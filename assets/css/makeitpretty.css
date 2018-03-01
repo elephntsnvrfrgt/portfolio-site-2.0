@@ -255,6 +255,7 @@ Grid
 .grid {
   padding: 0 7.778%;
   height: 78vh;
+  min-height: 510px;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: 100%;
@@ -267,10 +268,11 @@ Grid
   background: #F2F2F2;
   content: ""; }
 
-.col01, .col02, .col03, .col04, .col05, .col06, .col07, .col08, .col09, .col10, .col11, .col12 {
-  background: white;
-  border: 1px solid pink; }
-
+/*
+.col01, .col02, .col03, .col04, .col05, .col06, .col07, .col08, .col09, .col10, .col11, .col12{
+	background:white;
+  border:1px solid pink;
+}*/
 .content-hero {
   grid-column-start: 1;
   grid-column-end: 12;
@@ -284,17 +286,29 @@ Grid
     font-size: 18px;
     letter-spacing: 3.25px;
     text-transform: uppercase;
-    margin-bottom: 17px; }
+    margin-bottom: 42px; }
   .content-hero .hero-title {
     font-family: "TRYVesterbro-Poster", serif;
     font-size: 148px;
     letter-spacing: -0.49px;
     line-height: 132px;
-    margin-bottom: 50px; }
+    margin-bottom: 24px; }
   .content-hero .hero-info {
     font-family: "FiraMonoOT", "Courier New", Courier, monospace;
     font-size: 18px;
     color: #CCCCCC;
     line-height: 18px; }
+
+#hero-tmo {
+  background: no-repeat right/auto 100% url("../img/index/bg-tmo.jpg"); }
+
+#hero-vw {
+  background: no-repeat right/auto 100% url("../img/index/bg-vw.jpg"); }
+
+#hero-red {
+  background: no-repeat right/auto 100% url("#"); }
+
+#hero-cmhf {
+  background: no-repeat right/auto 100% url("../img/index/bg-cmhf.jpg"); }
 
 /*# sourceMappingURL=makeitpretty.css.map */

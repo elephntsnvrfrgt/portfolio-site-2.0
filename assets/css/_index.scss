@@ -1,0 +1,57 @@
+.content-hero{
+  grid-column-start: 1;
+  grid-column-end: 12;
+  color: $gray15;
+  text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-smoothing: antialiased;
+
+  .hero-eyebrow{
+    font-family: $sans-stack;
+    font-size: 18px;
+    letter-spacing: 3.25px;
+    text-transform: uppercase;
+    margin-bottom:42px;
+  }
+
+  .hero-title{
+    font-family: $serif-stack;
+    font-size: 148px;
+    letter-spacing: -0.49px;
+    line-height: 132px;
+    margin-bottom:24px;
+  }
+
+  .hero-info{
+    font-family: $mono-stack;
+    font-size: 18px;
+    color: #CCCCCC;
+    line-height: 18px;
+  }
+}
+
+// hero backgrounds ––––––––––––––––––––––––––––––––––––––––––
+
+// mixin ––––––––––––––––––––
+@mixin hero-bg($img-url){
+  background: no-repeat right / auto 100% url($img-url);
+}
+
+//ids –––––––––––––––––––––––
+
+#hero-tmo{
+  @include hero-bg("../img/index/bg-tmo.jpg");
+}
+
+#hero-vw{
+  @include hero-bg("../img/index/bg-vw.jpg");
+}
+
+#hero-red{
+  @include hero-bg("#");
+}
+
+#hero-cmhf{
+  @include hero-bg("../img/index/bg-cmhf.jpg");
+}
