@@ -1,0 +1,23 @@
+doctype html
+
+//- mixins –––––––––––––––––––––––––––––––––––––––––––––––––––
+//- ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+mixin home-hero(eyebrow, title, info)
+	.content-hero
+		.hero-eyebrow= eyebrow
+		h2.hero-title= title
+		.hero-info= info
+
+html
+	include includes/_head.pug
+
+	body
+		include includes/_nav.pug
+				
+		section.content-container
+			section.grid#tmo-hero
+				+home-hero('T-Mobile','Switcher','Web | Concept, Design, & Motion')
+			.divider
+			section.grid#vw-hero
+				+home-hero('Volkswagen Car-Net','Smart Car','App | Concept, Design, & Motion')
+			.divider

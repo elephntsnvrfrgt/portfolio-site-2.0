@@ -1,0 +1,300 @@
+@charset "UTF-8";
+@-ms-viewport {
+  width: device-width; }
+@viewport {
+  width: device-width; }
+/*
+ *
+ *  Copyright (c) David Bushell | http://dbushell.com/
+ *
+ */
+/* normalize.css v2.0.1 | MIT License | git.io/normalize */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block; }
+
+audio,
+canvas,
+video {
+  display: inline-block; }
+
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+[hidden] {
+  display: none; }
+
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+body {
+  margin: 0; }
+
+a:focus {
+  outline: thin dotted; }
+
+a:active,
+a:hover {
+  outline: 0; }
+
+h1 {
+  font-size: 2em; }
+
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+b,
+strong {
+  font-weight: bold; }
+
+dfn {
+  font-style: italic; }
+
+mark {
+  background: #ff0;
+  color: #000; }
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em; }
+
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word; }
+
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019"; }
+
+small {
+  font-size: 80%; }
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+img {
+  border: 0; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+figure {
+  margin: 0; }
+
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+legend {
+  border: 0;
+  padding: 0; }
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0; }
+
+button,
+input {
+  line-height: normal; }
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer; }
+
+button[disabled],
+input[disabled] {
+  cursor: default; }
+
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0; }
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box; }
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+textarea {
+  overflow: auto;
+  vertical-align: top; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+ul, ol {
+  padding: 0;
+  list-style: none; }
+
+h1, h2, h3, h4, h5, h6, p, ul, ol {
+  margin: 0; }
+
+a {
+  text-decoration: none; }
+
+/* ––––––––––––––––––––––––––––––––––––––––––––––––
+Colors
+––––––––––––––––––––––––––––––––––––––––––––––––
+*/
+body {
+  background: #262626; }
+
+/* ––––––––––––––––––––––––––––––––––––––––––––––––
+Type
+––––––––––––––––––––––––––––––––––––––––––––––––
+*/
+/* ---------------------------------------------
+Nav
+--------------------------------------------- */
+#nav-container {
+  position: fixed;
+  z-index: 1;
+  top: auto;
+  bottom: 0;
+  min-width: 510px;
+  width: 100vh;
+  height: 60px;
+  transform-origin: bottom left 0;
+  transform: rotate(-90deg) translate3d(0, 100%, 0); }
+
+.nav {
+  font-family: "FiraMonoOT", "Courier New", Courier, monospace;
+  height: 60px;
+  background: #262626;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased; }
+
+#logo-container {
+  margin: 20px 27px 0 0;
+  float: right;
+  width: 25%; }
+
+#logo-type {
+  text-align: right;
+  color: #FFFFFF;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 1px; }
+
+#social-container {
+  width: 64%;
+  float: left;
+  margin: 24px 0 0 24px;
+  line-height: 10px; }
+  #social-container li {
+    float: left;
+    padding-right: 20px; }
+  #social-container li a {
+    text-decoration: none;
+    color: #999999;
+    font-size: 11px; }
+
+#social-container li:nth-child(1) {
+  padding-right: 24px; }
+
+/* ––––––––––––––––––––––––––––––––––––––––––––––––
+Grid
+––––––––––––––––––––––––––––––––––––––––––––––––
+*/
+.content-container {
+  margin: 0 0 0 60px;
+  background: white; }
+
+.grid {
+  padding: 0 7.778%;
+  height: 78vh;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 100%;
+  grid-column-gap: 24px;
+  align-items: center; }
+
+.divider {
+  margin: 0 0 0 7.778%;
+  height: 1px;
+  background: #F2F2F2;
+  content: ""; }
+
+.col01, .col02, .col03, .col04, .col05, .col06, .col07, .col08, .col09, .col10, .col11, .col12 {
+  background: white;
+  border: 1px solid pink; }
+
+.content-hero {
+  grid-column-start: 1;
+  grid-column-end: 12;
+  color: #262626;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased; }
+  .content-hero .hero-eyebrow {
+    font-family: "WorkSans-Bold", Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    letter-spacing: 3.25px;
+    text-transform: uppercase;
+    margin-bottom: 17px; }
+  .content-hero .hero-title {
+    font-family: "TRYVesterbro-Poster", serif;
+    font-size: 148px;
+    letter-spacing: -0.49px;
+    line-height: 132px;
+    margin-bottom: 50px; }
+  .content-hero .hero-info {
+    font-family: "FiraMonoOT", "Courier New", Courier, monospace;
+    font-size: 18px;
+    color: #CCCCCC;
+    line-height: 18px; }
+
+/*# sourceMappingURL=makeitpretty.css.map */

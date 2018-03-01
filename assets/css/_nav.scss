@@ -1,0 +1,62 @@
+/* ---------------------------------------------
+Nav
+--------------------------------------------- */
+
+#nav-container{
+  position:fixed;
+  z-index:1;
+  top:auto;
+  bottom:0;
+  min-width:510px;
+  width:100vh;
+  height:60px;
+  transform-origin: bottom left 0;
+  transform:rotate(-90deg) translate3d(0,100%,0);
+}
+
+.nav{
+  font-family: $mono-stack;
+  height: 60px;
+  background:$gray15;
+  text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-smoothing: antialiased;
+}
+
+#logo-container{
+	margin: 20px 27px 0 0;
+	float:right;
+	width:25%;
+}
+
+#logo-type{
+	text-align:right;
+	color:$white;
+	font-weight:700;
+	font-size: 14px;
+	line-height:20px;
+	letter-spacing: 1px;
+}
+
+#social-container{
+	width:64%;
+	float:left;
+	margin:24px 0 0 24px;
+	line-height:10px;
+
+  li{
+  	float:left;
+  	padding-right:20px;
+  }
+
+  li a{
+  	text-decoration:none;
+  	color:$gray60;
+  	font-size:11px;
+  }
+}
+
+#social-container li:nth-child(1){
+	padding-right:24px;
+}
