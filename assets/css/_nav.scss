@@ -5,10 +5,6 @@ Nav
 //variables ––––––––––––
 $cubic-bezier: cubic-bezier(0.4, 0, .2, 1);
 
-$time-delay: 350ms;
-
-$items:2;
-
 
 //mixin ––––––––––––––––
 
@@ -44,7 +40,7 @@ $items:2;
 
 #nav-container{
   position:fixed;
-  z-index:1;
+  z-index:2;
   top:auto;
   bottom:0;
   min-width:510px;
@@ -98,7 +94,39 @@ $items:2;
   	padding-right:20px;
     a{
     	text-decoration:none;
+      transition: all 250ms ease-in;
+      position: relative;
+      &:after,
+      &:before {
+        content: '';
+        position: absolute;
+        top: calc(100% + 2px);
+        width: 0;
+        right: 0;
+        height: 1px;
+      }
+      &:before {
+        transition: width .4s cubic-bezier(0.51, 0.18, 0, 0.88) .1s;
+        background: lighten($gray60, 40);
+      }
+      &:hover{
+        color:lighten($gray60, 40);
+        &:after,
+        &:before {
+          width: 100%;
+          left: 0;
+        }
+      }
     }
+
+
+    /*
+a:hover{
+      color:lighten($gray60, 40);
+      //text-decoration: underline;
+    }*/
+
+
   }
 }
 
@@ -111,17 +139,19 @@ $items:2;
 
 .info-container{
   position:fixed;
-  z-index:0;
+  z-index:1;
   top:0;
   left:-400px;
   min-height:510px;
   height:100vh;
   //margin-left:60px;
+  padding-bottom:44px;
   background:$gray15;
   font-family: $sans-stack;
   font-weight:400;
   font-size:18px;
   color: $gray80;
+  overflow:scroll;
 }
 
 .info-content{
@@ -166,18 +196,19 @@ $items:2;
 
 .info-content-animatable{
   @include transition-cubic(750ms);
+
 }
 
 .info-content-active{
-  will-change: transform;
-  transition-delay:750ms;
+  //will-change: transform;
+  transition-delay:550ms;
   opacity: 1;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
 
 .info-content-active {
-  @include staggered_transitions($items:3,$nth:2,$initial:(750 + 150),$step:150)
+  @include staggered_transitions($items:3,$nth:2,$initial:(550 + 150),$step:150)
 }
 
 .content-container-animatable{
@@ -185,5 +216,11 @@ $items:2;
 }
 
 .content-container-active{
-  transform: perspective(1000px) rotateY(-15deg);
+  overflow: hidden !important;
+  will-change:transform;
+  -webkit-transform: translate3d(100px, 0, 0);
+  transform: translate3d(100px, 0, 0);
+
+// transform: perspective(1000px) rotateY(-15deg);
+
 }

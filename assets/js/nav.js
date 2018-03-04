@@ -41,4 +41,3 @@ var contentContainer = document.querySelector(".content-container");
 
 myInfo.addEventListener("transitionend", OnTransitionEnd, false);
 openInfo.addEventListener("click", toggleClassMenu, false);
-contentContainer.addEventListener("click", toggleClassMenu, false);

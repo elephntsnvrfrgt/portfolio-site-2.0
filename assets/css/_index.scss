@@ -2,22 +2,20 @@
   margin:0 0 0 60px;
   background:white;
 
-  /* -- zoom out blur
-  position: absolute;
+  // -- zoom out blur
+  //position: absolute;
   height: 100vh;
+  width:auto;
   overflow: scroll;
   background: white;
-  transform: scale(.9);
-  opacity: .8;
-  filter: blur(10px);
-  transform-origin: center center;
-  z-index: -2;*/
+  opacity: 1;
+  //filter: blur(10px);
 
 
   // -- rotate 3d
-  position: absolute;
-  z-index: -2;
-  transform-origin:right bottom;
+  //position: absolute;
+  //z-index: -2;
+  //transform-origin:right bottom;
 
 }
 

@@ -205,7 +205,7 @@ Nav
 --------------------------------------------- */
 #nav-container {
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   top: auto;
   bottom: 0;
   min-width: 510px;
@@ -252,25 +252,49 @@ Nav
   line-height: 10px; }
   #social-container li {
     float: left;
-    padding-right: 20px; }
+    padding-right: 20px;
+    /*
+a:hover{
+      color:lighten($gray60, 40);
+      //text-decoration: underline;
+    }*/ }
     #social-container li a {
-      text-decoration: none; }
+      text-decoration: none;
+      transition: all 250ms ease-in;
+      position: relative; }
+      #social-container li a:after, #social-container li a:before {
+        content: '';
+        position: absolute;
+        top: calc(100% + 2px);
+        width: 0;
+        right: 0;
+        height: 1px; }
+      #social-container li a:before {
+        transition: width 0.4s cubic-bezier(0.51, 0.18, 0, 0.88) 0.1s;
+        background: white; }
+      #social-container li a:hover {
+        color: white; }
+        #social-container li a:hover:after, #social-container li a:hover:before {
+          width: 100%;
+          left: 0; }
 
 #social-container li:nth-child(1) {
   padding-right: 24px; }
 
 .info-container {
   position: fixed;
-  z-index: 0;
+  z-index: 1;
   top: 0;
   left: -400px;
   min-height: 510px;
   height: 100vh;
+  padding-bottom: 44px;
   background: #262626;
   font-family: "Work Sans", Helvetica, Arial, sans-serif;
   font-weight: 400;
   font-size: 18px;
-  color: #CCCCCC; }
+  color: #CCCCCC;
+  overflow: scroll; }
 
 .info-content {
   width: 375px;
@@ -308,22 +332,24 @@ Nav
   transition: all 750ms cubic-bezier(0.4, 0, 0.2, 1); }
 
 .info-content-active {
-  will-change: transform;
-  transition-delay: 750ms;
+  transition-delay: 550ms;
   opacity: 1;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0); }
 
 .info-content-active:nth-of-type(2) {
-  transition-delay: 900ms; }
+  transition-delay: 700ms; }
 .info-content-active:nth-of-type(3) {
-  transition-delay: 1050ms; }
+  transition-delay: 850ms; }
 
 .content-container-animatable {
   transition: all 750ms cubic-bezier(0.4, 0, 0.2, 1); }
 
 .content-container-active {
-  transform: perspective(1000px) rotateY(-15deg); }
+  overflow: hidden !important;
+  will-change: transform;
+  -webkit-transform: translate3d(100px, 0, 0);
+  transform: translate3d(100px, 0, 0); }
 
 /* ––––––––––––––––––––––––––––––––––––––––––––––––
 Grid
@@ -353,19 +379,11 @@ Grid
 .content-container {
   margin: 0 0 0 60px;
   background: white;
-  /* -- zoom out blur
-  position: absolute;
   height: 100vh;
+  width: auto;
   overflow: scroll;
   background: white;
-  transform: scale(.9);
-  opacity: .8;
-  filter: blur(10px);
-  transform-origin: center center;
-  z-index: -2;*/
-  position: absolute;
-  z-index: -2;
-  transform-origin: right bottom; }
+  opacity: 1; }
 
 .content-hero {
   grid-column-start: 1;
