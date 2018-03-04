@@ -2,6 +2,46 @@
 Nav
 --------------------------------------------- */
 
+//variables ––––––––––––
+$cubic-bezier: cubic-bezier(0.4, 0, .2, 1);
+
+$time-delay: 350ms;
+
+$items:2;
+
+
+//mixin ––––––––––––––––
+
+@mixin text-render{
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+}
+
+@mixin transition-cubic($time){
+  transition: all $time $cubic-bezier;
+}
+
+@mixin transition-linear($time){
+  transition: all ($time) linear;
+}
+
+@mixin transition-easeOut($time){
+  transition: all ($time) ease-out;
+}
+
+@mixin  staggered_transitions($nth:1,$items:2,$initial:0,$step:.1){
+	@for $i from $nth through $items{
+		&:nth-of-type(#{$i}){
+			transition-delay:#{$initial}ms;
+		}
+		$initial: $initial + $step;
+	}
+}
+
+// styling ––––––––––––––
+
 #nav-container{
   position:fixed;
   z-index:1;
@@ -9,54 +49,141 @@ Nav
   bottom:0;
   min-width:510px;
   width:100vh;
-  height:60px;
+  background:$gray15;
+  border-bottom: 1px solid $gray20;
+  //height:60px;
   transform-origin: bottom left 0;
   transform:rotate(-90deg) translate3d(0,100%,0);
 }
 
-.nav{
+.nav-content{
   font-family: $mono-stack;
   height: 60px;
-  background:$gray15;
-  text-rendering: optimizeLegibility;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	font-smoothing: antialiased;
+  @include text-render;
 }
 
+/*
 #logo-container{
-	margin: 20px 27px 0 0;
-	float:right;
-	width:25%;
-}
+
+  float:right;
+  width:25%;
+  //cursor:pointer;
+}*/
+
+
 
 #logo-type{
+  float:right;
+  padding: 20px 27px 20px 27px;
+  display:block;
 	text-align:right;
 	color:$white;
 	font-weight:700;
 	font-size: 14px;
 	line-height:20px;
 	letter-spacing: 1px;
+  background:none;
+  border:none;
+}
+#logo-type:focus{
+  outline:none;
 }
 
 #social-container{
-	width:64%;
 	float:left;
-	margin:24px 0 0 24px;
+	padding:24px 0 22px 24px;
 	line-height:10px;
-
   li{
   	float:left;
   	padding-right:20px;
-  }
-
-  li a{
-  	text-decoration:none;
-  	color:$gray60;
-  	font-size:11px;
+    a{
+    	text-decoration:none;
+    }
   }
 }
 
 #social-container li:nth-child(1){
 	padding-right:24px;
+}
+
+
+// info - about me
+
+.info-container{
+  position:fixed;
+  z-index:0;
+  top:0;
+  left:-400px;
+  min-height:510px;
+  height:100vh;
+  //margin-left:60px;
+  background:$gray15;
+  font-family: $sans-stack;
+  font-weight:400;
+  font-size:18px;
+  color: $gray80;
+}
+
+.info-content{
+  width:255+60+60px;
+  padding: 57px 60px 0 60px;
+  opacity:0;
+  @include text-render;
+  -webkit-transform: translate3d(0, 10px, 0);
+  transform: translate3d(0, 10px, 0);
+}
+
+.info-label{
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color:$gray40;
+  padding-bottom:16px;
+}
+
+.experience{
+  padding-bottom:16px;
+
+  p{
+    padding-bottom:4px;
+  }
+}
+
+
+// info interaction –––––––––––––––
+
+.info-container-animatable{
+  @include transition-cubic(750ms);
+}
+
+.info-container-active{
+  will-change:transform;
+  -webkit-transform: translateX(460px);
+  transform: translateX(460px);
+  //pointer-events:none;
+}
+
+.info-content-animatable{
+  @include transition-cubic(750ms);
+}
+
+.info-content-active{
+  will-change: transform;
+  transition-delay:750ms;
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.info-content-active {
+  @include staggered_transitions($items:3,$nth:2,$initial:(750 + 150),$step:150)
+}
+
+.content-container-animatable{
+  @include transition-cubic(750ms);
+}
+
+.content-container-active{
+  transform: perspective(1000px) rotateY(-15deg);
 }

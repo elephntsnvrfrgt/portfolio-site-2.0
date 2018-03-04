@@ -1,16 +1,12 @@
 doctype html
-
-//- mixins –––––––––––––––––––––––––––––––––––––––––––––––––––
-//- ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––
-mixin mixin-hero(eyebrow, title, info)
-	.content-hero
-		.hero-eyebrow= eyebrow
-		h2.hero-title= title
-		.hero-info= info
-
+include includes/_mixins.pug
+		
 html
 	include includes/_head.pug
 
 	body
 		include includes/_nav.pug
 		include includes/_index-content.pug
+		script(
+			src='assets/js/nav.js'
+			)

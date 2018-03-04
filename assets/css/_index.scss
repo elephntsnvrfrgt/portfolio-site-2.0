@@ -1,3 +1,26 @@
+.content-container{
+  margin:0 0 0 60px;
+  background:white;
+
+  /* -- zoom out blur
+  position: absolute;
+  height: 100vh;
+  overflow: scroll;
+  background: white;
+  transform: scale(.9);
+  opacity: .8;
+  filter: blur(10px);
+  transform-origin: center center;
+  z-index: -2;*/
+
+
+  // -- rotate 3d
+  position: absolute;
+  z-index: -2;
+  transform-origin:right bottom;
+
+}
+
 .content-hero{
   grid-column-start: 1;
   grid-column-end: 12;
@@ -9,6 +32,7 @@
 
   .hero-eyebrow{
     font-family: $sans-stack;
+    font-weight: 700;
     font-size: 18px;
     letter-spacing: 3.25px;
     text-transform: uppercase;
