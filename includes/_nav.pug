@@ -1,8 +1,6 @@
 #nav-container
   .nav-content
-    input#logo-type(
-        type='button'
-        value="Isaac Martin")
+    h1#logo-type Isaac Martin
     #social-container
       ul.small
         li
@@ -16,16 +14,13 @@
         li
           a(href='https://dribbble.com/isaacmartin' target='_blank') Dribbble
 .info-container
+  #close.small close
   .info-content
     .info-label About
-    p Isaac Martin is a multidisciplinary designer. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
+    p #{bio}
   .info-content
     .info-label Experience
     ul
       +mixin-experience('SapientRazorfish','2014 - present')
       +mixin-experience('The Tombras Group','2011 - 2014')
-  .info-content
-    .info-label Experience
-    ul
-      +mixin-experience('SapientRazorfish','2014 - present')
-      +mixin-experience('The Tombras Group','2011 - 2014')
+      +mixin-experience('Cornerstone Arts Center','2009 - 2011')

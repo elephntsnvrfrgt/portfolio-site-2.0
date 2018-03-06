@@ -1,8 +1,10 @@
-/* ---------------------------------------------
-Nav
---------------------------------------------- */
+// –––––––––––––––––––––––––––––––––––––––––––––
+// Nav –––––––––––––––––––––––––––––––––––––––––
+// –––––––––––––––––––––––––––––––––––––––––––––
+
 
 //variables ––––––––––––
+
 $cubic-bezier: cubic-bezier(0.4, 0, .2, 1);
 
 
@@ -36,11 +38,34 @@ $cubic-bezier: cubic-bezier(0.4, 0, .2, 1);
 	}
 }
 
+@mixin hover_underline($underline_gap:1,$underline_thickness:1){
+  &:after, &:before{
+    content: '';
+    position: absolute;
+    top: calc(100% + #{$underline_gap}px);
+    width: 0;
+    right: 0;
+    height: #{$underline_thickness}px;
+  }
+  &:before {
+    transition: width 400ms cubic-bezier(0.51, 0.18, 0, 0.88) 100ms;
+    background: lighten($gray60, 40);
+  }
+  &:hover{
+    color:lighten($gray60, 40);
+    &:after, &:before {
+      width: 100%;
+      left: 0;
+    }
+  }
+}
+
+
 // styling ––––––––––––––
 
 #nav-container{
   position:fixed;
-  z-index:2;
+  z-index:10;
   top:auto;
   bottom:0;
   min-width:510px;
@@ -69,8 +94,9 @@ $cubic-bezier: cubic-bezier(0.4, 0, .2, 1);
 
 
 #logo-type{
+  position:relative;
   float:right;
-  padding: 20px 27px 20px 27px;
+  margin: 20px 27px 20px 27px;
   display:block;
 	text-align:right;
 	color:$white;
@@ -78,11 +104,36 @@ $cubic-bezier: cubic-bezier(0.4, 0, .2, 1);
 	font-size: 14px;
 	line-height:20px;
 	letter-spacing: 1px;
-  background:none;
-  border:none;
-}
-#logo-type:focus{
-  outline:none;
+  cursor:pointer;
+  transition: all 250ms ease-in;
+  @include hover_underline($underline_gap:-1,$underline_thickness:1);
+
+
+  /*
+@include transition-cubic(550ms);
+  &:hover{
+    will-change: transform;
+    transform: translate3d(-20px,0,0);
+  }
+  &:after{
+    content:url(../img/ic_info_outline_14px.svg);
+    position: absolute;
+    width: 14px;
+    right: 20px;
+    top: 20px;
+    transform: rotate(90deg);
+    opacity: 0;
+    transition: opacity 400ms $cubic-bezier;
+  }
+  &:hover,&:active,&:focus{
+    &:after{
+      //transform:rotate(90deg);
+      transition-delay:500ms;
+      opacity:.5;
+      right:0;
+      //right: 153px;
+    }
+  }*/
 }
 
 #social-container{
@@ -96,37 +147,8 @@ $cubic-bezier: cubic-bezier(0.4, 0, .2, 1);
     	text-decoration:none;
       transition: all 250ms ease-in;
       position: relative;
-      &:after,
-      &:before {
-        content: '';
-        position: absolute;
-        top: calc(100% + 2px);
-        width: 0;
-        right: 0;
-        height: 1px;
-      }
-      &:before {
-        transition: width .4s cubic-bezier(0.51, 0.18, 0, 0.88) .1s;
-        background: lighten($gray60, 40);
-      }
-      &:hover{
-        color:lighten($gray60, 40);
-        &:after,
-        &:before {
-          width: 100%;
-          left: 0;
-        }
-      }
+      @include hover_underline($underline_gap:1,$underline_thickness:1);
     }
-
-
-    /*
-a:hover{
-      color:lighten($gray60, 40);
-      //text-decoration: underline;
-    }*/
-
-
   }
 }
 
@@ -135,11 +157,11 @@ a:hover{
 }
 
 
-// info - about me
+// info - about me ––––––––
 
 .info-container{
   position:fixed;
-  z-index:1;
+  z-index:5;
   top:0;
   left:-400px;
   min-height:510px;
@@ -147,21 +169,51 @@ a:hover{
   //margin-left:60px;
   padding-bottom:44px;
   background:$gray15;
+  @include text-render;
   font-family: $sans-stack;
   font-weight:400;
   font-size:18px;
   color: $gray80;
+  //box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
   overflow:scroll;
+  /*
+&:after{
+    content: '';
+    position:absolute;
+    display: block;
+    left:375px;
+    top:0;
+    width:100vw;
+    height:100vh;
+    pointer-events: auto;
+    background: rgba(255, 0, 0, 1);;
+  }*/
+}
+
+#close{
+  position:absolute;
+  z-index:10 !important;
+  right:15px;
+  top:47px;
+  opacity:0;
+  //margin: 10px 20px;
+  //padding: 5px;
+  cursor:pointer;
+  @include hover_underline($underline_gap:1,$underline_thickness:1);
+  @include transition-cubic(250ms);
+  //animation: closeFadeIn 750ms $cubic-bezier 550ms reverse;
+  //animation-fill-mode: both;
 }
 
 .info-content{
   width:255+60+60px;
   padding: 57px 60px 0 60px;
   opacity:0;
-  @include text-render;
+  //@include text-render;
   -webkit-transform: translate3d(0, 10px, 0);
   transform: translate3d(0, 10px, 0);
 }
+
 
 .info-label{
   font-size: 12px;
@@ -191,12 +243,12 @@ a:hover{
   will-change:transform;
   -webkit-transform: translateX(460px);
   transform: translateX(460px);
+  box-shadow: 0 0 110px 40px rgba(0, 0, 0, 0.2);
   //pointer-events:none;
 }
 
 .info-content-animatable{
   @include transition-cubic(750ms);
-
 }
 
 .info-content-active{
@@ -208,19 +260,23 @@ a:hover{
 }
 
 .info-content-active {
-  @include staggered_transitions($items:3,$nth:2,$initial:(550 + 150),$step:150)
+  @include staggered_transitions($items:3,$nth:2,$initial:(550 + 150),$step:150);
+  //update the $items to the number of children in the .info-container
 }
 
-.content-container-animatable{
-  @include transition-cubic(750ms);
+@keyframes closeFadeIn {
+    from {opacity: 0;transform:rotate(-90deg) translateX(0px)}
+    to {opacity: 1;transform:rotate(-90deg) translateX(10px)}
 }
 
-.content-container-active{
-  overflow: hidden !important;
-  will-change:transform;
-  -webkit-transform: translate3d(100px, 0, 0);
-  transform: translate3d(100px, 0, 0);
+.close-animatable{
+  //transition: opacity 750ms $cubic-bezier;
+}
 
-// transform: perspective(1000px) rotateY(-15deg);
+.close-active{
+  //transition-delay: 550ms !important;
+  animation: closeFadeIn 750ms $cubic-bezier 350ms;
+  animation-fill-mode: both;
+  opacity:1 !important;
 
 }

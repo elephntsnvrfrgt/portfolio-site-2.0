@@ -1,16 +1,16 @@
+body{
+  overflow:hidden;
+  // stopped the page from scrolling left to right once info-container is active. BUT it stopped elastic scrolling.
+}
+
 .content-container{
   margin:0 0 0 60px;
-  background:white;
-
-  // -- zoom out blur
-  //position: absolute;
+  background:$white;
   height: 100vh;
-  width:auto;
-  overflow: scroll;
-  background: white;
+  width:calc(100% - 60px);
+  overflow-y: scroll;
   opacity: 1;
-  //filter: blur(10px);
-
+  transition:opacity 750ms $cubic-bezier;
 
   // -- rotate 3d
   //position: absolute;
@@ -18,6 +18,24 @@
   //transform-origin:right bottom;
 
 }
+
+.content-container-animatable{
+  @include transition-cubic(750ms);
+}
+
+.content-container-active{
+  overflow: hidden !important;
+  will-change:transform;
+  -webkit-transform: translate3d(100px, 0, 0);
+  transform: translate3d(100px, 0, 0);
+}
+
+/*
+.show{
+  opacity:1;
+}*/
+
+
 
 .content-hero{
   grid-column-start: 1;
