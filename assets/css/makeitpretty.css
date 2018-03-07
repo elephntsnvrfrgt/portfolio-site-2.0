@@ -497,10 +497,12 @@ Grid
 	background:white;
   border:1px solid pink;
 }*/
+.hideme {
+  opacity: 0; }
+
 .content-container {
   margin: 0 0 0 60px;
   background: #FFFFFF;
-  height: 100vh;
   width: calc(100% - 60px);
   overflow-y: scroll;
   opacity: 1;

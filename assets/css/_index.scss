@@ -3,10 +3,14 @@ body{
   // stopped the page from scrolling left to right once info-container is active. BUT it stopped elastic scrolling.
 }
 
+.hideme{
+  opacity: 0;
+}
+
 .content-container{
   margin:0 0 0 60px;
   background:$white;
-  height: 100vh;
+  //height: 100vh;
   width:calc(100% - 60px);
   overflow-y: scroll;
   opacity: 1;
