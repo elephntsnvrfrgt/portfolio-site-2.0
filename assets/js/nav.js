@@ -46,10 +46,6 @@ function OnTransitionEnd() {
 	close.classList.remove("close-animatable");
 }
 
-function OnAnimationEnd() {
-	close.classList.remove("close-animatable");
-
-}
 
 
 //variables
@@ -59,18 +55,8 @@ var myInfo = document.querySelector(".info-container");
 var infoContent = document.querySelectorAll(".info-content");
 var contentContainer = document.querySelector(".content-container");
 
+
 //event listeners
-myInfo.addEventListener("transitionend", OnTransitionEnd, false);
-close.addEventListener("animationend", OnAnimationEnd, false);
-openInfo.addEventListener("click", toggleClassMenu, false);
 close.addEventListener("click", toggleClassMenu, false);
-
-
-//contentContainer.addEventListener("DOMContentLoaded", fadeIn, false);
-//closeInfo.addEventListener("click", toggleClassMenu, false);
-
-
-//fadein content
-//document.addEventListener('DOMContentLoaded', function toggleClassMenu() {
-//   contentContainer.classList.add("show");
-// });
+openInfo.addEventListener("click", toggleClassMenu, false);
+myInfo.addEventListener("transitionend", OnTransitionEnd, false);

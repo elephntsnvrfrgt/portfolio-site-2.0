@@ -1,5 +1,5 @@
 body{
-  //overflow:hidden;
+  overflow:hidden;
   // stopped the page from scrolling left to right once info-container is active. BUT it stopped elastic scrolling.
 }
 
@@ -8,9 +8,11 @@ body{
   background:$white;
   height: 100vh;
   width:calc(100% - 60px);
+  -webkit-overflow-scrolling: touch;
   overflow-y: scroll;
-  opacity: 1;
-  transition:opacity 750ms $cubic-bezier;
+
+  //opacity: 1;
+  //transition:opacity 750ms $cubic-bezier;
 
   // -- rotate 3d
   //position: absolute;
@@ -25,7 +27,7 @@ body{
 
 .content-container-active{
   overflow: hidden !important;
-  //will-change:transform;
+  will-change:transform;
   -webkit-transform: translate3d(100px, 0, 0);
   transform: translate3d(100px, 0, 0);
 }

@@ -332,7 +332,7 @@ p {
   position: fixed;
   z-index: 5;
   top: 0;
-  left: -400px;
+  left: 0;
   min-height: 510px;
   height: 100vh;
   padding-bottom: 44px;
@@ -345,30 +345,62 @@ p {
   font-weight: 400;
   font-size: 18px;
   color: #CCCCCC;
-  overflow: scroll;
-  /*
-&:after{
-    content: '';
-    position:absolute;
-    display: block;
-    left:375px;
-    top:0;
-    width:100vw;
-    height:100vh;
-    pointer-events: auto;
-    background: rgba(255, 0, 0, 1);;
-  }*/ }
+  -webkit-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%); }
+
+.info-container:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: transparent;
+  opacity: 0;
+  pointer-events: none; }
+
+.info-container-active.info-container:after {
+  opacity: 1;
+  pointer-events: auto; }
+
+@-webkit-keyframes closeFadeOut {
+  from {
+    opacity: 1;
+    -webkit-transform: rotate(-90deg) translateX(-37px);
+    transform: rotate(-90deg) translateX(-37px); }
+  to {
+    opacity: 0;
+    -webkit-transform: rotate(-90deg) translateX(-47px);
+    transform: rotate(-90deg) translateX(-47px); } }
+
+@keyframes closeFadeOut {
+  from {
+    opacity: 1;
+    -webkit-transform: rotate(-90deg) translateX(-37px);
+    transform: rotate(-90deg) translateX(-37px); }
+  to {
+    opacity: 0;
+    -webkit-transform: rotate(-90deg) translateX(-47px);
+    transform: rotate(-90deg) translateX(-47px); } }
 
 .close {
   position: absolute;
   z-index: 10 !important;
   right: 15px;
-  top: 47px;
   opacity: 0;
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
   cursor: pointer;
   -webkit-transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
   -o-transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1); }
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-animation: closeFadeOut 750ms cubic-bezier(0.4, 0, 0.2, 1);
+  animation: closeFadeOut 750ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both; }
   .close:after, .close:before {
     content: '';
     position: absolute;
@@ -414,9 +446,9 @@ p {
 
 .info-container-active {
   will-change: transform;
-  -webkit-transform: translateX(460px);
-  -ms-transform: translateX(460px);
-  transform: translateX(460px);
+  -webkit-transform: translateX(60px);
+  -ms-transform: translateX(60px);
+  transform: translateX(60px);
   -webkit-box-shadow: 0 0 110px 40px rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 110px 40px rgba(0, 0, 0, 0.2); }
 
@@ -446,22 +478,22 @@ p {
 @-webkit-keyframes closeFadeIn {
   from {
     opacity: 0;
-    -webkit-transform: rotate(-90deg) translateX(0px);
-    transform: rotate(-90deg) translateX(0px); }
+    -webkit-transform: rotate(-90deg) translateX(-47px);
+    transform: rotate(-90deg) translateX(-47px); }
   to {
     opacity: 1;
-    -webkit-transform: rotate(-90deg) translateX(10px);
-    transform: rotate(-90deg) translateX(10px); } }
+    -webkit-transform: rotate(-90deg) translateX(-37px);
+    transform: rotate(-90deg) translateX(-37px); } }
 
 @keyframes closeFadeIn {
   from {
     opacity: 0;
-    -webkit-transform: rotate(-90deg) translateX(0px);
-    transform: rotate(-90deg) translateX(0px); }
+    -webkit-transform: rotate(-90deg) translateX(-47px);
+    transform: rotate(-90deg) translateX(-47px); }
   to {
     opacity: 1;
-    -webkit-transform: rotate(-90deg) translateX(10px);
-    transform: rotate(-90deg) translateX(10px); } }
+    -webkit-transform: rotate(-90deg) translateX(-37px);
+    transform: rotate(-90deg) translateX(-37px); } }
 
 .close-active {
   -webkit-animation: closeFadeIn 750ms cubic-bezier(0.4, 0, 0.2, 1) 350ms;
@@ -497,16 +529,16 @@ Grid
 	background:white;
   border:1px solid pink;
 }*/
+body {
+  overflow: hidden; }
+
 .content-container {
   margin: 0 0 0 60px;
   background: #FFFFFF;
   height: 100vh;
   width: calc(100% - 60px);
-  overflow-y: scroll;
-  opacity: 1;
-  -webkit-transition: opacity 750ms cubic-bezier(0.4, 0, 0.2, 1);
-  -o-transition: opacity 750ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: opacity 750ms cubic-bezier(0.4, 0, 0.2, 1); }
+  -webkit-overflow-scrolling: touch;
+  overflow-y: scroll; }
 
 .content-container-animatable {
   -webkit-transition: all 750ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -515,6 +547,7 @@ Grid
 
 .content-container-active {
   overflow: hidden !important;
+  will-change: transform;
   -webkit-transform: translate3d(100px, 0, 0);
   transform: translate3d(100px, 0, 0); }
 

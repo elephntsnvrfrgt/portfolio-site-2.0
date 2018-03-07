@@ -1,68 +1,42 @@
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+var lastPosition = -100;
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+$(document).ready(function() {
+    $('.wrapper').height($('.smooth').height());
 
-window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame;
+    $(window).resize(function() {
+        $('.wrapper').height($('.smooth').height());
+    });
 
-function getInertia(destinationValue, value, inertia) {
-  var valueToAdd = Math.abs((destinationValue - value) * inertia) >= 0.01 ? (destinationValue - value) * inertia : destinationValue - value;
-  value += valueToAdd;
+});
 
-  return value;
+var scroll = window.requestAnimationFrame ||
+    window.webkitRequestAnimationFrame ||
+    window.mozRequestAnimationFrame ||
+    window.msRequestAnimationFrame ||
+    window.oRequestAnimationFrame ||
+    // IE Fallback, you can even fallback to onscroll
+    function(callback) {
+        window.setTimeout(callback, 1000 / 60)
+    };
+
+function loop() {
+
+    // Avoid calculations if not needed
+    if (lastPosition == window.pageYOffset) {
+        scroll(loop);
+        return false;
+    } else lastPosition = window.pageYOffset;
+
+    var transform = 'translate3d(0px, -' + lastPosition + 'px, 0px)';
+    var smoothScroll = $(".smooth")[0];
+
+    //smoothScroll.style.webkitTransform = transform;
+    //smoothScroll.style.mozTransform = transform;
+    smoothScroll.style.transform = transform;
+
+
+    scroll(loop)
 }
 
-var smoothScroll = function () {
-  function smoothScroll() {
-    _classCallCheck(this, smoothScroll);
-
-    this.$body = document.querySelector('body');
-    this.$mainWrapper = document.querySelector('#scrollwrapper');
-    this.$window = window;
-
-    this.SCROLL_INERTIA = 0.05;
-    this.sY = null; // scroll Y
-    this.siY = null; // scroll inertia Y
-
-    this.bindEvents();
-    this.onResize();
-
-    requestAnimationFrame(this.updateProps.bind(this));
-    requestAnimationFrame(this.scrollContent.bind(this));
-  }
-
-  _createClass(smoothScroll, [{
-    key: 'bindEvents',
-    value: function bindEvents() {
-      window.addEventListener('resize', this.onResize.bind(this));
-    }
-  }, {
-    key: 'onResize',
-    value: function onResize() {
-      this.height = this.$mainWrapper.offsetHeight;
-    }
-  }, {
-    key: 'updateProps',
-    value: function updateProps() {
-      this.sY = this.$window.scrollY || this.$window.pageYOffset;
-      this.siY = getInertia(this.sY, this.siY, this.SCROLL_INERTIA);
-
-      //console.log(this.siY);
-      requestAnimationFrame(this.updateProps.bind(this));
-    }
-  }, {
-    key: 'scrollContent',
-    value: function scrollContent() {
-
-      var bottom = this.$mainWrapper.getBoundingClientRect().bottom;
-      var wHeight = this.$window.innerHeight;
-
-      this.$mainWrapper.style.transform = 'translateY(' + -this.siY + 'px)';
-
-      requestAnimationFrame(this.scrollContent.bind(this));
-    }
-  }]);
-
-  return smoothScroll;
-}();
-
-new smoothScroll();
+// Call the loop for the first time
+loop();
