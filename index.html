@@ -9,6 +9,9 @@
     <meta name="keywords" content="Isaac Martin, Isaac, Martin, designer, visual designer, creative, Portfolio, Design Lead, design, Art Direction, Motion, Motion Design">
     <link rel="stylesheet" type="text/css" href="assets/css/makeitpretty.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans:400,700">
+    <script src="assets/js/scrollreveal.js"></script>
+    <script>window.sr = ScrollReveal(); sr.reveal('.grid');</script>
+    <style>.sr .content-container, .sr .grid {visibility: hidden;}</style>
   </head>
   <body>
     <div id="nav-container">
@@ -26,7 +29,7 @@
       </div>
     </div>
     <div class="info-container">
-      <div class="small" id="close">close</div>
+      <div class="close small">close</div>
       <div class="info-content">
         <div class="info-label">About</div>
         <p>The portfolio of Isaac Martin, a multidisciplinary designer. Living and working in Austin, Texas. Currently Design Lead at SapientRazorfish.</p>
@@ -74,7 +77,32 @@
         </div>
       </section>
       <div class="divider"></div>
+      <div class="grid" id="hero-tmo">
+        <div class="content-hero">
+          <div class="hero-eyebrow">T-Mobile</div>
+          <h2 class="hero-title">Switcher</h2>
+          <div class="hero-info">Web | Concept, Design, &amp; Motion</div>
+        </div>
+      </div>
+      <div class="divider"></div>
+      <section class="grid" id="hero-vw">
+        <div class="content-hero">
+          <div class="hero-eyebrow">Volkswagen Car-Net</div>
+          <h2 class="hero-title">Smart Car</h2>
+          <div class="hero-info">App | Concept, Design, &amp; Motion</div>
+        </div>
+      </section>
+      <div class="divider"></div>
+      <section class="grid" id="hero-cmhf">
+        <div class="content-hero">
+          <div class="hero-eyebrow">Country Music Hall of Fame</div>
+          <h2 class="hero-title">Preserve</h2>
+          <div class="hero-info">Web | Concept, Design, &amp; Motion</div>
+        </div>
+      </section>
+      <div class="divider"></div>
     </section>
     <script src="assets/js/nav.js"></script>
+    <script>sr.reveal('.grid', { container: '.content-container' });</script>
   </body>
 </html>

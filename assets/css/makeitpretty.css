@@ -359,7 +359,7 @@ p {
     background: rgba(255, 0, 0, 1);;
   }*/ }
 
-#close {
+.close {
   position: absolute;
   z-index: 10 !important;
   right: 15px;
@@ -369,21 +369,21 @@ p {
   -webkit-transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
   -o-transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1); }
-  #close:after, #close:before {
+  .close:after, .close:before {
     content: '';
     position: absolute;
     top: calc(100% + 1px);
     width: 0;
     right: 0;
     height: 1px; }
-  #close:before {
+  .close:before {
     -webkit-transition: width 400ms cubic-bezier(0.51, 0.18, 0, 0.88) 100ms;
     -o-transition: width 400ms cubic-bezier(0.51, 0.18, 0, 0.88) 100ms;
     transition: width 400ms cubic-bezier(0.51, 0.18, 0, 0.88) 100ms;
     background: white; }
-  #close:hover {
+  .close:hover {
     color: white; }
-    #close:hover:after, #close:hover:before {
+    .close:hover:after, .close:hover:before {
       width: 100%;
       left: 0; }
 
@@ -468,7 +468,7 @@ p {
   animation: closeFadeIn 750ms cubic-bezier(0.4, 0, 0.2, 1) 350ms;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
-  opacity: 1 !important; }
+  opacity: 1; }
 
 /* ––––––––––––––––––––––––––––––––––––––––––––––––
 Grid
@@ -497,9 +497,6 @@ Grid
 	background:white;
   border:1px solid pink;
 }*/
-body {
-  overflow: hidden; }
-
 .content-container {
   margin: 0 0 0 60px;
   background: #FFFFFF;
@@ -518,7 +515,6 @@ body {
 
 .content-container-active {
   overflow: hidden !important;
-  will-change: transform;
   -webkit-transform: translate3d(100px, 0, 0);
   transform: translate3d(100px, 0, 0); }
 

@@ -46,16 +46,22 @@ function OnTransitionEnd() {
 	close.classList.remove("close-animatable");
 }
 
+function OnAnimationEnd() {
+	close.classList.remove("close-animatable");
+
+}
+
 
 //variables
 var openInfo = document.querySelector("#logo-type");
-var close = document.querySelector("#close");
+var close = document.querySelector(".close");
 var myInfo = document.querySelector(".info-container");
 var infoContent = document.querySelectorAll(".info-content");
 var contentContainer = document.querySelector(".content-container");
 
 //event listeners
 myInfo.addEventListener("transitionend", OnTransitionEnd, false);
+close.addEventListener("animationend", OnAnimationEnd, false);
 openInfo.addEventListener("click", toggleClassMenu, false);
 close.addEventListener("click", toggleClassMenu, false);
 
