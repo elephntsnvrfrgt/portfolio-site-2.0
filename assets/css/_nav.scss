@@ -203,10 +203,12 @@ $cubic-bezier: cubic-bezier(0.4, 0, .2, 1);
   pointer-events: auto;
 }
 
+
 @keyframes closeFadeOut {
     from {opacity: 1;transform:rotate(-90deg) translateX(-37px)}
     to {opacity: 0;transform:rotate(-90deg) translateX(-47px)}
 }
+
 .close{
   position:absolute;
   z-index:10 !important;
@@ -221,10 +223,8 @@ $cubic-bezier: cubic-bezier(0.4, 0, .2, 1);
   @include transition-cubic(250ms);
   animation: closeFadeOut 750ms $cubic-bezier;
   animation-fill-mode: both;
-
-  //animation: closeFadeIn 750ms $cubic-bezier 550ms reverse;
-  //animation-fill-mode: both;
 }
+
 
 .info-content{
   width:255+60+60px;
