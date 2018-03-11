@@ -11,22 +11,22 @@ $cubic-bezier: cubic-bezier(0.4, 0, .2, 1);
 //mixin ––––––––––––––––
 
 @mixin text-render{
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-smoothing: antialiased;
 }
 
 @mixin transition-cubic($time){
-  transition: all $time $cubic-bezier;
+	transition: all $time $cubic-bezier;
 }
 
 @mixin transition-linear($time){
-  transition: all ($time) linear;
+	transition: all ($time) linear;
 }
 
 @mixin transition-easeOut($time){
-  transition: all ($time) ease-out;
+	transition: all ($time) ease-out;
 }
 
 @mixin  staggered_transitions($nth:1,$items:2,$initial:0,$step:.1){
@@ -38,118 +38,86 @@ $cubic-bezier: cubic-bezier(0.4, 0, .2, 1);
 	}
 }
 
-@mixin hover_underline($underline_gap:1,$underline_thickness:1){
-  &:after, &:before{
-    content: '';
-    position: absolute;
-    top: calc(100% + #{$underline_gap}px);
-    width: 0;
-    right: 0;
-    height: #{$underline_thickness}px;
-  }
-  &:before {
-    transition: width 400ms cubic-bezier(0.51, 0.18, 0, 0.88) 100ms;
-    background: lighten($gray60, 40);
-  }
-  &:hover{
-    color:lighten($gray60, 40);
-    &:after, &:before {
-      width: 100%;
-      left: 0;
-    }
-  }
+@mixin hover_underline($underline_gap:1,$underline_thickness:1,$color:#{$gray40}){
+	&:after, &:before{
+		content: '';
+		position: absolute;
+		top: calc(100% + #{$underline_gap}px);
+		width: 0;
+		right: 0;
+		height: #{$underline_thickness}px;
+	}
+	&:before {
+		transition: width 400ms cubic-bezier(0.51, 0.18, 0, 0.88) 100ms;
+		background: #{$color};
+	}
+	&:hover{
+		color:#{$color};
+		&:after, &:before {
+			width: 100%;
+			left: 0;
+		}
+	}
 }
 
 
 // styling ––––––––––––––
 
 #nav-container{
-  position:fixed;
-  z-index:10;
-  top:auto;
-  bottom:0;
-  min-width:510px;
-  width:100vh;
-  background:$gray15;
-  border-bottom: 1px solid $gray20;
-  //height:60px;
-  transform-origin: bottom left 0;
-  transform:rotate(-90deg) translate3d(0,100%,0);
+	position:fixed;
+	z-index:10;
+	top:auto;
+	bottom:0;
+	min-width:510px;
+	width:100vh;
+	background:$gray15;
+	border-bottom: 1px solid $gray20;
+	//height:60px;
+	transform-origin: bottom left 0;
+	transform:rotate(-90deg) translate3d(0,100%,0);
 }
+
 
 .nav-content{
-  font-family: $mono-stack;
-  height: 60px;
-  @include text-render;
+	font-family: $mono-stack;
+	height: 60px;
+	@include text-render;
 }
 
-/*
-#logo-container{
-
-  float:right;
-  width:25%;
-  //cursor:pointer;
-}*/
-
-
-
 #logo-type{
-  position:relative;
-  float:right;
-  margin: 20px 27px 20px 27px;
-  display:block;
+	position:relative;
+	float:right;
+	margin: 20px 27px 20px 27px;
+	display:block;
 	text-align:right;
 	color:$white;
 	font-weight:700;
 	font-size: 14px;
 	line-height:20px;
 	letter-spacing: 1px;
-  cursor:pointer;
-  transition: all 250ms ease-in;
-  @include hover_underline($underline_gap:-1,$underline_thickness:1);
+	cursor:pointer;
+	transition: all 250ms ease-in;
+	@include hover_underline($underline_gap:-1,$underline_thickness:1,$color:#{$gray95});
+}
 
-
-  /*
-@include transition-cubic(550ms);
-  &:hover{
-    will-change: transform;
-    transform: translate3d(-20px,0,0);
-  }
-  &:after{
-    content:url(../img/ic_info_outline_14px.svg);
-    position: absolute;
-    width: 14px;
-    right: 20px;
-    top: 20px;
-    transform: rotate(90deg);
-    opacity: 0;
-    transition: opacity 400ms $cubic-bezier;
-  }
-  &:hover,&:active,&:focus{
-    &:after{
-      //transform:rotate(90deg);
-      transition-delay:500ms;
-      opacity:.5;
-      right:0;
-      //right: 153px;
-    }
-  }*/
+#logo-mark{
+	width:13px;
 }
 
 #social-container{
 	float:left;
 	padding:24px 0 22px 24px;
 	line-height:10px;
-  li{
-  	float:left;
-  	padding-right:20px;
-    a{
-    	text-decoration:none;
-      transition: all 250ms ease-in;
-      position: relative;
-      @include hover_underline($underline_gap:1,$underline_thickness:1);
-    }
-  }
+	li{
+		float:left;
+		padding-right:20px;
+		a{
+			text-decoration:none;
+			transition: all 250ms ease-in;
+			position: relative;
+			@include hover_underline($underline_gap:1,$underline_thickness:1,$color:#{$gray80});
+		}
+	}
 }
 
 #social-container li:nth-child(1){
@@ -160,142 +128,141 @@ $cubic-bezier: cubic-bezier(0.4, 0, .2, 1);
 // info - about me ––––––––
 
 .info-container{
-  position:fixed;
-  z-index:5;
-  top:0;
-  left:0;
-  min-height:510px;
-  height:100vh;
-  //margin-left:60px;
-  padding-bottom:44px;
-  background:$gray15;
-  @include text-render;
-  font-family: $sans-stack;
-  font-weight:400;
-  font-size:18px;
-  color: $gray80;
-  //box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-  //overflow:scroll;
-  transform: translateX(-100%);
+	position:fixed;
+	z-index:5;
+	top:0;
+	left:0;
+	min-height:510px;
+	height:100vh;
+	//margin-left:60px;
+	padding-bottom:44px;
+	background:$gray15;
+	@include text-render;
+	font-family: $sans-stack;
+	font-weight:400;
+	font-size:18px;
+	color: $gray80;
+	//box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+	//overflow:scroll;
+	transform: translateX(-100%);
 }
 
 
 //sets up the block that makes it so you can't click on the content-container
 .info-container:after{
-  content: '';
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0,0,0,0);
-  opacity: 0;
-  //will-change: opacity;
-  pointer-events: none;
-  //transition: opacity 0.3s cubic-bezier(0,0,0.3,1);
+	content: '';
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0,0,0,0);
+	opacity: 0;
+	//will-change: opacity;
+	pointer-events: none;
+	//transition: opacity 0.3s cubic-bezier(0,0,0.3,1);
 }
 
 
 //makes it so you can't click on the content-container
 .info-container-active.info-container:after{
-  opacity:1;
-  pointer-events: auto;
+	opacity:1;
+	pointer-events: auto;
 }
 
 
 @keyframes closeFadeOut {
-    from {opacity: 1;transform:rotate(-90deg) translateX(-37px)}
-    to {opacity: 0;transform:rotate(-90deg) translateX(-47px)}
+	from {opacity: 1;transform:rotate(-90deg) translateX(-37px)}
+	to {opacity: 0;transform:rotate(-90deg) translateX(-47px)}
 }
 
 .close{
-  position:absolute;
-  z-index:10 !important;
-  right:15px;
-  //top:47px;
-  opacity:0;
-  transform: rotate(-90deg);
-  //margin: 10px 20px;
-  //padding: 5px;
-  cursor:pointer;
-  @include hover_underline($underline_gap:1,$underline_thickness:1);
-  @include transition-cubic(250ms);
-  animation: closeFadeOut 750ms $cubic-bezier;
-  animation-fill-mode: both;
+	position:absolute;
+	z-index:10 !important;
+	right:15px;
+	//top:47px;
+	opacity:0;
+	transform: rotate(-90deg);
+	//margin: 10px 20px;
+	//padding: 5px;
+	cursor:pointer;
+	@include hover_underline($underline_gap:1,$underline_thickness:1,$color:#{$gray80});
+	@include transition-cubic(250ms);
+	animation: closeFadeOut 750ms $cubic-bezier;
+	animation-fill-mode: both;
 }
 
 
 .info-content{
-  width:255+60+60px;
-  padding: 57px 60px 0 60px;
-  opacity:0;
-  //@include text-render;
-  -webkit-transform: translate3d(0, 10px, 0);
-  transform: translate3d(0, 10px, 0);
+	width:255+60+60px;
+	padding: 57px 60px 0 60px;
+	opacity:0;
+	//@include text-render;
+	-webkit-transform: translate3d(0, 10px, 0);
+	transform: translate3d(0, 10px, 0);
 }
 
 
 .info-label{
-  font-size: 12px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  font-weight: 700;
-  color:$gray40;
-  padding-bottom:16px;
+	font-size: 12px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	font-weight: 700;
+	color:$gray40;
+	padding-bottom:16px;
 }
 
 .experience{
-  padding-bottom:16px;
+	padding-bottom:16px;
 
-  p{
-    padding-bottom:4px;
-  }
+	p{
+		padding-bottom:4px;
+	}
 }
 
 
 // info interaction –––––––––––––––
 
 .info-container-animatable{
-  @include transition-cubic(750ms);
+	@include transition-cubic(750ms);
 }
 
 .info-container-active{
-  will-change:transform;
-  transform: translateX(60px);
-  box-shadow: 0 0 110px 40px rgba(0, 0, 0, 0.2);
-  //pointer-events:none;
+	will-change:transform;
+	transform: translateX(60px);
+	box-shadow: 0 0 110px 40px rgba(0, 0, 0, 0.2);
+	//pointer-events:none;
 }
 
 .info-content-animatable{
-  @include transition-cubic(750ms);
+	@include transition-cubic(750ms);
 }
 
 .info-content-active{
-  //will-change: transform;
-  transition-delay:550ms;
-  opacity: 1;
-  transform: translate3d(0, 0, 0);
+	//will-change: transform;
+	transition-delay:550ms;
+	opacity: 1;
+	transform: translate3d(0, 0, 0);
 }
 
 .info-content-active {
-  @include staggered_transitions($items:3,$nth:2,$initial:(550 + 150),$step:150);
-  //update the $items to the number of children in the .info-container
+	@include staggered_transitions($items:3,$nth:2,$initial:(550 + 150),$step:150);
+	//update the $items to the number of children in the .info-container
 }
 
 @keyframes closeFadeIn {
-    from {opacity: 0;transform:rotate(-90deg) translateX(-47px)}
-    to {opacity: 1;transform:rotate(-90deg) translateX(-37px)}
+	from {opacity: 0;transform:rotate(-90deg) translateX(-47px)}
+	to {opacity: 1;transform:rotate(-90deg) translateX(-37px)}
 }
 
 .close-animatable{
-  //transition: opacity 750ms $cubic-bezier;
+	//transition: opacity 750ms $cubic-bezier;
 }
 
 .close-active{
-  //transition-delay: 550ms !important;
-  animation: closeFadeIn 750ms $cubic-bezier 350ms;
-  animation-fill-mode: both;
-  opacity:1;
-
+	//transition-delay: 550ms !important;
+	animation: closeFadeIn 750ms $cubic-bezier 350ms;
+	animation-fill-mode: both;
+	opacity:1;
 }

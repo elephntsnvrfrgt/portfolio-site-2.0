@@ -1,0 +1,28 @@
+a.allWork{
+	position:absolute;
+	z-index:10 !important;
+	right:15px;
+	top:65px;
+	transform: rotate(-90deg);
+	@include hover_underline($underline_gap:1,$underline_thickness:1,$color:#{$gray60});
+	@include transition-cubic(250ms);
+	.small{
+		margin:10px 9px;
+	}
+}
+
+.icon{
+	padding:10px;
+	width:14px;
+}
+
+.subpage-grid{
+	//grid-template-rows:repeat(12,1fr);
+}
+
+.description{
+	grid-column-start: 1;
+	grid-column-end:6;
+	padding-top:100px;
+	color: $gray80;
+}

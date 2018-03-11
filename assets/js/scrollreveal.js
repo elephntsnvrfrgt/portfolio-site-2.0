@@ -93,7 +93,7 @@
     // `<html>` is the default reveal container. You can pass either:
     // DOM Node, e.g. document.querySelector('.fooContainer')
     // Selector, e.g. '.fooContainer'
-    container: document.querySelector(".content-container"), //window.document.documentElement,
+    container: document.querySelector(".reveal"), //window.document.documentElement,
 
     // true/false to control reveal animations on mobile.
     mobile: true,

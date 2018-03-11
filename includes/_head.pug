@@ -1,6 +1,6 @@
 - var bio = "The portfolio of Isaac Martin, a multidisciplinary designer. Living and working in Austin, Texas. Currently Design Lead at SapientRazorfish.";
 
-head
+block head
   meta(
     charset='utf-8'
     )
@@ -12,7 +12,7 @@ head
     http-equiv='X-UA-Compatible'
     content='IE=edge,chrome=1'
     )
-  title Isaac Martin
+  title #{pageTitle}
   meta(
     name='description'
     content= bio
@@ -33,8 +33,8 @@ head
   script(
     src='assets/js/scrollreveal.js'
     )
-  script window.sr = ScrollReveal(); sr.reveal('.grid');
-  style .sr .content-container, .sr .grid {visibility: hidden;}
+  script window.sr = ScrollReveal(); sr.reveal('.reveal');
+  style .sr .reveal {visibility: hidden;}
     
     
 

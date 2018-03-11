@@ -6,13 +6,12 @@ Grid
 
 .grid{
 	padding:0 7.778%;
-	height:78vh;
-  min-height:510px;
+	min-height:700px;
 	display:grid;
 	grid-template-columns:repeat(12, 1fr);
-	grid-template-rows:100%;
+	//grid-template-rows:repeat(12,1fr);
 	grid-column-gap: 24px;
-  align-items: center;
+  //align-items: center;
 	//opacity:0;
 }
 

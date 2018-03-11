@@ -1,22 +1,24 @@
-doctype html
-include includes/_mixins.pug
+extends layout.pug	
 
-html
-	include includes/_head.pug
-
-	body
-		include includes/_nav.pug
-		include includes/_index-content.pug
-		script(
-			src='assets/js/nav.js'
-			)
-		script(
-			src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'
-			)
-		script(
-			src='assets/js/scroll.js'
-			)
-		script sr.reveal('.grid', { container: '.content-container' });
-		//-script(
-			src='assets/js/scroll.js'
-			)
+block prepend head
+	- var pageTitle = "Isaac Martin – Designer"
+block content
+	section.content-container
+		a.reveal.grid#hero-tmo(href="tmo-switcher.html")
+			+mixin_hero('T-Mobile','Switcher','Web | Concept, Design, & Motion')
+		.divider
+		a.reveal.grid#hero-vw(href="#")
+			+mixin_hero('Volkswagen Car-Net','Smart Car','App | Concept, Design, & Motion')
+		.divider
+		a.reveal.grid#hero-cmhf(href="#")
+			+mixin_hero('Country Music Hall of Fame','Preserve','Web | Concept, Design, & Motion')
+		.divider
+		a.reveal.grid#hero-tmo(href="#")
+			+mixin_hero('T-Mobile','Switcher','Web | Concept, Design, & Motion')
+		.divider
+		a.reveal.grid#hero-vw(href="#")
+			+mixin_hero('Volkswagen Car-Net','Smart Car','App | Concept, Design, & Motion')
+		.divider
+		a.reveal.grid#hero-cmhf(href="#")
+			+mixin_hero('Country Music Hall of Fame','Preserve','Web | Concept, Design, & Motion')
+		.divider

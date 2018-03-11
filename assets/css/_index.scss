@@ -1,6 +1,18 @@
 body{
   overflow:hidden;
   // stopped the page from scrolling left to right once info-container is active. BUT it stopped elastic scrolling.
+
+	@include text-render;
+
+}
+
+a:focus{
+  border:none;
+  outline:none;
+}
+
+.floatRight{
+	float: right;
 }
 
 .content-container{
@@ -42,11 +54,17 @@ body{
 .content-hero{
   grid-column-start: 1;
   grid-column-end: 12;
-  color: $gray15;
-  text-rendering: optimizeLegibility;
+	padding-top:220px;
+	//grid-row-start:5;
+	//grid-row-end:9;
+	color: $gray15;
+  /*
+text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	font-smoothing: antialiased;
+	font-smoothing: antialiased;*/
+
+
 
   .hero-eyebrow{
     font-family: $sans-stack;
@@ -77,7 +95,7 @@ body{
 
 // mixin ––––––––––––––––––––
 @mixin hero-bg($img-url){
-  background: no-repeat right / auto 100% url($img-url);
+  background: no-repeat top right / auto 700px url($img-url);
 }
 
 //ids –––––––––––––––––––––––

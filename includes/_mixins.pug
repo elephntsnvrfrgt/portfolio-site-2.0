@@ -1,10 +1,19 @@
-mixin mixin-hero(eyebrow, title, info)
+mixin mixin_hero(eyebrow, title, info)
   .content-hero
     .hero-eyebrow= eyebrow
     h2.hero-title= title
     .hero-info= info
   
-mixin mixin-experience(job_name, years)
+mixin mixin_experience(job_name, years)
   li.experience
     p= job_name
     .small= years
+    
+mixin mixin_js
+  script(
+    src='assets/js/nav.js'
+    )
+  script(
+    src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'
+    )
+  script sr.reveal('.reveal', { container: '.content-container' });
