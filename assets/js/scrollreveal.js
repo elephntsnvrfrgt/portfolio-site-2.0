@@ -428,7 +428,8 @@
       transform.initial += ' scale(' + config.scale + ')'
       transform.target += ' scale(1)'
     }
-    if (config.rotate.x) {
+
+		if (config.rotate.x) {
       transform.initial += ' rotateX(' + config.rotate.x + 'deg)'
       transform.target += ' rotateX(0)'
     }
@@ -440,6 +441,8 @@
       transform.initial += ' rotateZ(' + config.rotate.z + 'deg)'
       transform.target += ' rotateZ(0)'
     }
+
+
     transform.initial += '; opacity: ' + config.opacity + ';'
     transform.target += '; opacity: ' + elem.styles.computed.opacity + ';'
   }

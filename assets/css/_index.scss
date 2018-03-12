@@ -54,42 +54,26 @@ a:focus{
 .content-hero{
   grid-column-start: 1;
   grid-column-end: 12;
-	padding-top:220px;
 	//grid-row-start:5;
 	//grid-row-end:9;
 	color: $gray15;
-  /*
+	padding-top:220px;
+	.eyebrow{
+		margin-bottom:42px;
+	}
+
+	.title{
+		margin-bottom:24px;
+	}
+
+/*
 text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	font-smoothing: antialiased;*/
-
-
-
-  .hero-eyebrow{
-    font-family: $sans-stack;
-    font-weight: 700;
-    font-size: 18px;
-    letter-spacing: 3.25px;
-    text-transform: uppercase;
-    margin-bottom:42px;
-  }
-
-  .hero-title{
-    font-family: $serif-stack;
-    font-size: 148px;
-    letter-spacing: -0.49px;
-    line-height: 132px;
-    margin-bottom:24px;
-  }
-
-  .hero-info{
-    font-family: $mono-stack;
-    font-size: 18px;
-    color: #CCCCCC;
-    line-height: 18px;
-  }
 }
+
+
 
 // hero backgrounds ––––––––––––––––––––––––––––––––––––––––––
 

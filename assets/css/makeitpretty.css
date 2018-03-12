@@ -207,6 +207,29 @@ p {
   line-height: 24px;
   font-family: "Work Sans", Helvetica, Arial, sans-serif; }
 
+.eyebrow {
+  font-family: "Work Sans", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 3.25px;
+  text-transform: uppercase; }
+
+.title {
+  font-family: "TRYVesterbro-Poster", serif;
+  font-size: 148px;
+  letter-spacing: -0.49px;
+  line-height: 132px; }
+
+.info {
+  font-family: "FiraMonoOT", "Courier New", Courier, monospace;
+  font-size: 18px;
+  color: #CCCCCC;
+  line-height: 18px; }
+
+.title-section {
+  font-family: "TRYVesterbro-Poster", serif;
+  font-size: 320px; }
+
 #nav-container {
   position: fixed;
   z-index: 10;
@@ -536,31 +559,17 @@ a:focus {
 .content-hero {
   grid-column-start: 1;
   grid-column-end: 12;
-  padding-top: 220px;
   color: #262626;
+  padding-top: 220px;
   /*
 text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	font-smoothing: antialiased;*/ }
-  .content-hero .hero-eyebrow {
-    font-family: "Work Sans", Helvetica, Arial, sans-serif;
-    font-weight: 700;
-    font-size: 18px;
-    letter-spacing: 3.25px;
-    text-transform: uppercase;
+  .content-hero .eyebrow {
     margin-bottom: 42px; }
-  .content-hero .hero-title {
-    font-family: "TRYVesterbro-Poster", serif;
-    font-size: 148px;
-    letter-spacing: -0.49px;
-    line-height: 132px;
+  .content-hero .title {
     margin-bottom: 24px; }
-  .content-hero .hero-info {
-    font-family: "FiraMonoOT", "Courier New", Courier, monospace;
-    font-size: 18px;
-    color: #CCCCCC;
-    line-height: 18px; }
 
 #hero-tmo {
   background: no-repeat top right/auto 700px url("../img/index/bg-tmo.jpg"); }
@@ -609,8 +618,65 @@ a.allWork {
   padding: 10px;
   width: 14px; }
 
+.subpage-content {
+  position: relative;
+  z-index: 5;
+  grid-column-end: span 13; }
+  .subpage-content img {
+    -webkit-box-shadow: 0 10px 200px 0 rgba(0, 0, 0, 0.16);
+    box-shadow: 0 10px 200px 0 rgba(0, 0, 0, 0.16);
+    position: relative;
+    z-index: 5; }
+  .subpage-content .info {
+    margin-top: 30px; }
+
 .description {
-  grid-column-start: 1;
-  grid-column-end: 6;
-  padding-top: 100px;
+  padding: 100px 0;
   color: #CCCCCC; }
+
+img {
+  width: 100%;
+  height: auto;
+  grid-column-start: auto;
+  grid-row-start: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.span-12 {
+  grid-column-end: span 12; }
+  .span-12 .eyebrow {
+    margin-bottom: 30px; }
+  .span-12 img {
+    margin-bottom: 48px; }
+
+.span-9 {
+  grid-column-end: span 9; }
+  .span-9 img {
+    margin-top: 52px; }
+
+.span-6 {
+  grid-column-end: span 6; }
+
+#bottom-01 {
+  content: '';
+  width: 100%;
+  height: 486px;
+  background: no-repeat top left/100% auto url(../img/subpage/tmo-switcher/section-01-bg.jpg);
+  z-index: 0;
+  top: -100px; }
+
+.title-section {
+  position: relative;
+  z-index: 0;
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  float: right;
+  -webkit-transform-origin: bottom right;
+  -ms-transform-origin: bottom right;
+  transform-origin: bottom right;
+  height: 0;
+  right: 200px;
+  text-align: right;
+  color: #F2F2F2; }

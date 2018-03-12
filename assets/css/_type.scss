@@ -17,3 +17,30 @@ p{
   line-height: 24px;
 	font-family: $sans-stack;
 }
+
+.eyebrow{
+	font-family: $sans-stack;
+	font-weight: 700;
+	font-size: 18px;
+	letter-spacing: 3.25px;
+	text-transform: uppercase;
+}
+
+.title{
+	font-family: $serif-stack;
+	font-size: 148px;
+	letter-spacing: -0.49px;
+	line-height: 132px;
+}
+
+.info{
+	font-family: $mono-stack;
+	font-size: 18px;
+	color: $gray80;
+	line-height: 18px;
+}
+
+.title-section{
+	font-family:$serif-stack;
+	font-size:320px;
+}
