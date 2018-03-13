@@ -92,8 +92,8 @@ text-rendering: optimizeLegibility;
   @include hero-bg("../img/index/bg-vw.jpg");
 }
 
-#hero-red{
-  @include hero-bg("#");
+#hero-odi{
+  @include hero-bg("../img/index/bg-odi.jpg");
 }
 
 #hero-cmhf{

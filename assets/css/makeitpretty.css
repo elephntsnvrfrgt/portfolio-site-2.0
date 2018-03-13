@@ -577,8 +577,8 @@ text-rendering: optimizeLegibility;
 #hero-vw {
   background: no-repeat top right/auto 700px url("../img/index/bg-vw.jpg"); }
 
-#hero-red {
-  background: no-repeat top right/auto 700px url("#"); }
+#hero-odi {
+  background: no-repeat top right/auto 700px url("../img/index/bg-odi.jpg"); }
 
 #hero-cmhf {
   background: no-repeat top right/auto 700px url("../img/index/bg-cmhf.jpg"); }
@@ -631,7 +631,7 @@ a.allWork {
     margin-top: 30px; }
 
 .description {
-  padding: 100px 0;
+  padding: 100px 0 0 0;
   color: #CCCCCC; }
 
 img {
@@ -646,7 +646,7 @@ img {
 .span-12 {
   grid-column-end: span 12; }
   .span-12 .eyebrow {
-    margin-bottom: 30px; }
+    margin: 100px 0 30px 0; }
   .span-12 img {
     margin-bottom: 48px; }
 
@@ -677,6 +677,7 @@ img {
   -ms-transform-origin: bottom right;
   transform-origin: bottom right;
   height: 0;
+  margin-top: 100px;
   right: 200px;
   text-align: right;
   color: #F2F2F2; }

@@ -39,7 +39,7 @@ a.allWork{
 }
 
 .description{
-	padding:100px 0;
+	padding:100px 0 0 0;
 	color: $gray80;
 }
 
@@ -54,7 +54,7 @@ img{
 .span-12{
 	grid-column-end:span 12;
 	.eyebrow{
-		margin-bottom:30px;
+		margin:100px 0 30px 0;
 	}
 	img{
 		margin-bottom:48px;
@@ -88,6 +88,7 @@ img{
 	float: right;
 	transform-origin: bottom right;
 	height:0;
+	margin-top:100px;
 	right:200px;
 	text-align:right;
 	color:$gray95;
