@@ -1,62 +1,16 @@
-function toggleClassMenu() {
-	//slides the .info-container into view
-	myInfo.classList.add("info-container-animatable");
-	if(!myInfo.classList.contains("info-container-active")) {
-		myInfo.classList.add("info-container-active");
-	} else {
-		myInfo.classList.remove('info-container-active');
-	}
+//var $navContainer = $('#nav-container');
 
-	//fades in the #close
-	close.classList.add("close-animatable");
-	if(!close.classList.contains("close-active")) {
-		close.classList.add("close-active");
-	} else {
-		close.classList.remove('close-active');
-	}
+//TweenLite.from($navContainer, 1, {width:'0vh'});
 
-	//fades in all the .info-content blocks
-  var i;
-  for (i = 0; i < infoContent.length; i++){
-    infoContent[i].classList.add("info-content-animatable");
-  	if(!infoContent[i].classList.contains("info-content-active")) {
-  		infoContent[i].classList.add("info-content-active");
-  	} else {
-  		infoContent[i].classList.remove('info-content-active');
-  	}
-  }
+var 	navContent = $('.nav-content'),
+			logoMark = $('#logo-mark'),
+			socialLinks = $('.social'),
+			//logoType = $('#logo-type'),
+			socialContainer = $('#social-container'),
+			tl = new TimelineMax();
 
-	//makes the .content-container not scrollable
-  contentContainer.classList.add("content-container-animatable");
-  if(!contentContainer.classList.contains("content-container-active")) {
-    contentContainer.classList.add("content-container-active");
-  } else {
-    contentContainer.classList.remove('content-container-active');
-  }
-}
-
-//removes the ...animatable class
-function OnTransitionEnd() {
-	myInfo.classList.remove("info-container-animatable");
-  var i;
-  for (i = 0; i< infoContent.length; i++){
-    infoContent[i].classList.remove("info-content-animatable");
-  }
-  contentContainer.classList.remove("content-container-animatable");
-	close.classList.remove("close-animatable");
-}
-
-
-
-//variables
-var openInfo = document.querySelector("#logo-type");
-var close = document.querySelector(".close");
-var myInfo = document.querySelector(".info-container");
-var infoContent = document.querySelectorAll(".info-content");
-var contentContainer = document.querySelector(".content-container");
-
-
-//event listeners
-close.addEventListener("click", toggleClassMenu, false);
-openInfo.addEventListener("click", toggleClassMenu, false);
-myInfo.addEventListener("transitionend", OnTransitionEnd, false);
+tl
+			.from(navContent, 1, {autoAlpha:0})
+			//.from(logoMark, 1, {autoAlpha:0}, 0)
+			//.from(socialLinks, 1, {autoAlpha:0}, 1)
+			.staggerFrom(socialLinks, 1.25, {x:-10, autoAlpha:0, ease: Power3.easeOut}, 0.07);

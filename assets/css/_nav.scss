@@ -68,8 +68,9 @@ $cubic-bezier: cubic-bezier(0.4, 0, .2, 1);
 	z-index:10;
 	top:auto;
 	bottom:0;
-	min-width:510px;
 	width:100vh;
+	//min-width:510px;
+	height:60px;
 	background:$gray15;
 	border-bottom: 1px solid $gray20;
 	//height:60px;
@@ -88,7 +89,6 @@ $cubic-bezier: cubic-bezier(0.4, 0, .2, 1);
 	position:relative;
 	float:right;
 	margin: 20px 27px 20px 27px;
-	display:block;
 	text-align:right;
 	color:$white;
 	font-weight:700;
@@ -101,21 +101,28 @@ $cubic-bezier: cubic-bezier(0.4, 0, .2, 1);
 }
 
 #logo-mark{
-	width:13px;
+	float:left;
+	margin-right:20px;
+	img{
+		width:13px;
+	}
 }
 
 #social-container{
 	float:left;
 	padding:24px 0 22px 24px;
 	line-height:10px;
-	li{
-		float:left;
-		padding-right:20px;
-		a{
-			text-decoration:none;
-			transition: all 250ms ease-in;
-			position: relative;
-			@include hover_underline($underline_gap:1,$underline_thickness:1,$color:#{$gray80});
+	ul{
+		display:inline-block;
+		li{
+			float:left;
+			padding-right:20px;
+			a{
+				text-decoration:none;
+				transition: all 250ms ease-in;
+				position: relative;
+				@include hover_underline($underline_gap:1,$underline_thickness:1,$color:#{$gray80});
+			}
 		}
 	}
 }
@@ -128,6 +135,7 @@ $cubic-bezier: cubic-bezier(0.4, 0, .2, 1);
 // info - about me ––––––––
 
 .info-container{
+	display: block;
 	position:fixed;
 	z-index:5;
 	top:0;
