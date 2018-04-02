@@ -112,6 +112,7 @@ $cubic-bezier: cubic-bezier(0.4, 0, .2, 1);
 	float:left;
 	padding:24px 0 22px 24px;
 	line-height:10px;
+	display:block;
 	ul{
 		display:inline-block;
 		li{
@@ -129,6 +130,10 @@ $cubic-bezier: cubic-bezier(0.4, 0, .2, 1);
 
 #social-container li:nth-child(1){
 	padding-right:24px;
+}
+
+.social{
+	opacity:0;
 }
 
 

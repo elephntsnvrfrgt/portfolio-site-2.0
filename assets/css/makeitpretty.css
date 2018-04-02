@@ -294,7 +294,8 @@ p {
 #social-container {
   float: left;
   padding: 24px 0 22px 24px;
-  line-height: 10px; }
+  line-height: 10px;
+  display: block; }
   #social-container ul {
     display: inline-block; }
     #social-container ul li {
@@ -326,6 +327,9 @@ p {
 
 #social-container li:nth-child(1) {
   padding-right: 24px; }
+
+.social {
+  opacity: 0; }
 
 .info-container {
   display: block;
