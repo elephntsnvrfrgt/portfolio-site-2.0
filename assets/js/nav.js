@@ -39,14 +39,48 @@ $(document).ready(function(){
 		}
 	);
 
-	$(heroTMO).click(function() {
-  $("#tmo-content").fadeToggle()
-	});
+
+	//first attempt
+	// $(heroTMO).click(
+	// 	function(){
+	// 		$("#tmo-content, #tmo-description, #close").fadeToggle()
+	// 	}
+	// );
+	//
+	// $("#hero-vw").click(
+	// 	function(){
+  // 		$("#vw-content, #vw-description, #close").fadeToggle()
+	// 	}
+	// );
+	//
+	// $("#close").click(
+	// 	function(){
+  // 		$( "#tmo-content:visible, #tmo-description:visible, #vw-content:visible, #vw-description:visible, #close:visible" ).fadeToggle();
+	// 		$('.content-container').animate({
+  //       scrollTop: $("#hero-tmo").offset().top
+  //   }, 1000);
+	// 	}
+	// );
+
+	//second attempt
+	$(heroTMO).click(
+		function(){
+			$("#tmo-content, #tmo-description, #close").animate(
+				{
+        	opacity: '1',
+					top: '0px',
+    		},
+				1000
+			);
+		}
+	);
 
 
-	$("#hero-vw").click(function(){
-        $( ".content-container" ).load("vw.html .content-container")
-    });
+
+	// attempt at ajax
+	// $("#hero-vw").click(function(){
+  //       $("body" ).load("vw.html .content-container")
+  //   });
 
 
 

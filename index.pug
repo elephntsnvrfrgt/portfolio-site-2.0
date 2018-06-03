@@ -3,10 +3,11 @@ extends layout.pug
 block prepend head
 	- var pageTitle = "Isaac Martin – Designer"
 block content
+	#close.small.hidden close
 	section.content-container
 		a.reveal.grid.toggle#hero-tmo(href="#T-Mobile-Switcher")
 			+mixin_hero('T-Mobile','Switcher','Web | Concept, Design, & Motion')
-			p.reveal.description.span-6.hidden#tmo-description This little micro experience for prospective customers starts on T-Mobile’s homepage (some other ads and social junk pointed to it as well). Three quick questions and you’re on your way. You’re taken to the Results page, which highlights the amount you’ll save per year, the other benefits that come with the Un-Carrier, and some other goofy bits to put a smile on their face. Most of the experience shown here made it to production, but a couple extra pieces got sprinkled in for fun.
+			p.description.span-6.hidden#tmo-description This little micro experience for prospective customers starts on T-Mobile’s homepage (some other ads and social junk pointed to it as well). Three quick questions and you’re on your way. You’re taken to the Results page, which highlights the amount you’ll save per year, the other benefits that come with the Un-Carrier, and some other goofy bits to put a smile on their face. Most of the experience shown here made it to production, but a couple extra pieces got sprinkled in for fun.
 		section.subcontent-container.hidden#tmo-content
 			.grid.subsection
 				.reveal.subpage-content.span-12
@@ -52,9 +53,10 @@ block content
 					.info Monthly bill
 			.subpage-content#bottom-01
 		.divider
+			
 		a.reveal.grid.toggle#hero-vw(href="#vw")
 			+mixin_hero('Volkswagen Car-Net','Connect','App | Concept, Design, & Motion')
-			p.reveal.description.span-6.hidden#vw-description This little micro experience for prospective customers starts on T-Mobile’s homepage (some other ads and social junk pointed to it as well). Three quick questions and you’re on your way. You’re taken to the Results page, which highlights the amount you’ll save per year, the other benefits that come with the Un-Carrier, and some other goofy bits to put a smile on their face. Most of the experience shown here made it to production, but a couple extra pieces got sprinkled in for fun.
+			p.description.span-6.hidden#vw-description This little micro experience for prospective customers starts on T-Mobile’s homepage (some other ads and social junk pointed to it as well). Three quick questions and you’re on your way. You’re taken to the Results page, which highlights the amount you’ll save per year, the other benefits that come with the Un-Carrier, and some other goofy bits to put a smile on their face. Most of the experience shown here made it to production, but a couple extra pieces got sprinkled in for fun.
 		section.subcontent-container.hidden#vw-content
 			.grid.subsection
 				.reveal.subpage-content.span-12
@@ -71,41 +73,16 @@ block content
 					+img-responsive(srcset,sizes,'assets/img/subpage/tmo-switcher/q3-2116w.jpg')
 					.info Monthly bill
 			.subpage-content#bottom-01
-			.grid.subsection
-				.reveal.subpage-content.span-12
-					.title-section.span-6 Savings
-					.eyebrow Results page
-					+img-responsive(srcset,sizes,'assets/img/subpage/tmo-switcher/video-2706w.jpg')
-				.reveal.subpage-content.span-9
-					+img-responsive(srcset,sizes,'assets/img/subpage/tmo-switcher/q1-2116w.jpg')
-					.info Current carrier
-				.reveal.subpage-content.span-9
-					+img-responsive(srcset,sizes,'assets/img/subpage/tmo-switcher/q2-2116w.jpg')
-					.info Number of lines
-				.reveal.subpage-content.span-9
-					+img-responsive(srcset,sizes,'assets/img/subpage/tmo-switcher/q3-2116w.jpg')
-					.info Monthly bill
-				.reveal.subpage-content.span-12
-					.title-section.span-6 Timeline
-					.eyebrow Results page
-					+img-responsive(srcset,sizes,'assets/img/subpage/tmo-switcher/video-2706w.jpg')
-				.reveal.subpage-content.span-9
-					+img-responsive(srcset,sizes,'assets/img/subpage/tmo-switcher/q3-2116w.jpg')
-					.info Monthly bill
-				.reveal.subpage-content.span-9
-					+img-responsive(srcset,sizes,'assets/img/subpage/tmo-switcher/q3-2116w.jpg')
-					.info Monthly bill
-				.reveal.subpage-content.span-9
-					+img-responsive(srcset,sizes,'assets/img/subpage/tmo-switcher/q3-2116w.jpg')
-					.info Monthly bill
-			.subpage-content#bottom-01
 		.divider
+			
 		a.reveal.grid#hero-odi(href="odi.html")
 			+mixin_hero('Odigo Auto','Insure','Branding & App | Concept, Design, & Motion')
 		.divider
+			
 		a.reveal.grid#hero-cmhf(href="cmhf.html")
 			+mixin_hero('Country Music Hall of Fame','Preserve','Web | Concept, Design, & Motion')
 		.divider
+			
 block append scripts
 	script(
 		src='assets/js/CustomEase.min.js'

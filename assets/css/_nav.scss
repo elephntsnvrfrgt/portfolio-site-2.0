@@ -185,10 +185,10 @@ $cubic-bezier: cubic-bezier(0.4, 0, .2, 1);
 }
 
 
-@keyframes closeFadeOut {
-	from {opacity: 1;transform:rotate(-90deg) translateX(-37px)}
-	to {opacity: 0;transform:rotate(-90deg) translateX(-47px)}
-}
+// @keyframes closeFadeOut {
+// 	from {opacity: 1;transform:rotate(-90deg) translateX(-37px)}
+// 	to {opacity: 0;transform:rotate(-90deg) translateX(-47px)}
+// }
 
 .close{
 	position:absolute;
@@ -264,18 +264,18 @@ $cubic-bezier: cubic-bezier(0.4, 0, .2, 1);
 	//update the $items to the number of children in the .info-container
 }
 
-@keyframes closeFadeIn {
-	from {opacity: 0;transform:rotate(-90deg) translateX(-47px)}
-	to {opacity: 1;transform:rotate(-90deg) translateX(-37px)}
-}
-
-.close-animatable{
-	//transition: opacity 750ms $cubic-bezier;
-}
-
-.close-active{
-	//transition-delay: 550ms !important;
-	animation: closeFadeIn 750ms $cubic-bezier 350ms;
-	animation-fill-mode: both;
-	opacity:1;
-}
+// @keyframes closeFadeIn {
+// 	from {opacity: 0;transform:rotate(-90deg) translateX(-47px)}
+// 	to {opacity: 1;transform:rotate(-90deg) translateX(-37px)}
+// }
+//
+// .close-animatable{
+// 	//transition: opacity 750ms $cubic-bezier;
+// }
+//
+// .close-active{
+// 	//transition-delay: 550ms !important;
+// 	animation: closeFadeIn 750ms $cubic-bezier 350ms;
+// 	animation-fill-mode: both;
+// 	opacity:1;
+// }

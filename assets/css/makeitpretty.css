@@ -369,26 +369,6 @@ p {
   opacity: 1;
   pointer-events: auto; }
 
-@-webkit-keyframes closeFadeOut {
-  from {
-    opacity: 1;
-    -webkit-transform: rotate(-90deg) translateX(-37px);
-    transform: rotate(-90deg) translateX(-37px); }
-  to {
-    opacity: 0;
-    -webkit-transform: rotate(-90deg) translateX(-47px);
-    transform: rotate(-90deg) translateX(-47px); } }
-
-@keyframes closeFadeOut {
-  from {
-    opacity: 1;
-    -webkit-transform: rotate(-90deg) translateX(-37px);
-    transform: rotate(-90deg) translateX(-37px); }
-  to {
-    opacity: 0;
-    -webkit-transform: rotate(-90deg) translateX(-47px);
-    transform: rotate(-90deg) translateX(-47px); } }
-
 .close {
   position: absolute;
   z-index: 10 !important;
@@ -479,33 +459,6 @@ p {
   -o-transition-delay: 850ms;
   transition-delay: 850ms; }
 
-@-webkit-keyframes closeFadeIn {
-  from {
-    opacity: 0;
-    -webkit-transform: rotate(-90deg) translateX(-47px);
-    transform: rotate(-90deg) translateX(-47px); }
-  to {
-    opacity: 1;
-    -webkit-transform: rotate(-90deg) translateX(-37px);
-    transform: rotate(-90deg) translateX(-37px); } }
-
-@keyframes closeFadeIn {
-  from {
-    opacity: 0;
-    -webkit-transform: rotate(-90deg) translateX(-47px);
-    transform: rotate(-90deg) translateX(-47px); }
-  to {
-    opacity: 1;
-    -webkit-transform: rotate(-90deg) translateX(-37px);
-    transform: rotate(-90deg) translateX(-37px); } }
-
-.close-active {
-  -webkit-animation: closeFadeIn 750ms cubic-bezier(0.4, 0, 0.2, 1) 350ms;
-  animation: closeFadeIn 750ms cubic-bezier(0.4, 0, 0.2, 1) 350ms;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-  opacity: 1; }
-
 /* ––––––––––––––––––––––––––––––––––––––––––––––––
 Grid
 ––––––––––––––––––––––––––––––––––––––––––––––––
@@ -551,7 +504,7 @@ a:focus {
   overflow-y: scroll; }
 
 .hidden {
-  display: none; }
+  opacity: 0; }
 
 .subcontent-container {
   height: auto;
@@ -599,7 +552,7 @@ text-rendering: optimizeLegibility;
 #hero-cmhf {
   background: no-repeat top right/auto 700px url("../img/index/bg-cmhf.jpg"); }
 
-a.allWork {
+#close, a.allWork {
   position: absolute;
   z-index: 10 !important;
   right: 15px;
@@ -609,25 +562,26 @@ a.allWork {
   transform: rotate(-90deg);
   -webkit-transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
   -o-transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1); }
-  a.allWork:after, a.allWork:before {
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer; }
+  #close:after, #close:before, a.allWork:after, a.allWork:before {
     content: '';
     position: absolute;
     top: calc(100% + 1px);
     width: 0;
     right: 0;
     height: 1px; }
-  a.allWork:before {
+  #close:before, a.allWork:before {
     -webkit-transition: width 400ms cubic-bezier(0.51, 0.18, 0, 0.88) 100ms;
     -o-transition: width 400ms cubic-bezier(0.51, 0.18, 0, 0.88) 100ms;
     transition: width 400ms cubic-bezier(0.51, 0.18, 0, 0.88) 100ms;
     background: #999999; }
-  a.allWork:hover {
+  #close:hover, a.allWork:hover {
     color: #999999; }
-    a.allWork:hover:after, a.allWork:hover:before {
+    #close:hover:after, #close:hover:before, a.allWork:hover:after, a.allWork:hover:before {
       width: 100%;
       left: 0; }
-  a.allWork .small {
+  #close .small, a.allWork .small {
     margin: 10px 9px; }
 
 .icon {
@@ -648,7 +602,9 @@ a.allWork {
 
 .description {
   padding: 100px 0 0 0;
-  color: #CCCCCC; }
+  color: #CCCCCC;
+  position: relative;
+  top: 40px; }
 
 img {
   width: 100%;
