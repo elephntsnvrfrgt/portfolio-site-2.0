@@ -15,7 +15,7 @@ mixin mixin_js
     )
 
 mixin img-responsive(srcset,sizes,src)
-	img(
+	img.lazyload(
 		srcset=srcset,
 		sizes=sizes,
 		src=src

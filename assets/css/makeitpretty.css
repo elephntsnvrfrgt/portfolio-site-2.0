@@ -550,6 +550,13 @@ a:focus {
   -webkit-overflow-scrolling: touch;
   overflow-y: scroll; }
 
+.hidden {
+  display: none; }
+
+.subcontent-container {
+  height: auto;
+  overflow: hidden; }
+
 .content-container-animatable {
   -webkit-transition: all 750ms cubic-bezier(0.4, 0, 0.2, 1);
   -o-transition: all 750ms cubic-bezier(0.4, 0, 0.2, 1);
