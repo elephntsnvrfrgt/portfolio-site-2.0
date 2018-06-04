@@ -35,15 +35,7 @@ a:focus{
 
 }
 
-  .hidden{
-    opacity:0;
-    //display: none;
-  }
 
-.subcontent-container{
-  height:auto;
-  overflow:hidden;
-}
 
 .content-container-animatable{
   @include transition-cubic(750ms);

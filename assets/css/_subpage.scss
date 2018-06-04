@@ -1,26 +1,37 @@
-.subsection{
-
-}
-
-
-
-#close, a.allWork{
+#close{
 	position:absolute;
 	z-index:10 !important;
 	right:15px;
-	top:65px;
+	top:85px;
 	transform: rotate(-90deg);
 	@include hover_underline($underline_gap:1,$underline_thickness:1,$color:#{$gray60});
-	@include transition-cubic(250ms);
+	//@include transition-cubic(250ms);
 	cursor: pointer;
 	.small{
 		margin:10px 9px;
 	}
 }
 
-.icon{
-	padding:10px;
-	width:14px;
+.hidden{
+	opacity:0;
+	display:none;
+}
+
+.reveal{
+	opacity: 0;
+}
+
+// .lazyload{
+// 	opacity:0;
+// }
+//
+// .lazyloaded{
+// 	opacity: 1;
+// }
+
+.subcontent-container{
+height:auto;
+overflow:hidden;
 }
 
 @mixin softShadow($blur:200){
@@ -41,11 +52,13 @@
 	}
 }
 
+
+
 .description{
 	padding:100px 0 0 0;
 	color: $gray80;
 	position: relative;
-	top:40px;
+	top:20px;
 }
 
 img{
