@@ -578,9 +578,6 @@ text-rendering: optimizeLegibility;
   opacity: 0;
   display: none; }
 
-.reveal {
-  opacity: 0; }
-
 .subcontent-container {
   height: auto;
   overflow: hidden; }

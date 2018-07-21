@@ -123,30 +123,30 @@ $(document).ready(function(){
 
 
 	//scroll reveal
-	var reveals = document.querySelectorAll('.reveal');
-
-	var config = {
-	  threshold: 0.4
-	};
-
-	var observer = new IntersectionObserver(function (entries, self) {
-	  entries.forEach(function (entry) {
-	    if (entry.isIntersecting) {
-	      var overlap = '-=0.3';
-
-	      if (!tlMax.isActive()) {
-	        overlap = '+=0';
-	      }
-
-	      tlMax.fromTo(entry.target, 1.25, {y:60, autoAlpha:0},{y:0, autoAlpha: 1, ease: Power3.easeOut});
-	      self.unobserve(entry.target);
-	    }
-	  });
-	}, config);
-
-	reveals.forEach(function (reveal) {
-	  observer.observe(reveal);
-	});
+	// var reveals = document.querySelectorAll('.reveal');
+	//
+	// var config = {
+	//   threshold: 0.4
+	// };
+	//
+	// var observer = new IntersectionObserver(function (entries, self) {
+	//   entries.forEach(function (entry) {
+	//     if (entry.isIntersecting) {
+	//       var overlap = '-=0.3';
+	//
+	//       if (!tlMax.isActive()) {
+	//         overlap = '+=0';
+	//       }
+	//
+	//       tlMax.fromTo(entry.target, 1.25, {y:60, autoAlpha:0},{y:0, autoAlpha: 1, ease: Power3.easeOut});
+	//       self.unobserve(entry.target);
+	//     }
+	//   });
+	// }, config);
+	//
+	// reveals.forEach(function (reveal) {
+	//   observer.observe(reveal);
+	// });
 
 
 
