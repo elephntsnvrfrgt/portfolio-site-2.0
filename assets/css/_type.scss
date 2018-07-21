@@ -8,39 +8,36 @@ $sans-stack: 'Work Sans',Helvetica,Arial,sans-serif;
 $serif-stack: 'TRYVesterbro-Poster',serif;
 
 .small, #nav-container a{
-  font-family: $mono-stack;
-  color:$gray60;
-  font-size:11px;
+  font: 11px $mono-stack;
+	color:$gray60;
 }
 
 p{
-  line-height: 24px;
-	font-family: $sans-stack;
+	font: 16px/24px $sans-stack;
+	margin-bottom: 15px;
+	.deemphasize{
+		color: $gray60;
+	}
 }
 
 .eyebrow{
-	font-family: $sans-stack;
-	font-weight: 700;
-	font-size: 18px;
+  font: 700 18px $sans-stack;
+	color: $gray15;
+	text-transform:uppercase;
 	letter-spacing: 3.25px;
-	text-transform: uppercase;
+	margin-bottom: 25px;
 }
 
 .title{
-	font-family: $serif-stack;
-	font-size: 148px;
+  font:148px/132px $serif-stack;
 	letter-spacing: -0.49px;
-	line-height: 132px;
 }
 
 .info{
-	font-family: $mono-stack;
-	font-size: 18px;
+  font: 18px/18px $mono-stack;
 	color: $gray80;
-	line-height: 18px;
 }
 
 .title-section{
-	font-family:$serif-stack;
-	font-size:320px;
+	font: 320px $serif-stack;
 }

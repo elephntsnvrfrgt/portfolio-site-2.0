@@ -199,36 +199,32 @@ Type
 ––––––––––––––––––––––––––––––––––––––––––––––––
 */
 .small, #nav-container a {
-  font-family: "FiraMonoOT", "Courier New", Courier, monospace;
-  color: #999999;
-  font-size: 11px; }
+  font: 11px "FiraMonoOT", "Courier New", Courier, monospace;
+  color: #999999; }
 
 p {
-  line-height: 24px;
-  font-family: "Work Sans", Helvetica, Arial, sans-serif; }
+  font: 16px/24px "Work Sans", Helvetica, Arial, sans-serif;
+  margin-bottom: 15px; }
+  p .deemphasize {
+    color: #999999; }
 
 .eyebrow {
-  font-family: "Work Sans", Helvetica, Arial, sans-serif;
-  font-weight: 700;
-  font-size: 18px;
+  font: 700 18px "Work Sans", Helvetica, Arial, sans-serif;
+  color: #262626;
+  text-transform: uppercase;
   letter-spacing: 3.25px;
-  text-transform: uppercase; }
+  margin-bottom: 25px; }
 
 .title {
-  font-family: "TRYVesterbro-Poster", serif;
-  font-size: 148px;
-  letter-spacing: -0.49px;
-  line-height: 132px; }
+  font: 148px/132px "TRYVesterbro-Poster", serif;
+  letter-spacing: -0.49px; }
 
 .info {
-  font-family: "FiraMonoOT", "Courier New", Courier, monospace;
-  font-size: 18px;
-  color: #CCCCCC;
-  line-height: 18px; }
+  font: 18px/18px "FiraMonoOT", "Courier New", Courier, monospace;
+  color: #CCCCCC; }
 
 .title-section {
-  font-family: "TRYVesterbro-Poster", serif;
-  font-size: 320px; }
+  font: 320px "TRYVesterbro-Poster", serif; }
 
 #nav-container {
   position: fixed;
@@ -361,7 +357,7 @@ p {
   top: 0;
   width: 100vw;
   height: 100vh;
-  background: transparent;
+  background: rgba(0, 0, 0, 0);
   opacity: 0;
   pointer-events: none; }
 
