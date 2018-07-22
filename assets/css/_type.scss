@@ -10,6 +10,20 @@ $serif-stack: 'TRYVesterbro-Poster',serif;
 .small, #nav-container a{
   font: 11px $mono-stack;
 	color:$gray60;
+  text-decoration: none;
+}
+
+a{
+	font:11px $mono-stack;
+	text-decoration:none;
+	color:$gray60;
+  position:relative;
+  transition: all .25s ease-in;
+	@include hover_underline($underline_gap:0,$underline_thickness:1,$color:#{$blue});
+  &:focus{
+    border:none;
+    outline:none;
+  }
 }
 
 p{

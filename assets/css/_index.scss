@@ -1,105 +1,167 @@
 body{
-  overflow:hidden;
-  // stopped the page from scrolling left to right once info-container is active. BUT it stopped elastic scrolling.
-
 	@include text-render;
-
-}
-
-a:focus{
-  border:none;
-  outline:none;
-}
-
-.floatRight{
-	float: right;
-}
-
-.content-container{
-  //opacity:0;
-  //visibility: hidden;
-  margin:0 0 0 60px;
   background:$white;
-  height: 100vh;
-  width:calc(100% - 60px);
-  -webkit-overflow-scrolling: touch;
-  overflow-y: scroll;
-
-  //opacity: 1;
-  //transition:opacity 750ms $cubic-bezier;
-
-  // -- rotate 3d
-  //position: absolute;
-  //z-index: -2;
-  //transform-origin:right bottom;
-
 }
 
+//circle stamp
 
-
-.content-container-animatable{
-  @include transition-cubic(750ms);
+#circle {
+	position: fixed;
+	z-index:100;
+	top:50px;
+	right:50px;
+	width: 110px;
+	padding-bottom: 110px;
+	overflow: hidden;
 }
 
-.content-container-active{
-  overflow: hidden !important;
-  will-change:transform;
-  -webkit-transform: translate3d(100px, 0, 0);
-  transform: translate3d(100px, 0, 0);
+#circle text {
+	font: 28px $mono-stack;
+	letter-spacing:5.2px;
 }
 
-/*
-.show{
-  opacity:1;
-}*/
+#circle svg {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	//rotate animation loop
+	animation-name: rotate;
+	animation-duration: 20s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+@keyframes rotate {
+    from { transform: rotate(360deg); }
+    to { transform: rotate(0); }
+}
+
+//end circle stamp
 
 
+
+
+
+.container{
+	margin:0 0 0 60px;
+	width:calc(100% - 60px);
+}
+
+.grid-container{
+	padding:0 7.778%;
+	max-width:1440px;
+	margin:0 auto;
+	display:grid;
+	grid-template-rows:repeat(7, 100px);
+	grid-template-columns:repeat(12, 1fr);
+	grid-gap: 24px;
+}
 
 .content-hero{
-  grid-column-start: 1;
-  grid-column-end: 12;
-	//grid-row-start:5;
-	//grid-row-end:9;
+  grid-row:3/span 3;
+	grid-column: 1/span 7;
 	color: $gray15;
-	padding-top:220px;
 	.eyebrow{
 		margin-bottom:42px;
 	}
+}
 
-	.title{
-		margin-bottom:24px;
+
+
+
+// work/tiles
+
+.grid-container.work{
+	grid-template-rows:repeat(8, 100px);
+}
+
+.tile,
+.prjtNo,
+.prjtTitle {
+	cursor: pointer;
+}
+
+.tile {
+	display:flex;
+	flex-direction:row;
+	justify-content:space-between;
+	grid-column:span 6;
+	grid-row:span 3;
+	//position: relative;
+	//z-index: 0;
+	filter:grayscale(100%) opacity(60%);
+	transition:all 1.25s ease;
+	&:hover{
+		z-index:10;
+		filter:grayscale(0%) opacity(100%);
+		//background-size:129%;
+		box-shadow: 0 12px 16px -12px rgba(0,0,0,0.10),
+								0 20px 100px -13px rgba(0,0,0,0.25);
 	}
+}
 
-/*
-text-rendering: optimizeLegibility;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	font-smoothing: antialiased;*/
+.offset{
+	grid-row:1;
+	grid-column:span 6;
+}
+
+.prjtNo {
+	opacity:.35;
+	text-transform: uppercase;
+	color: #9b9b9b;
+	text-align: right;
+	transform: rotate(-90deg);
+	transform-origin:165% 110%;
+	align-self:flex-start;
+}
+
+.prjtTitle {
+	opacity:.1;
+	align-self:flex-end;
+	width: 200px;
+	transform-origin: 40% -115%;
+	transform: rotate(-90deg);
+}
+
+.prjt-01{
+	background:center/cover #f8f8f8 url('http://isaacmart.in/dev/portfolio-2.0/assets/tile/bg-TMO.jpg');
+}
+
+.prjt-02{
+	background:center/cover #f8f8f8 url('http://isaacmart.in/dev/portfolio-2.0/assets/tile/bg-VW.jpg');
+}
+
+.prjt-03{
+	background:center/cover #f8f8f8 url('http://isaacmart.in/dev/portfolio-2.0/assets/tile/bg-CMHF.jpg');
+}
+
+.prjt-04{
+	background:center/cover #f8f8f8 url('http://isaacmart.in/dev/portfolio-2.0/assets/tile/bg-ODI.jpg');
 }
 
 
+//about/info
 
-// hero backgrounds ––––––––––––––––––––––––––––––––––––––––––
 
-// mixin ––––––––––––––––––––
-@mixin hero-bg($img-url){
-  background: no-repeat top right / auto 700px url($img-url);
-}
 
-//ids –––––––––––––––––––––––
+.about {
+	.column{
+		grid-column:1/span 4;
+		grid-row-start:3;
 
-#hero-tmo{
-  @include hero-bg("../img/index/bg-tmo.jpg");
-}
-
-#hero-vw{
-  @include hero-bg("../img/index/bg-vw.jpg");
-}
-
-#hero-odi{
-  @include hero-bg("../img/index/bg-odi.jpg");
-}
-
-#hero-cmhf{
-  @include hero-bg("../img/index/bg-cmhf.jpg");
+	}
+	.column:nth-child(2){
+		grid-column-start:7;
+	}
+	li {
+		padding:10px 10px 10px 0;
+    a{
+      font: 16px/24px $sans-stack; 
+    }
+	}
+	li:nth-child(1){
+		padding-top:0;
+	}
 }
