@@ -5,7 +5,7 @@ $(document).ready(function(){
 				socialLinks = $('.social'),
 				logoType = $('#logo-type'),
 				infoContainer = $('.info-container'),
-				infoContent = $('.info-content'),
+				infoFade = $('.info-fade'),
 				socialContainer = $('#social-container'),
 				heroTMO = $('#hero-tmo'),
 				heroVW = $('#hero-vw'),
@@ -23,7 +23,7 @@ $(document).ready(function(){
 				tlMax = new TimelineMax();
 
 
-	$(logoMark).mouseover(
+	logoMark.mouseover(
 		function(){
 			tlMax
 					.staggerFromTo(socialLinks, 1,
@@ -33,7 +33,7 @@ $(document).ready(function(){
 		}
 	);
 
-	$(socialContainer).mouseleave(
+	socialContainer.mouseleave(
 		function(){
 			tlMax
 				.staggerFromTo(socialLinks, 0.75,
@@ -43,33 +43,50 @@ $(document).ready(function(){
 		}
 	);
 
-	$(logoType).click(
-		function(){
-			//$( this ).toggleClass( "active" );
-			tlMax({paused: true})
-				.to(infoContainer, 1,
-					{x:375, ease: Power3.easeOut}
-				)
-				.staggerFromTo(infoContent, .75,
-					{y:10, autoAlpha:0},
-					{	y:-10, autoAlpha:1,
-						ease: Power3.easeOut,
-						},
-					0.09
-				)
-		}
-	);
+//info drawer animation
 
-	logoType.on('click', function () {
-	    $(this).toggleClass('active');
-	    if (open) {
-	      timeline.reverse();
-	      open = false;
-	    } else {
-	      timeline.play();
-	      open = true;
-	    }
-	  });
+	function openInfo() {
+		tlMax
+			.to(infoContainer, 1,
+				{x:375, ease: Power3.easeOut}
+			)
+			.staggerFromTo(infoFade, .75,
+				{y:10, autoAlpha:0},
+				{	y:-10, autoAlpha:1,
+					ease: Power3.easeOut
+				},0.09,
+				'-=.5'
+			)
+			// .to($('.close'), 1.75,
+			// 	{autoAlpha:1},
+			// 	'-=1.75'
+			// );
+	    logoType.one("click", closeInfo);
+	}
+
+	function closeInfo() {
+		tlMax
+			.to(infoFade, .5,
+				{autoAlpha:0}
+			)
+			.to(infoContainer, 1,
+				{x:-375, ease:Power3.easeIn},
+			'-=.5');
+	    logoType.one("click", openInfo);
+	}
+
+	logoType.one("click", openInfo);
+
+	// logoType.on('click', function () {
+	//     $(this).toggleClass('active');
+	//     if (open) {
+	//       timeline.reverse();
+	//       open = false;
+	//     } else {
+	//       timeline.play();
+	//       open = true;
+	//     }
+	//   });
 
 
 //tile hover effect

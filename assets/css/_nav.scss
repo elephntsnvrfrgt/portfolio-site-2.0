@@ -110,35 +110,24 @@
 	top: 0;
 	width: 100vw;
 	height: 100vh;
-	background: rgba(0,0,0,0);
-	opacity: 0;
+	background: rgba(0,0,0,1);
+	opacity: .1;
 	//will-change: opacity;
+	overflow:hidden;
 	pointer-events: none;
 	//transition: opacity 0.3s cubic-bezier(0,0,0.3,1);
 }
 
 
-//makes it so you can't click on the content-container
-.info-container-active.info-container:after{
-	opacity:1;
-	pointer-events: auto;
-}
 
-
-// @keyframes closeFadeOut {
-// 	from {opacity: 1;transform:rotate(-90deg) translateX(-37px)}
-// 	to {opacity: 0;transform:rotate(-90deg) translateX(-47px)}
-// }
 
 .close{
-	position:absolute;
-	z-index:10 !important;
-	right:15px;
-	//top:47px;
-	opacity:0;
-	transform: rotate(-90deg);
-	//margin: 10px 20px;
-	//padding: 5px;
+	position: absolute;
+  right: 35px;
+  top: 25px;
+  opacity: 1;
+  transform: rotate(-90deg);
+  transform-origin: right top;
 	cursor:pointer;
 	@include hover_underline($underline_gap:1,$underline_thickness:1,$color:#{$gray80});
 	@include transition-cubic(250ms);

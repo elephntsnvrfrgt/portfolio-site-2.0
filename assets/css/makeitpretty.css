@@ -232,8 +232,14 @@ a {
 p {
   font: 16px/24px "Work Sans", Helvetica, Arial, sans-serif;
   margin-bottom: 15px; }
+  p a {
+    font-family: inherit;
+    font-size: inherit; }
   p .deemphasize {
     color: #999999; }
+    p .deemphasize a {
+      font-family: inherit;
+      font-size: inherit; }
 
 .eyebrow {
   font: 700 18px "Work Sans", Helvetica, Arial, sans-serif;
@@ -375,22 +381,22 @@ p {
   top: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0);
-  opacity: 0;
+  background: black;
+  opacity: .1;
+  overflow: hidden;
   pointer-events: none; }
-
-.info-container-active.info-container:after {
-  opacity: 1;
-  pointer-events: auto; }
 
 .close {
   position: absolute;
-  z-index: 10 !important;
-  right: 15px;
-  opacity: 0;
+  right: 35px;
+  top: 25px;
+  opacity: 1;
   -webkit-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   transform: rotate(-90deg);
+  -webkit-transform-origin: right top;
+  -ms-transform-origin: right top;
+  transform-origin: right top;
   cursor: pointer;
   -webkit-transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
   -o-transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);

@@ -29,8 +29,16 @@ a{
 p{
 	font: 16px/24px $sans-stack;
 	margin-bottom: 15px;
+  a{
+    font-family:inherit;
+    font-size:inherit;
+  }
 	.deemphasize{
 		color: $gray60;
+    a{
+      font-family:inherit;
+      font-size:inherit;
+    }
 	}
 }
 
