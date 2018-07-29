@@ -18,12 +18,15 @@ a{
 	text-decoration:none;
 	color:$gray60;
   position:relative;
-  transition: all .25s ease-in;
-	@include hover_underline($underline_gap:0,$underline_thickness:1,$color:#{$blue});
   &:focus{
     border:none;
     outline:none;
   }
+}
+
+.hover-underline, p a{
+  transition: all .25s ease-in;
+	@include hover_underline($underline_gap:0,$underline_thickness:1,$color:#{$blue});
 }
 
 p{

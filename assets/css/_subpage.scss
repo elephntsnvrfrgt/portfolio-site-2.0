@@ -1,33 +1,10 @@
-#close{
-	position:absolute;
-	z-index:10 !important;
-	right:15px;
-	top:85px;
-	transform: rotate(-90deg);
-	@include hover_underline($underline_gap:1,$underline_thickness:1,$color:#{$gray60});
-	//@include transition-cubic(250ms);
-	cursor: pointer;
-	.small{
-		margin:10px 9px;
-	}
+#hero-tmo{
+	background:url(../img/subpage/bg-tmo.jpg);
 }
 
-.hidden{
-	opacity:0;
-	display:none;
+#hero-vw{
+	background:url(../img/subpage/bg-vw.jpg);
 }
-
-// .reveal{
-// 	opacity: 0;
-// }
-
-// .lazyload{
-// 	opacity:0;
-// }
-//
-// .lazyloaded{
-// 	opacity: 1;
-// }
 
 .subcontent-container{
 height:auto;

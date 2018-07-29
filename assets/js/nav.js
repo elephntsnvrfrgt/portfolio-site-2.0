@@ -2,23 +2,25 @@ $(document).ready(function(){
 
 	var 	navContent = $('.nav-content'),
 				logoMark = $('#logo-mark'),
-				socialLinks = $('.social'),
+				social = $('.social'),
+				socialLinks = $(".social-links"),
 				logoType = $('#logo-type'),
+				close = $('#closeInfo'),
 				infoContainer = $('.info-container'),
 				infoFade = $('.info-fade'),
 				socialContainer = $('#social-container'),
-				heroTMO = $('#hero-tmo'),
-				heroVW = $('#hero-vw'),
-				heroODI = $('#hero-odi'),
-				heroCMHF = $('#hero-cmhf'),
-				descTMO = $('#tmo-description'),
-				descVW = $('#vw-description'),
-				descODI = $('#odi-description'),
-				descCMHF = $('#cmhf-description'),
-				contentTMO = $('#tmo-content'),
-				contentVW = $('#vw-content'),
-				contentODI = $('#odi-content'),
-				contentCMHF = $('#cmhf-content'),
+				// heroTMO = $('#hero-tmo'),
+				// heroVW = $('#hero-vw'),
+				// heroODI = $('#hero-odi'),
+				// heroCMHF = $('#hero-cmhf'),
+				// descTMO = $('#tmo-description'),
+				// descVW = $('#vw-description'),
+				// descODI = $('#odi-description'),
+				// descCMHF = $('#cmhf-description'),
+				// contentTMO = $('#tmo-content'),
+				// contentVW = $('#vw-content'),
+				// contentODI = $('#odi-content'),
+				// contentCMHF = $('#cmhf-content'),
 			 	open = false,
 				tlMax = new TimelineMax();
 
@@ -26,20 +28,21 @@ $(document).ready(function(){
 	logoMark.mouseover(
 		function(){
 			tlMax
-					.staggerFromTo(socialLinks, 1,
+					.staggerFromTo(social, 1,
 						{x:-10, autoAlpha:0},
 						{x:0, autoAlpha:1, ease: Power3.easeOut},
-						0.09);
+						0.09
+					);
 		}
 	);
 
 	socialContainer.mouseleave(
 		function(){
 			tlMax
-				.staggerFromTo(socialLinks, 0.75,
-					{autoAlpha:1},
+				.staggerTo(social, 0.75,
 					{autoAlpha:0, ease: Power3.easeOut},
-					0.09);
+					0.09
+				);
 		}
 	);
 
@@ -57,10 +60,6 @@ $(document).ready(function(){
 				},0.09,
 				'-=.5'
 			)
-			// .to($('.close'), 1.75,
-			// 	{autoAlpha:1},
-			// 	'-=1.75'
-			// );
 	    logoType.one("click", closeInfo);
 	}
 
@@ -74,8 +73,11 @@ $(document).ready(function(){
 			'-=.5');
 	    logoType.one("click", openInfo);
 	}
-
+	close.click(closeInfo);
 	logoType.one("click", openInfo);
+
+
+
 
 	// logoType.on('click', function () {
 	//     $(this).toggleClass('active');

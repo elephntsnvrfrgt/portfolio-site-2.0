@@ -3,51 +3,60 @@ extends layout.pug
 block prepend head
 	- var pageTitle = "T-Mobile Switcher"
 block content
-	a.allWork.small(href="index.html") Back to works
-	section.content-container
-		.grid#hero-tmo
-			+mixin_hero('T-Mobile','Switcher','Web | Concept, Design, & Motion')
-			p.reveal.description.span-6 This little micro experience for prospective customers starts on T-Mobile’s homepage (some other ads and social junk pointed to it as well). Three quick questions and you’re on your way. You’re taken to the Results page, which highlights the amount you’ll save per year, the other benefits that come with the Un-Carrier, and some other goofy bits to put a smile on their face. Most of the experience shown here made it to production, but a couple extra pieces got sprinkled in for fun.
-		.grid.subsection
-			.reveal.subpage-content.span-12
-				.title-section.span-6 Questions
-				.eyebrow Homepage component
-				+img-responsive(srcset,sizes,'assets/img/subpage/tmo-switcher/video-2706w.jpg')
-			.reveal.subpage-content.span-9
-				+img-responsive(srcset,sizes,'assets/img/subpage/tmo-switcher/q1-2116w.jpg')
-				.info Current carrier
-			.reveal.subpage-content.span-9
-				+img-responsive(srcset,sizes,'assets/img/subpage/tmo-switcher/q2-2116w.jpg')
-				.info Number of lines
-			.reveal.subpage-content.span-9
-				+img-responsive(srcset,sizes,'assets/img/subpage/tmo-switcher/q3-2116w.jpg')
-				.info Monthly bill
-		.subpage-content#bottom-01
-		.grid.subsection
-			.reveal.subpage-content.span-12
-				.title-section.span-6 Savings
-				.eyebrow Results page
-				+img-responsive(srcset,sizes,'assets/img/subpage/tmo-switcher/video-2706w.jpg')
-			.reveal.subpage-content.span-9
-				+img-responsive(srcset,sizes,'assets/img/subpage/tmo-switcher/q1-2116w.jpg')
-				.info Current carrier
-			.reveal.subpage-content.span-9
-				+img-responsive(srcset,sizes,'assets/img/subpage/tmo-switcher/q2-2116w.jpg')
-				.info Number of lines
-			.reveal.subpage-content.span-9
-				+img-responsive(srcset,sizes,'assets/img/subpage/tmo-switcher/q3-2116w.jpg')
-				.info Monthly bill
-			.reveal.subpage-content.span-12
-				.title-section.span-6 Timeline
-				.eyebrow Results page
-				+img-responsive(srcset,sizes,'assets/img/subpage/tmo-switcher/video-2706w.jpg')
-			.reveal.subpage-content.span-9
-				+img-responsive(srcset,sizes,'assets/img/subpage/tmo-switcher/q3-2116w.jpg')
-				.info Monthly bill
-			.reveal.subpage-content.span-9
-				+img-responsive(srcset,sizes,'assets/img/subpage/tmo-switcher/q3-2116w.jpg')
-				.info Monthly bill
-			.reveal.subpage-content.span-9
-				+img-responsive(srcset,sizes,'assets/img/subpage/tmo-switcher/q3-2116w.jpg')
-				.info Monthly bill
-		.subpage-content#bottom-01
+	.container
+		
+		section.grid-container.intro
+			.content-hero#hero-tmo
+				+mixin_hero('T-Mobile','Switcher','Web | Concept, Design, & Motion')
+				p.description This little micro experience for prospective customers starts on T-Mobile’s homepage (some other ads and social junk pointed to it as well). Three quick questions and you’re on your way. You’re taken to the Results page, which highlights the amount you’ll save per year, the other benefits that come with the Un-Carrier, and some other goofy bits to put a smile on their face. Most of the experience shown here made it to production, but a couple extra pieces got sprinkled in for fun.
+				
+		section.grid-container
+				
+	
+	//- section.content-container
+	//- 	.grid#hero-tmo
+	//- 		+mixin_hero('T-Mobile','Switcher','Web | Concept, Design, & Motion')
+	//- 		p.reveal.description.span-6 This little micro experience for prospective customers starts on T-Mobile’s homepage (some other ads and social junk pointed to it as well). Three quick questions and you’re on your way. You’re taken to the Results page, which highlights the amount you’ll save per year, the other benefits that come with the Un-Carrier, and some other goofy bits to put a smile on their face. Most of the experience shown here made it to production, but a couple extra pieces got sprinkled in for fun.
+	//- 	.grid.subsection
+	//- 		.reveal.subpage-content.span-12
+	//- 			.title-section.span-6 Questions
+	//- 			.eyebrow Homepage component
+	//- 			+img-responsive(srcset,sizes,'assets/img/subpage/tmo-switcher/video-2706w.jpg')
+	//- 		.reveal.subpage-content.span-9
+	//- 			+img-responsive(srcset,sizes,'assets/img/subpage/tmo-switcher/q1-2116w.jpg')
+	//- 			.info Current carrier
+	//- 		.reveal.subpage-content.span-9
+	//- 			+img-responsive(srcset,sizes,'assets/img/subpage/tmo-switcher/q2-2116w.jpg')
+	//- 			.info Number of lines
+	//- 		.reveal.subpage-content.span-9
+	//- 			+img-responsive(srcset,sizes,'assets/img/subpage/tmo-switcher/q3-2116w.jpg')
+	//- 			.info Monthly bill
+	//- 	.subpage-content#bottom-01
+	//- 	.grid.subsection
+	//- 		.reveal.subpage-content.span-12
+	//- 			.title-section.span-6 Savings
+	//- 			.eyebrow Results page
+	//- 			+img-responsive(srcset,sizes,'assets/img/subpage/tmo-switcher/video-2706w.jpg')
+	//- 		.reveal.subpage-content.span-9
+	//- 			+img-responsive(srcset,sizes,'assets/img/subpage/tmo-switcher/q1-2116w.jpg')
+	//- 			.info Current carrier
+	//- 		.reveal.subpage-content.span-9
+	//- 			+img-responsive(srcset,sizes,'assets/img/subpage/tmo-switcher/q2-2116w.jpg')
+	//- 			.info Number of lines
+	//- 		.reveal.subpage-content.span-9
+	//- 			+img-responsive(srcset,sizes,'assets/img/subpage/tmo-switcher/q3-2116w.jpg')
+	//- 			.info Monthly bill
+	//- 		.reveal.subpage-content.span-12
+	//- 			.title-section.span-6 Timeline
+	//- 			.eyebrow Results page
+	//- 			+img-responsive(srcset,sizes,'assets/img/subpage/tmo-switcher/video-2706w.jpg')
+	//- 		.reveal.subpage-content.span-9
+	//- 			+img-responsive(srcset,sizes,'assets/img/subpage/tmo-switcher/q3-2116w.jpg')
+	//- 			.info Monthly bill
+	//- 		.reveal.subpage-content.span-9
+	//- 			+img-responsive(srcset,sizes,'assets/img/subpage/tmo-switcher/q3-2116w.jpg')
+	//- 			.info Monthly bill
+	//- 		.reveal.subpage-content.span-9
+	//- 			+img-responsive(srcset,sizes,'assets/img/subpage/tmo-switcher/q3-2116w.jpg')
+	//- 			.info Monthly bill
+	//- 	.subpage-content#bottom-01
