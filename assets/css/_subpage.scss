@@ -17,7 +17,7 @@
 }
 
 .content-hero{
-  grid-row:3/span 3;
+  margin-top: 248px;;
 	grid-column: 1/span 7;
 	color: $gray15;
 	.eyebrow{
@@ -26,23 +26,54 @@
 }
 
 .description{
-	grid-row: 6/span 1;
-  grid-column: 1/span 7;
+	margin-top:100px;
+}
+
+.section-title{
+	position:relative;
+	display:block;
+	z-index:-10;
+	float: right;
+	transform-origin: top right;
+	transform:rotate(-90deg);
+	height:0;
+	right:325px;
+	text-align:right;
+}
+
+.content{
+	margin-top:10px;
+	grid-row-gap:30px;
+	.eyebrow{
+		grid-column:1/span 12;
+		margin-bottom:0;
+	}
 }
 
 img{
 	width:100%;
 	height:auto;
-	grid-column-start: auto;
-  grid-row-start: auto;
 	display:flex;
 }
 
 .video {
-	background:$gray40;
-	grid-row-start: 2;
+	//grid-row-start: auto;
 	grid-column: 1/span 12;
+	margin-bottom:70px;
+	@include softShadow($blur:200);
 }
+
+.img{
+	grid-column:1/span 9;
+	margin-bottom:30px;
+	img{
+		@include softShadow($blur:200);
+	}
+	.caption{
+		margin: 24px 0 0 0;
+	}
+}
+
 
 
 #bottom-01{
@@ -52,18 +83,4 @@ img{
 	background: no-repeat top left / 100% auto url(../img/subpage/tmo-switcher/section-01-bg.jpg);
 	z-index:0;
 	top:-100px;
-}
-
-.section-title{
-	position:relative;
-	z-index:-10;
-	float: right;
-	transform-origin: top right;
-	transform:rotate(-90deg);
-	height:0;
-	//margin-top:100px;
-	right:350px;
-	text-align:right;
-	color:$gray95;
-
 }

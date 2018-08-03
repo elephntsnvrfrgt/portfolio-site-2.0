@@ -5,15 +5,26 @@ block prepend head
 block content
 	.container
 		
-		section.grid-container.intro#hero-tmo
+		section.grid-container.grid-rows.intro#hero-tmo
 			.content-hero
 				+mixin_hero('T-Mobile','Switcher','Web | Concept, Design, & Motion')
-			p.description This little micro experience for prospective customers starts on <span class="nowrap">T-Mobile’s</span> homepage (some other ads and social junk pointed to it as well). Three quick questions and you’re on your way. You’re taken to the Results page, which highlights the amount you’ll save per year, the other benefits that come with the <span class="nowrap">Un-Carrier,</span> and some other goofy bits to put a smile on their face. Most of the experience shown here made it to production, but a couple extra pieces got sprinkled in <span class="nowrap">for fun.</span>
+				p.description This little micro experience for prospective customers starts on <span class="nowrap">T-Mobile’s</span> homepage (some other ads and social junk pointed to it as well). Three quick questions and you’re on your way. You’re taken to the Results page, which highlights the amount you’ll save per year, the other benefits that come with the <span class="nowrap">Un-Carrier,</span> and some other goofy bits to put a smile on their face. Most of the experience shown here made it to production, but a couple extra pieces got sprinkled in <span class="nowrap">for fun.</span>
 				
 		.section-title Questions
-		section.grid-container
+		section.grid-container.content
+			.eyebrow Homepage component
 			.video
-			
+				img(src='assets/img/subpage/tmo-switcher/video-2706w.jpg', alt="")
+			.img
+				img(src='assets/img/subpage/tmo-switcher/q1-2116w.jpg')
+				.info.caption Current carrier
+			.img
+				img(src='assets/img/subpage/tmo-switcher/q2-2116w.jpg')
+				.info.caption Number of lines
+			.img
+				img(src='assets/img/subpage/tmo-switcher/q3-2116w.jpg')
+				.info.caption Monthly bill
+
 				
 				
 	

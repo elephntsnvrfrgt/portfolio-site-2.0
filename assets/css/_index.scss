@@ -51,13 +51,19 @@ body{
 
 .grid-container{
 	padding:0 7.778%;
-	max-width:1440px;
-	min-height:800px;
+	max-width:1600px;
 	margin:0 auto;
 	display:grid;
-	grid-auto-rows:100px;
 	grid-template-columns:repeat(12, 1fr);
 	grid-gap: 24px;
+}
+
+.grid-rows{
+	grid-auto-rows:100px;
+}
+
+.intro{
+		min-height:800px;
 }
 
 
@@ -139,9 +145,10 @@ body{
 
 
 .about {
+	min-height:800px;
 	.column{
 		grid-column:1/span 4;
-		grid-row-start:3;
+		margin-top: 248px;
 
 	}
 	.column:nth-child(2){

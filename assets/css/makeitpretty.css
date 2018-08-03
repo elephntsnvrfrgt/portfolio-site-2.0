@@ -260,12 +260,14 @@ p {
   color: #CCCCCC; }
 
 .section-title {
-  font: 320px "TRYVesterbro-Poster", serif; }
+  font: 320px "TRYVesterbro-Poster", serif;
+  color: #F2F2F2; }
 
 .nowrap {
   white-space: nowrap; }
 
 #nav-container {
+  overflow-y: hidden;
   position: fixed;
   z-index: 30;
   top: auto;
@@ -436,28 +438,6 @@ p {
   .experience p {
     padding-bottom: 4px; }
 
-/* ––––––––––––––––––––––––––––––––––––––––––––––––
-Grid
-––––––––––––––––––––––––––––––––––––––––––––––––
-*/
-.grid {
-  padding: 0 7.778%;
-  min-height: 700px;
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-column-gap: 24px; }
-
-.divider {
-  margin: 0 0 0 7.778%;
-  height: 1px;
-  background: #F2F2F2;
-  content: ""; }
-
-/*
-.col01, .col02, .col03, .col04, .col05, .col06, .col07, .col08, .col09, .col10, .col11, .col12{
-	background:white;
-  border:1px solid pink;
-}*/
 body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -515,13 +495,17 @@ body {
 
 .grid-container {
   padding: 0 7.778%;
-  max-width: 1440px;
-  min-height: 800px;
+  max-width: 1600px;
   margin: 0 auto;
   display: grid;
-  grid-auto-rows: 100px;
   grid-template-columns: repeat(12, 1fr);
   grid-gap: 24px; }
+
+.grid-rows {
+  grid-auto-rows: 100px; }
+
+.intro {
+  min-height: 800px; }
 
 .grid-container.work {
   grid-template-rows: repeat(8, 100px); }
@@ -598,20 +582,19 @@ body {
 .prjt-04 {
   background: center/cover #f8f8f8 url("http://isaacmart.in/dev/portfolio-2.0/assets/tile/bg-ODI.jpg"); }
 
-.about .column {
-  grid-column: 1/span 4;
-  grid-row-start: 3; }
-
-.about .column:nth-child(2) {
-  grid-column-start: 7; }
-
-.about li {
-  padding: 10px 10px 10px 0; }
-  .about li a {
-    font: 16px/24px "Work Sans", Helvetica, Arial, sans-serif; }
-
-.about li:nth-child(1) {
-  padding-top: 0; }
+.about {
+  min-height: 800px; }
+  .about .column {
+    grid-column: 1/span 4;
+    margin-top: 248px; }
+  .about .column:nth-child(2) {
+    grid-column-start: 7; }
+  .about li {
+    padding: 10px 10px 10px 0; }
+    .about li a {
+      font: 16px/24px "Work Sans", Helvetica, Arial, sans-serif; }
+  .about li:nth-child(1) {
+    padding-top: 0; }
 
 #hero-tmo {
   background: -webkit-gradient(linear, right top, left bottom, color-stop(40%, rgba(255, 255, 255, 0)), to(white)), url(../img/subpage/bg-tmo.jpg) no-repeat right top;
@@ -642,40 +625,18 @@ body {
   background-size: auto 700px; }
 
 .content-hero {
-  grid-row: 3/span 3;
+  margin-top: 248px;
   grid-column: 1/span 7;
   color: #262626; }
   .content-hero .eyebrow {
     margin-bottom: 42px; }
 
 .description {
-  grid-row: 6/span 1;
-  grid-column: 1/span 7; }
-
-img {
-  width: 100%;
-  height: auto;
-  grid-column-start: auto;
-  grid-row-start: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
-
-.video {
-  background: #4c4c4c;
-  grid-row-start: 2;
-  grid-column: 1/span 12; }
-
-#bottom-01 {
-  content: '';
-  width: 100%;
-  height: 486px;
-  background: no-repeat top left/100% auto url(../img/subpage/tmo-switcher/section-01-bg.jpg);
-  z-index: 0;
-  top: -100px; }
+  margin-top: 100px; }
 
 .section-title {
   position: relative;
+  display: block;
   z-index: -10;
   float: right;
   -webkit-transform-origin: top right;
@@ -685,6 +646,42 @@ img {
   -ms-transform: rotate(-90deg);
   transform: rotate(-90deg);
   height: 0;
-  right: 350px;
-  text-align: right;
-  color: #F2F2F2; }
+  right: 325px;
+  text-align: right; }
+
+.content {
+  margin-top: 10px;
+  grid-row-gap: 30px; }
+  .content .eyebrow {
+    grid-column: 1/span 12;
+    margin-bottom: 0; }
+
+img {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.video {
+  grid-column: 1/span 12;
+  margin-bottom: 70px;
+  -webkit-box-shadow: 0 10px 200px 0 rgba(0, 0, 0, 0.16);
+  box-shadow: 0 10px 200px 0 rgba(0, 0, 0, 0.16); }
+
+.img {
+  grid-column: 1/span 9;
+  margin-bottom: 30px; }
+  .img img {
+    -webkit-box-shadow: 0 10px 200px 0 rgba(0, 0, 0, 0.16);
+    box-shadow: 0 10px 200px 0 rgba(0, 0, 0, 0.16); }
+  .img .caption {
+    margin: 24px 0 0 0; }
+
+#bottom-01 {
+  content: '';
+  width: 100%;
+  height: 486px;
+  background: no-repeat top left/100% auto url(../img/subpage/tmo-switcher/section-01-bg.jpg);
+  z-index: 0;
+  top: -100px; }
