@@ -260,7 +260,7 @@ p {
   color: #CCCCCC; }
 
 .section-title {
-  font: 320px "TRYVesterbro-Poster", serif;
+  font: 18vw "TRYVesterbro-Poster", serif;
   color: #F2F2F2; }
 
 .nowrap {
@@ -646,7 +646,7 @@ body {
   -ms-transform: rotate(-90deg);
   transform: rotate(-90deg);
   height: 0;
-  right: 325px;
+  right: 19vw;
   text-align: right; }
 
 .content {
@@ -665,7 +665,7 @@ img {
 
 .video {
   grid-column: 1/span 12;
-  margin-bottom: 70px;
+  margin: 0 0 76px 0;
   -webkit-box-shadow: 0 10px 200px 0 rgba(0, 0, 0, 0.16);
   box-shadow: 0 10px 200px 0 rgba(0, 0, 0, 0.16); }
 

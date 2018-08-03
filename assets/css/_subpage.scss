@@ -37,7 +37,7 @@
 	transform-origin: top right;
 	transform:rotate(-90deg);
 	height:0;
-	right:325px;
+	right:19vw;
 	text-align:right;
 }
 
@@ -59,7 +59,7 @@ img{
 .video {
 	//grid-row-start: auto;
 	grid-column: 1/span 12;
-	margin-bottom:70px;
+	margin:0 0 76px 0;
 	@include softShadow($blur:200);
 }
 
