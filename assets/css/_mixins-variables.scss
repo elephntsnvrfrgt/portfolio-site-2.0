@@ -45,3 +45,16 @@ $cubic-bezier: cubic-bezier(0.4, 0, .2, 1);
 		}
 	}
 }
+
+@mixin softShadow($blur:200){
+	box-shadow: 0 10px #{$blur}px 0 rgba(0,0,0,0.16);
+}
+
+
+@mixin subpageHero($imgpath){
+	background:
+		linear-gradient(to bottom left, rgba(255, 255, 255, 0) 40%, white 100%),
+		url(#{$imgpath}) no-repeat right top;
+	//background-attachment: fixed;
+	background-size: auto 700px;
+}

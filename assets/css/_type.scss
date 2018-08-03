@@ -16,7 +16,7 @@ $serif-stack: 'TRYVesterbro-Poster',serif;
 a{
 	font:11px $mono-stack;
 	text-decoration:none;
-	color:$gray60;
+	color:$gray40;
   position:relative;
   &:focus{
     border:none;
@@ -31,6 +31,7 @@ a{
 
 p{
 	font: 16px/24px $sans-stack;
+  color:$gray60;
 	margin-bottom: 15px;
   a{
     font-family:inherit;
@@ -63,6 +64,10 @@ p{
 	color: $gray80;
 }
 
-.title-section{
+.section-title{
 	font: 320px $serif-stack;
+}
+
+.nowrap{
+  white-space: nowrap;
 }
