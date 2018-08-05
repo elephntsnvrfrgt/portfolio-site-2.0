@@ -53,7 +53,7 @@ $cubic-bezier: cubic-bezier(0.4, 0, .2, 1);
 
 @mixin subpageHero($imgpath){
 	background:
-		linear-gradient(to bottom left, rgba(255, 255, 255, 0) 40%, white 100%),
+		linear-gradient(to bottom left, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0) 100%),
 		url(#{$imgpath}) no-repeat right top;
 	//background-attachment: fixed;
 	background-size: auto 700px;

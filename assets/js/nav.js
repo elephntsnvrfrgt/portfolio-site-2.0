@@ -1,10 +1,12 @@
 $(document).ready(function(){
 
+	$(".content").fitVids();
+
 	var 	navContent = $('.nav-content'),
 				logoMark = $('#logo-mark'),
 				social = $('.social'),
 				socialLinks = $(".social-links"),
-				logoType = $('#logo-type'),
+				info = $('#info'),
 				close = $('#closeInfo'),
 				infoContainer = $('.info-container'),
 				infoFade = $('.info-fade'),
@@ -60,7 +62,7 @@ $(document).ready(function(){
 				},0.09,
 				'-=.5'
 			)
-	    logoType.one("click", closeInfo);
+	    info.one("click", closeInfo);
 	}
 
 	function closeInfo() {
@@ -71,15 +73,15 @@ $(document).ready(function(){
 			.to(infoContainer, 1,
 				{x:-375, ease:Power3.easeIn},
 			'-=.5');
-	    logoType.one("click", openInfo);
+	    info.one("click", openInfo);
 	}
 	close.click(closeInfo);
-	logoType.one("click", openInfo);
+	info.one("click", openInfo);
 
 
 
 
-	// logoType.on('click', function () {
+	// info.on('click', function () {
 	//     $(this).toggleClass('active');
 	//     if (open) {
 	//       timeline.reverse();

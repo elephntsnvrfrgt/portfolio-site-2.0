@@ -9,12 +9,15 @@
   <link rel="stylesheet" type="text/css" href="assets/css/makeitpretty.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Work+Sans:400,700">
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-  <!--  script(    src='../assets/js/lazyload.js'-->
-  <!--    )-->
+  <script src="assets/js/jquery.fitvids.js"></script>
   <body>
     <div id="nav-container">
       <div class="nav-content">
-        <h1 id="logo-type">Isaac Martin</h1>
+        <div id="nameinfo">
+          <h1 class="small" id="logo-type"><a href="../index.html">Isaac Martin</a></h1>
+          <div class="small" id="line"></div>
+          <div class="small" id="info">Info</div>
+        </div>
         <div id="social-container"><a id="logo-mark" href="../index.html"><img src="assets/img/logo-mark.svg" alt=""></a>
           <ul class="social-links small">
             <li class="social"><a href="https://www.behance.net/isaacmartin/" target="_blank">Behance</a></li>
@@ -49,8 +52,11 @@
         </ul>
       </div>
     </div>
+    <div id="works"><svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs></defs><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><path d="M0,4.875 L4.875,4.875 L4.875,0 L0,0 L0,4.875 Z M0,12 L4.875,12 L4.875,7.125 L0,7.125 L0,12 Z M7.125,7.125 L7.125,12 L12,12 L12,7.125 L7.125,7.125 Z M7.125,0 L7.125,4.875 L12,4.875 L12,0 L7.125,0 Z" id="icn-grid" fill="#000000" fill-rule="nonzero"></path></g></svg>
+      <div class="small">Selected works</div>
+    </div>
     <div class="container">
-      <section class="grid-container grid-rows intro" id="hero-tmo">
+      <section class="grid-container intro" id="hero-tmo">
         <div class="content-hero">
           <div class="eyebrow">T-Mobile</div>
           <h2 class="title">Switcher</h2>
@@ -61,7 +67,9 @@
       <div class="section-title">Questions</div>
       <section class="grid-container content">
         <div class="eyebrow">Homepage component</div>
-        <div class="video"><img src="assets/img/subpage/tmo-switcher/video-2706w.jpg" alt=""></div>
+        <div class="video">
+          <iframe id="ytplayer" type="text/html" width="1920px" height="1080px" src="https://www.youtube.com/embed/Hhng9QHNi9I?autoplay=0&amp;controls=0&amp;loop=1&amp;playlist=Hhng9QHNi9I&amp;rel=0&amp;showinfo=0&amp;color=white&amp;modestbranding=1" frameborder="0" allowfullscreen></iframe>
+        </div>
         <div class="img"><img src="assets/img/subpage/tmo-switcher/q1-2116w.jpg">
           <div class="info caption">Current carrier</div>
         </div>
@@ -72,6 +80,21 @@
           <div class="info caption">Monthly bill</div>
         </div>
       </section>
+      <div id="tmoendsection1"></div>
+      <div class="section-title">Savings</div>
+      <section class="grid-container content">
+        <div class="eyebrow">Results page</div>
+        <div class="video">
+          <iframe id="ytplayer" type="text/html" width="1920px" height="1080px" src="https://www.youtube.com/embed/Vtqhn2ovhu4?autoplay=0&amp;controls=0&amp;loop=1&amp;playlist=Vtqhn2ovhu4&amp;rel=0&amp;showinfo=0&amp;color=white&amp;modestbranding=1" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="img"><img src="assets/img/subpage/tmo-switcher/lp-results.jpg">
+          <div class="info caption">Default view</div>
+        </div>
+        <div class="img"><img src="assets/img/subpage/tmo-switcher/lp-timeline.jpg">
+          <div class="info caption">Timeline view</div>
+        </div>
+      </section>
+      <div id="tmoendsection2"></div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
     <script src="assets/js/nav.js"></script>

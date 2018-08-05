@@ -287,41 +287,95 @@ p {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-smoothing: antialiased; }
+  font-smoothing: antialiased;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
+#nameinfo {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-ordinal-group: 2;
+  -ms-flex-order: 1;
+  order: 1;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+  #nameinfo .small {
+    margin: 0 25px 0 0; }
 
 #logo-type {
+  -webkit-box-ordinal-group: 3;
+  -ms-flex-order: 2;
+  order: 2;
   position: relative;
-  float: right;
-  margin: 20px 27px 20px 27px;
   text-align: right;
   color: #FFFFFF;
-  font-size: 14px;
-  line-height: 20px;
-  letter-spacing: 1px;
   cursor: pointer;
   -webkit-transition: all 250ms ease-in;
   -o-transition: all 250ms ease-in;
   transition: all 250ms ease-in; }
-  #logo-type:after, #logo-type:before {
+  #logo-type:hover {
+    opacity: .8; }
+
+#line {
+  -webkit-box-ordinal-group: 2;
+  -ms-flex-order: 1;
+  order: 1;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  content: '';
+  height: 1px;
+  min-width: 30px;
+  background: #4c4c4c; }
+
+#info {
+  -webkit-box-ordinal-group: 1;
+  -ms-flex-order: 0;
+  order: 0;
+  text-decoration: none;
+  -webkit-transition: all 250ms ease-in;
+  -o-transition: all 250ms ease-in;
+  transition: all 250ms ease-in;
+  position: relative;
+  cursor: pointer; }
+  #info:after, #info:before {
     content: '';
     position: absolute;
-    top: calc(100% + -1px);
+    top: calc(100% + 1px);
     width: 0;
     right: 0;
     height: 1px; }
-  #logo-type:before {
+  #info:before {
     -webkit-transition: width 400ms cubic-bezier(0.51, 0.18, 0, 0.88) 100ms;
     -o-transition: width 400ms cubic-bezier(0.51, 0.18, 0, 0.88) 100ms;
     transition: width 400ms cubic-bezier(0.51, 0.18, 0, 0.88) 100ms;
-    background: #F2F2F2; }
-  #logo-type:hover {
-    color: #F2F2F2; }
-    #logo-type:hover:after, #logo-type:hover:before {
+    background: #CCCCCC; }
+  #info:hover {
+    color: #CCCCCC; }
+    #info:hover:after, #info:hover:before {
       width: 100%;
       left: 0; }
 
 #social-container {
   float: left;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  -webkit-box-ordinal-group: 1;
+  -ms-flex-order: 0;
+  order: 0;
   padding: 24px 0 22px 24px;
   line-height: 10px;
   display: block; }
@@ -584,11 +638,6 @@ body {
 
 .about {
   min-height: 800px; }
-  .about .column {
-    grid-column: 1/span 4;
-    margin-top: 248px; }
-  .about .column:nth-child(2) {
-    grid-column-start: 7; }
   .about li {
     padding: 10px 10px 10px 0; }
     .about li a {
@@ -596,33 +645,71 @@ body {
   .about li:nth-child(1) {
     padding-top: 0; }
 
+.column {
+  grid-column: 1/span 4;
+  margin-top: 248px; }
+
+.column:nth-child(2) {
+  grid-column-start: 7; }
+
 #hero-tmo {
-  background: -webkit-gradient(linear, right top, left bottom, color-stop(40%, rgba(255, 255, 255, 0)), to(white)), url(../img/subpage/bg-tmo.jpg) no-repeat right top;
-  background: -webkit-linear-gradient(top right, rgba(255, 255, 255, 0) 40%, white 100%), url(../img/subpage/bg-tmo.jpg) no-repeat right top;
-  background: -o-linear-gradient(top right, rgba(255, 255, 255, 0) 40%, white 100%), url(../img/subpage/bg-tmo.jpg) no-repeat right top;
-  background: linear-gradient(to bottom left, rgba(255, 255, 255, 0) 40%, white 100%), url(../img/subpage/bg-tmo.jpg) no-repeat right top;
+  background: -webkit-gradient(linear, right top, left bottom, color-stop(40%, rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0))), url(../img/subpage/bg-tmo.jpg) no-repeat right top;
+  background: -webkit-linear-gradient(top right, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0) 100%), url(../img/subpage/bg-tmo.jpg) no-repeat right top;
+  background: -o-linear-gradient(top right, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0) 100%), url(../img/subpage/bg-tmo.jpg) no-repeat right top;
+  background: linear-gradient(to bottom left, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0) 100%), url(../img/subpage/bg-tmo.jpg) no-repeat right top;
   background-size: auto 700px; }
 
 #hero-vw {
-  background: -webkit-gradient(linear, right top, left bottom, color-stop(40%, rgba(255, 255, 255, 0)), to(white)), url(../img/subpage/bg-vw.jpg) no-repeat right top;
-  background: -webkit-linear-gradient(top right, rgba(255, 255, 255, 0) 40%, white 100%), url(../img/subpage/bg-vw.jpg) no-repeat right top;
-  background: -o-linear-gradient(top right, rgba(255, 255, 255, 0) 40%, white 100%), url(../img/subpage/bg-vw.jpg) no-repeat right top;
-  background: linear-gradient(to bottom left, rgba(255, 255, 255, 0) 40%, white 100%), url(../img/subpage/bg-vw.jpg) no-repeat right top;
+  background: -webkit-gradient(linear, right top, left bottom, color-stop(40%, rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0))), url(../img/subpage/bg-vw.jpg) no-repeat right top;
+  background: -webkit-linear-gradient(top right, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0) 100%), url(../img/subpage/bg-vw.jpg) no-repeat right top;
+  background: -o-linear-gradient(top right, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0) 100%), url(../img/subpage/bg-vw.jpg) no-repeat right top;
+  background: linear-gradient(to bottom left, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0) 100%), url(../img/subpage/bg-vw.jpg) no-repeat right top;
   background-size: auto 700px; }
 
 #hero-odi {
-  background: -webkit-gradient(linear, right top, left bottom, color-stop(40%, rgba(255, 255, 255, 0)), to(white)), url(../img/subpage/bg-odi.jpg) no-repeat right top;
-  background: -webkit-linear-gradient(top right, rgba(255, 255, 255, 0) 40%, white 100%), url(../img/subpage/bg-odi.jpg) no-repeat right top;
-  background: -o-linear-gradient(top right, rgba(255, 255, 255, 0) 40%, white 100%), url(../img/subpage/bg-odi.jpg) no-repeat right top;
-  background: linear-gradient(to bottom left, rgba(255, 255, 255, 0) 40%, white 100%), url(../img/subpage/bg-odi.jpg) no-repeat right top;
+  background: -webkit-gradient(linear, right top, left bottom, color-stop(40%, rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0))), url(../img/subpage/bg-odi.jpg) no-repeat right top;
+  background: -webkit-linear-gradient(top right, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0) 100%), url(../img/subpage/bg-odi.jpg) no-repeat right top;
+  background: -o-linear-gradient(top right, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0) 100%), url(../img/subpage/bg-odi.jpg) no-repeat right top;
+  background: linear-gradient(to bottom left, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0) 100%), url(../img/subpage/bg-odi.jpg) no-repeat right top;
   background-size: auto 700px; }
 
 #hero-cmhf {
-  background: -webkit-gradient(linear, right top, left bottom, color-stop(40%, rgba(255, 255, 255, 0)), to(white)), url(../img/subpage/bg-cmhf.jpg) no-repeat right top;
-  background: -webkit-linear-gradient(top right, rgba(255, 255, 255, 0) 40%, white 100%), url(../img/subpage/bg-cmhf.jpg) no-repeat right top;
-  background: -o-linear-gradient(top right, rgba(255, 255, 255, 0) 40%, white 100%), url(../img/subpage/bg-cmhf.jpg) no-repeat right top;
-  background: linear-gradient(to bottom left, rgba(255, 255, 255, 0) 40%, white 100%), url(../img/subpage/bg-cmhf.jpg) no-repeat right top;
+  background: -webkit-gradient(linear, right top, left bottom, color-stop(40%, rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0))), url(../img/subpage/bg-cmhf.jpg) no-repeat right top;
+  background: -webkit-linear-gradient(top right, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0) 100%), url(../img/subpage/bg-cmhf.jpg) no-repeat right top;
+  background: -o-linear-gradient(top right, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0) 100%), url(../img/subpage/bg-cmhf.jpg) no-repeat right top;
+  background: linear-gradient(to bottom left, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0) 100%), url(../img/subpage/bg-cmhf.jpg) no-repeat right top;
   background-size: auto 700px; }
+
+#works {
+  position: fixed;
+  z-index: 110;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transform-origin: top right;
+  -ms-transform-origin: top right;
+  transform-origin: top right;
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  top: 185px;
+  right: 30px;
+  height: 60px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  opacity: .4; }
+  #works .small {
+    margin: 0 0 0 30px;
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg); }
+
+#works:hover {
+  opacity: 1; }
 
 .content-hero {
   margin-top: 248px;
@@ -664,6 +751,9 @@ img {
   display: flex; }
 
 .video {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   grid-column: 1/span 12;
   margin: 0 0 76px 0;
   -webkit-box-shadow: 0 10px 200px 0 rgba(0, 0, 0, 0.16);
@@ -678,10 +768,21 @@ img {
   .img .caption {
     margin: 24px 0 0 0; }
 
-#bottom-01 {
+#tmoendsection1 {
   content: '';
   width: 100%;
-  height: 486px;
-  background: no-repeat top left/100% auto url(../img/subpage/tmo-switcher/section-01-bg.jpg);
-  z-index: 0;
-  top: -100px; }
+  height: 30vw;
+  background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(20%, rgba(255, 255, 255, 0))), no-repeat bottom left/100% auto url(../img/subpage/tmo-switcher/tmoendsection1-bg.jpg);
+  background: -webkit-linear-gradient(top, white 0%, rgba(255, 255, 255, 0) 20%), no-repeat bottom left/100% auto url(../img/subpage/tmo-switcher/tmoendsection1-bg.jpg);
+  background: -o-linear-gradient(top, white 0%, rgba(255, 255, 255, 0) 20%), no-repeat bottom left/100% auto url(../img/subpage/tmo-switcher/tmoendsection1-bg.jpg);
+  background: linear-gradient(to bottom, white 0%, rgba(255, 255, 255, 0) 20%), no-repeat bottom left/100% auto url(../img/subpage/tmo-switcher/tmoendsection1-bg.jpg);
+  margin: 0 0 10vw 0; }
+
+#tmoendsection2 {
+  content: '';
+  width: 100%;
+  height: 30vw;
+  background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(20%, rgba(255, 255, 255, 0))), no-repeat bottom left/100% auto url(../img/subpage/tmo-switcher/tmoendsection2-bg.jpg);
+  background: -webkit-linear-gradient(top, white 0%, rgba(255, 255, 255, 0) 20%), no-repeat bottom left/100% auto url(../img/subpage/tmo-switcher/tmoendsection2-bg.jpg);
+  background: -o-linear-gradient(top, white 0%, rgba(255, 255, 255, 0) 20%), no-repeat bottom left/100% auto url(../img/subpage/tmo-switcher/tmoendsection2-bg.jpg);
+  background: linear-gradient(to bottom, white 0%, rgba(255, 255, 255, 0) 20%), no-repeat bottom left/100% auto url(../img/subpage/tmo-switcher/tmoendsection2-bg.jpg); }

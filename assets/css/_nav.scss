@@ -5,7 +5,7 @@
 // styling ––––––––––––––
 
 #nav-container{
-	overflow-y: hidden; 
+	overflow-y: hidden;
 	position:fixed;
 	z-index:30;
 	top:auto;
@@ -23,25 +23,61 @@
 	font-family: $mono-stack;
 	//height: 100%;
 	@include text-render;
+	display:flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+#nameinfo{
+	width:50%;
+	display:flex;
+	order:1;
+	align-items:center;
+	justify-content: space-between;
+	.small{
+		margin:0 25px 0 0;
+	}
 }
 
 #logo-type{
+	order:2;
 	position:relative;
-	float:right;
-	margin: 20px 27px 20px 27px;
+	//margin: 20px 27px 20px 27px;
 	text-align:right;
 	color:$white;
 	//font-weight:700;
-	font-size: 14px;
-	line-height:20px;
-	letter-spacing: 1px;
+	// font-size: 14px;
+	// line-height:20px;
+	// letter-spacing: 1px;
 	cursor:pointer;
 	transition: all 250ms ease-in;
-	@include hover_underline($underline_gap:-1,$underline_thickness:1,$color:#{$gray95});
+	&:hover{
+		opacity:.8;
+	}
+}
+
+#line{
+	order:1;
+	flex-grow:1;
+	content:'';
+	height:1px;
+	min-width:30px;
+	background:$gray40;
+}
+
+#info{
+	order:0;
+	text-decoration:none;
+	transition: all 250ms ease-in;
+	position: relative;
+	cursor:pointer;
+	@include hover_underline($underline_gap:1,$underline_thickness:1,$color:#{$gray80});
 }
 
 #social-container{
 	float:left;
+	align-self: flex-start;
+	order:0;
 	padding:24px 0 22px 24px;
 	line-height:10px;
 	display:block;

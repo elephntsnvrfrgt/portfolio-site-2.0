@@ -146,14 +146,6 @@ body{
 
 .about {
 	min-height:800px;
-	.column{
-		grid-column:1/span 4;
-		margin-top: 248px;
-
-	}
-	.column:nth-child(2){
-		grid-column-start:7;
-	}
 	li {
 		padding:10px 10px 10px 0;
     a{
@@ -163,4 +155,13 @@ body{
 	li:nth-child(1){
 		padding-top:0;
 	}
+}
+
+.column{
+	grid-column:1/span 4;
+	margin-top: 248px;
+
+}
+.column:nth-child(2){
+	grid-column-start:7;
 }
