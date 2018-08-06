@@ -58,7 +58,7 @@
 // }
 
 .content-hero{
-  margin-top: 248px;;
+  margin-top: 248px;
 	grid-column: 1/span 7;
 	color: $gray15;
 	.eyebrow{
@@ -138,4 +138,32 @@ img{
 		no-repeat bottom left / 100% auto url(../img/subpage/tmo-switcher/tmoendsection2-bg.jpg)
 	;
 	//margin:0 0 10vw 0;
+}
+
+
+//menu
+
+.menu{
+	background:$gray15;
+	// width:calc(100% - 60px);
+	// overflow:scroll;
+	// position:absolute;
+	// top:0;
+	// right:0;
+	// z-index:110;
+	// height:100vh;
+	padding:248px 0;
+	text-align:center;
+
+	li:nth-last-child(1n+2){
+		margin:0 0 248px 0;
+	}
+}
+
+.dark{
+	color:$white;
+}
+
+li.content-hero.dark{
+	grid-column: span 12;
 }

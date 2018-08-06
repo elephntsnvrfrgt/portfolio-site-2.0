@@ -299,7 +299,7 @@ p {
   justify-content: space-between; }
 
 #nameinfo {
-  width: 50%;
+  width: 54%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -316,20 +316,33 @@ p {
     margin: 0 25px 0 0; }
 
 #logo-type {
-  -webkit-box-ordinal-group: 3;
-  -ms-flex-order: 2;
-  order: 2;
   position: relative;
   text-align: right;
-  color: #FFFFFF;
   cursor: pointer;
   -webkit-transition: all 250ms ease-in;
   -o-transition: all 250ms ease-in;
   transition: all 250ms ease-in; }
+  #logo-type:after, #logo-type:before {
+    content: '';
+    position: absolute;
+    top: calc(100% + 1px);
+    width: 0;
+    right: 0;
+    height: 1px; }
+  #logo-type:before {
+    -webkit-transition: width 400ms cubic-bezier(0.51, 0.18, 0, 0.88) 100ms;
+    -o-transition: width 400ms cubic-bezier(0.51, 0.18, 0, 0.88) 100ms;
+    transition: width 400ms cubic-bezier(0.51, 0.18, 0, 0.88) 100ms;
+    background: #CCCCCC; }
   #logo-type:hover {
-    opacity: .8; }
+    color: #CCCCCC; }
+    #logo-type:hover:after, #logo-type:hover:before {
+      width: 100%;
+      left: 0; }
+  #logo-type a {
+    color: #FFFFFF !important; }
 
-#line {
+.line {
   -webkit-box-ordinal-group: 2;
   -ms-flex-order: 1;
   order: 1;
@@ -411,7 +424,8 @@ p {
 #logo-mark {
   float: left;
   margin-right: 20px;
-  display: block; }
+  display: block;
+  opacity: .6; }
   #logo-mark img {
     width: 13px; }
 
@@ -786,3 +800,16 @@ img {
   background: -webkit-linear-gradient(top, white 0%, rgba(255, 255, 255, 0) 20%), no-repeat bottom left/100% auto url(../img/subpage/tmo-switcher/tmoendsection2-bg.jpg);
   background: -o-linear-gradient(top, white 0%, rgba(255, 255, 255, 0) 20%), no-repeat bottom left/100% auto url(../img/subpage/tmo-switcher/tmoendsection2-bg.jpg);
   background: linear-gradient(to bottom, white 0%, rgba(255, 255, 255, 0) 20%), no-repeat bottom left/100% auto url(../img/subpage/tmo-switcher/tmoendsection2-bg.jpg); }
+
+.menu {
+  background: #262626;
+  padding: 248px 0;
+  text-align: center; }
+  .menu li:nth-last-child(1n+2) {
+    margin: 0 0 248px 0; }
+
+.dark {
+  color: #FFFFFF; }
+
+li.content-hero.dark {
+  grid-column: span 12; }

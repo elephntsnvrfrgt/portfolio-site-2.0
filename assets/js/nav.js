@@ -61,7 +61,7 @@ $(document).ready(function(){
 					ease: Power3.easeOut
 				},0.09,
 				'-=.5'
-			)
+			);
 	    info.one("click", closeInfo);
 	}
 

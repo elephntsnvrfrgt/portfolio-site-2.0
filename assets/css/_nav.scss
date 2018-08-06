@@ -29,7 +29,7 @@
 }
 
 #nameinfo{
-	width:50%;
+	width:54%;
 	display:flex;
 	order:1;
 	align-items:center;
@@ -40,23 +40,22 @@
 }
 
 #logo-type{
-	order:2;
 	position:relative;
 	//margin: 20px 27px 20px 27px;
 	text-align:right;
-	color:$white;
 	//font-weight:700;
 	// font-size: 14px;
 	// line-height:20px;
 	// letter-spacing: 1px;
 	cursor:pointer;
 	transition: all 250ms ease-in;
-	&:hover{
-		opacity:.8;
+	@include hover_underline($underline_gap:1,$underline_thickness:1,$color:#{$gray80});
+	a{
+		color:$white !important;
 	}
 }
 
-#line{
+.line{
 	order:1;
 	flex-grow:1;
 	content:'';
@@ -100,6 +99,7 @@
 	float:left;
 	margin-right:20px;
   display:block;
+	opacity:.6;
 	//cursor:pointer;
 	img{
 		width:13px;
