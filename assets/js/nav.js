@@ -11,6 +11,10 @@ $(document).ready(function(){
 				infoContainer = $('.info-container'),
 				infoFade = $('.info-fade'),
 				socialContainer = $('#social-container'),
+				container = $('.container'),
+				menuBtn = $('#menu-btn'),
+				menuContainer = $('#menu-container'),
+				menuLi = $('.menuListItem'),
 				// heroTMO = $('#hero-tmo'),
 				// heroVW = $('#hero-vw'),
 				// heroODI = $('#hero-odi'),
@@ -26,6 +30,10 @@ $(document).ready(function(){
 			 	open = false,
 				tlMax = new TimelineMax();
 
+
+
+//–––––––––––––––––––––––––––––––––––––––––––
+//nav animations
 
 	logoMark.mouseover(
 		function(){
@@ -48,51 +56,99 @@ $(document).ready(function(){
 		}
 	);
 
+
+
+//–––––––––––––––––––––––––––––––––––––––––––
 //info drawer animation
 
 	function openInfo() {
 		tlMax
-			.to(infoContainer, 1,
+			.to(
+				infoContainer,
+				1,
 				{x:375, ease: Power3.easeOut}
 			)
-			.staggerFromTo(infoFade, .75,
+			.staggerFromTo(
+				infoFade,
+				.75,
 				{y:10, autoAlpha:0},
-				{	y:-10, autoAlpha:1,
-					ease: Power3.easeOut
-				},0.09,
+				{	y:-10, autoAlpha:1, ease: Power3.easeOut},
+				0.09,
 				'-=.5'
 			);
 	    info.one("click", closeInfo);
+			close.click(closeInfo);
+
 	}
 
 	function closeInfo() {
 		tlMax
-			.to(infoFade, .5,
+			.to(
+				infoFade, .5,
 				{autoAlpha:0}
 			)
-			.to(infoContainer, 1,
+			.to(infoContainer,
+				1,
 				{x:-375, ease:Power3.easeIn},
-			'-=.5');
+				'-=.5'
+			);
 	    info.one("click", openInfo);
+			close.click(closeInfo)
 	}
-	close.click(closeInfo);
-	info.one("click", openInfo);
+
+	info.one("click", openInfo)
+	close.click(closeInfo)
 
 
 
 
-	// info.on('click', function () {
-	//     $(this).toggleClass('active');
-	//     if (open) {
-	//       timeline.reverse();
-	//       open = false;
-	//     } else {
-	//       timeline.play();
-	//       open = true;
-	//     }
-	//   });
+//–––––––––––––––––––––––––––––––––––––––––––
+//menu trigger and animation
+
+	function openMenu() {
+		tlMax
+			.to(
+				menuContainer,
+				.75,
+				{autoAlpha:1}
+			)
+			.staggerFromTo(
+				menuLi,
+				.75,
+				{y:10, autoAlpha:0},
+				{y:-10, autoAlpha:1, ease: Power3.easeOut},
+				0.09,
+				'-=.5'
+			)
+			.set(
+				container,
+				{visibility:'hidden'}
+			);
+			menuBtn.one("click", closeMenu);
+	}
+
+	function closeMenu() {
+		tlMax
+			.set(
+				container,
+				{visibility:'visible',}
+			)
+			.to(
+				menuLi,
+				.5,
+				{autoAlpha:0}
+			)
+			.to(
+				menuContainer, .5,
+				{autoAlpha:0}
+			);
+			menuBtn.one("click", openMenu);
+	}
+	menuBtn.one("click", openMenu);
 
 
+
+//–––––––––––––––––––––––––––––––––––––––––––
 //tile hover effect
 
 	$('.tile').each(function(index,element){

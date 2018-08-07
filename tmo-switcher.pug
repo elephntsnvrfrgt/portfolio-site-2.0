@@ -3,25 +3,11 @@ extends layout.pug
 block prepend head
 	- var pageTitle = "T-Mobile Switcher"
 block content
-	#works
-		<svg width="12px" height="12px" viewBox="0 0 12 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs></defs><g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><path d="M0,4.875 L4.875,4.875 L4.875,0 L0,0 L0,4.875 Z M0,12 L4.875,12 L4.875,7.125 L0,7.125 L0,12 Z M7.125,7.125 L7.125,12 L12,12 L12,7.125 L7.125,7.125 Z M7.125,0 L7.125,4.875 L12,4.875 L12,0 L7.125,0 Z" id="icn-grid" fill="#000000" fill-rule="nonzero"></path></g></svg>
+	#menu-btn
+		<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" id="menu-icn"><path id="bottom" d="M24 4h-24v4h24v-4zm0"></path><path id="middle" d="M24 15h-24v-4h24v4zm0"></path><path id="top" d="M24 18h-24v4h24v-4z"></path></svg>
 		.small Selected works
-	//- #circle
-	//- 	<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
-	//- 			<defs>
-	//- 					<path id="circlePath" d=" M 150, 150 m -120, 0 a 120,120 0 0,1 240,0 a 120,120 0 0,1 -240,0 "/>
-	//- 			</defs>
-	//- 			<circle cx="150" cy="150" r="150" fill="none"/>
-	//- 			<g>
-	//- 					<use xlink:href="#circlePath" fill="none"/>
-	//- 					<text fill="#9B9B9B">
-	//- 							<textPath xlink:href="#circlePath">Selected works   •   Selected works   •   </textPath>
-	//- 					</text>
-	//- 			</g>
-	//- 	</svg>
 		
 	.container
-		
 		section.grid-container.intro#hero-tmo
 			.content-hero
 				+mixin_hero('T-Mobile','Switch','Web | Concept, Design, & Motion')
@@ -66,18 +52,3 @@ block content
 				img(src='assets/img/subpage/tmo-switcher/lp-timeline.jpg')
 				.info.caption Timeline view
 		#tmoendsection2
-		
-		//-menu
-		ul.menu.dark
-			li
-				.eyebrow.dark T-Mobile
-				.title Switch
-			li
-				.eyebrow.dark Volkswagen Car-net
-				.title Connect
-			li
-				.eyebrow.dark Odigo Insurance
-				.title Insure
-			li
-				.eyebrow.dark Country Music Hall of Fame
-				.title Preserve

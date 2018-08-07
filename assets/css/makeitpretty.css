@@ -309,9 +309,9 @@ p {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between; }
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end; }
   #nameinfo .small {
     margin: 0 25px 0 0; }
 
@@ -355,10 +355,9 @@ p {
   background: #4c4c4c; }
 
 #info {
-  -webkit-box-ordinal-group: 1;
-  -ms-flex-order: 0;
-  order: 0;
+  color: #FFFFFF;
   text-decoration: none;
+  text-align: right;
   -webkit-transition: all 250ms ease-in;
   -o-transition: all 250ms ease-in;
   transition: all 250ms ease-in;
@@ -383,7 +382,6 @@ p {
       left: 0; }
 
 #social-container {
-  float: left;
   -ms-flex-item-align: start;
   align-self: flex-start;
   -webkit-box-ordinal-group: 1;
@@ -511,7 +509,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-smoothing: antialiased;
-  background: #FFFFFF; }
+  background: #FFFFFF;
+  overflow-x: hidden; }
 
 #circle {
   position: fixed;
@@ -559,7 +558,9 @@ body {
 
 .container {
   margin: 0 0 0 60px;
-  width: calc(100% - 60px); }
+  width: calc(100% - 60px);
+  height: 100vh;
+  overflow: scroll; }
 
 .grid-container {
   padding: 0 7.778%;
@@ -694,37 +695,6 @@ body {
   background: linear-gradient(to bottom left, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0) 100%), url(../img/subpage/bg-cmhf.jpg) no-repeat right top;
   background-size: auto 700px; }
 
-#works {
-  position: fixed;
-  z-index: 110;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-transform-origin: top right;
-  -ms-transform-origin: top right;
-  transform-origin: top right;
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg);
-  top: 185px;
-  right: 30px;
-  height: 60px;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  opacity: .4; }
-  #works .small {
-    margin: 0 0 0 30px;
-    -webkit-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    transform: rotate(180deg); }
-
-#works:hover {
-  opacity: 1; }
-
 .content-hero {
   margin-top: 248px;
   grid-column: 1/span 7;
@@ -737,7 +707,6 @@ body {
 
 .section-title {
   position: relative;
-  display: block;
   z-index: -10;
   float: right;
   -webkit-transform-origin: top right;
@@ -801,12 +770,72 @@ img {
   background: -o-linear-gradient(top, white 0%, rgba(255, 255, 255, 0) 20%), no-repeat bottom left/100% auto url(../img/subpage/tmo-switcher/tmoendsection2-bg.jpg);
   background: linear-gradient(to bottom, white 0%, rgba(255, 255, 255, 0) 20%), no-repeat bottom left/100% auto url(../img/subpage/tmo-switcher/tmoendsection2-bg.jpg); }
 
+#menu-btn {
+  position: fixed;
+  z-index: 120;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transform-origin: top right;
+  -ms-transform-origin: top right;
+  transform-origin: top right;
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+  top: 185px;
+  right: 30px;
+  height: 60px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  opacity: .4; }
+  #menu-btn .small {
+    margin: 0 0 0 30px;
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg); }
+
+#menu-btn:hover {
+  opacity: 1; }
+
+#top {
+  position: relative;
+  top: 3px; }
+
+#menu-icn {
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg); }
+
+#menu-container {
+  opacity: 0;
+  visibility: hidden; }
+
 .menu {
   background: #262626;
+  width: calc(100% - 60px);
+  margin: 0 0 0 60px;
+  overflow: scroll;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 110;
+  height: 100vh;
   padding: 248px 0;
   text-align: center; }
   .menu li:nth-last-child(1n+2) {
     margin: 0 0 248px 0; }
+  .menu .title {
+    -webkit-transition: all 550ms;
+    -o-transition: all 550ms;
+    transition: all 550ms; }
+  .menu a:hover > .title {
+    -webkit-text-stroke: 1px white;
+    -webkit-text-fill: #262626;
+    color: #262626; }
 
 .dark {
   color: #FFFFFF; }
