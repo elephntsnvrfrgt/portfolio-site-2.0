@@ -5,30 +5,34 @@
 	z-index:120;
 	display:flex;
 	transform-origin: top right;
-	transform:rotate(90deg);
-	top:185px;
-	right:30px;
+	transform:rotate(-90deg);
+	top: 30px;
+  right: 80px;
 	height:60px;
 	align-items: center;
-  justify-content: center;
-	opacity:.4;
+  justify-content: flex-end;
+	opacity:.5;
+	cursor: pointer;
+	transition: all .25s;
 	.small{
-		margin:0 0 0 30px;
-		transform:rotate(180deg);
+		margin:0 30px 0 0;
+	}
+	&:hover{
+		opacity: 1;
 	}
 }
 
-#menu-btn:hover{
-	opacity: 1;
-}
-
-#top{
-	position:relative;
-	top:3px;
-}
-
-#menu-icn{
+#burger{
+	order:1;
 	transform:rotate(90deg);
+	perspective: 800px;
+	stroke:$gray60;
+	fill:$gray60;
+}
+
+#menuText{
+	order:0;
+	text-align: right;
 }
 
 
@@ -37,6 +41,7 @@
 	opacity: 0;
 	visibility:hidden;
 }
+
 
 .menu{
 	background:$gray15;
@@ -55,8 +60,9 @@
 		margin:0 0 248px 0;
 	}
 
-	.title{
-		transition: all 550ms;
+	.title, .eyebrow{
+		transition: all .75s;
+		//transform:scale3d(1,1,1);
 	}
 
 	a:hover > .title{
@@ -64,7 +70,15 @@
 		-webkit-text-fill:$gray15;
 		color:$gray15;
 	}
+
+	a:hover > .eyebrow{
+		color:$gray60;
+		//letter-spacing: 4px;
+	}
+
+
 }
+
 
 .dark{
 	color:$white;

@@ -1,7 +1,6 @@
 body{
 	@include text-render;
   background:$white;
-	overflow-x:hidden;
 }
 
 //circle stamp
@@ -49,7 +48,8 @@ body{
 	margin:0 0 0 60px;
 	width:calc(100% - 60px);
 	height:100vh;
-	overflow:scroll;
+	overflow-x:hidden;
+	overflow-y:scroll;
 }
 
 .grid-container{

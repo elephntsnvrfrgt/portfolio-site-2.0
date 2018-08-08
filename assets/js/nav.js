@@ -7,11 +7,13 @@ $(document).ready(function(){
 				social = $('.social'),
 				socialLinks = $(".social-links"),
 				info = $('#info'),
+				infoBtn = $('#nameinfo'),
 				close = $('#closeInfo'),
 				infoContainer = $('.info-container'),
 				infoFade = $('.info-fade'),
 				socialContainer = $('#social-container'),
 				container = $('.container'),
+				overlay = $('#overlay'),
 				menuBtn = $('#menu-btn'),
 				menuContainer = $('#menu-container'),
 				menuLi = $('.menuListItem'),
@@ -75,29 +77,73 @@ $(document).ready(function(){
 				{	y:-10, autoAlpha:1, ease: Power3.easeOut},
 				0.09,
 				'-=.5'
-			);
-	    info.one("click", closeInfo);
-			close.click(closeInfo);
+			)
+			// //overlay to disable scrolling
+			// .set(
+			// 	overlay,
+			// 	{visibility:'visible'},
+			// 	'-=1'
+			// )
+			// .to(
+			// 	overlay,
+			// 	1,
+			// 	{opacity:.05, ease: Power3.easeOut},
+			// 	'-=1'
+			// )
 
+
+		infoBtn.one("click", closeInfo);
+
+		//change from isaac to close
+		$('#info').fadeOut("slow", function(){
+		   var infoText = $("<div class='small' id='info'>Close</div>").hide();
+		   $(this).replaceWith(infoText);
+		   $('#info').fadeIn("slow");
+		});
 	}
 
 	function closeInfo() {
 		tlMax
 			.to(
-				infoFade, .5,
+				infoFade,
+				.5,
 				{autoAlpha:0}
 			)
-			.to(infoContainer,
+			.to(
+				infoContainer,
 				1,
 				{x:-375, ease:Power3.easeIn},
 				'-=.5'
-			);
-	    info.one("click", openInfo);
-			close.click(closeInfo)
+			)
+			.to(
+				info,
+				.5,
+				{autoAlpha:0}
+			)
+			// //overlay to disable scrolling
+			// .to(
+			// 	overlay,
+			// 	1,
+			// 	{opacity:0, ease: Power3.easeOut},
+			// 	'-=1'
+			// )
+			// .set(
+			// 	overlay,
+			// 	{visibility:'hidden'}
+			// )
+
+
+		infoBtn.one("click", openInfo);
+
+		//change from close to isaac
+		$('#info').fadeOut("slow", function(){
+		   var infoText = $("<div class='small' id='info'>Isaac Martin</div>").hide();
+		   $(this).replaceWith(infoText);
+		   $('#info').fadeIn("slow");
+		});
 	}
 
-	info.one("click", openInfo)
-	close.click(closeInfo)
+	infoBtn.one("click", openInfo);
 
 
 
@@ -109,22 +155,29 @@ $(document).ready(function(){
 		tlMax
 			.to(
 				menuContainer,
-				.75,
+				.5,
 				{autoAlpha:1}
 			)
 			.staggerFromTo(
 				menuLi,
-				.75,
-				{y:10, autoAlpha:0},
-				{y:-10, autoAlpha:1, ease: Power3.easeOut},
-				0.09,
-				'-=.5'
+				1.5,
+				{y:15, autoAlpha:0},
+				{y:-15, autoAlpha:1, ease: Power3.easeOut},
+				0.2,
+				'+=.25'
 			)
 			.set(
 				container,
 				{visibility:'hidden'}
-			);
+			)
 			menuBtn.one("click", closeMenu);
+
+			//change menu text
+			$('#menuText').fadeOut("slow", function(){
+			   var menuText = $("<div class='small' id='menuText'>Never mind</div>").hide();
+			   $(this).replaceWith(menuText);
+			   $('#menuText').fadeIn("slow");
+			});
 	}
 
 	function closeMenu() {
@@ -141,10 +194,42 @@ $(document).ready(function(){
 			.to(
 				menuContainer, .5,
 				{autoAlpha:0}
-			);
+			)
 			menuBtn.one("click", openMenu);
+
+			//change menu text
+			$('#menuText').fadeOut("slow", function(){
+			   var menuText = $("<div class='small' id='menuText'>Selected works</div>").hide();
+			   $(this).replaceWith(menuText);
+			   $('#menuText').fadeIn("slow");
+			});
 	}
 	menuBtn.one("click", openMenu);
+
+
+//menu hamburger svg animation
+
+	var menuToggle = new TimelineMax({paused:true, reversed:true});
+	var menuTime = .3;
+	var delayMenu = .25;
+
+	menuToggle
+	  .set('', {className:"-=closemenu"})
+	  .set('', {className:"+=openmenu"})
+	  .to(' .top', menuTime, {y:'-12px', transformOrigin: '50% 50%', fill:'white',  ease: Power3.ease}, delayMenu, 'burg')
+	  .to(' .bot', menuTime, {y:'12px', transformOrigin: '50% 50%', fill:'white', ease: Power3.ease}, delayMenu, 'burg')
+	  .to(' .mid', menuTime, {scale:0, transformOrigin: '50% 50%', stroke:'white', ease: Power3.ease}, delayMenu, 'burg')
+	  .add('rotate')
+	  .to(' .top', menuTime, {y:'8', ease: Power3.ease}, 'rotate')
+	  .to(' .bot', menuTime, {y:'-8', ease: Power3.ease}, 'rotate')
+	  .to(' .top', menuTime, {rotationZ:45, transformOrigin: '50% 50%', ease: Power3.ease}, 'rotate')
+	  .to(' .bot', menuTime, {rotationZ:-45, transformOrigin: '50% 50%', ease: Power3.ease}, 'rotate')
+
+	 // .set('#burger .mid', {opacity:0})//temp fix for stupid iOS rotate y bug
+
+	menuBtn.click(function () {
+	  menuToggle.reversed() ? menuToggle.restart() : menuToggle.reverse();
+	});
 
 
 

@@ -34,9 +34,9 @@
 
 .section-title{
 	position:relative;
-	//display:block;
+	//display:inline;
 	z-index:-10;
-	float: right;
+	//float: right;
 	transform-origin: top right;
 	transform:rotate(-90deg);
 	height:0;
