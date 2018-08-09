@@ -1,7 +1,8 @@
 mixin mixin_hero(eyebrow, title, info)
-	.eyebrow= eyebrow
-	h2.title= title
-	.info= info
+	.herotext
+		.eyebrow= eyebrow
+		h2.title= title
+		.info= info
 
 mixin mixin_experience(job_name, years)
 	li.experience
@@ -14,11 +15,4 @@ mixin mixin_js
     )
 	script(
 		src='assets/js/nav.js'
-		)
-
-mixin img-responsive(srcset,sizes,src)
-	img.lazyload(
-		srcset=srcset,
-		sizes=sizes,
-		src=src
 		)

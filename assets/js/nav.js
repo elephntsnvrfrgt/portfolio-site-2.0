@@ -1,5 +1,7 @@
 $(document).ready(function(){
 
+
+
 	$(".content").fitVids();
 
 	var 	navContent = $('.nav-content'),
@@ -17,21 +19,28 @@ $(document).ready(function(){
 				menuBtn = $('#menu-btn'),
 				menuContainer = $('#menu-container'),
 				menuLi = $('.menuListItem'),
-				// heroTMO = $('#hero-tmo'),
-				// heroVW = $('#hero-vw'),
-				// heroODI = $('#hero-odi'),
-				// heroCMHF = $('#hero-cmhf'),
-				// descTMO = $('#tmo-description'),
-				// descVW = $('#vw-description'),
-				// descODI = $('#odi-description'),
-				// descCMHF = $('#cmhf-description'),
-				// contentTMO = $('#tmo-content'),
-				// contentVW = $('#vw-content'),
-				// contentODI = $('#odi-content'),
-				// contentCMHF = $('#cmhf-content'),
 			 	open = false,
 				tlMax = new TimelineMax();
 
+
+
+//–––––––––––––––––––––––––––––––––––––––––––
+//page content fade in
+
+	tlMax
+		.to(
+			$('.fadein'),
+			1.5,
+			{opacity:1, ease: Power3.easeOut}
+		)
+		.staggerFromTo(
+			$('.herotext'),
+			1,
+			{y:10, autoAlpha:0},
+			{y:0, autoAlpha:1, ease: Power3.easeOut},
+			0.2,
+			"-=1.5"
+		);
 
 
 //–––––––––––––––––––––––––––––––––––––––––––
@@ -40,7 +49,8 @@ $(document).ready(function(){
 	logoMark.mouseover(
 		function(){
 			tlMax
-					.staggerFromTo(social, 1,
+					.staggerFromTo(social,
+						1,
 						{x:-10, autoAlpha:0},
 						{x:0, autoAlpha:1, ease: Power3.easeOut},
 						0.09
@@ -220,10 +230,10 @@ $(document).ready(function(){
 	  .to(' .bot', menuTime, {y:'12px', transformOrigin: '50% 50%', fill:'white', ease: Power3.ease}, delayMenu, 'burg')
 	  .to(' .mid', menuTime, {scale:0, transformOrigin: '50% 50%', stroke:'white', ease: Power3.ease}, delayMenu, 'burg')
 	  .add('rotate')
-	  .to(' .top', menuTime, {y:'8', ease: Power3.ease}, 'rotate')
-	  .to(' .bot', menuTime, {y:'-8', ease: Power3.ease}, 'rotate')
-	  .to(' .top', menuTime, {rotationZ:45, transformOrigin: '50% 50%', ease: Power3.ease}, 'rotate')
-	  .to(' .bot', menuTime, {rotationZ:-45, transformOrigin: '50% 50%', ease: Power3.ease}, 'rotate')
+	  .to(' .top', menuTime, {y:'8', ease: Power3.ease}, delayMenu, 'rotate')
+	  .to(' .bot', menuTime, {y:'-8', ease: Power3.ease}, delayMenu, 'rotate')
+	  .to(' .top', menuTime, {rotationZ:45, transformOrigin: '50% 50%', ease: Power3.ease}, delayMenu, 'rotate')
+	  .to(' .bot', menuTime, {rotationZ:-45, transformOrigin: '50% 50%', ease: Power3.ease}, delayMenu, 'rotate')
 
 	 // .set('#burger .mid', {opacity:0})//temp fix for stupid iOS rotate y bug
 
@@ -252,6 +262,20 @@ $(document).ready(function(){
 	function out(){
 		this.animation.reverse();
 	}
+
+
+
+//–––––––––––––––––––––––––––––––––––––––––––
+//scroll reveal
+
+
+
+
+//–––––––––––––––––––––––––––––––––––––––––––
+//parallax scrolling
+
+
+
 
 
 

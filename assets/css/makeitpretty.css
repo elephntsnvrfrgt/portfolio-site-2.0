@@ -540,6 +540,9 @@ body {
 .intro {
   min-height: 800px; }
 
+.fadein {
+  opacity: 0; }
+
 .grid-container.work {
   grid-template-rows: repeat(8, 100px); }
 
@@ -636,6 +639,7 @@ body {
   background: -webkit-linear-gradient(top right, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0) 100%), url(../img/subpage/bg-tmo.jpg) no-repeat right top;
   background: -o-linear-gradient(top right, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0) 100%), url(../img/subpage/bg-tmo.jpg) no-repeat right top;
   background: linear-gradient(to bottom left, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0) 100%), url(../img/subpage/bg-tmo.jpg) no-repeat right top;
+  background-attachment: scroll;
   background-size: auto 700px; }
 
 #hero-vw {
@@ -643,6 +647,7 @@ body {
   background: -webkit-linear-gradient(top right, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0) 100%), url(../img/subpage/bg-vw.jpg) no-repeat right top;
   background: -o-linear-gradient(top right, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0) 100%), url(../img/subpage/bg-vw.jpg) no-repeat right top;
   background: linear-gradient(to bottom left, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0) 100%), url(../img/subpage/bg-vw.jpg) no-repeat right top;
+  background-attachment: scroll;
   background-size: auto 700px; }
 
 #hero-odi {
@@ -650,6 +655,7 @@ body {
   background: -webkit-linear-gradient(top right, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0) 100%), url(../img/subpage/bg-odi.jpg) no-repeat right top;
   background: -o-linear-gradient(top right, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0) 100%), url(../img/subpage/bg-odi.jpg) no-repeat right top;
   background: linear-gradient(to bottom left, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0) 100%), url(../img/subpage/bg-odi.jpg) no-repeat right top;
+  background-attachment: scroll;
   background-size: auto 700px; }
 
 #hero-cmhf {
@@ -657,6 +663,7 @@ body {
   background: -webkit-linear-gradient(top right, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0) 100%), url(../img/subpage/bg-cmhf.jpg) no-repeat right top;
   background: -o-linear-gradient(top right, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0) 100%), url(../img/subpage/bg-cmhf.jpg) no-repeat right top;
   background: linear-gradient(to bottom left, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0) 100%), url(../img/subpage/bg-cmhf.jpg) no-repeat right top;
+  background-attachment: scroll;
   background-size: auto 700px; }
 
 .content-hero {

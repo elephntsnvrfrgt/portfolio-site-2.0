@@ -50,6 +50,9 @@ body{
 	height:100vh;
 	overflow-x:hidden;
 	overflow-y:scroll;
+
+	// perspective: 1000px;
+  // transform-style: preserve-3d;
 }
 
 .grid-container{
@@ -69,6 +72,9 @@ body{
 		min-height:800px;
 }
 
+.fadein{
+	opacity:0;
+}
 
 
 
