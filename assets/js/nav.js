@@ -209,7 +209,7 @@ $(document).ready(function(){
 
 			//change menu text
 			$('#menuText').fadeOut("slow", function(){
-			   var menuText = $("<div class='small' id='menuText'>Selected works</div>").hide();
+			   var menuText = $("<div class='small' id='menuText'>Other works</div>").hide();
 			   $(this).replaceWith(menuText);
 			   $('#menuText').fadeIn("slow");
 			});

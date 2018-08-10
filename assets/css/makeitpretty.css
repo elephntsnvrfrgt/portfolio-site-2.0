@@ -311,9 +311,6 @@ p {
 #info {
   color: #FFFFFF;
   text-align: right;
-  -webkit-transition: all 250ms ease-in;
-  -o-transition: all 250ms ease-in;
-  transition: all 250ms ease-in;
   position: relative;
   cursor: pointer; }
   #info:after, #info:before {

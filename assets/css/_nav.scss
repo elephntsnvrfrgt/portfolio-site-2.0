@@ -54,7 +54,6 @@
 	color:$white;
 	//text-decoration:none;
 	text-align: right;
-	transition: all 250ms ease-in;
 	position: relative;
 	cursor:pointer;
 	@include hover_underline($underline_gap:1,$underline_thickness:1,$color:#{$gray80});
