@@ -1,6 +1,9 @@
 body{
-	@include text-render;
   background:$white;
+}
+
+html.sr .load-hidden {
+    visibility: hidden;
 }
 
 //circle stamp

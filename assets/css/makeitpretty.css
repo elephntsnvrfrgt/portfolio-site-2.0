@@ -234,7 +234,10 @@ a {
 p {
   font: 16px/24px "Work Sans", Helvetica, Arial, sans-serif;
   color: #999999;
-  margin-bottom: 15px; }
+  margin-bottom: 15px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased; }
   p a {
     font-family: inherit;
     font-size: inherit; }
@@ -249,7 +252,10 @@ p {
   color: #262626;
   text-transform: uppercase;
   letter-spacing: 3.25px;
-  margin-bottom: 25px; }
+  margin-bottom: 25px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased; }
 
 .title {
   font: 148px/132px "TRYVesterbro-Poster", serif;
@@ -257,7 +263,10 @@ p {
 
 .info {
   font: 18px/18px "FiraMonoOT", "Courier New", Courier, monospace;
-  color: #CCCCCC; }
+  color: #CCCCCC;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased; }
 
 .section-title {
   font: 18vw "TRYVesterbro-Poster", serif;
@@ -284,7 +293,6 @@ p {
 
 .nav-content {
   font-family: "FiraMonoOT", "Courier New", Courier, monospace;
-  text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-smoothing: antialiased;
@@ -392,7 +400,6 @@ p {
   height: 100vh;
   padding: 10px 0 44px 0;
   background: #262626;
-  text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-smoothing: antialiased;
@@ -466,11 +473,10 @@ p {
   background: black; }
 
 body {
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-smoothing: antialiased;
   background: #FFFFFF; }
+
+html.sr .load-hidden {
+  visibility: hidden; }
 
 #circle {
   position: fixed;
@@ -636,7 +642,6 @@ body {
   background: -webkit-linear-gradient(top right, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0) 100%), url(../img/subpage/bg-tmo.jpg) no-repeat right top;
   background: -o-linear-gradient(top right, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0) 100%), url(../img/subpage/bg-tmo.jpg) no-repeat right top;
   background: linear-gradient(to bottom left, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0) 100%), url(../img/subpage/bg-tmo.jpg) no-repeat right top;
-  background-attachment: scroll;
   background-size: auto 700px; }
 
 #hero-vw {
@@ -644,7 +649,6 @@ body {
   background: -webkit-linear-gradient(top right, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0) 100%), url(../img/subpage/bg-vw.jpg) no-repeat right top;
   background: -o-linear-gradient(top right, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0) 100%), url(../img/subpage/bg-vw.jpg) no-repeat right top;
   background: linear-gradient(to bottom left, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0) 100%), url(../img/subpage/bg-vw.jpg) no-repeat right top;
-  background-attachment: scroll;
   background-size: auto 700px; }
 
 #hero-odi {
@@ -652,7 +656,6 @@ body {
   background: -webkit-linear-gradient(top right, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0) 100%), url(../img/subpage/bg-odi.jpg) no-repeat right top;
   background: -o-linear-gradient(top right, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0) 100%), url(../img/subpage/bg-odi.jpg) no-repeat right top;
   background: linear-gradient(to bottom left, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0) 100%), url(../img/subpage/bg-odi.jpg) no-repeat right top;
-  background-attachment: scroll;
   background-size: auto 700px; }
 
 #hero-cmhf {
@@ -660,7 +663,6 @@ body {
   background: -webkit-linear-gradient(top right, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0) 100%), url(../img/subpage/bg-cmhf.jpg) no-repeat right top;
   background: -o-linear-gradient(top right, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0) 100%), url(../img/subpage/bg-cmhf.jpg) no-repeat right top;
   background: linear-gradient(to bottom left, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0) 100%), url(../img/subpage/bg-cmhf.jpg) no-repeat right top;
-  background-attachment: scroll;
   background-size: auto 700px; }
 
 .content-hero {
@@ -736,6 +738,27 @@ img {
   background: -webkit-linear-gradient(top, white 0%, rgba(255, 255, 255, 0) 20%), no-repeat bottom left/100% auto url(../img/subpage/tmo-switcher/tmoendsection2-bg.jpg);
   background: -o-linear-gradient(top, white 0%, rgba(255, 255, 255, 0) 20%), no-repeat bottom left/100% auto url(../img/subpage/tmo-switcher/tmoendsection2-bg.jpg);
   background: linear-gradient(to bottom, white 0%, rgba(255, 255, 255, 0) 20%), no-repeat bottom left/100% auto url(../img/subpage/tmo-switcher/tmoendsection2-bg.jpg); }
+
+.footer {
+  position: relative;
+  min-height: 500px; }
+
+.nextPrjt#circle {
+  position: absolute;
+  top: 190px;
+  right: 50px; }
+
+#next.title {
+  position: absolute;
+  z-index: 110;
+  top: 240px;
+  right: 100px;
+  text-align: right;
+  -webkit-transition: color 1.25s ease;
+  -o-transition: color 1.25s ease;
+  transition: color 1.25s ease; }
+  #next.title:hover {
+    color: #262626; }
 
 #menu-btn {
   position: fixed;

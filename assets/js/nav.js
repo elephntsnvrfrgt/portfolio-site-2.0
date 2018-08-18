@@ -1,8 +1,9 @@
 $(document).ready(function(){
 
-
+	//Barba.Pjax.start();
 
 	$(".content").fitVids();
+	ScrollReveal().reveal('.container .reveal', {container:'.container', delay:250, duration: 1750, easing:'cubic-bezier(.01,.12,.2,1)'});
 
 	var 	navContent = $('.nav-content'),
 				logoMark = $('#logo-mark'),
@@ -27,20 +28,20 @@ $(document).ready(function(){
 //–––––––––––––––––––––––––––––––––––––––––––
 //page content fade in
 
-	tlMax
-		.to(
-			$('.fadein'),
-			1.5,
-			{opacity:1, ease: Power3.easeOut}
-		)
-		.staggerFromTo(
-			$('.herotext'),
-			1,
-			{y:10, autoAlpha:0},
-			{y:0, autoAlpha:1, ease: Power3.easeOut},
-			0.2,
-			"-=1.5"
-		);
+	// tlMax
+	// 	.to(
+	// 		$('.fadein'),
+	// 		1.5,
+	// 		{opacity:1, ease: Power3.easeOut}
+	// 	)
+	// 	.staggerFromTo(
+	// 		$('.herotext'),
+	// 		1,
+	// 		{y:10, autoAlpha:0},
+	// 		{y:0, autoAlpha:1, ease: Power3.easeOut},
+	// 		0.2,
+	// 		"-=1.5"
+	// 	);
 
 
 //–––––––––––––––––––––––––––––––––––––––––––
@@ -165,8 +166,8 @@ $(document).ready(function(){
 		tlMax
 			.to(
 				menuContainer,
-				.5,
-				{autoAlpha:1}
+				.4,
+				{autoAlpha:1, ease: Power3.easeOut}
 			)
 			.staggerFromTo(
 				menuLi,
@@ -174,19 +175,19 @@ $(document).ready(function(){
 				{y:15, autoAlpha:0},
 				{y:-15, autoAlpha:1, ease: Power3.easeOut},
 				0.2,
-				'+=.25'
+				'+=.1'
 			)
 			.set(
 				container,
-				{visibility:'hidden'}
+				{visibility:"hidden"}
 			)
 			menuBtn.one("click", closeMenu);
 
 			//change menu text
-			$('#menuText').fadeOut("slow", function(){
+			$("#menuText").fadeOut("slow", function(){
 			   var menuText = $("<div class='small' id='menuText'>Never mind</div>").hide();
 			   $(this).replaceWith(menuText);
-			   $('#menuText').fadeIn("slow");
+			   $("#menuText").fadeIn("slow");
 			});
 	}
 
@@ -198,12 +199,13 @@ $(document).ready(function(){
 			)
 			.to(
 				menuLi,
-				.5,
+				.3,
 				{autoAlpha:0}
 			)
 			.to(
-				menuContainer, .5,
-				{autoAlpha:0}
+				menuContainer, .3,
+				{autoAlpha:0},
+				'-=.2'
 			)
 			menuBtn.one("click", openMenu);
 
@@ -220,8 +222,8 @@ $(document).ready(function(){
 //menu hamburger svg animation
 
 	var menuToggle = new TimelineMax({paused:true, reversed:true});
-	var menuTime = .3;
-	var delayMenu = .25;
+	var menuTime = .4;
+	var delayMenu = .3;
 
 	menuToggle
 	  .set('', {className:"-=closemenu"})

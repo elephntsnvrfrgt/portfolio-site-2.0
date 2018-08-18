@@ -33,6 +33,7 @@ p{
 	font: 16px/24px $sans-stack;
   color:$gray60;
 	margin-bottom: 15px;
+  @include text-render;
   a{
     font-family:inherit;
     font-size:inherit;
@@ -52,6 +53,7 @@ p{
 	text-transform:uppercase;
 	letter-spacing: 3.25px;
 	margin-bottom: 25px;
+  @include text-render;
 }
 
 .title{
@@ -62,6 +64,7 @@ p{
 .info{
   font: 18px/18px $mono-stack;
 	color: $gray80;
+  @include text-render;
 }
 
 .section-title{

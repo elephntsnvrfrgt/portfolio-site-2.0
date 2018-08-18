@@ -6,7 +6,7 @@ $cubic-bezier: cubic-bezier(0.4, 0, .2, 1);
 //mixins ––––––––––––––––
 
 @mixin text-render{
-	text-rendering: optimizeLegibility;
+	//text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	font-smoothing: antialiased;
@@ -55,6 +55,5 @@ $cubic-bezier: cubic-bezier(0.4, 0, .2, 1);
 	background:
 		linear-gradient(to bottom left, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0) 100%),
 		url(#{$imgpath}) no-repeat right top;
-	background-attachment: scroll;
 	background-size: auto 700px;
 }

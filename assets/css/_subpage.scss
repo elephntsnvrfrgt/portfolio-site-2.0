@@ -104,3 +104,27 @@ img{
 	;
 	//margin:0 0 10vw 0;
 }
+
+.footer{
+	position:relative;
+	min-height:500px;
+}
+
+
+.nextPrjt#circle{
+	position:absolute;
+	top:190px;
+	right:50px;
+}
+
+#next.title{
+	position: absolute;
+  z-index: 110;
+  top: 240px;
+  right: 100px;
+  text-align: right;
+	transition:color 1.25s ease;
+	&:hover{
+		color:$gray15;
+	}
+}
