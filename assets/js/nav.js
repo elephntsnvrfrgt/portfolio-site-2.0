@@ -1,10 +1,5 @@
 $(document).ready(function(){
 
-	//Barba.Pjax.start();
-
-	$(".content").fitVids();
-	ScrollReveal().reveal('.container .reveal', {container:'.container', delay:250, duration: 1750, easing:'cubic-bezier(.01,.12,.2,1)'});
-
 	var 	navContent = $('.nav-content'),
 				logoMark = $('#logo-mark'),
 				social = $('.social'),
@@ -20,29 +15,16 @@ $(document).ready(function(){
 				menuBtn = $('#menu-btn'),
 				menuContainer = $('#menu-container'),
 				menuLi = $('.menuListItem'),
-			 	open = false,
+				open = false,
 				tlMax = new TimelineMax();
 
 
-
 //–––––––––––––––––––––––––––––––––––––––––––
-//page content fade in
+//plugins
 
-	// tlMax
-	// 	.to(
-	// 		$('.fadein'),
-	// 		1.5,
-	// 		{opacity:1, ease: Power3.easeOut}
-	// 	)
-	// 	.staggerFromTo(
-	// 		$('.herotext'),
-	// 		1,
-	// 		{y:10, autoAlpha:0},
-	// 		{y:0, autoAlpha:1, ease: Power3.easeOut},
-	// 		0.2,
-	// 		"-=1.5"
-	// 	);
-
+	$(".content").fitVids();
+	ScrollReveal().reveal('.container .revealMove', {container:'.container', distance:'20px', delay:200, duration: 1500, easing:'cubic-bezier(.26,.56,.33,1)'});
+	ScrollReveal().reveal('.container .revealFade', {container:'.container', delay:200, duration: 1500, easing:'cubic-bezier(.5,0,.2,1)'});
 
 //–––––––––––––––––––––––––––––––––––––––––––
 //nav animations
@@ -102,7 +84,6 @@ $(document).ready(function(){
 			// 	'-=1'
 			// )
 
-
 		infoBtn.one("click", closeInfo);
 
 		//change from isaac to close
@@ -131,18 +112,6 @@ $(document).ready(function(){
 				.5,
 				{autoAlpha:0}
 			)
-			// //overlay to disable scrolling
-			// .to(
-			// 	overlay,
-			// 	1,
-			// 	{opacity:0, ease: Power3.easeOut},
-			// 	'-=1'
-			// )
-			// .set(
-			// 	overlay,
-			// 	{visibility:'hidden'}
-			// )
-
 
 		infoBtn.one("click", openInfo);
 
@@ -184,10 +153,10 @@ $(document).ready(function(){
 			menuBtn.one("click", closeMenu);
 
 			//change menu text
-			$("#menuText").fadeOut("slow", function(){
+			$("#menuText").fadeOut(400, function(){
 			   var menuText = $("<div class='small' id='menuText'>Never mind</div>").hide();
 			   $(this).replaceWith(menuText);
-			   $("#menuText").fadeIn("slow");
+			   $("#menuText").fadeIn(400);
 			});
 	}
 
@@ -199,21 +168,21 @@ $(document).ready(function(){
 			)
 			.to(
 				menuLi,
-				.3,
+				.5,
 				{autoAlpha:0}
 			)
 			.to(
-				menuContainer, .3,
+				menuContainer, .5,
 				{autoAlpha:0},
 				'-=.2'
 			)
 			menuBtn.one("click", openMenu);
 
 			//change menu text
-			$('#menuText').fadeOut("slow", function(){
-			   var menuText = $("<div class='small' id='menuText'>Other works</div>").hide();
+			$('#menuText').fadeOut(400, function(){
+			   var menuText = $("<div class='small' id='menuText'>Other work</div>").hide();
 			   $(this).replaceWith(menuText);
-			   $('#menuText').fadeIn("slow");
+			   $('#menuText').fadeIn(400);
 			});
 	}
 	menuBtn.one("click", openMenu);
@@ -222,7 +191,7 @@ $(document).ready(function(){
 //menu hamburger svg animation
 
 	var menuToggle = new TimelineMax({paused:true, reversed:true});
-	var menuTime = .4;
+	var menuTime = .5;
 	var delayMenu = .3;
 
 	menuToggle
@@ -251,7 +220,7 @@ $(document).ready(function(){
 	$('.tile').each(function(index,element){
 		var tlMax = new TimelineMax({paused:true}),
 				prjtTileInfo = ".prjtNo, .prjtTitle";
-		tlMax.to($(element).find(prjtTileInfo), 1, {opacity:1})
+		tlMax.to($(element).find(prjtTileInfo), .9, {opacity:1})
 		element.animation = tlMax;
 	})
 
@@ -264,19 +233,6 @@ $(document).ready(function(){
 	function out(){
 		this.animation.reverse();
 	}
-
-
-
-//–––––––––––––––––––––––––––––––––––––––––––
-//scroll reveal
-
-
-
-
-//–––––––––––––––––––––––––––––––––––––––––––
-//parallax scrolling
-
-
 
 
 

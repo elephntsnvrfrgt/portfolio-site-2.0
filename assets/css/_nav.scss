@@ -24,6 +24,7 @@
 	//height: 100%;
 	@include text-render;
 	display:flex;
+	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
 }
@@ -31,11 +32,25 @@
 #nameinfo{
 	//width:54%;
 	//display:flex;
-	order:1;
+	order:2;
 	align-items:center;
 	//justify-content: flex-end;
+	// align-self: flex-end;
 	.small{
 		margin:0 25px 0 0;
+	}
+}
+
+#home{
+	position: absolute;
+	right:50vh;
+	visibility:hidden;
+	a{
+		color: $gray40;
+		transition: color .5s;
+		&:hover{
+			color: $gray60;
+		}
 	}
 }
 
@@ -60,8 +75,8 @@
 }
 
 #social-container{
-	align-self: flex-start;
-	order:0;
+	// align-self: flex-start;
+	// order:0;
 	padding:24px 0 22px 24px;
 	line-height:10px;
 	display:block;
