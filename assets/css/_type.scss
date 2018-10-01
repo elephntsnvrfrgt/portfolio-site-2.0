@@ -61,6 +61,11 @@ p{
 	letter-spacing: -0.49px;
 }
 
+.content-hl{
+  font:72px/74px $serif-stack;
+  letter-spacing:-0.24px;
+}
+
 .info{
   font: 18px/18px $mono-stack;
 	color: $gray80;
@@ -68,7 +73,7 @@ p{
 }
 
 .section-title{
-	font: 18vw $serif-stack;
+	font: 21vw $serif-stack;
   color:$gray95;
 }
 

@@ -1,4 +1,6 @@
+//––––––––––––––––––––––––––––––––––––––
 //hero backgrounds
+//––––––––––––––––––––––––––––––––––––––
 
 #hero-tmo{
 	@include subpageHero('../img/subpage/bg-tmo.jpg');
@@ -18,6 +20,9 @@
 
 
 
+//––––––––––––––––––––––––––––––––––––––
+//hero
+//––––––––––––––––––––––––––––––––––––––
 
 .content-hero{
   margin-top: 248px;
@@ -31,6 +36,12 @@
 	}
 }
 
+
+
+//––––––––––––––––––––––––––––––––––––––
+//content
+//––––––––––––––––––––––––––––––––––––––
+
 .description{
 	margin-top:100px;
 }
@@ -43,8 +54,12 @@
 	transform-origin: top right;
 	transform:rotate(-90deg);
 	height:0;
-	right:19vw;
+	right:22vw;
 	text-align:right;
+}
+
+.fix{
+	top:100px;
 }
 
 .content{
@@ -60,9 +75,10 @@ img{
 	width:100%;
 	height:auto;
 	display:flex;
+	align-self: center;
 }
 
-.video {
+.video, .img-full {
 	//grid-row-start: auto;
 	display:flex;
 	grid-column: 1/span 12;
@@ -70,8 +86,7 @@ img{
 	@include softShadow($blur:200);
 }
 
-
-.img{
+.img-9{
 	grid-column:1/span 9;
 	margin-bottom:30px;
 	img{
@@ -82,7 +97,35 @@ img{
 	}
 }
 
+.right, .left{
+	width:50%;
+	align-self:center;
+	display:flex;
+	flex-direction: column;
+	img{
 
+	}
+}
+
+
+.text-img-5050{
+	display:flex;
+	grid-column:1/span 12;
+	//height:700px;
+	img{
+		//filter: drop-shadow(0 10px 200px rgba(0,0,0,0.16));
+	}
+}
+
+
+
+
+
+
+
+//––––––––––––––––––––––––––––––––––––––
+//image section breaks
+//––––––––––––––––––––––––––––––––––––––
 
 #tmoendsection1{
 	content:'';
@@ -104,6 +147,11 @@ img{
 	;
 	//margin:0 0 10vw 0;
 }
+
+
+//––––––––––––––––––––––––––––––––––––––
+//footer
+//––––––––––––––––––––––––––––––––––––––
 
 .footer{
 	position:relative;

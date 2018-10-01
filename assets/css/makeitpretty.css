@@ -261,6 +261,10 @@ p {
   font: 148px/132px "TRYVesterbro-Poster", serif;
   letter-spacing: -0.49px; }
 
+.content-hl {
+  font: 72px/74px "TRYVesterbro-Poster", serif;
+  letter-spacing: -0.24px; }
+
 .info {
   font: 18px/18px "FiraMonoOT", "Courier New", Courier, monospace;
   color: #CCCCCC;
@@ -269,7 +273,7 @@ p {
   font-smoothing: antialiased; }
 
 .section-title {
-  font: 18vw "TRYVesterbro-Poster", serif;
+  font: 21vw "TRYVesterbro-Poster", serif;
   color: #F2F2F2; }
 
 .nowrap {
@@ -696,8 +700,11 @@ html.sr .load-hidden {
   -ms-transform: rotate(-90deg);
   transform: rotate(-90deg);
   height: 0;
-  right: 19vw;
+  right: 22vw;
   text-align: right; }
+
+.fix {
+  top: 100px; }
 
 .content {
   margin-top: 10px;
@@ -711,9 +718,11 @@ img {
   height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  -ms-flex-item-align: center;
+  align-self: center; }
 
-.video {
+.video, .img-full {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -722,14 +731,32 @@ img {
   -webkit-box-shadow: 0 10px 200px 0 rgba(0, 0, 0, 0.16);
   box-shadow: 0 10px 200px 0 rgba(0, 0, 0, 0.16); }
 
-.img {
+.img-9 {
   grid-column: 1/span 9;
   margin-bottom: 30px; }
-  .img img {
+  .img-9 img {
     -webkit-box-shadow: 0 10px 200px 0 rgba(0, 0, 0, 0.16);
     box-shadow: 0 10px 200px 0 rgba(0, 0, 0, 0.16); }
-  .img .caption {
+  .img-9 .caption {
     margin: 24px 0 0 0; }
+
+.right, .left {
+  width: 50%;
+  -ms-flex-item-align: center;
+  align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
+.text-img-5050 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  grid-column: 1/span 12; }
 
 #tmoendsection1 {
   content: '';

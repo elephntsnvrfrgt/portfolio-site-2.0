@@ -3,4 +3,26 @@ extends layout.pug
 block prepend head
 	- var pageTitle = "Volkswagen Car-Net"
 block content
+	#menu-btn
+		<svg id="burger" width="14" class="openmenu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><path class="top" d="M0 6h30v2H0z"/><line class="mid" x1="0" y1="15" x2="30" y2="15" stroke-width="1.4" vector-effect="non-scaling-stroke"/><path class="bot" d="M0 22h30v2H0z"/></svg>
+		#menuText.small Other work
+		
+	.container
+		section.grid-container.intro.revealMove.load-hidden#hero-vw
+			.content-hero.revealMove.load-hidden
+				+mixin_hero('Volkswagen Car-Net','Connect','App | Concept, Design, & Motion')
+				.herotext.description
+					p Car-Net is a service by Volkswagen that allows you to remotely interact with your car from your device.
+					p This case study is a fork of some pitch work I was apart of at Razorfish. The product redesign was a small part of the pitch, so afterwards I went back and thought more about what could make it a more interesting and useful tool. 
 	
+		.section-title The App
+		section.grid-container.content
+			.eyebrow.revealFade.load-hidden Dashboard
+			.img-full.revealFade.load-hidden
+				img(src='assets/img/subpage/vw/vw-dashboard@2x.png')
+			.text-img-5050
+				.left
+					.content-hl Forget the fob
+					p The need for physical keys seems to be dwindling, so why not get rid of a fob too? Here you have all the functionality, plus much more.
+				.right
+					img(src='assets/img/subpage/vw/remote-key@2x.png')
