@@ -97,25 +97,29 @@ img{
 	}
 }
 
+.fiftyfifty{
+	display:grid;
+	grid-template-columns:inherit;
+	grid-column-gap:inherit;
+	grid-column:1/span 12;
+}
+
 .right, .left{
-	width:50%;
 	align-self:center;
 	display:flex;
 	flex-direction: column;
-	img{
+}
 
-	}
+.left{
+	grid-column:1/span 6;
+}
+
+.right{
+	grid-column:7/span 6;
 }
 
 
-.text-img-5050{
-	display:flex;
-	grid-column:1/span 12;
-	//height:700px;
-	img{
-		//filter: drop-shadow(0 10px 200px rgba(0,0,0,0.16));
-	}
-}
+
 
 
 

@@ -740,8 +740,13 @@ img {
   .img-9 .caption {
     margin: 24px 0 0 0; }
 
+.fiftyfifty {
+  display: grid;
+  grid-template-columns: inherit;
+  grid-column-gap: inherit;
+  grid-column: 1/span 12; }
+
 .right, .left {
-  width: 50%;
   -ms-flex-item-align: center;
   align-self: center;
   display: -webkit-box;
@@ -752,11 +757,11 @@ img {
   -ms-flex-direction: column;
   flex-direction: column; }
 
-.text-img-5050 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  grid-column: 1/span 12; }
+.left {
+  grid-column: 1/span 6; }
+
+.right {
+  grid-column: 7/span 6; }
 
 #tmoendsection1 {
   content: '';
