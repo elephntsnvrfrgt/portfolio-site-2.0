@@ -1,24 +1,55 @@
+//-- hero text block ----------------------------------------------------------
+//-- designed for homepage and subpage hero/intro components
+
 mixin mixin_hero(eyebrow, title, info)
 	.herotext
 		.eyebrow= eyebrow
 		h2.title= title
 		.info= info
+		
+		//-- end hero text block
+
+
+
+//-- resume list items --------------------------------------------------------
 
 mixin mixin_experience(job_name, years)
 	li.experience
 		p= job_name
 		.small= years
+		
+		//-- end resume list items
+		
+		
+
+//-- js stack -----------------------------------------------------------------
 
 mixin mixin_js
 	script(src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js')
 	script(src='assets/js/nav.js')
 	script(src='assets/js/CustomEase.min.js')
+	
+	//-- end js stack
 
 
-//- mixin mixin_5050-iRight()
-//- 	.fiftyfifty
-//- 		.left
-//- 			.content-hl= headline
-//- 			p= body
-//- 		.right
-//- 			img(src='assets/img/subpage/vw/vw-phone-remote-key@2x.png')
+
+//-- 5050 component -----------------------------------------------------------
+//-- designed for subpages with image paired w/ type, side-by-side
+
+mixin mixin_5050-iRight(headline, body, src)
+	.fiftyfifty.revealFade.load-hidden
+		.left
+			.content-hl=headline
+			p=body
+		.right
+			img(src=src)
+				
+mixin mixin_5050-iLeft(headline, body, src)
+	.fiftyfifty.revealFade.load-hidden
+		.left
+			img(src=src)
+		.right
+			.content-hl=headline
+			p=body
+
+			//-- end 5050 component

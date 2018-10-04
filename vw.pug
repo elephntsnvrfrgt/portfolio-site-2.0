@@ -21,19 +21,35 @@ block content
 			.img-full.revealFade.load-hidden
 				img(src='assets/img/subpage/vw/vw-dashboard@2x.png')
 			
-			//-- img right
-			.fiftyfifty
-				.left
-					.content-hl Remote key
-					p The need for physical keys seems to be dwindling, so why not get rid of a fob too? Here you have all the functionality, plus much more.
-				.right
-					img(src='assets/img/subpage/vw/vw-phone-remote-key@2x.png')
+			+mixin_5050-iRight('Remote key', 'The need for physical keys seems to be dwindling, so why not get rid of a fob too? Here you have all the functionality, plus much more.', 'assets/img/subpage/vw/vw-phone-remote-key@2x.png')
+			+mixin_5050-iLeft('Tracking', 'The need for physical keys seems to be dwindling, so why not get rid of a fob too? Here you have all the functionality, plus much more.', 'assets/img/subpage/vw/vw-phone-tracking@2x.png')
+			+mixin_5050-iRight('Destinations', 'Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit sit amet non magna. Vestibulum id ligula porta felis euismod semper. Aenean lacinia bibendum nulla sed consectetur. Donec sed odio dui.', 'assets/img/subpage/vw/vw-phone-destinations@2x.png')
+			+mixin_5050-iLeft('Health', 'Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit sit amet non magna. Vestibulum id ligula porta felis euismod semper. Aenean lacinia bibendum nulla sed consectetur. Donec sed odio dui.', 'assets/img/subpage/vw/vw-phone-health@2x.png')
+			+mixin_5050-iRight('Assistance', 'Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit sit amet non magna. Vestibulum id ligula porta felis euismod semper. Aenean lacinia bibendum nulla sed consectetur. Donec sed odio dui.', 'assets/img/subpage/vw/vw-phone-assistance@2x.png')
+		
+		#vwendsection1
 			
-			//-- img left
-			.fiftyfifty
-				.left
-					img(src='assets/img/subpage/vw/vw-phone-tracking@2x.png')
-				.right
-					.content-hl Tracking
-					p The need for physical keys seems to be dwindling, so why not get rid of a fob too? Here you have all the functionality, plus much more.
-				
+		.section-title Watch
+		section.grid-container.content
+			+mixin_5050-iRight('Remote key', 'Lorem ipsum', 'assets/img/subpage/vw/vw-watch-01@2x.png')
+			+mixin_5050-iLeft('Force Touch Menu', 'Lorem ipsum', 'assets/img/subpage/vw/vw-watch-02@2x.png')
+			+mixin_5050-iRight('Alerts & Notifications', 'Lorem ipsum', 'assets/img/subpage/vw/vw-watch-03@2x.png')
+			+mixin_5050-iLeft('Voice Control', 'Lorem ipsum', 'assets/img/subpage/vw/vw-watch-04@2x.png')
+		
+		#vwendsection2
+
+		.footer
+			#circle.nextPrjt
+				<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
+						<defs>
+								<path id="circlePath" d=" M 150, 150 m -120, 0 a 120,120 0 0,1 240,0 a 120,120 0 0,1 -240,0 "/>
+						</defs>
+						<circle cx="150" cy="150" r="150" fill="none"/>
+						<g>
+								<use xlink:href="#circlePath" fill="none"/>
+								<text fill="#9B9B9B">
+										<textPath xlink:href="#circlePath">Odigo • Automotive • Insurance •</textPath>
+								</text>
+						</g>
+				</svg>
+			a#next.title.revealMove.load-hidden(href="../odi.html") Next
