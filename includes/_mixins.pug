@@ -52,4 +52,18 @@ mixin mixin_5050-iLeft(headline, body, src)
 			.content-hl=headline
 			p=body
 
-			//-- end 5050 component
+		//-- end 5050 component
+			
+			
+//-- overlap component --------------------------------------------------------
+//-- designed for cmhf --------------------------------------------------------
+
+mixin mixin_overlap(eyebrow, desktop_img, mobile_img)
+	.eyebrow=eyebrow
+	.overlap-component
+		.desktop-comp
+			img(src=desktop_img)
+		.mobile-comp
+			img(src=mobile_img)
+				
+		//-- end overlap component	

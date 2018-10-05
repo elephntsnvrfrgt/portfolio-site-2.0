@@ -1,0 +1,46 @@
+extends layout.pug	
+
+block prepend head
+	- var pageTitle = "Country Music Hall of Fame"
+block content
+	#menu-btn
+		<svg id="burger" width="14" class="openmenu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><path class="top" d="M0 6h30v2H0z"/><line class="mid" x1="0" y1="15" x2="30" y2="15" stroke-width="1.4" vector-effect="non-scaling-stroke"/><path class="bot" d="M0 22h30v2H0z"/></svg>
+		#menuText.small Other work
+		
+	.container
+		section.grid-container.intro.revealMove.load-hidden#hero-cmhf
+			.content-hero.revealMove.load-hidden
+				+mixin_hero('Country Music Hall of Fame','Preserve','Web | Concept, Design, & Motion')
+				.herotext.description
+					p Car-Net is a service by Volkswagen that allows you to remotely interact with your car from your device.
+					p This case study is a fork of some pitch work I was apart of at Razorfish. The product redesign was a small part of the pitch, so afterwards I went back and thought more about what could make it a more interesting and useful tool. 
+	
+		.section-title Pages
+		section.grid-container.content
+			
+			+mixin_overlap('Homepage','assets/img/subpage/cmhf/cmhf-01-L.jpg','assets/img/subpage/cmhf/cmhf-01-S@2x.png')
+			+mixin_overlap('Exhibits & Collections', 'assets/img/subpage/cmhf/cmhf-02-L.jpg', 'assets/img/subpage/cmhf/cmhf-02-S@2x.png')
+			+mixin_overlap('Exhibit', 'assets/img/subpage/cmhf/cmhf-03-L.jpg', 'assets/img/subpage/cmhf/cmhf-03-S@2x.png')
+			+mixin_overlap('Hall of Fame Inductee', 'assets/img/subpage/cmhf/cmhf-05-L.jpg', 'assets/img/subpage/cmhf/cmhf-05-S@2x.png')
+			
+			
+							
+			
+		
+		#cmhfendsection1
+
+		.footer
+			#circle.nextPrjt
+				<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
+						<defs>
+								<path id="circlePath" d=" M 150, 150 m -120, 0 a 120,120 0 0,1 240,0 a 120,120 0 0,1 -240,0 "/>
+						</defs>
+						<circle cx="150" cy="150" r="150" fill="none"/>
+						<g>
+								<use xlink:href="#circlePath" fill="none"/>
+								<text fill="#9B9B9B">
+										<textPath xlink:href="#circlePath">T-Mobile • Switcher • T-Mobile •</textPath>
+								</text>
+						</g>
+				</svg>
+			a#next.title.revealMove.load-hidden(href="../tmo-switcher.html") Next
