@@ -5,7 +5,7 @@ Type
 
 $mono-stack: "FiraMonoOT", "Courier New", Courier, monospace;
 $sans-stack: 'Work Sans',Helvetica,Arial,sans-serif;
-$serif-stack: 'TRYVesterbro-Poster',serif;
+$serif-stack: "Vesterbro Poster",serif;
 
 .small, #nav-container a{
   font: 11px $mono-stack;
@@ -58,6 +58,8 @@ p{
 
 .title{
   font:148px/132px $serif-stack;
+  font-weight:normal;
+  font-style:normal;
 	letter-spacing: -0.49px;
 }
 

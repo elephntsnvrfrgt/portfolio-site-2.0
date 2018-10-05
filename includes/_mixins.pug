@@ -59,8 +59,8 @@ mixin mixin_5050-iLeft(headline, body, src)
 //-- designed for cmhf --------------------------------------------------------
 
 mixin mixin_overlap(eyebrow, desktop_img, mobile_img)
-	.eyebrow=eyebrow
-	.overlap-component
+	.revealFade.load-hidden.eyebrow=eyebrow
+	.overlap-component.revealFade.load-hidden
 		.desktop-comp
 			img(src=desktop_img)
 		.mobile-comp

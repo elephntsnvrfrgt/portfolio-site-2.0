@@ -258,11 +258,13 @@ p {
   font-smoothing: antialiased; }
 
 .title {
-  font: 148px/132px "TRYVesterbro-Poster", serif;
+  font: 148px/132px "Vesterbro Poster", serif;
+  font-weight: normal;
+  font-style: normal;
   letter-spacing: -0.49px; }
 
 .content-hl {
-  font: 72px/74px "TRYVesterbro-Poster", serif;
+  font: 72px/74px "Vesterbro Poster", serif;
   letter-spacing: -0.24px;
   margin-bottom: 20px; }
 
@@ -274,7 +276,7 @@ p {
   font-smoothing: antialiased; }
 
 .section-title {
-  font: 21vw "TRYVesterbro-Poster", serif;
+  font: 21vw "Vesterbro Poster", serif;
   color: #F2F2F2; }
 
 .nowrap {
