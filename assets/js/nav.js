@@ -4,8 +4,8 @@ $(document).ready(function(){
 				logoMark = $('#logo-mark'),
 				social = $('.social'),
 				socialLinks = $(".social-links"),
-				info = $('#info'),
-				infoBtn = $('#nameinfo'),
+				//info = $('#info'),
+				infoBtn = $('#about'),
 				close = $('#closeInfo'),
 				infoContainer = $('.info-container'),
 				infoFade = $('.info-fade'),
@@ -24,7 +24,8 @@ $(document).ready(function(){
 
 	$(".content").fitVids();
 	ScrollReveal().reveal('.container .revealMove', {container:'.container', distance:'20px', delay:200, duration: 1500, easing:'cubic-bezier(.26,.56,.33,1)'});
-	ScrollReveal().reveal('.container .revealFade', {container:'.container', delay:200, duration: 1500, easing:'cubic-bezier(.5,0,.2,1)'});
+	ScrollReveal().reveal('.container .revealMove2', {container:'.container', distance:'10px', delay:200, duration: 1500, easing:'cubic-bezier(.26,.56,.33,1)'});
+	ScrollReveal().reveal('.container .revealFade', {container:'.container', delay:200, duration: 1250, easing:'cubic-bezier(.5,0,.2,1)'});
 
 //–––––––––––––––––––––––––––––––––––––––––––
 //nav animations
@@ -84,14 +85,14 @@ $(document).ready(function(){
 			// 	'-=1'
 			// )
 
-		infoBtn.one("click", closeInfo);
-
-		//change from isaac to close
-		$('#info').fadeOut("slow", function(){
-		   var infoText = $("<div class='small' id='info'>Close</div>").hide();
-		   $(this).replaceWith(infoText);
-		   $('#info').fadeIn("slow");
-		});
+		// infoBtn.one("click", closeInfo);
+		//
+		// //change from isaac to close
+		// $('#info').fadeOut("slow", function(){
+		//    var infoText = $("<div class='small' id='info'>Close</div>").hide();
+		//    $(this).replaceWith(infoText);
+		//    $('#info').fadeIn("slow");
+		// });
 	}
 
 	function closeInfo() {
@@ -107,23 +108,17 @@ $(document).ready(function(){
 				{x:-375, ease:Power3.easeIn},
 				'-=.5'
 			)
-			.to(
-				info,
-				.5,
-				{autoAlpha:0}
-			)
 
-		infoBtn.one("click", openInfo);
-
-		//change from close to isaac
-		$('#info').fadeOut("slow", function(){
-		   var infoText = $("<div class='small' id='info'>Isaac Martin</div>").hide();
-		   $(this).replaceWith(infoText);
-		   $('#info').fadeIn("slow");
-		});
+		// //change from close to isaac
+		// $('#info').fadeOut("slow", function(){
+		//    var infoText = $("<div class='small' id='info'>Isaac Martin</div>").hide();
+		//    $(this).replaceWith(infoText);
+		//    $('#info').fadeIn("slow");
+		// });
 	}
 
-	infoBtn.one("click", openInfo);
+	infoBtn.click(openInfo);
+	close.click(closeInfo);
 
 
 
