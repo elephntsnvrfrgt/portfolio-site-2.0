@@ -90,15 +90,21 @@ img{
 	@include softShadow($blur:200);
 }
 
+video.video{
+	width:100%;
+}
+
 .img-9{
 	grid-column:1/span 9;
 	margin-bottom:30px;
 	img{
 		@include softShadow($blur:200);
 	}
-	.caption{
-		margin: 0 0 24px 0;
-	}
+}
+
+.caption{
+	margin: 0 0 14px 0;
+	grid-column: 1/span 12;
 }
 
 
