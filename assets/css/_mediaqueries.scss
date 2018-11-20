@@ -1,42 +1,9 @@
-// Small devices (tablets, 768px and up)
+// ---------------------------------------------
+// Small devices (700px and down)--------
+//----------------------------------------------
 @media (max-width: 700px) {
 
-#circle {
-  top:15px;
-  right:15px;
-  width:90px
-}
-
-#menu-btn{
-  right:65px;
-}
-
-#nav-container, .info-container{
-  display:none;
-}
-
-.container{
-  margin:0;
-  width:100%;
-  //padding-right:12vw;
-}
-
-.intro{
-  min-height:80vh;
-  margin-bottom:30px;
-}
-
-.content-hero{
-  margin-top:35vh;
-  grid-column: 1/span 13;
-  .eyebrow{
-		margin-bottom:5vw;
-	}
-}
-
-.content-hero{
-  padding-right:12vw;
-}
+//typography
 
 .title {
     font-size: 18vw;
@@ -73,15 +40,24 @@ p{
 }
 
 
-// #hero-cmhf, #hero-vw, #hero-odi{
-//   background:none;
-// }
+// spinning circle
 
-#hero-tmo, #hero-cmhf, #hero-vw, #hero-odi{
-  background-position: right top;
-  background-size: auto 330px;
+#circle {
+  top:15px;
+  right:15px;
+  width:90px
 }
 
+
+// menu
+
+#menu-btn{
+  right:65px;
+}
+
+#nav-container, .info-container{
+  display:none;
+}
 
 .menu{
   width:100%;
@@ -93,6 +69,81 @@ p{
     margin: 0 0 30vw 0;
 }
 
+
+// layout
+
+.container{
+  margin:0;
+  width:100%;
+  //padding-right:12vw;
+}
+
+.intro{
+  min-height:78vh;
+  margin-bottom:30px;
+}
+
+// hero component
+.content-hero{
+  margin-top:35vh;
+  grid-column: 1/span 13;
+  .eyebrow{
+		margin-bottom:5vw;
+	}
+}
+
+.content-hero{
+  padding-right:12vw;
+}
+
+#hero-tmo, #hero-cmhf, #hero-vw, #hero-odi{
+  background-position: right top;
+  background-size: auto 330px;
+}
+
+
+//tiles
+
+.tile{
+  grid-column: span 12;
+  grid-row:span 3;
+  filter:grayscale(100%) opacity(100%);
+  .eyebrow{
+    font-size:14px;
+  }
+}
+
+.offset{
+  display:none;
+}
+
+.prjtNo{
+  opacity:.9;
+}
+
+.prjtTitle{
+  opacity:.9;
+  transform-origin:58px -27px;
+  width:145px;
+}
+
+
+//about/info
+
+.about{
+  min-height:400px;
+}
+.column, .column:nth-child(2){
+  grid-column:span 12;
+}
+
+.column{
+  margin-top:120px;
+}
+
+.column:nth-child(2){
+  margin-top:30px;
+}
 
 
 }
