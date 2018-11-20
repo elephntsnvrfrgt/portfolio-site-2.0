@@ -1,0 +1,100 @@
+// Small devices (tablets, 768px and up)
+@media (max-width: 700px) {
+
+#circle {
+  top:15px;
+  right:15px;
+  width:90px
+}
+
+#menu-btn{
+  right:65px;
+}
+
+#nav-container, .info-container{
+  display:none;
+}
+
+.container{
+  margin:0;
+  width:100%;
+  //padding-right:12vw;
+}
+
+.intro{
+  min-height:80vh;
+  margin-bottom:30px;
+}
+
+.content-hero{
+  margin-top:35vh;
+  grid-column: 1/span 13;
+  .eyebrow{
+		margin-bottom:5vw;
+	}
+}
+
+.content-hero{
+  padding-right:12vw;
+}
+
+.title {
+    font-size: 18vw;
+    line-height:16vw;
+    letter-spacing: -0.49px;
+}
+
+.menu{
+  .eyebrow{
+		margin-bottom:4vw;
+	}
+  .title{
+    line-height:18vw;
+  }
+}
+
+.eyebrow{
+  font-size: 3vw;
+  letter-spacing:.5vw;
+}
+
+.info{
+  font-size:3.1vw;
+  line-height: 3.1vw;
+}
+
+.description{
+  margin-top:10vw;
+}
+
+p{
+  font-size:14px;
+  line-height:22px;
+}
+
+
+// #hero-cmhf, #hero-vw, #hero-odi{
+//   background:none;
+// }
+
+#hero-tmo, #hero-cmhf, #hero-vw, #hero-odi{
+  background-position: right top;
+  background-size: auto 330px;
+}
+
+
+.menu{
+  width:100%;
+  margin:0;
+  padding: 30vw 0;
+}
+
+.menu li:nth-last-child(1n+2) {
+    margin: 0 0 30vw 0;
+}
+
+
+
+}
+
+// End Small Devices

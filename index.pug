@@ -3,26 +3,27 @@ extends layout.pug
 block prepend head
 	- var pageTitle = "Isaac Martin – Design, Art Direction, Motion"
 block content
+	#circle
+		<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
+				<defs>
+						<path id="circlePath" d=" M 150, 150 m -120, 0 a 120,120 0 0,1 240,0 a 120,120 0 0,1 -240,0 "/>
+				</defs>
+				<circle cx="150" cy="150" r="150" fill="none"/>
+				<g>
+						<use xlink:href="#circlePath" fill="none"/>
+						<text fill="#9B9B9B">
+								<textPath xlink:href="#circlePath">Design  •  Art Direction  •  Motion  •  </textPath>
+						</text>
+				</g>
+		</svg>
 	.container
-		#circle
-			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
-					<defs>
-							<path id="circlePath" d=" M 150, 150 m -120, 0 a 120,120 0 0,1 240,0 a 120,120 0 0,1 -240,0 "/>
-					</defs>
-					<circle cx="150" cy="150" r="150" fill="none"/>
-					<g>
-							<use xlink:href="#circlePath" fill="none"/>
-							<text fill="#9B9B9B">
-									<textPath xlink:href="#circlePath">Design  •  Art Direction  •  Motion  •  </textPath>
-							</text>
-					</g>
-			</svg>
+		
 		section.grid-container.grid-rows.intro.minh-800
 			.content-hero.revealMove.load-hidden
 				.eyebrow Selected works of
-				h2.title Isaac Martin
+				h2.title Isaac<br>Martin
 				
-		section.grid-container.grid-rows.work
+		section.grid-container.grid-rows.work.revealFade.load-hidden
 			.offset
 			a.tile.prjt-01.revealMove.load-hidden(href="tmo-switcher.html")
 				.prjtNo.small p.01
