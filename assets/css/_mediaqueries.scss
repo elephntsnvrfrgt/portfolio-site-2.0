@@ -55,8 +55,29 @@ p{
   right:65px;
 }
 
+#menu-container #name{
+  display:block;
+  text-align:left;
+  left:-60px;
+  bottom:105px;
+  top:auto;
+  letter-spacing:.5px;
+  font-weight:500;
+  //transform-origin: left top;
+}
+
 #nav-container, .info-container{
   display:none;
+}
+
+
+
+.social{
+  opacity:1;
+}
+
+.info-container{
+  left:-375px;
 }
 
 .menu{
@@ -107,7 +128,7 @@ p{
 .tile{
   grid-column: span 12;
   grid-row:span 3;
-  filter:grayscale(100%) opacity(100%);
+  filter:grayscale(100%) opacity(40%);
   .eyebrow{
     font-size:14px;
   }
@@ -118,11 +139,11 @@ p{
 }
 
 .prjtNo{
-  opacity:.9;
+  opacity:1;
 }
 
 .prjtTitle{
-  opacity:.9;
+  opacity:1;
   transform-origin:58px -27px;
   width:145px;
 }
@@ -131,21 +152,32 @@ p{
 //about/info
 
 .about{
-  min-height:400px;
+  min-height:650px;
 }
 .column, .column:nth-child(2){
   grid-column:span 12;
 }
 
 .column{
-  margin-top:120px;
+  margin-top:150px;
 }
 
 .column:nth-child(2){
   margin-top:30px;
+  margin-bottom:150px;
 }
 
 
 }
 
 // End Small Devices
+
+
+// ---------------------------------------------
+// XSmall devices (350px and down)--------
+//----------------------------------------------
+@media (max-width: 350px) {
+  .tile{
+    grid-row:span 2;
+  }
+}
