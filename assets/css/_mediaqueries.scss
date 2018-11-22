@@ -51,7 +51,7 @@ p{
 #circle {
   top:15px;
   right:15px;
-  width:16vw;
+  width:22vw;
 }
 
 .footer{
@@ -62,6 +62,7 @@ p{
   top: auto;
   bottom:18vw;
   right: 5vw;
+  width:16vw;
 }
 
 #next.title{
@@ -97,8 +98,6 @@ p{
   display:none;
 }
 
-
-
 .social{
   opacity:1;
 }
@@ -114,7 +113,11 @@ p{
 }
 
 .menu li:nth-last-child(1n+2) {
-    margin: 0 0 30vw 0;
+    margin: 0 0 25vw 0;
+}
+
+.menu li:nth-child(4) {
+    margin: 0 0 0 0;
 }
 
 
@@ -127,7 +130,7 @@ p{
 }
 
 .grid-container{
-  grid-gap: 5px;
+  grid-gap: 20px;
 }
 
 .intro{
@@ -135,7 +138,9 @@ p{
   margin-bottom:30px;
 }
 
+
 // hero component
+
 .content-hero{
   margin-top:35vh;
   grid-column: 1/span 13;
@@ -213,8 +218,9 @@ p{
 
 .column:nth-child(2){
   margin-top:30px;
-  margin-bottom:150px;
+  margin-bottom:120px;
 }
+
 
 //content
 
@@ -222,7 +228,20 @@ p{
   grid-column:span 10;
 }
 
-#tmoendsection1, #tmoendsection2{
+.img-full, .video{
+  margin: 0 0 30px 0;
+}
+
+
+.overlap-component {
+  margin-bottom: 50px;
+}
+
+.mobile-comp img{
+  width:110%;
+}
+
+#tmoendsection1, #tmoendsection2, #vwendsection1,  #odiendsection1{
   height:70vw;
 }
 
@@ -231,8 +250,37 @@ p{
 }
 
 #tmoendsection2{
-  background: linear-gradient(to bottom, white 0%, rgba(255, 255, 255, 0) 20%), no-repeat top right/160% auto url(../img/subpage/tmo-switcher/tmoendsection2-bg.jpg);
+  background: linear-gradient(to bottom, white 0%, rgba(255, 255, 255, 0) 20%), no-repeat bottom right/160% auto url(../img/subpage/tmo-switcher/tmoendsection2-bg.jpg);
 }
+
+#vwendsection1 {
+  background: no-repeat top right/100% auto url(../img/subpage/vw/vwendsection1@2x.jpg);
+}
+
+#vwendsection2{
+  height:50vw;
+  background: no-repeat bottom right/130% auto url(../img/subpage/vw/vwendsection2@2x.jpg);
+}
+
+#odiendsection1{
+  background: no-repeat top left/100% auto url(../img/subpage/odi/odiendsection1@2x.jpg);
+}
+
+#odiendsection2{
+  height:50vw;
+  background: no-repeat center left/100% auto url(../img/subpage/odi/odiendsection2@2x.jpg);
+}
+
+#cmhfendsection1{
+  height:50vw;
+  margin:0 0 50px 0;
+  background: no-repeat bottom center/120% auto url(../img/subpage/cmhf/cmhfendsection1@2x.jpg);
+}
+
+
+
+
+
 
 }
 
