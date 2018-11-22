@@ -94,10 +94,8 @@ video.video{
 	width:100%;
 }
 
-@import 'video-js';
-
 .img-9{
-	grid-column:1/span 9;
+	grid-column:span 9;
 	margin-bottom:30px;
 	img{
 		@include softShadow($blur:200);
