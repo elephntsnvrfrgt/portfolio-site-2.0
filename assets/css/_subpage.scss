@@ -255,7 +255,7 @@ video.video{
   right: 100px;
   text-align: right;
 	transition:color 1.25s ease;
-	&:hover{
+	&:hover, &:focus{
 		color:$gray15;
 	}
 }

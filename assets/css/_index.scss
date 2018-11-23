@@ -104,7 +104,7 @@ html.sr .load-hidden {
 	//z-index: 0;
 	filter:grayscale(100%) opacity(60%);
 	transition:all 1s ease !important;
-	&:hover{
+	&:hover, &:focus{
 		z-index:10;
 		filter:grayscale(0%) opacity(100%);
 		box-shadow: 0 12px 16px -12px rgba(0,0,0,0.10),
@@ -178,6 +178,11 @@ html.sr .load-hidden {
 	grid-column-start:7;
 }
 
+.copyright{
+  grid-column:span 12;
+  margin-bottom:50px;
+  color:$gray80;
+}
 
 //404 error
 
@@ -213,6 +218,5 @@ html.sr .load-hidden {
     height:auto;
     width:100%;
     @include softShadowDark($blur:200);
-
   }
 }

@@ -17,7 +17,7 @@
 	.small{
 		margin:0 30px 0 0;
 	}
-	&:hover{
+	&:hover, &:focus{
 		opacity: 1;
 	}
 }
@@ -79,12 +79,12 @@
 		line-height: 148px;
 	}
 
-	a:hover > .title{
+	a:hover, a:focus > .title{
 		-webkit-text-fill:$gray15;
 		color:$gray15;
 	}
 
-	a:hover > .eyebrow{
+	a:hover, a:focus > .eyebrow{
 		color:$gray60;
 		//letter-spacing: 4px;
 	}
