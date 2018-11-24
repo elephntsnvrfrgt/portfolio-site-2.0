@@ -148,6 +148,7 @@ video.video{
 .desktop-comp{
 	grid-column:1/span 9;
 	grid-row-start: 1;
+	@include softShadow($blur:200, $alpha:0.1)
 }
 
 .mobile-comp{

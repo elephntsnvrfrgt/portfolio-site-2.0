@@ -46,8 +46,8 @@ $cubic-bezier: cubic-bezier(0.4, 0, .2, 1);
 	}
 }
 
-@mixin softShadow($blur:200){
-	box-shadow: 0 10px #{$blur}px 0 rgba(0,0,0,0.16);
+@mixin softShadow($blur:200, $alpha:0.16){
+	box-shadow: 0 10px #{$blur}px 0 rgba(0,0,0,$alpha);
 	//filter: drop-shadow(0 10px #{$blur}px rgba(0,0,0,0.16));
 }
 

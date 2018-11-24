@@ -178,16 +178,29 @@ html.sr .load-hidden {
 	grid-column-start:7;
 }
 
+//footer
+
 .copyright{
   grid-column:span 12;
   margin-bottom:50px;
   color:$gray80;
 }
 
-//404 error
+// error
 
-.errorcontainer{
+._404, ._500{
   background:red !important;
+  .container{
+    overflow: visible;
+  }
+  footer{
+    position:fixed;
+    bottom:0;
+  }
+  .copyright{
+    color:darken(red, 15%)
+  }
+
 }
 
 .errortitle{

@@ -102,7 +102,7 @@ p{
 // spinning circle
 
 #circle {
-  top:15px;
+  top:3px;
   right:15px;
   width:22vw;
 }
@@ -168,6 +168,10 @@ p{
   }
   li:nth-child(4) {
       margin: 0 0 0 0;
+  }
+  .title{
+    font-size:16vw;
+    -webkit-text-stroke: .5px white;
   }
 }
 
@@ -328,7 +332,12 @@ p{
 }
 
 
+//error 404
 
+.errorgif{
+  grid-column: 3/span 10;
+  grid-row: 2/span 2;
+}
 
 
 
