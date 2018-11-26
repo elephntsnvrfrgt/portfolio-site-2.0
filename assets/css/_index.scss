@@ -50,7 +50,8 @@ html.sr .load-hidden {
 .container{
 	margin:0 0 0 60px;
 	width:calc(100% - 60px);
-	// height:100vh;
+	height:100vh;
+  // must keep height or else ScrollReveal won't work.
 	overflow-x:hidden;
 	overflow-y:scroll;
   -webkit-overflow-scrolling: touch;
@@ -180,9 +181,13 @@ html.sr .load-hidden {
 
 //footer
 
+footer {
+  grid-auto-rows: 50px;
+}
+
 .copyright{
+  //margin-bottom:50px;
   grid-column:span 12;
-  margin-bottom:50px;
   color:$gray80;
 }
 
@@ -198,7 +203,7 @@ html.sr .load-hidden {
     bottom:0;
   }
   .copyright{
-    color:darken(red, 15%)
+    color:darken(red, 12%)
   }
 
 }

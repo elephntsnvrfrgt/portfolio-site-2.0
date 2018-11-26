@@ -1,7 +1,7 @@
 extends layout.pug	
 
 block prepend head
-	- var pageTitle = "Garbagetrain - 500 error!"
+	- var pageTitle = "500 - Garbagetrain!"
 block content
 	body._500
 		.container
@@ -25,8 +25,5 @@ block content
 					.eyebrow.erroreyebrow 500 error
 					h2.title Holy–<br>cannoli
 					p Go back <a href="index.html">home</a>, ya turkey!
-
-block footer
-	footer.container
-		section.grid-container
-			.copyright.small Copyright &copy; 2018 / Isaac Martin
+			
+			include includes/_footer.pug

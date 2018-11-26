@@ -22,9 +22,10 @@ $(document).ready(function(){
 //–––––––––––––––––––––––––––––––––––––––––––
 //plugins
 
-	$(".content").fitVids();
+	// $(".content").fitVids();
 	ScrollReveal().reveal('.container .revealMove', {container:'.container', distance:'20px', delay:200, duration: 1500, easing:'cubic-bezier(.26,.56,.33,1)'});
 	ScrollReveal().reveal('.container .revealMove2', {container:'.container', distance:'10px', delay:200, duration: 1500, easing:'cubic-bezier(.26,.56,.33,1)'});
+	ScrollReveal().reveal('.container .revealMove3', {container:'.container', distance:'80px', delay:300, duration: 1750, easing:'cubic-bezier(.26,.56,.33,1)'});
 	ScrollReveal().reveal('.container .revealFade', {container:'.container', delay:200, duration: 1250, easing:'cubic-bezier(.5,0,.2,1)'});
 
 //–––––––––––––––––––––––––––––––––––––––––––
@@ -138,8 +139,7 @@ $(document).ready(function(){
 				1.5,
 				{y:15, autoAlpha:0},
 				{y:-15, autoAlpha:1, ease: Power3.easeOut},
-				0.2,
-				'+=.1'
+				0.1
 			)
 			.set(
 				container,
@@ -159,7 +159,7 @@ $(document).ready(function(){
 		tlMax
 			.set(
 				container,
-				{visibility:'visible',}
+				{visibility:'visible'}
 			)
 			.to(
 				menuLi,

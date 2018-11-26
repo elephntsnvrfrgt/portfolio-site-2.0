@@ -1,4 +1,4 @@
-@media (min-width: 1900px){
+@media (min-width: 1681px){
   #hero-tmo, #hero-vw, #hero-odi, #hero-cmhf{
     background-size:auto 940px;
   }
@@ -52,6 +52,11 @@
 }
 
 // ---------------------------------------------
+// Medium devices (700px and down)--------
+//----------------------------------------------
+
+
+// ---------------------------------------------
 // Small devices (700px and down)--------
 //----------------------------------------------
 @media (max-width: 959px) {
@@ -65,9 +70,10 @@
 }
 
 .content-hl {
-  font-size: 7vw;
-  line-height:7vw;
+  font-size: 9vw;
+  line-height: 9vw;
   letter-spacing: 0;
+  margin-bottom: 10px;
 }
 
 .menu{
@@ -101,20 +107,20 @@ p{
 
 // spinning circle
 
+.footer{
+  min-height: 175px;
+}
+
 #circle {
   top:3px;
   right:15px;
   width:22vw;
 }
 
-.footer{
-  min-height: 175px;
-}
-
 .nextPrjt#circle {
   top: auto;
-  bottom:18vw;
-  right: 5vw;
+  bottom:15vw;
+  right: 6vw;
   width:16vw;
 }
 
@@ -171,7 +177,7 @@ p{
   }
   .title{
     font-size:16vw;
-    -webkit-text-stroke: .5px white;
+    -webkit-text-stroke: 0;
   }
 }
 
@@ -257,7 +263,7 @@ p{
 }
 
 
-//about/info
+//about/info/credits
 
 .about{
   min-height:650px;
@@ -273,6 +279,12 @@ p{
 .column:nth-child(2){
   margin-top:30px;
   margin-bottom:120px;
+}
+
+.credits{
+  .column{
+    margin-top: 50px !important;
+  }
 }
 
 
@@ -340,7 +352,6 @@ p{
 }
 
 
-
 }
 
 // End Small Devices
@@ -350,9 +361,30 @@ p{
 // XSmall devices (350px and down)--------
 //----------------------------------------------
 @media (max-width: 350px) {
-
   .tile{
     grid-row:span 2;
   }
 
 }
+
+@media (max-width:1024px){
+  ._404, ._500{
+    .grid-rows{
+      grid-auto-rows: 50px;
+    }
+    .intro{
+      min-height:768px;
+    }
+    .errorgif{
+      grid-column: 5/span 8;
+      grid-row: 5/span 5;
+    }
+  }
+}
+
+
+// @media (pointer: coarse){
+//   .container{
+//     height:auto;
+//   }
+// }
