@@ -3,8 +3,8 @@ Type
 ––––––––––––––––––––––––––––––––––––––––––––––––
 */
 
-$mono-stack: 'Fira Mono', 'Courier New', Courier, monospace;
-$sans-stack: 'Work Sans', Helvetica, Arial, sans-serif;
+$mono-stack: 'IBM Plex Mono', 'Courier New', Courier, monospace;
+$sans-stack: 'GT America', 'Work Sans', Helvetica, Arial, sans-serif;
 $serif-stack: 'Vesterbro Poster', Georgia, serif;
 
 .small, #nav-container a, #menu-container #name{
@@ -30,8 +30,9 @@ a{
 }
 
 p{
-	font: 16px/24px $sans-stack;
+	font:300 16px/24px $sans-stack;
   color:$gray60;
+  letter-spacing: .25px;
 	margin-bottom: 15px;
   @include text-render;
   a{
@@ -68,9 +69,14 @@ p{
 }
 
 .info{
-  font: 18px/18px $mono-stack;
+  font:500 18px/18px $mono-stack;
 	color: $gray80;
   @include text-render;
+}
+
+.info-label{
+  font-size:12px;
+  letter-spacing:2px;
 }
 
 .section-title{

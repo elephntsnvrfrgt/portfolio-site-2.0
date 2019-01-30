@@ -2,8 +2,8 @@ $(document).ready(function(){
 
 	var 	navContent = $('.nav-content'),
 				logoMark = $('#logo-mark'),
-				social = $('.social'),
-				socialLinks = $(".social-links"),
+					social = $('.social'),
+					socialLinks = $(".social-links"),
 				//info = $('#info'),
 				infoBtn = $('#about'),
 				close = $('#closeInfo'),
@@ -22,11 +22,22 @@ $(document).ready(function(){
 //–––––––––––––––––––––––––––––––––––––––––––
 //plugins
 
+	//var rellax = new Rellax('.rellax');
+	//can't use rellax due to .container being 100vh with overflow.
+
 	// $(".content").fitVids();
-	ScrollReveal().reveal('.container .revealMove', {container:'.container', distance:'20px', delay:200, duration: 1500, easing:'cubic-bezier(.26,.56,.33,1)'});
-	ScrollReveal().reveal('.container .revealMove2', {container:'.container', distance:'10px', delay:200, duration: 1500, easing:'cubic-bezier(.26,.56,.33,1)'});
-	ScrollReveal().reveal('.container .revealMove3', {container:'.container', distance:'80px', delay:300, duration: 1750, easing:'cubic-bezier(.26,.56,.33,1)'});
-	ScrollReveal().reveal('.container .revealFade', {container:'.container', delay:200, duration: 1250, easing:'cubic-bezier(.5,0,.2,1)'});
+	ScrollReveal().reveal('.revealMove', {interval: 300, container:'.container', distance:'20px', delay:200, duration: 1500, easing:'cubic-bezier(.26,.56,.33,1)'});
+
+	ScrollReveal().reveal('.revealMove2', {container:'.container', distance:'10px', delay:200, duration: 1500, easing:'cubic-bezier(.26,.56,.33,1)'});
+
+	ScrollReveal().reveal('.revealMove3',
+	{container:'.container', distance:'40px', delay:400, duration: 1750, easing:'cubic-bezier(.26,.56,.33,1)'});
+
+	ScrollReveal().reveal('.revealFade', {container:'.container', delay:200, duration: 1250, easing:'cubic-bezier(.5,0,.2,1)'});
+
+	ScrollReveal().reveal('.revealFade2', {container:'.container', delay:250, duration: 1250, easing:'cubic-bezier(.5,0,.2,1)'});
+
+
 
 //–––––––––––––––––––––––––––––––––––––––––––
 //nav animations
@@ -228,7 +239,6 @@ $(document).ready(function(){
 	function out(){
 		this.animation.reverse();
 	}
-
 
 
 

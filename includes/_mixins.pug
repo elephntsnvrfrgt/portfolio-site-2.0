@@ -44,18 +44,18 @@ mixin mixin_js
 //-- designed for subpages with image paired w/ type, side-by-side
 
 mixin mixin_5050-iRight(headline, body, src)
-	.fiftyfifty.iRight-s.revealFade.load-hidden
-		.left
+	.fiftyfifty.iRight-s
+		.left.load-hidden.revealFade2
 			.content-hl=headline
 			p=body
-		.right
+		.right.load-hidden.revealFade
 			img(src=src)
 				
 mixin mixin_5050-iLeft(headline, body, src)
-	.fiftyfifty.iLeft-s.revealFade.load-hidden
-		.left
+	.fiftyfifty.iLeft-s
+		.left.load-hidden.revealFade
 			img(src=src)
-		.right
+		.right.load-hidden.revealFade2
 			.content-hl=headline
 			p=body
 

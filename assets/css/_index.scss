@@ -1,5 +1,5 @@
 body{
-  background:$white;
+  background:$gray15;
 }
 
 html.sr .load-hidden {
@@ -55,6 +55,7 @@ html.sr .load-hidden {
 	overflow-x:hidden;
 	overflow-y:scroll;
   -webkit-overflow-scrolling: touch;
+  background:$white;
 
 	// perspective: 1000px;
   // transform-style: preserve-3d;
@@ -74,7 +75,8 @@ html.sr .load-hidden {
 }
 
 .intro{
-		min-height:800px;
+  height:100vh;
+  min-height:800px;
 }
 
 .fadein{
