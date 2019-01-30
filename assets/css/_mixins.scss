@@ -1,0 +1,63 @@
+//variables ––––––––––––
+
+$cubic-bezier: cubic-bezier(0.4, 0, .2, 1);
+
+
+//mixins ––––––––––––––––
+
+@mixin text-render{
+	//text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-smoothing: antialiased;
+}
+
+@mixin transition-cubic($time){
+	transition: all $time $cubic-bezier;
+}
+
+@mixin transition-linear($time){
+	transition: all ($time) linear;
+}
+
+@mixin transition-easeOut($time){
+	transition: all ($time) ease-out;
+}
+
+@mixin hover_underline($underline_gap:1,$underline_thickness:1,$color:#{$gray40}){
+	&:after, &:before{
+		content: '';
+		position: absolute;
+		top: calc(100% + #{$underline_gap}px);
+		width: 0;
+		right: 0;
+		height: #{$underline_thickness}px;
+	}
+	&:before {
+		transition: width 400ms cubic-bezier(0.51, 0.18, 0, 0.88) 100ms;
+		background: #{$color};
+	}
+	&:hover, &:focus{
+		color:#{$color};
+		&:after, &:before {
+			width: 100%;
+			left: 0;
+		}
+	}
+}
+
+@mixin softShadow($blur:200, $alpha:0.16){
+	box-shadow: 0 10px #{$blur}px 0 rgba(0,0,0,$alpha);
+	//filter: drop-shadow(0 10px #{$blur}px rgba(0,0,0,0.16));
+}
+
+@mixin softShadowDark($blur:200){
+	box-shadow: 0 10px #{$blur}px 0 rgba(0,0,0,0.35)
+}
+
+@mixin subpageHero($imgpath){
+	background:
+		linear-gradient(to bottom left, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0) 100%),
+		url(#{$imgpath}) no-repeat right top;
+	background-size: auto 700px;
+}

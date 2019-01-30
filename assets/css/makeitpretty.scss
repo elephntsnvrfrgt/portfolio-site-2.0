@@ -7,9 +7,11 @@
 }
 
 @import 'normalize';
+@import 'mixins';
 @import 'colors';
-@import 'glbl-styles';
 @import 'type';
 @import 'nav';
-@import 'grid';
 @import 'index';
+@import 'subpage';
+@import 'menu';
+@import 'mediaqueries';

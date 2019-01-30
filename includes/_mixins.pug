@@ -1,10 +1,76 @@
-mixin mixin-hero(eyebrow, title, info)
-  .content-hero
-    .hero-eyebrow= eyebrow
-    h2.hero-title= title
-    .hero-info= info
-  
-mixin mixin-experience(job, years)
-  li.experience
-    p= job
-    .small= years
+//-- hero text block ----------------------------------------------------------
+//-- designed for homepage and subpage hero/intro components
+
+mixin mixin_hero(eyebrow, title, info)
+	.herotext
+		.eyebrow= eyebrow
+		h2.title= title
+		.info= info
+		
+		//-- end hero text block
+
+
+
+//-- resume list items --------------------------------------------------------
+
+mixin mixin_experience(job_name, years)
+	li.experience
+		p= job_name
+		.small= years
+		
+		//-- end resume list items
+		
+		
+
+//-- js stack -----------------------------------------------------------------
+
+mixin mixin_js
+	script(src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js')
+	
+	script(src='assets/js/nav.js')
+	
+	//--Global site tag (gtag.js) - Google Analytics
+	script(
+		async 
+		src="https://www.googletagmanager.com/gtag/js?id=UA-47998323-1"
+		)
+	script window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'UA-47998323-1');
+	
+	//-- end js stack
+
+
+
+//-- 5050 component -----------------------------------------------------------
+//-- designed for subpages with image paired w/ type, side-by-side
+
+mixin mixin_5050-iRight(headline, body, src)
+	.fiftyfifty.iRight-s
+		.left.load-hidden.revealFade2
+			.content-hl=headline
+			p=body
+		.right.load-hidden.revealFade
+			img(src=src)
+				
+mixin mixin_5050-iLeft(headline, body, src)
+	.fiftyfifty.iLeft-s
+		.left.load-hidden.revealFade
+			img(src=src)
+		.right.load-hidden.revealFade2
+			.content-hl=headline
+			p=body
+
+		//-- end 5050 component
+			
+			
+//-- overlap component --------------------------------------------------------
+//-- designed for cmhf --------------------------------------------------------
+
+mixin mixin_overlap(eyebrow, desktop_img, mobile_img)
+	.revealFade.load-hidden.eyebrow=eyebrow
+	.overlap-component.revealFade.load-hidden
+		.desktop-comp
+			img(src=desktop_img)
+		.mobile-comp
+			img(src=mobile_img)
+				
+		//-- end overlap component	

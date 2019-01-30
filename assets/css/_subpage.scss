@@ -1,0 +1,275 @@
+//––––––––––––––––––––––––––––––––––––––
+//hero backgrounds
+//––––––––––––––––––––––––––––––––––––––
+
+#hero-tmo{
+	@include subpageHero('../img/subpage/bg-tmo.jpg');
+}
+
+#hero-vw{
+	@include subpageHero('../img/subpage/bg-vw.jpg');
+}
+
+#hero-odi{
+	@include subpageHero('../img/subpage/bg-odi.jpg');
+}
+
+#hero-cmhf{
+	@include subpageHero('../img/subpage/bg-cmhf.jpg');
+}
+
+
+
+//––––––––––––––––––––––––––––––––––––––
+//hero
+//––––––––––––––––––––––––––––––––––––––
+
+.content-hero{
+  margin-top: 248px;
+	grid-column: 1/span 7;
+	color: $gray15;
+	//position:relative;
+	//transform:translateZ(200px) scale(0.8);
+
+	.eyebrow{
+		margin-bottom:36px;
+	}
+
+	.title{
+		margin-bottom:14px;
+	}
+}
+
+
+
+//––––––––––––––––––––––––––––––––––––––
+//content
+//––––––––––––––––––––––––––––––––––––––
+
+.description{
+	margin-top:100px;
+}
+
+.section-title{
+	position:relative;
+	//display:inline;
+	z-index:-10;
+	//float: right;
+	transform-origin: top right;
+	transform:rotate(-90deg);
+	height:0;
+	right:22vw;
+	text-align:right;
+}
+
+.fix{
+	top:100px;
+}
+
+.content{
+	margin-top:10px;
+	grid-row-gap:30px;
+	.eyebrow{
+		grid-column:1/span 12;
+		margin-bottom:0;
+	}
+}
+
+img{
+	width:100%;
+	height:auto;
+	display:flex;
+	align-self: center;
+}
+
+.video, .img-full {
+	//grid-row-start: auto;
+	display:flex;
+	grid-column: 1/span 12;
+	margin:0 0 76px 0;
+	@include softShadow($blur:200);
+}
+
+video.video{
+	width:100%;
+}
+
+.img-9{
+	grid-column:span 9;
+	margin-bottom:30px;
+	img{
+		@include softShadow($blur:200);
+	}
+}
+
+.caption{
+	margin: 0 0 14px 0;
+	grid-column: 1/span 12;
+}
+
+
+//––––––––––––––––––––––––––––––––––––––
+//5050 component
+//––––––––––––––––––––––––––––––––––––––
+
+.fiftyfifty{
+	display:grid;
+	grid-template-columns:inherit;
+	grid-column-gap:inherit;
+	grid-column:1/span 12;
+}
+
+.right, .left{
+	align-self:center;
+	display:flex;
+	flex-direction: column;
+}
+
+.left{
+	grid-column:1/span 6;
+}
+
+.right{
+	grid-column:7/span 6;
+}
+
+
+//––––––––––––––––––––––––––––––––––––––
+//overlap (used on CMHF)
+//––––––––––––––––––––––––––––––––––––––
+
+.overlap-component{
+	display:grid;
+	grid-template-columns:inherit;
+	grid-gap:inherit;
+	grid-column:1/span 12;
+	margin-bottom: 100px;
+}
+.desktop-comp{
+	grid-column:1/span 9;
+	grid-row-start: 1;
+	@include softShadow($blur:200, $alpha:0.1)
+}
+
+.mobile-comp{
+	grid-column:7/span 6;
+	grid-row-start:1;
+}
+
+
+//––––––––––––––––––––––––––––––––––––––
+//project credits
+//––––––––––––––––––––––––––––––––––––––
+
+.credits{
+	li{
+		padding: 0 0 5px 0;
+	}
+	p{
+		font-size:12px;
+		margin-bottom:0;
+	}
+}
+
+
+
+
+
+//––––––––––––––––––––––––––––––––––––––
+//image section breaks
+//––––––––––––––––––––––––––––––––––––––
+
+#tmoendsection1{
+	content:'';
+	width:100%;
+	height:30vw;
+	background:
+		linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 20%),
+		no-repeat bottom left / 100% auto url(../img/subpage/tmo-switcher/tmoendsection1-bg.jpg);
+	margin:0 0 10vw 0;
+}
+
+#tmoendsection2{
+	content:'';
+	width:100%;
+	height:30vw;
+	background:
+		linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 20%),
+		no-repeat bottom left / 100% auto url(../img/subpage/tmo-switcher/tmoendsection2-bg.jpg)
+	;
+	//margin:0 0 10vw 0;
+}
+
+#vwendsection1{
+	content:'';
+	width:100%;
+	height:40vw;
+	background:
+		no-repeat bottom left / 100% auto url(../img/subpage/vw/vwendsection1@2x.jpg)
+	;
+}
+
+#vwendsection2{
+	content:'';
+	width:100%;
+	height:40vw;
+	background:
+		no-repeat bottom left / 100% auto url(../img/subpage/vw/vwendsection2@2x.jpg)
+	;
+}
+
+#odiendsection1{
+	content:'';
+	width:100%;
+	height:44vw;
+	background:
+		no-repeat center left / 100% auto url(../img/subpage/odi/odiendsection1@3x.jpg)
+	;
+}
+
+#odiendsection2{
+	content:'';
+	width:100%;
+	height:31vw;
+	background:
+		no-repeat bottom left / 100% auto url(../img/subpage/odi/odiendsection2@3x.jpg)
+	;
+}
+
+#cmhfendsection1{
+	content:'';
+	width:100%;
+	height:36vw;
+	background:
+		no-repeat bottom left / 100% auto url(../img/subpage/cmhf/cmhfendsection1@3x.jpg)
+	;
+}
+
+
+//––––––––––––––––––––––––––––––––––––––
+//footer
+//––––––––––––––––––––––––––––––––––––––
+
+.footer{
+	position:relative;
+	min-height:500px;
+}
+
+
+.nextPrjt#circle{
+	position:absolute;
+	top:190px;
+	right:50px;
+}
+
+#next.title{
+	position: absolute;
+  z-index: 110;
+  top: 240px;
+  right: 100px;
+  text-align: right;
+	transition:color 1.25s ease;
+	&:hover, &:focus{
+		color:$gray15;
+	}
+}

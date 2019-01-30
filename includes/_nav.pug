@@ -1,31 +1,40 @@
 #nav-container
-  .nav-content
-    input#logo-type(
-        type='button'
-        value="Isaac Martin")
-    #social-container
-      ul.small
-        li
-          img(src='assets/img/logo-mark.svg', alt="")
-        li
-          a(href='#') LinkedIn
-        li
-          a(href='#') Twitter
-        li
-          a(href='#') Behance
-        li
-          a(href='#') Dribbble
+	.nav-content
+		a#name.small(href='index.html') Isaac Martin
+		#social-container
+			#logo-mark
+				img(src='assets/img/logo-mark.svg', alt="")
+			ul.social-links.small
+				li.social
+					a#about(href="#Info") Info
+				li.social
+					a(href='mailto:hello[at]isaacmart[dot]in?subject=Howdy&body=Sorry%20to%20give%20you%20work%20when%20all%20you%20are%20trying%20to%20do%20is%20say%20hello...%20but%20replace%20the%20%5Bat%5D%20and%20%5Bdot%5D%20with%20the%20real%20symbols%20in%20the%20To%3A%20before%20you%20mash%20that%20send%20button.') Email
+				li.social
+					a(href='https://www.behance.net/isaacmartin/' target='_blank') Behance
+				li.social
+					a(href='https://dribbble.com/isaacmartin' target='_blank') Dribbble
+				li.social
+					a(href='https://twitter.com/isaacmart_in' target='_blank') Twitter
+
 .info-container
-  .info-content
-    .info-label About
-    p Isaac Martin is a multidisciplinary designer. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-  .info-content
-    .info-label Experience
-    ul
-      +mixin-experience('SapientRazorfish','2014 - present')
-      +mixin-experience('The Tombras Group','2011 - 2014')
-  .info-content
-    .info-label Experience
-    ul
-      +mixin-experience('SapientRazorfish','2014 - present')
-      +mixin-experience('The Tombras Group','2011 - 2014')
+	#closeInfo.small close
+	.info-content.info-fade
+		.info-label.eyebrow About
+		p #{bio}
+	.info-content.info-fade
+		.info-label.eyebrow Experience
+		ul
+			li.experience
+				p Publicis.Sapient <strike>SapientRazorfish</strike> <strike>Razorfish</strike>
+				.small 2014 - present
+			+mixin_experience('The Tombras Group','2011 - 2014')
+			+mixin_experience('Cornerstone Center for the Arts','2009 - 2011')
+	.info-content.info-fade
+		.info-label.eyebrow Colophon
+		ul
+			li
+				+mixin_experience('Vesterbro Poster','Black Foundry')
+			li
+				+mixin_experience('Work Sans','Wei Huang')
+			li
+				+mixin_experience('Fira Mono','Carrois Apostrophe')

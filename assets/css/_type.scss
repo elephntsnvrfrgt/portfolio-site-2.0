@@ -3,16 +3,87 @@ Type
 ––––––––––––––––––––––––––––––––––––––––––––––––
 */
 
-$mono-stack: "FiraMonoOT", "Courier New", Courier, monospace;
-$sans-stack: 'Work Sans',Helvetica,Arial,sans-serif;
-$serif-stack: 'TRYVesterbro-Poster',serif;
+$mono-stack: 'IBM Plex Mono', 'Courier New', Courier, monospace;
+$sans-stack: 'GT America', 'Work Sans', Helvetica, Arial, sans-serif;
+$serif-stack: 'Vesterbro Poster', Georgia, serif;
 
-.small, #nav-container a{
-  font-family: $mono-stack;
-  color:$gray60;
-  font-size:11px;
+.small, #nav-container a, #menu-container #name{
+  font: 11px $mono-stack;
+	color:$gray60;
+  text-decoration: none;
+}
+
+a{
+	font: 11px $mono-stack;
+	text-decoration:none;
+	color:$gray40;
+  position:relative;
+  &:focus{
+    border:none;
+    outline:none;
+  }
+}
+
+.hover-underline, p a{
+  transition: all .25s ease-in;
+	@include hover_underline($underline_gap:0,$underline_thickness:1,$color:#{$blue});
 }
 
 p{
-  line-height: 24px;
+	font:300 16px/24px $sans-stack;
+  color:$gray60;
+  letter-spacing: .25px;
+	margin-bottom: 15px;
+  @include text-render;
+  a{
+    font-family:inherit;
+    font-size:inherit;
+  }
+	.deemphasize{
+		color: $gray60;
+    a{
+      font-family:inherit;
+      font-size:inherit;
+    }
+	}
+}
+
+.eyebrow{
+  font: 700 18px $sans-stack;
+	color: $gray15;
+	text-transform:uppercase;
+	letter-spacing: 3.25px;
+	margin-bottom: 25px;
+  @include text-render;
+}
+
+.title{
+  font:148px/132px $serif-stack;
+	letter-spacing: -0.49px;
+}
+
+.content-hl{
+  font:72px/74px $serif-stack;
+  letter-spacing:-0.24px;
+  margin-bottom:20px;
+}
+
+.info{
+  font:500 18px/18px $mono-stack;
+	color: $gray80;
+  @include text-render;
+}
+
+.info-label{
+  font-size:12px;
+  letter-spacing:2px;
+}
+
+.section-title{
+	font: 21vw $serif-stack;
+  color:$gray95;
+}
+
+.nowrap{
+  white-space: nowrap;
 }

@@ -1,0 +1,29 @@
+extends layout.pug	
+
+block prepend head
+	- var pageTitle = "500 - Garbagetrain!"
+block content
+	body._500
+		.container
+			#circle
+				<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
+						<defs>
+								<path id="circlePath" d=" M 150, 150 m -120, 0 a 120,120 0 0,1 240,0 a 120,120 0 0,1 -240,0 "/>
+						</defs>
+						<circle cx="150" cy="150" r="150" fill="none"/>
+						<g>
+								<use xlink:href="#circlePath" fill="none"/>
+								<text fill="white">
+										<textPath xlink:href="#circlePath">500 • Error • 500 • Error • 500 • </textPath>
+								</text>
+						</g>
+				</svg>
+			section.grid-container.grid-rows.intro
+				.errorgif.revealMove2.load-hidden
+					img(src="assets/img/index/nachos.gif")
+				.content-hero.errortitle.revealMove.load-hidden
+					.eyebrow.erroreyebrow 500 error
+					h2.title Holy–<br>cannoli
+					p Go back <a href="index.html">home</a>, ya turkey!
+			
+			include includes/_footer.pug
