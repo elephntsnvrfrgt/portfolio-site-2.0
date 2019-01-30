@@ -50,11 +50,6 @@ html.sr .load-hidden {
 .container{
 	margin:0 0 0 60px;
 	width:calc(100% - 60px);
-	height:100vh;
-  // must keep height or else ScrollReveal won't work.
-	overflow-x:hidden;
-	overflow-y:scroll;
-  -webkit-overflow-scrolling: touch;
   background:$white;
 
 	// perspective: 1000px;

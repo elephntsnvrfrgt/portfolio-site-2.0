@@ -8,8 +8,8 @@ block content
 		#menuText.small Other work
 		
 	.container
-		section.grid-container.intro.revealMove.load-hidden#hero-cmhf
-			.content-hero.revealMove.load-hidden
+		section.grid-container.intro#hero-cmhf
+			.content-hero
 				+mixin_hero('Country Music Hall of Fame','Preserve','Web | Concept, Design, & Motion')
 				.herotext.description
 					p Located in Nashville, TN, Country Music Hall of Fame and Museum preserves the history and cultural importance of this music genre. They invited The Tombras Group, where I served as a visual designer, to pitch a tri-part site suite. In addition to the museum, CMHF manages two other historic entities: the legendary Hatch Show Print and Historic Studio B.
@@ -21,10 +21,10 @@ block content
 			+mixin_overlap('Homepage','assets/img/subpage/cmhf/cmhf-01-L.jpg','assets/img/subpage/cmhf/cmhf-01-S@2x.png')
 		
 			.info.caption Hotspot interaction
-			video.video.revealFade.load-hidden(preload="auto" autoplay loop controls poster="assets/vid/cmhf-homepage-poster.jpg")
+			video.video(preload="auto" autoplay loop controls poster="assets/vid/cmhf-homepage-poster.jpg")
 				source(src="assets/vid/cmhf-homepage.webm" type="video/webm")
 				source(src="assets/vid/cmhf-homepage.mp4" type="video/mp4")
-			//- .video.revealFade.load-hidden
+			//- .video
 			//- 	iframe(
 			//- 		type="text/html"
 			//- 		width="1920px"
@@ -34,12 +34,12 @@ block content
 			//- 		allowfullscreen)
 			+mixin_overlap('Exhibits & Collections', 'assets/img/subpage/cmhf/cmhf-02-L.jpg', 'assets/img/subpage/cmhf/cmhf-02-S@2x.png')
 			.info.caption Inductee info
-			video.video.revealFade.load-hidden(preload="auto" autoplay loop controls poster="assets/vid/cmhf-inductee-poster.jpg")
+			video.video(preload="auto" autoplay loop controls poster="assets/vid/cmhf-inductee-poster.jpg")
 				source(src="assets/vid/cmhf-inductee.webm" type="video/webm")
 				source(src="assets/vid/cmhf-inductee.mp4" type="video/mp4")
 			+mixin_overlap('Exhibit', 'assets/img/subpage/cmhf/cmhf-03-L.jpg', 'assets/img/subpage/cmhf/cmhf-03-S@2x.png')
 			+mixin_overlap('Hall of Fame Inductee', 'assets/img/subpage/cmhf/cmhf-05-L.jpg', 'assets/img/subpage/cmhf/cmhf-05-S@2x.png')
-			//- .video.revealFade.load-hidden
+			//- .video
 			//- 	iframe(
 			//- 		type="text/html"
 			//- 		width="1920px"
@@ -47,7 +47,7 @@ block content
 			//- 		src="https://www.youtube.com/embed/https://youtu.be/Vtqhn2ovhu4?autoplay=0&controls=0&loop=1&playlist=https://youtu.be/Vtqhn2ovhu4&rel=0&showinfo=0&color=white&modestbranding=1"
 			//- 		frameborder="0"
 			//- 		allowfullscreen)
-			//- .video.revealFade.load-hidden
+			//- .video
 			//- 	iframe(
 			//- 		frameborder="0"
 			//- 		width="1920"
@@ -76,6 +76,6 @@ block content
 								</text>
 						</g>
 				</svg>
-			a#next.title.revealMove.load-hidden(href="tmo-switcher.html") Next
+			a#next.title(href="tmo-switcher.html") Next
 			
 		include includes/_footer.pug

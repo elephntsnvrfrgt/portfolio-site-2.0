@@ -22,20 +22,10 @@ $(document).ready(function(){
 //–––––––––––––––––––––––––––––––––––––––––––
 //plugins
 
-	//var rellax = new Rellax('.rellax');
-	//can't use rellax due to .container being 100vh with overflow.
+
 
 	// $(".content").fitVids();
-	ScrollReveal().reveal('.revealMove', {interval: 300, container:'.container', distance:'20px', delay:200, duration: 1500, easing:'cubic-bezier(.26,.56,.33,1)'});
 
-	ScrollReveal().reveal('.revealMove2', {container:'.container', distance:'10px', delay:200, duration: 1500, easing:'cubic-bezier(.26,.56,.33,1)'});
-
-	ScrollReveal().reveal('.revealMove3',
-	{container:'.container', distance:'40px', delay:400, duration: 1750, easing:'cubic-bezier(.26,.56,.33,1)'});
-
-	ScrollReveal().reveal('.revealFade', {container:'.container', delay:200, duration: 1250, easing:'cubic-bezier(.5,0,.2,1)'});
-
-	ScrollReveal().reveal('.revealFade2', {container:'.container', delay:250, duration: 1250, easing:'cubic-bezier(.5,0,.2,1)'});
 
 
 
@@ -153,8 +143,14 @@ $(document).ready(function(){
 				0.1
 			)
 			.set(
-				container,
-				{visibility:"hidden"}
+				$('body'),
+				{overflow:"hidden"},
+				0
+			)
+			.set(
+				$('.menu'),
+				{overflow:"scroll"},
+				0
 			)
 			menuBtn.one("click", closeMenu);
 
@@ -169,8 +165,14 @@ $(document).ready(function(){
 	function closeMenu() {
 		tlMax
 			.set(
-				container,
-				{visibility:'visible'}
+				$('body'),
+				{overflow:"inherit"},
+				0
+			)
+			.set(
+				$('.menu'),
+				{overflow:"hidden"},
+				0
 			)
 			.to(
 				menuLi,
