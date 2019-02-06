@@ -20,26 +20,6 @@
 
 
 
-//––––––––––––––––––––––––––––––––––––––
-//hero
-//––––––––––––––––––––––––––––––––––––––
-
-.content-hero{
-  margin-top: 248px;
-	grid-column: 1/span 7;
-	color: $gray15;
-	//position:relative;
-	//transform:translateZ(200px) scale(0.8);
-
-	.eyebrow{
-		margin-bottom:36px;
-	}
-
-	.title{
-		margin-bottom:14px;
-	}
-}
-
 
 
 //––––––––––––––––––––––––––––––––––––––
@@ -53,7 +33,7 @@
 .section-title{
 	position:relative;
 	//display:inline;
-	z-index:-10;
+	z-index:0;
 	//float: right;
 	transform-origin: top right;
 	transform:rotate(-90deg);
@@ -69,6 +49,8 @@
 .content{
 	margin-top:10px;
 	grid-row-gap:30px;
+	position:relative;
+	z-index:10;
 	.eyebrow{
 		grid-column:1/span 12;
 		margin-bottom:0;

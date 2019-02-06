@@ -1,4 +1,8 @@
 $(document).ready(function(){
+$(window).on("load", function(){
+
+      // OPTIONAL - waits til next tick render to run code (prevents running in the middle of render tick)
+window.requestAnimationFrame(function() {
 
 	var 	navContent = $('.nav-content'),
 				logoMark = $('#logo-mark'),
@@ -25,6 +29,7 @@ $(document).ready(function(){
 
 
 	// $(".content").fitVids();
+
 
 
 
@@ -74,27 +79,6 @@ $(document).ready(function(){
 				0.09,
 				'-=.5'
 			)
-			// //overlay to disable scrolling
-			// .set(
-			// 	overlay,
-			// 	{visibility:'visible'},
-			// 	'-=1'
-			// )
-			// .to(
-			// 	overlay,
-			// 	1,
-			// 	{opacity:.05, ease: Power3.easeOut},
-			// 	'-=1'
-			// )
-
-		// infoBtn.one("click", closeInfo);
-		//
-		// //change from isaac to close
-		// $('#info').fadeOut("slow", function(){
-		//    var infoText = $("<div class='small' id='info'>Close</div>").hide();
-		//    $(this).replaceWith(infoText);
-		//    $('#info').fadeIn("slow");
-		// });
 	}
 
 	function closeInfo() {
@@ -107,7 +91,7 @@ $(document).ready(function(){
 			.to(
 				infoContainer,
 				1,
-				{x:-375, ease:Power3.easeIn},
+				{x:-375, ease:Power2.easeInOut},
 				'-=.5'
 			)
 
@@ -127,6 +111,7 @@ $(document).ready(function(){
 
 //–––––––––––––––––––––––––––––––––––––––––––
 //menu trigger and animation
+	const targetElement = document.querySelector("#menu-container");
 
 	function openMenu() {
 		tlMax
@@ -142,38 +127,28 @@ $(document).ready(function(){
 				{y:-15, autoAlpha:1, ease: Power3.easeOut},
 				0.1
 			)
-			.set(
-				$('body'),
-				{overflow:"hidden"},
-				0
+			.to(
+				$('#menuText'),
+				.4,
+				{text:"Never mind", ease:Power3.easeInOut},
+				'-=1.9'
 			)
-			.set(
-				$('.menu'),
-				{overflow:"scroll"},
-				0
-			)
+
 			menuBtn.one("click", closeMenu);
 
 			//change menu text
-			$("#menuText").fadeOut(400, function(){
-			   var menuText = $("<div class='small' id='menuText'>Never mind</div>").hide();
-			   $(this).replaceWith(menuText);
-			   $("#menuText").fadeIn(400);
-			});
+			// $("#menuText").fadeOut(400, function(){
+			//    var menuText = $("<div class='small' id='menuText'>Never mind</div>").hide();
+			//    $(this).replaceWith(menuText);
+			//    $("#menuText").fadeIn(400);
+			// });
+
+			bodyScrollLock.disableBodyScroll(targetElement);
 	}
 
 	function closeMenu() {
 		tlMax
-			.set(
-				$('body'),
-				{overflow:"inherit"},
-				0
-			)
-			.set(
-				$('.menu'),
-				{overflow:"hidden"},
-				0
-			)
+
 			.to(
 				menuLi,
 				.5,
@@ -184,14 +159,22 @@ $(document).ready(function(){
 				{autoAlpha:0},
 				'-=.2'
 			)
+			.to(
+				$('#menuText'),
+				.4,
+				{text:"Other work", ease:Power3.easeInOut},
+				'-=.2'
+			)
 			menuBtn.one("click", openMenu);
 
+			bodyScrollLock.enableBodyScroll(targetElement);
+
 			//change menu text
-			$('#menuText').fadeOut(400, function(){
-			   var menuText = $("<div class='small' id='menuText'>Other work</div>").hide();
-			   $(this).replaceWith(menuText);
-			   $('#menuText').fadeIn(400);
-			});
+			// $('#menuText').fadeOut(400, function(){
+			//    var menuText = $("<div class='small' id='menuText'>Other work</div>").hide();
+			//    $(this).replaceWith(menuText);
+			//    $('#menuText').fadeIn(400);
+			// });
 	}
 	menuBtn.one("click", openMenu);
 
@@ -228,7 +211,10 @@ $(document).ready(function(){
 	$('.tile').each(function(index,element){
 		var tlMax = new TimelineMax({paused:true}),
 				prjtTileInfo = ".prjtNo, .prjtTitle";
-		tlMax.to($(element).find(prjtTileInfo), .9, {opacity:1})
+		tlMax
+			.to($(element).find(prjtTileInfo), 1, {opacity:1, ease: Power1.easeInOut})
+			.to($(element), 1, {zIndex:10, filter:"opacity(1) grayscale(0)", boxShadow:"0 12px 16px -12px rgba(0,0,0,0.10), 0 20px 100px -13px rgba(0,0,0,0.25)", ease: Power1.easeInOut},'-=1')
+
 		element.animation = tlMax;
 	})
 
@@ -243,5 +229,42 @@ $(document).ready(function(){
 	}
 
 
+//–––––––––––––––––––––––––––––––––––––––––––
+//ScrollMagic
 
+
+	//Init ScrollMagic
+	var controller = new ScrollMagic.Controller();
+
+	$('.trigger').each(function(){
+
+		var tween = TweenMax
+				.staggerFromTo($(".fadeInMove", this),
+				1,
+				{y:50, autoAlpha:0},
+				{y:0, autoAlpha:1, ease: Power3.easeOut},
+				0.15);
+
+		var sceneReveal = new ScrollMagic.Scene({
+				triggerElement: this,
+				offset:-100,
+				reverse:false
+				})
+
+				.setTween(tween)
+				.addIndicators() //remove for production
+				.addTo(controller);
+	});
+
+//–––––––––––––––––––––––––––––––––––––––––––
+//hero text animations
+
+			tlMax
+	  			.staggerFromTo(".content-hero .fadeInMove",
+					1,
+					{y:50, autoAlpha:0},
+					{y:0, autoAlpha:1, ease: Power3.easeOut},
+					0.15)
+});
+});
 });

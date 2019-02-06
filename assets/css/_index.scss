@@ -1,10 +1,8 @@
 body{
   background:$gray15;
+  overflow-x:hidden;
 }
 
-html.sr .load-hidden {
-    visibility: hidden;
-}
 
 //circle stamp
 
@@ -74,9 +72,25 @@ html.sr .load-hidden {
   min-height:800px;
 }
 
-.fadein{
-	opacity:0;
+//––––––––––––––––––––––––––––––––––––––
+//hero
+//––––––––––––––––––––––––––––––––––––––
+
+.content-hero{
+  margin-top: 248px;
+	grid-column: 1/span 7;
+	color: $gray15;
+
+	.eyebrow{
+		margin-bottom:36px;
+	}
+
+	.title{
+		margin-bottom:14px;
+	}
 }
+
+
 
 
 
@@ -98,16 +112,28 @@ html.sr .load-hidden {
 	justify-content:space-between;
 	grid-column:span 6;
 	grid-row:span 3;
-	//position: relative;
-	//z-index: 0;
-	filter:grayscale(100%) opacity(60%);
-	transition:all 1s ease !important;
-	&:hover, &:focus{
-		z-index:10;
-		filter:grayscale(0%) opacity(100%);
-		box-shadow: 0 12px 16px -12px rgba(0,0,0,0.10),
-								0 20px 100px -13px rgba(0,0,0,0.25);
-	}
+	filter: opacity(.6) grayscale(1);
+  box-shadow:
+    0 0 0 0 rgba(0,0,0,0),
+    0 0 0 0 rgba(0,0,0,0);
+	// &:hover, &:focus{
+	// 	z-index:10;
+	// 	filter: opacity(100%) grayscale(0);
+	// 	box-shadow: 0 12px 16px -12px rgba(0,0,0,0.10),
+	// 							0 20px 100px -13px rgba(0,0,0,0.25);
+	// }
+}
+
+
+.fadeInMove{
+  visibility:hidden;
+  will-change:visibility,transform;
+}
+
+.fadeInMoveRotate{
+  visibility:hidden;
+  backface-visibility: hidden;
+  transform: perspective(800px);
 }
 
 .offset{
