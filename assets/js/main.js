@@ -1,13 +1,13 @@
 $(document).ready(function(){
 $(window).on("load", function(){
 
-      // OPTIONAL - waits til next tick render to run code (prevents running in the middle of render tick)
+// OPTIONAL - waits til next tick render to run code (prevents running in the middle of render tick)
 window.requestAnimationFrame(function() {
 
 	var 	navContent = $('.nav-content'),
 				logoMark = $('#logo-mark'),
-					social = $('.social'),
-					socialLinks = $(".social-links"),
+				social = $('.social'),
+				socialLinks = $(".social-links"),
 				//info = $('#info'),
 				infoBtn = $('#about'),
 				close = $('#closeInfo'),
@@ -240,10 +240,11 @@ window.requestAnimationFrame(function() {
 
 		var tween = TweenMax
 				.staggerFromTo($(".fadeInMove", this),
-				1,
-				{y:50, autoAlpha:0},
-				{y:0, autoAlpha:1, ease: Power3.easeOut},
-				0.15);
+				1.25,
+				{y:65, autoAlpha:0},
+				{y:0, autoAlpha:1, ease: Power1.easeOut},
+				0.15)
+				;
 
 		var sceneReveal = new ScrollMagic.Scene({
 				triggerElement: this,
@@ -258,13 +259,21 @@ window.requestAnimationFrame(function() {
 
 //–––––––––––––––––––––––––––––––––––––––––––
 //hero text animations
+			var heroBg = ".intro";
 
 			tlMax
-	  			.staggerFromTo(".content-hero .fadeInMove",
-					1,
-					{y:50, autoAlpha:0},
+					.staggerFromTo(".content-hero .fadeInMove",
+					1.5,
+					{y:80, autoAlpha:0},
 					{y:0, autoAlpha:1, ease: Power3.easeOut},
 					0.15)
+
+					.fromTo(heroBg,
+					1.25,
+					{y:40,autoAlpha:0},
+					{y:0, autoAlpha:1, ease: Power2.easeOut},
+					'-=1.5'
+					)
 });
 });
 });

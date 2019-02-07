@@ -51,10 +51,10 @@
 	grid-row-gap:30px;
 	position:relative;
 	z-index:10;
-	.eyebrow{
-		grid-column:1/span 12;
-		margin-bottom:0;
-	}
+	// .eyebrow{
+	// 	grid-column:1/span 12;
+	// 	margin-bottom:0;
+	// }
 }
 
 img{
@@ -62,6 +62,11 @@ img{
 	height:auto;
 	display:flex;
 	align-self: center;
+}
+
+.wrapper-12{
+	grid-column: 1/span 12;
+	grid-column-gap:inherit;
 }
 
 .video, .img-full {

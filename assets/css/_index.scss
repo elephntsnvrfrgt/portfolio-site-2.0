@@ -68,6 +68,7 @@ body{
 }
 
 .intro{
+  visibility:hidden;
   height:100vh;
   min-height:800px;
 }
@@ -127,7 +128,6 @@ body{
 
 .fadeInMove{
   visibility:hidden;
-  will-change:visibility,transform;
 }
 
 .fadeInMoveRotate{
