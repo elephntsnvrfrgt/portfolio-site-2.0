@@ -111,6 +111,7 @@ window.requestAnimationFrame(function() {
 
 //–––––––––––––––––––––––––––––––––––––––––––
 //menu trigger and animation
+
 	const targetElement = document.querySelector("#menu-container");
 
 	function openMenu() {
@@ -129,9 +130,9 @@ window.requestAnimationFrame(function() {
 			)
 			.to(
 				$('#menuText'),
-				.4,
-				{text:"Never mind", ease:Power3.easeInOut},
-				'-=1.9'
+				0,
+				{text:"Never mind", ease:Power3.easeIn},
+				'-=2.1'
 			)
 
 			menuBtn.one("click", closeMenu);
@@ -161,8 +162,8 @@ window.requestAnimationFrame(function() {
 			)
 			.to(
 				$('#menuText'),
-				.4,
-				{text:"Other work", ease:Power3.easeInOut},
+				0,
+				{text:"Other work", ease:Power3.easeIn},
 				'-=.2'
 			)
 			menuBtn.one("click", openMenu);
@@ -203,17 +204,36 @@ window.requestAnimationFrame(function() {
 	  menuToggle.reversed() ? menuToggle.restart() : menuToggle.reverse();
 	});
 
+//–––––––––––––––––––––––––––––––––––––––––––
+//hero text animations
 
+	var heroBg = ".intro",
+			duration = 1.5;
+
+	tlMax
+			.staggerFromTo(".content-hero .fadeInMove",
+			duration,
+			{y:80, autoAlpha:0},
+			{y:0, autoAlpha:1, ease: Power3.easeOut},
+			0.15)
+
+			.fromTo(heroBg,
+			duration,
+			{y:40,autoAlpha:0},
+			{y:0, autoAlpha:1, ease: Power2.easeOut},
+			'-=1.5'
+			)
 
 //–––––––––––––––––––––––––––––––––––––––––––
 //tile hover effect
 
 	$('.tile').each(function(index,element){
 		var tlMax = new TimelineMax({paused:true}),
+				duration = .6,
 				prjtTileInfo = ".prjtNo, .prjtTitle";
 		tlMax
-			.to($(element).find(prjtTileInfo), 1, {opacity:1, ease: Power1.easeInOut})
-			.to($(element), 1, {zIndex:10, filter:"opacity(1) grayscale(0)", boxShadow:"0 12px 16px -12px rgba(0,0,0,0.10), 0 20px 100px -13px rgba(0,0,0,0.25)", ease: Power1.easeInOut},'-=1')
+			.to($(element).find(prjtTileInfo), duration, {opacity:1, ease: Power1.easeInOut})
+			.to($(element), duration, {zIndex:10, filter:"opacity(1) grayscale(0)", boxShadow:"0 12px 16px -12px rgba(0,0,0,0.10), 0 20px 100px -13px rgba(0,0,0,0.25)", ease: Power1.easeInOut},'-=.6')
 
 		element.animation = tlMax;
 	})
@@ -236,44 +256,164 @@ window.requestAnimationFrame(function() {
 	//Init ScrollMagic
 	var controller = new ScrollMagic.Controller();
 
+	//Fade in Move scroll reveal
 	$('.trigger').each(function(){
 
 		var tween = TweenMax
-				.staggerFromTo($(".fadeInMove", this),
-				1.25,
-				{y:65, autoAlpha:0},
-				{y:0, autoAlpha:1, ease: Power1.easeOut},
-				0.15)
-				;
+									.staggerFrom(
+										$(".fadeInMove", this),
+										1,
+										{y:65, autoAlpha:0, ease: Power1.easeOut},
+										0.15
+									)
+								;
 
 		var sceneReveal = new ScrollMagic.Scene({
-				triggerElement: this,
-				offset:-100,
-				reverse:false
+					triggerElement: this,
+					triggerHook: .6,
+					reverse:false
+
 				})
 
 				.setTween(tween)
-				.addIndicators() //remove for production
+				//.addIndicators() //remove for production
 				.addTo(controller);
 	});
 
-//–––––––––––––––––––––––––––––––––––––––––––
-//hero text animations
-			var heroBg = ".intro";
+
+	//Parallax Hero
+	$('.parallaxH').each(function(){
+
+		var tween = new TimelineMax ()
+			.add([
+				TweenMax.fromTo($(".parallaxH"), 1, {y: 0}, {y: -80, ease: Linear.easeNone})
+		]);
+
+		var sceneParallaxH = new ScrollMagic.Scene({
+					triggerElement: this,
+					duration:'100%'
+				})
+
+				.setTween(tween)
+				// .addIndicators(
+				// 	{name: "H"}
+				// ) //remove for production
+				.addTo(controller);
+		});
+	//
+	//
+	// 	//Parallax Foreground right
+	// 	$('.parallaxFGr').each(function(){
+	//
+	// 		var tween = new TimelineMax ()
+	// 			.add([
+	// 				TweenMax.to($(".parallaxFGr"), 1, {y: -100, ease: Linear.easeNone})
+	// 		]);
+	//
+	// 		var sceneParallaxFGr = new ScrollMagic.Scene({
+	// 					triggerElement: this,
+	// 					offset:200,
+	// 					duration:'200%'
+	// 				})
+	//
+	// 				.setTween(tween)
+	// 				.addIndicators({
+	// 					name: "FGr",
+	// 					colorStart: "#017FFE",
+	// 					colorEnd: "#017FFE",
+	// 					indent: 100
+	// 				}) //remove for production
+	// 				.addTo(controller);
+	// 	});
+	//
+	//
+	// 	//Parallax Foreground left
+	// 	$('.parallaxFGl').each(function(){
+	//
+	// 		var tween = new TimelineMax ()
+	// 			.add([
+	// 				TweenMax.fromTo($(".parallaxFGl"), 1, {y: 0}, {y: -100, ease: Linear.easeNone})
+	// 		]);
+	//
+	// 		var sceneParallaxFGr = new ScrollMagic.Scene({
+	// 					triggerElement: this,
+	// 					duration:'200%'
+	// 				})
+	//
+	// 				.setTween(tween)
+	// 				.addIndicators({
+	// 					name: "FGl",
+	// 					colorStart: "#000000",
+	// 					colorEnd: "#000000",
+	// 					indent: 200
+	// 				}) //remove for production
+	// 				.addTo(controller);
+	// 	});
+
+		//Parallax Vertical Section Title
+
+
+
+		$('.parallaxST').each(function(){
 
 			tlMax
-					.staggerFromTo(".content-hero .fadeInMove",
-					1.5,
-					{y:80, autoAlpha:0},
-					{y:0, autoAlpha:1, ease: Power3.easeOut},
-					0.15)
+					.set($(this),{y:0})
 
-					.fromTo(heroBg,
-					1.25,
-					{y:40,autoAlpha:0},
-					{y:0, autoAlpha:1, ease: Power2.easeOut},
-					'-=1.5'
-					)
+			var tween = TweenMax
+										.to(
+											$(this),
+											1,
+											{y: 250, ease: Linear.easeNone}
+										)
+									;
+
+			var sceneParallaxST = new ScrollMagic.Scene({
+						triggerElement: this,
+						triggerHook:1,
+						duration:'300%'
+					})
+
+					.setTween(tween)
+					// .addIndicators({
+					// 	name: "ST",
+					// 	colorStart: "#e20074",
+					// 	colorEnd: "#e20074",
+					// 	colorTrigger: "#e20074",
+					// 	indent: 200
+					// }) //remove for production
+					.addTo(controller);
+		});
+
+
+		//Parallax Section Divider imgs
+		$('.parallaxSD').each(function(){
+
+			var tween = TweenMax
+										.fromTo(
+											$(this),
+											1,
+											{y:-200},
+											{y: 200, ease: Linear.easeNone}
+										)
+									;
+
+			var sceneParallaxSD = new ScrollMagic.Scene({
+						triggerElement: this,
+						triggerHook:1,
+						duration:'200%'
+					})
+
+					.setTween(tween)
+					// .addIndicators({
+					// 	name: "SD",
+					// 	colorStart: "#000000",
+					// 	colorEnd: "#000000",
+					// 	colorTrigger: "#000000",
+					// 	indent: 100
+					// }) //remove for production
+					.addTo(controller);
+		});
+
 });
 });
 });

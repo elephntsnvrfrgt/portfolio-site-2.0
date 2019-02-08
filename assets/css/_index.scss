@@ -1,6 +1,5 @@
 body{
   background:$gray15;
-  overflow-x:hidden;
 }
 
 
@@ -49,6 +48,7 @@ body{
 	margin:0 0 0 60px;
 	width:calc(100% - 60px);
   background:$white;
+  overflow:hidden;
 
 	// perspective: 1000px;
   // transform-style: preserve-3d;
@@ -91,6 +91,10 @@ body{
 	}
 }
 
+.minh-800 .title{
+  margin-bottom:0;
+}
+
 
 
 
@@ -127,13 +131,17 @@ body{
 
 
 .fadeInMove{
-  visibility:hidden;
+  visibility: hidden;
 }
 
 .fadeInMoveRotate{
   visibility:hidden;
   backface-visibility: hidden;
   transform: perspective(800px);
+}
+
+.parallaxSD{
+  overflow-y:hidden;
 }
 
 .offset{
@@ -160,19 +168,19 @@ body{
 }
 
 .prjt-01{
-	background:center/cover #f8f8f8 url('../img/index/bg-TMO.jpg');
+	background:center/cover #f8f8f8 url('../img/index/bg-tmo.jpg');
 }
 
 .prjt-02{
-	background:center/cover #f8f8f8 url('../img/index/bg-VW.jpg');
+	background:center/cover #f8f8f8 url('../img/index/bg-vw.jpg');
 }
 
 .prjt-03{
-	background:center/cover #f8f8f8 url('../img/index/bg-CMHF.jpg');
+	background:center/cover #f8f8f8 url('../img/index/bg-cmhf.jpg');
 }
 
 .prjt-04{
-	background:center/cover #f8f8f8 url('../img/index/bg-ODI.jpg');
+	background:center/cover #f8f8f8 url('../img/index/bg-odi.jpg');
 }
 
 
@@ -217,9 +225,9 @@ footer {
 // error
 
 ._404, ._500{
-  background:red !important;
   .container{
     overflow: visible;
+    background:red;
   }
   footer{
     position:fixed;
