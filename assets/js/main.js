@@ -204,6 +204,33 @@ window.requestAnimationFrame(function() {
 	  menuToggle.reversed() ? menuToggle.restart() : menuToggle.reverse();
 	});
 
+
+	//–––––––––––––––––––––––––––––––––––––––––––
+	//tile hover effect
+
+		$('.tile').each(function(index,element){
+			var tlMax = new TimelineMax({paused:true}),
+					duration = .6,
+					prjtTileInfo = ".prjtNo, .prjtTitle";
+			tlMax
+				.to($(element).find(prjtTileInfo), duration, {opacity:1, ease: Power1.easeInOut})
+				.to($(element), duration, {zIndex:10, filter:"opacity(1) grayscale(0)", boxShadow:"0 12px 16px -12px rgba(0,0,0,0.10), 0 20px 100px -13px rgba(0,0,0,0.25)", ease: Power1.easeInOut},'-=.6')
+
+			element.animation = tlMax;
+		})
+
+		$('.tile').hover(over, out);
+
+		function over(){
+			this.animation.play();
+		}
+
+		function out(){
+			this.animation.reverse();
+		}
+
+
+
 //–––––––––––––––––––––––––––––––––––––––––––
 //hero text animations
 
@@ -224,195 +251,238 @@ window.requestAnimationFrame(function() {
 			'-=1.5'
 			)
 
-//–––––––––––––––––––––––––––––––––––––––––––
-//tile hover effect
 
-	$('.tile').each(function(index,element){
-		var tlMax = new TimelineMax({paused:true}),
-				duration = .6,
-				prjtTileInfo = ".prjtNo, .prjtTitle";
-		tlMax
-			.to($(element).find(prjtTileInfo), duration, {opacity:1, ease: Power1.easeInOut})
-			.to($(element), duration, {zIndex:10, filter:"opacity(1) grayscale(0)", boxShadow:"0 12px 16px -12px rgba(0,0,0,0.10), 0 20px 100px -13px rgba(0,0,0,0.25)", ease: Power1.easeInOut},'-=.6')
-
-		element.animation = tlMax;
-	})
-
-	$('.tile').hover(over, out);
-
-	function over(){
-		this.animation.play();
-	}
-
-	function out(){
-		this.animation.reverse();
-	}
 
 
 //–––––––––––––––––––––––––––––––––––––––––––
 //ScrollMagic
 
+	if ($(window).width() >= 960) {
 
-	//Init ScrollMagic
-	var controller = new ScrollMagic.Controller();
-
-	//Fade in Move scroll reveal
-	$('.trigger').each(function(){
-
-		var tween = TweenMax
-									.staggerFrom(
-										$(".fadeInMove", this),
-										1,
-										{y:65, autoAlpha:0, ease: Power1.easeOut},
-										0.15
-									)
-								;
-
-		var sceneReveal = new ScrollMagic.Scene({
-					triggerElement: this,
-					triggerHook: .6,
-					reverse:false
-
-				})
-
-				.setTween(tween)
-				//.addIndicators() //remove for production
-				.addTo(controller);
-	});
+		//Init ScrollMagic
+		var controller = new ScrollMagic.Controller();
 
 
-	//Parallax Hero
-	$('.parallaxH').each(function(){
-
-		var tween = new TimelineMax ()
-			.add([
-				TweenMax.fromTo($(".parallaxH"), 1, {y: 0}, {y: -80, ease: Linear.easeNone})
-		]);
-
-		var sceneParallaxH = new ScrollMagic.Scene({
-					triggerElement: this,
-					duration:'100%'
-				})
-
-				.setTween(tween)
-				// .addIndicators(
-				// 	{name: "H"}
-				// ) //remove for production
-				.addTo(controller);
-		});
-	//
-	//
-	// 	//Parallax Foreground right
-	// 	$('.parallaxFGr').each(function(){
-	//
-	// 		var tween = new TimelineMax ()
-	// 			.add([
-	// 				TweenMax.to($(".parallaxFGr"), 1, {y: -100, ease: Linear.easeNone})
-	// 		]);
-	//
-	// 		var sceneParallaxFGr = new ScrollMagic.Scene({
-	// 					triggerElement: this,
-	// 					offset:200,
-	// 					duration:'200%'
-	// 				})
-	//
-	// 				.setTween(tween)
-	// 				.addIndicators({
-	// 					name: "FGr",
-	// 					colorStart: "#017FFE",
-	// 					colorEnd: "#017FFE",
-	// 					indent: 100
-	// 				}) //remove for production
-	// 				.addTo(controller);
-	// 	});
-	//
-	//
-	// 	//Parallax Foreground left
-	// 	$('.parallaxFGl').each(function(){
-	//
-	// 		var tween = new TimelineMax ()
-	// 			.add([
-	// 				TweenMax.fromTo($(".parallaxFGl"), 1, {y: 0}, {y: -100, ease: Linear.easeNone})
-	// 		]);
-	//
-	// 		var sceneParallaxFGr = new ScrollMagic.Scene({
-	// 					triggerElement: this,
-	// 					duration:'200%'
-	// 				})
-	//
-	// 				.setTween(tween)
-	// 				.addIndicators({
-	// 					name: "FGl",
-	// 					colorStart: "#000000",
-	// 					colorEnd: "#000000",
-	// 					indent: 200
-	// 				}) //remove for production
-	// 				.addTo(controller);
-	// 	});
-
-		//Parallax Vertical Section Title
-
-
-
-		$('.parallaxST').each(function(){
-
-			tlMax
-					.set($(this),{y:0})
+		//Fade in Move scroll reveal
+		$('.trigger').each(function(){
 
 			var tween = TweenMax
-										.to(
-											$(this),
+										.staggerFrom(
+											$(".fadeInMove", this),
 											1,
-											{y: 250, ease: Linear.easeNone}
+											{y:65, autoAlpha:0, ease: Power1.easeOut},
+											0.15
 										)
 									;
 
-			var sceneParallaxST = new ScrollMagic.Scene({
+			var sceneReveal = new ScrollMagic.Scene({
 						triggerElement: this,
-						triggerHook:1,
-						duration:'300%'
+						triggerHook: .6,
+						reverse:false
+
 					})
 
 					.setTween(tween)
-					// .addIndicators({
-					// 	name: "ST",
-					// 	colorStart: "#e20074",
-					// 	colorEnd: "#e20074",
-					// 	colorTrigger: "#e20074",
-					// 	indent: 200
-					// }) //remove for production
+					//.addIndicators() //remove for production
 					.addTo(controller);
 		});
 
 
-		//Parallax Section Divider imgs
-		$('.parallaxSD').each(function(){
+		//Parallax Hero
+		$('.parallaxH').each(function(){
 
-			var tween = TweenMax
-										.fromTo(
-											$(this),
-											1,
-											{y:-200},
-											{y: 200, ease: Linear.easeNone}
-										)
-									;
+			var tween = new TimelineMax ()
+				.add([
+					TweenMax.fromTo($(".parallaxH"), 1, {y: 0}, {y: -80, ease: Linear.easeNone})
+			]);
 
-			var sceneParallaxSD = new ScrollMagic.Scene({
+			var sceneParallaxH = new ScrollMagic.Scene({
 						triggerElement: this,
-						triggerHook:1,
-						duration:'200%'
+						duration:'100%'
 					})
 
 					.setTween(tween)
-					// .addIndicators({
-					// 	name: "SD",
-					// 	colorStart: "#000000",
-					// 	colorEnd: "#000000",
-					// 	colorTrigger: "#000000",
-					// 	indent: 100
-					// }) //remove for production
 					.addTo(controller);
-		});
+			});
+
+
+			//Parallax Vertical Section Title
+
+			$('.parallaxST').each(function(){
+
+				tlMax
+						.set($(this),{y:0})
+
+				var tween = TweenMax
+											.to(
+												$(this),
+												1,
+												{y: 250, ease: Linear.easeNone}
+											)
+										;
+
+				var sceneParallaxST = new ScrollMagic.Scene({
+							triggerElement: this,
+							triggerHook:1,
+							duration:'300%'
+						})
+
+						.setTween(tween)
+						.addTo(controller);
+			});
+
+
+			//Parallax Section Divider imgs
+			$('.parallaxSD').each(function(){
+
+				var tween = TweenMax
+											.fromTo(
+												$(this),
+												1,
+												{y:-200},
+												{y: 200, ease: Linear.easeNone}
+											)
+										;
+
+				var sceneParallaxSD = new ScrollMagic.Scene({
+							triggerElement: this,
+							triggerHook:1,
+							duration:'200%'
+						})
+
+						.setTween(tween)
+						.addTo(controller);
+			});
+
+
+		} else {
+
+			//Init new Controller for smaller screens
+			var controller = new ScrollMagic.Controller();
+
+			//Fade in Move scroll reveal multiple items via parent trigger
+			$('.trigger-s').each(function(){
+
+				var tween = TweenMax
+											.staggerFrom(
+												$(".fadeInMove", this),
+												1,
+												{y:65, autoAlpha:0, ease: Power1.easeOut},
+												0.15
+											)
+										;
+
+				var sceneRevealMultiSm = new ScrollMagic.Scene({
+							triggerElement: this,
+							triggerHook: .8,
+							reverse:false
+
+						})
+
+						.setTween(tween)
+						//.addIndicators() //remove for production
+						.addTo(controller);
+			});
+
+			//Fade in Move scroll reveal multiple items via parent trigger
+			$('.fadeInMove-s').each(function(){
+
+				var tween = TweenMax
+											.staggerFrom(
+												$(this),
+												1,
+												{y:65, autoAlpha:0, ease: Power1.easeOut},
+												0.15
+											)
+										;
+
+				var sceneRevealSingleSm = new ScrollMagic.Scene({
+							triggerElement: this,
+							triggerHook: .8,
+							reverse:false
+
+						})
+
+						.setTween(tween)
+						//.addIndicators() //remove for production
+						.addTo(controller);
+			});
+
+
+			//Parallax Hero
+			$('.parallaxH').each(function(){
+
+				var tween = new TimelineMax ()
+					.add([
+						TweenMax.fromTo($(".parallaxH"), 1, {y: 0}, {y: -80, ease: Linear.easeNone})
+				]);
+
+				var sceneParallaxHSm = new ScrollMagic.Scene({
+							triggerElement: this,
+							duration:'150%'
+						})
+
+						.setTween(tween)
+						// .addIndicators(
+						// 	{name: "H"}
+						// ) //remove for production
+						.addTo(controller);
+				});
+
+				$('.parallaxST').each(function(){
+
+					tlMax
+							.set($(this),{y:0})
+
+					var tween = TweenMax
+												.to(
+													$(this),
+													1,
+													{y: 250, ease: Linear.easeNone}
+												)
+											;
+
+					var sceneParallaxSTSm = new ScrollMagic.Scene({
+								triggerElement: this,
+								triggerHook:1,
+								duration:'300%'
+							})
+
+							.setTween(tween)
+							.addTo(controller);
+				});
+
+				//Parallax Section Divider imgs
+				$('.parallaxSD').each(function(){
+
+					var tween = TweenMax
+												.fromTo(
+													$(this),
+													1,
+													{y:-100},
+													{y: 100, ease: Linear.easeNone}
+												)
+											;
+
+					var sceneParallaxSD = new ScrollMagic.Scene({
+								triggerElement: this,
+								triggerHook:1,
+								duration:'200%'
+							})
+
+							.setTween(tween)
+							// .addIndicators({
+							// 	name: "SD",
+							// 	colorStart: "#000000",
+							// 	colorEnd: "#000000",
+							// 	colorTrigger: "#000000",
+							// 	indent: 100
+							// }) //remove for production
+							.addTo(controller);
+				});
+
+
+		}
 
 });
 });

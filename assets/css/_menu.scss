@@ -76,19 +76,11 @@
 	}
 
 	.title{
-		-webkit-text-stroke: 1px white;
+		-webkit-text-stroke: 1px $white;
 		line-height: 148px;
 	}
 
-	a:hover > .title{
-		-webkit-text-fill:$gray15;
-		color:$gray15;
-	}
-
-	a:hover > .eyebrow{
-		color:$gray60;
-		//letter-spacing: 4px;
-	}
+	//hovers for li located in mediaqueries
 
 
 }

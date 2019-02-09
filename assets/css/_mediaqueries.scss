@@ -1,3 +1,7 @@
+// ---------------------------------------------
+// XLarge devices ------------------------------
+// ---------------------------------------------
+
 @media (min-width: 1681px){
   #hero-tmo, #hero-vw, #hero-odi, #hero-cmhf{
     background-size:auto 940px;
@@ -51,14 +55,15 @@
   }
 
 }
+// End XLarge Devices
+
 
 // ---------------------------------------------
-// Medium devices (700px and down)--------
+// Medium devices (700px and down)--------------
 //----------------------------------------------
 
-
 // ---------------------------------------------
-// Small devices (700px and down)--------
+// Small devices (959px and down)---------------
 //----------------------------------------------
 @media (max-width: 959px) {
 
@@ -170,7 +175,7 @@ p{
 .menu{
   width:100%;
   margin:0;
-  padding: 30vw 0;
+  padding: 30vw 14vw;
   li:nth-last-child(1n+2) {
       margin: 0 0 25vw 0;
   }
@@ -179,16 +184,16 @@ p{
   }
   .title{
     font-size:16vw;
-    -webkit-text-stroke: 0;
+    -webkit-text-stroke: .5px $white;
   }
 }
+
 
 // layout
 
 .container{
   margin:0;
   width:100%;
-  //padding-right:12vw;
 }
 
 .grid-container{
@@ -243,7 +248,7 @@ p{
 .tile{
   grid-column: span 12;
   grid-row:span 3;
-  filter:grayscale(100%) opacity(80%);
+  filter: opacity(.8) grayscale(1);
   .eyebrow{
     font-size:14px;
     letter-spacing:2px;
@@ -356,38 +361,51 @@ p{
 
 
 }
-
 // End Small Devices
 
 
+
 // ---------------------------------------------
-// XSmall devices (350px and down)--------
-//----------------------------------------------
+// XSmall devices (350px and down)--------------
+// ---------------------------------------------
+
+@media (max-width: 480px) {
+  .eyebrow{
+    margin-bottom: 5vw;
+  }
+  .caption{
+    margin:0 0 5vw 0;
+  }
+}
+
 @media (max-width: 350px) {
   .tile{
     grid-row:span 2;
   }
-
 }
+// End XSmall Devices
 
-@media (max-width:1024px){
-  ._404, ._500{
-    .grid-rows{
-      grid-auto-rows: 50px;
+
+
+// ---------------------------------------------
+// Hovers that don't play well with touch devices...
+// ---------------------------------------------
+@media (hover: hover) {
+
+  #name{
+    @include hover_underline($underline_gap:1,$underline_thickness:1,$color:#{$gray80});
+  }
+
+  .menu{
+
+    a:hover > .title{
+  		color:$gray15;
     }
-    .intro{
-      min-height:768px;
-    }
-    .errorgif{
-      grid-column: 5/span 8;
-      grid-row: 5/span 5;
-    }
+
+    a:hover > .eyebrow{
+  		color:$gray60;
+  	}
   }
 }
 
-
-// @media (pointer: coarse){
-//   .container{
-//     height:auto;
-//   }
-// }
+// End Hovers that don't play well with touch...
