@@ -58,21 +58,18 @@
 // End XLarge Devices
 
 
-// ---------------------------------------------
-// Medium devices (700px and down)--------------
-//----------------------------------------------
 
 // ---------------------------------------------
-// Small devices (959px and down)---------------
+// Medium devices (959px and down)---------------
 //----------------------------------------------
 @media (max-width: 959px) {
 
 //typography
 
 .title {
-    font-size: 18vw;
-    line-height:16vw;
-    letter-spacing: -0.49px;
+    font-size: 122px;
+    line-height:108px;
+    letter-spacing: -.3px;
 }
 
 .content-hl {
@@ -92,18 +89,13 @@
 }
 
 .eyebrow{
-  font-size: 3vw;
-  letter-spacing:.5vw;
 }
 
 .info{
-  font-size:3.1vw;
-  line-height: 3.1vw;
+
 }
 
-.description{
-  margin-top:10vw;
-}
+
 
 p{
   font-size:14px;
@@ -118,22 +110,22 @@ p{
 }
 
 #circle {
-  top:3px;
-  right:15px;
-  width:22vw;
+  top: 5.25vw;
+  right: 5.25vw;
 }
+
 
 .nextPrjt#circle {
   top: auto;
   bottom:15vw;
-  right: 6vw;
+  right: 5.25vw;
   width:16vw;
 }
 
 #next.title{
   bottom: 50px;
   top: auto;
-  right: 13vw;
+  right: 11vw;
 }
 
 
@@ -213,7 +205,7 @@ p{
   margin-top:35vh;
   grid-column: 1/span 13;
   .eyebrow{
-		margin-bottom:5vw;
+		margin-bottom:25px;
 	}
 }
 
@@ -223,7 +215,7 @@ p{
 
 #hero-tmo, #hero-cmhf, #hero-vw, #hero-odi{
   background-position: right top;
-  background-size: auto 330px;
+  background-size: auto 60vw;
 }
 
 .left, .right{
@@ -361,29 +353,95 @@ p{
 
 
 }
-// End Small Devices
+// End Medium devices
 
+
+@media (max-width:768px){
+
+  .title {
+      font-size: 16vw;
+      line-height:14vw;
+      letter-spacing: -.051041667vw;
+  }
+
+  .eyebrow{
+    font-size: 3vw;
+    letter-spacing:.4vw;
+  }
+
+  .info{
+    font-size:3vw;
+    line-height: 3vw;
+  }
+
+
+
+
+}
+
+// ---------------------------------------------
+// Small devices (480px and down)--------------
+// ---------------------------------------------
+
+@media (max-width: 480px) {
+
+  #circle {
+    top:15px;
+    right:15px;
+    width:22vw;
+    padding-bottom:22vw;
+  }
+
+  .eyebrow{
+    margin-bottom: 5vw;
+  }
+
+  .caption{
+    margin:0 0 5vw 0;
+  }
+
+  .content-hero{
+    margin-top: 50vh;
+  }
+
+  #hero-tmo, #hero-cmhf, #hero-vw, #hero-odi{
+    background-position: right top;
+    background-size: auto 100vw;
+  }
+
+}
 
 
 // ---------------------------------------------
 // XSmall devices (350px and down)--------------
 // ---------------------------------------------
 
-@media (max-width: 480px) {
-  .eyebrow{
-    margin-bottom: 5vw;
-  }
-  .caption{
-    margin:0 0 5vw 0;
-  }
-}
-
 @media (max-width: 350px) {
+
+  .title{
+    font-size:56px;
+    line-height: 50px;
+  }
+
+  .eyebrow{
+    font-size:10.5px;
+  }
+
+  .info{
+    font-size:10.5px;
+    line-height: 10.5px;
+  }
+
+  .content-hero{
+    .eyebrow{
+      margin-bottom:18px;
+    }
+  }
   .tile{
     grid-row:span 2;
   }
 }
-// End XSmall Devices
+// End XSmall devices
 
 
 
