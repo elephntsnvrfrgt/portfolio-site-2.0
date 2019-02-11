@@ -68,7 +68,6 @@
 
 	.title, .eyebrow{
 		transition: all .75s;
-		//transform:scale3d(1,1,1);
 	}
 
 	.eyebrow{
@@ -76,7 +75,7 @@
 	}
 
 	.title{
-		-webkit-text-stroke: 1px $white;
+		//-webkit-text-stroke: 1px $white; edit in mediaqueries
 		line-height: 148px;
 	}
 

@@ -251,12 +251,32 @@ window.requestAnimationFrame(function() {
 			'-=1.5'
 			)
 
+			.fromTo(".errorgif",
+			duration,
+			{y:40,autoAlpha:0},
+			{y:0, autoAlpha:1, ease: Power2.easeOut},
+			'-=1.55'
+			)
+
+//–––––––––––––––––––––––––––––––––––––––––––
+//hero text animations
+
+
+	// tlMax
+	// 		.staggerFromTo(".errorintro .fadeInMove",
+	// 		duration,
+	// 		{y:80, autoAlpha:0},
+	// 		{y:0, autoAlpha:1, ease: Power3.easeOut},
+	// 		0.15)
+
+
 
 
 
 //–––––––––––––––––––––––––––––––––––––––––––
 //ScrollMagic
 
+	//For devices larger than or equal to 960px
 	if ($(window).width() >= 960) {
 
 		//Init ScrollMagic
@@ -310,9 +330,6 @@ window.requestAnimationFrame(function() {
 
 			$('.parallaxST').each(function(){
 
-				tlMax
-						.set($(this),{y:0})
-
 				var tween = TweenMax
 											.to(
 												$(this),
@@ -354,7 +371,7 @@ window.requestAnimationFrame(function() {
 						.addTo(controller);
 			});
 
-
+		//For devices less than 960px---------------------
 		} else {
 
 			//Init new Controller for smaller screens
@@ -367,7 +384,7 @@ window.requestAnimationFrame(function() {
 											.staggerFrom(
 												$(".fadeInMove", this),
 												1,
-												{y:65, autoAlpha:0, ease: Power1.easeOut},
+												{y:55, autoAlpha:0, ease: Power1.easeOut},
 												0.15
 											)
 										;
@@ -391,7 +408,7 @@ window.requestAnimationFrame(function() {
 											.staggerFrom(
 												$(this),
 												1,
-												{y:65, autoAlpha:0, ease: Power1.easeOut},
+												{y:50, autoAlpha:0, ease: Power1.easeOut},
 												0.15
 											)
 										;
@@ -419,6 +436,7 @@ window.requestAnimationFrame(function() {
 
 				var sceneParallaxHSm = new ScrollMagic.Scene({
 							triggerElement: this,
+							triggerHook:.6,
 							duration:'150%'
 						})
 
@@ -431,14 +449,11 @@ window.requestAnimationFrame(function() {
 
 				$('.parallaxST').each(function(){
 
-					tlMax
-							.set($(this),{y:0})
-
 					var tween = TweenMax
 												.to(
 													$(this),
 													1,
-													{y: 250, ease: Linear.easeNone}
+													{y: 150, ease: Linear.easeNone}
 												)
 											;
 
@@ -459,8 +474,8 @@ window.requestAnimationFrame(function() {
 												.fromTo(
 													$(this),
 													1,
-													{y:-100},
-													{y: 100, ease: Linear.easeNone}
+													{y:-75},
+													{y: 75, ease: Linear.easeNone}
 												)
 											;
 

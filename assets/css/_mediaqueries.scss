@@ -22,7 +22,7 @@
     height:auto;
   }
   .content-hero {
-    margin-top: 360px;
+    margin-top: 35vh;
   }
 
   .eyebrow{
@@ -54,13 +54,18 @@
     grid-row:span 4;
   }
 
+  .prjtTitle {
+    width:240px;
+    transform-origin: 42% -148%;
+  }
+
 }
 // End XLarge Devices
 
 
 
 // ---------------------------------------------
-// Medium devices (959px and down)---------------
+// Large devices (959px and down)---------------
 //----------------------------------------------
 @media (max-width: 959px) {
 
@@ -176,7 +181,6 @@ p{
   }
   .title{
     font-size:16vw;
-    -webkit-text-stroke: .5px $white;
   }
 }
 
@@ -353,9 +357,28 @@ p{
 
 
 }
-// End Medium devices
+// End Large devices
+
+/* Portrait */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen
+  and (min-device-width: 1024px)
+  and (max-device-width: 1024px)
+  and (orientation: portrait)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+    //for subpages
+    .content-hero{
+      margin-top: 50vh;
+    }
+
+}
 
 
+// ---------------------------------------------
+// Medium devices (959px and down)---------------
+//----------------------------------------------
 @media (max-width:768px){
 
   .title {
@@ -374,10 +397,10 @@ p{
     line-height: 3vw;
   }
 
-
-
-
 }
+// End Medium devices
+
+
 
 // ---------------------------------------------
 // Small devices (480px and down)--------------
@@ -400,14 +423,37 @@ p{
     margin:0 0 5vw 0;
   }
 
+  //for subpages
   .content-hero{
-    margin-top: 50vh;
+    margin-top: 56vh;
   }
 
-  #hero-tmo, #hero-cmhf, #hero-vw, #hero-odi{
-    background-position: right top;
-    background-size: auto 100vw;
+  //specifically for index
+  .minh-800 {
+
+    .content-hero {
+      margin-top: 52vw;
+    }
+
   }
+
+
+  #hero-tmo{
+  	@include subpageHero-s('../img/subpage/bg-tmo-s.jpg');
+  }
+
+  #hero-vw{
+  	@include subpageHero-s('../img/subpage/bg-vw-s.jpg');
+  }
+
+  #hero-odi{
+  	@include subpageHero-s('../img/subpage/bg-odi-s.jpg');
+  }
+
+  #hero-cmhf{
+  	@include subpageHero-s('../img/subpage/bg-cmhf-s.jpg');
+  }
+
 
 }
 
@@ -456,6 +502,10 @@ p{
 
   .menu{
 
+    .title{
+      -webkit-text-stroke: 1px $white;
+    }
+
     a:hover > .title{
   		color:$gray15;
     }
@@ -465,5 +515,15 @@ p{
   	}
   }
 }
+
+@media (hover: hover) and (max-width: 959px) {
+
+  .menu{
+    .title{
+      -webkit-text-stroke: .5px $white;
+    }
+  }
+}
+
 
 // End Hovers that don't play well with touch...
