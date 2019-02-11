@@ -8,14 +8,14 @@ block content
 		#menuText.small Other work
 		
 	.container
-		section.grid-container.intro.revealMove.load-hidden#hero-odi
-			.content-hero.revealMove.load-hidden
+		section.grid-container.intro#hero-odi
+			.content-hero.parallaxH
 				+mixin_hero('Odigo Auto Insurance','Insure','App | Concept, Design, & Motion')
 				.herotext.description
-					p A large insurance company spun out a startup to create a rewarding, behavior-based model that was all based on an app.
-					p I was apart of the initial branding concept team, helping them develop the visual identity. Once the branding was settling in, I transitioned onto the product team, helping define the app functionality and visuals. To be completely transparent, they ended up scrapping the name, the identity, as well as most everything you see below. It was a fun and rewarding project nonetheless.
+					p.fadeInMove A large insurance company spun out a startup to create a rewarding, behavior-based model that was all based on an app.
+					p.fadeInMove I was apart of the initial branding concept team, helping them develop the visual identity. Once the branding was settling in, I transitioned onto the product team, helping define the app functionality and visuals. To be completely transparent, they ended up scrapping the name, the identity, as well as most everything you see below. It was a fun and rewarding project nonetheless.
 	
-		.section-title The App
+		.section-title.parallaxST The App
 		section.grid-container.content
 			
 			+mixin_5050-iRight('Welcome', 'From quotes to claims to customer service, everything you need is in the app. It also uses the smarts of your phone to assess your good (or bad) driving habits. How much and how cautious you drive determines how much you save, and it’s all in real-time.', 'assets/img/subpage/odi/odi-01@3x.png')
@@ -24,18 +24,18 @@ block content
 			+mixin_5050-iLeft('Incidents', 'This is where you’ll see how many days you’ve been incident free. To further incentivize, there are tiers of achievement that unlock different rewards or discounts. Again, the safer you are, the cheaper you are. This is also where you’ll go in the unfortunate event that you do need to file a claim or get roadside assistance.', 'assets/img/subpage/odi/odi-05@3x.png')
 			+mixin_5050-iRight('Profile & Settings', 'Pretty straightforward here. Moved? Got a new credit card? Too many or too little notifications? This is where you can manage all of that. Simply and easily change your contact and payment info, or update your privacy and notification settings.', 'assets/img/subpage/odi/odi-03@3x.png')
 		
-		#odiendsection1
+		#odiendsection1.parallaxSD
 			
-		.section-title Assistant
+		.section-title.parallaxST Assistant
 		section.grid-container.content
 			+mixin_5050-iRight('Ask Odigo', 'You may have noticed the persistent help bubble at the top of each screen. Just tap that sucker and you have instant access to your personal Odigo virtual assistant. If the virtual assistant can’t find what you’re looking for, you have the option to talk or chat with a human-being.', 'assets/img/subpage/odi/odi-06@3x.png')
 			+mixin_5050-iLeft('Call', 'If you prefer to talk to someone on the phone, you have the option of calling them or having them call you so you don’t have to wait on hold. Again, you’ll be connected to a real person that has access to your info and past inquiries so they know how best to help you.', 'assets/img/subpage/odi/odi-07@3x.png')
 			+mixin_5050-iRight('Chat', 'Chat is asynchronous. That means you can ask your question, and instead of waiting for a response, you can get back to your day while customer service gets to work on your question or issue. Come back when it’s convenient for you and pick up where you left off.', 'assets/img/subpage/odi/odi-08@3x.png')
 		
-		#odiendsection2
+		#odiendsection2.parallaxSD
 
-		.footer
-			#circle.nextPrjt
+		.footer.trigger.trigger-s
+			#circle.nextPrjt.fadeInMove
 				<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
 						<defs>
 								<path id="circlePath" d=" M 150, 150 m -120, 0 a 120,120 0 0,1 240,0 a 120,120 0 0,1 -240,0 "/>
@@ -44,10 +44,10 @@ block content
 						<g>
 								<use xlink:href="#circlePath" fill="none"/>
 								<text fill="#9B9B9B">
-										<textPath xlink:href="#circlePath">Country • Music • Hall of Fame •</textPath>
+										<textPath xlink:href="#circlePath">T-Mobile • Switcher • T-Mobile •</textPath>
 								</text>
 						</g>
 				</svg>
-			a#next.title.revealMove.load-hidden(href="cmhf.html") Next
+			a#next.title.fadeInMove(href="tmo-switcher.html") Next
 			
 		include includes/_footer.pug

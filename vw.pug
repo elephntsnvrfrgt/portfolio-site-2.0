@@ -8,16 +8,16 @@ block content
 		#menuText.small Other work
 		
 	.container
-		section.grid-container.intro.revealMove.load-hidden#hero-vw
-			.content-hero.revealMove.load-hidden
+		section.grid-container.intro#hero-vw
+			.content-hero.parallaxH
 				+mixin_hero('Volkswagen Car-Net','Connect','App | Concept, Design, & Motion')
 				.herotext.description
-					p Car-Net is a service by Volkswagen that allows you to remotely monitor and interact with your VW. What started as a pitch with Razorfish, quickly turned into a personal concept piece that allowed me to explore visuals as well as functionality, pushing it more into what it could and should be.
+					p.fadeInMove Car-Net is a service by Volkswagen that allows you to remotely monitor and interact with your VW. What started as a pitch with Razorfish, quickly turned into a personal concept piece that allowed me to explore visuals as well as functionality, pushing it more into what it could and should be.
 	
-		.section-title The App
+		.section-title.parallaxST The App
 		section.grid-container.content
-			//- .eyebrow.revealFade.load-hidden Dashboard
-			//- .img-full.revealFade.load-hidden
+			//- .eyebrow Dashboard
+			//- .img-full
 			//- 	img(src='assets/img/subpage/vw/vw-dashboard@2x.png')
 			
 			+mixin_overlap('Dashboard','assets/img/subpage/vw/vw-01-L@2x.jpg','assets/img/subpage/vw/vw-01-S@3x.png')
@@ -28,19 +28,19 @@ block content
 			+mixin_5050-iLeft('Health', 'The Health Report enables you, whether you’re familiar with car mechanics or not, to be proactive in a maintenance schedule. If/when the time comes to do more serious work, you see the same diagnosis the mechanic has and opens up clearer communication.', 'assets/img/subpage/vw/vw-phone-health@3x.png')
 			+mixin_5050-iRight('Assistance', 'If unfortunate events occur, Assistance is there to… well, assist. Car-Net will contact a live person to dispatch the appropriate help. This occurs automatically in the case of a collision, otherwise you can manually initiate if need be.', 'assets/img/subpage/vw/vw-phone-assistance@3x.png')
 		
-		#vwendsection1
+		#vwendsection1.parallaxSD
 			
-		.section-title Watch
+		.section-title.parallaxST Watch
 		section.grid-container.content
 			+mixin_5050-iRight('Remote key', 'To keep things simple and prioritize utility, the watch app is boiled down to the Remote Key functions. Page-based navigation makes for quick access to most functions.', 'assets/img/subpage/vw/vw-watch-01@3x.png')
 			+mixin_5050-iLeft('Force Touch Menu', 'The remaining functions are grouped under a Force Touch, in order to negate accidental triggers. Things like starting the engine, panic, or calling emergency services.', 'assets/img/subpage/vw/vw-watch-02@3x.png')
 			+mixin_5050-iRight('Alerts & Notifications', 'These would be smarter and more proactive. Leave for work at the same time everyday? Car-Net can set the mood with music and a comfortable temperature so you can start your commute off right. Walking out of the store with a cart full of groceries? Car-Net can open the trunk for you.', 'assets/img/subpage/vw/vw-watch-03@3x.png')
 			+mixin_5050-iLeft('Voice Control', 'For those times when you’re hands are full, why not speak those commands into reality. Or maybe you’re just lazy and couldn’t be bothered to push a button, let alone look at your wrist. The only thing better would be mind control, I suppose.', 'assets/img/subpage/vw/vw-watch-04@3x.png')
 		
-		#vwendsection2
+		#vwendsection2.parallaxSD
 
-		.footer
-			#circle.nextPrjt
+		.footer.trigger.trigger-s
+			#circle.nextPrjt.fadeInMove
 				<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
 						<defs>
 								<path id="circlePath" d=" M 150, 150 m -120, 0 a 120,120 0 0,1 240,0 a 120,120 0 0,1 -240,0 "/>
@@ -49,10 +49,11 @@ block content
 						<g>
 								<use xlink:href="#circlePath" fill="none"/>
 								<text fill="#9B9B9B">
-										<textPath xlink:href="#circlePath">Odigo • Automotive • Insurance •</textPath>
+										<textPath xlink:href="#circlePath">Country • Music • Hall of Fame •</textPath>
 								</text>
 						</g>
 				</svg>
-			a#next.title.revealMove.load-hidden(href="odi.html") Next
+			a#next.title.fadeInMove(href="cmhf.html") Next
+		
 			
 		include includes/_footer.pug

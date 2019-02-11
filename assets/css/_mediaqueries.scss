@@ -1,3 +1,7 @@
+// ---------------------------------------------
+// XLarge devices ------------------------------
+// ---------------------------------------------
+
 @media (min-width: 1681px){
   #hero-tmo, #hero-vw, #hero-odi, #hero-cmhf{
     background-size:auto 940px;
@@ -18,7 +22,7 @@
     height:auto;
   }
   .content-hero {
-    margin-top: 360px;
+    margin-top: 35vh;
   }
 
   .eyebrow{
@@ -50,24 +54,27 @@
     grid-row:span 4;
   }
 
+  .prjtTitle {
+    width:240px;
+    transform-origin: 42% -148%;
+  }
+
 }
+// End XLarge Devices
+
+
 
 // ---------------------------------------------
-// Medium devices (700px and down)--------
-//----------------------------------------------
-
-
-// ---------------------------------------------
-// Small devices (700px and down)--------
+// Large devices (959px and down)---------------
 //----------------------------------------------
 @media (max-width: 959px) {
 
 //typography
 
 .title {
-    font-size: 18vw;
-    line-height:16vw;
-    letter-spacing: -0.49px;
+    font-size: 122px;
+    line-height:108px;
+    letter-spacing: -.3px;
 }
 
 .content-hl {
@@ -87,18 +94,13 @@
 }
 
 .eyebrow{
-  font-size: 3vw;
-  letter-spacing:.5vw;
 }
 
 .info{
-  font-size:3.1vw;
-  line-height: 3.1vw;
+
 }
 
-.description{
-  margin-top:10vw;
-}
+
 
 p{
   font-size:14px;
@@ -113,22 +115,22 @@ p{
 }
 
 #circle {
-  top:3px;
-  right:15px;
-  width:22vw;
+  top: 5.25vw;
+  right: 5.25vw;
 }
+
 
 .nextPrjt#circle {
   top: auto;
   bottom:15vw;
-  right: 6vw;
+  right: 5.25vw;
   width:16vw;
 }
 
 #next.title{
   bottom: 50px;
   top: auto;
-  right: 13vw;
+  right: 11vw;
 }
 
 
@@ -141,6 +143,7 @@ p{
 #menu-container #name{
   display:block;
   text-align:left;
+  position: fixed;
   left:-60px;
   bottom:105px;
   top:auto;
@@ -169,7 +172,7 @@ p{
 .menu{
   width:100%;
   margin:0;
-  padding: 30vw 0;
+  padding: 30vw 14vw;
   li:nth-last-child(1n+2) {
       margin: 0 0 25vw 0;
   }
@@ -178,16 +181,15 @@ p{
   }
   .title{
     font-size:16vw;
-    -webkit-text-stroke: 0;
   }
 }
+
 
 // layout
 
 .container{
   margin:0;
   width:100%;
-  //padding-right:12vw;
 }
 
 .grid-container{
@@ -207,7 +209,7 @@ p{
   margin-top:35vh;
   grid-column: 1/span 13;
   .eyebrow{
-		margin-bottom:5vw;
+		margin-bottom:25px;
 	}
 }
 
@@ -217,7 +219,7 @@ p{
 
 #hero-tmo, #hero-cmhf, #hero-vw, #hero-odi{
   background-position: right top;
-  background-size: auto 330px;
+  background-size: auto 60vw;
 }
 
 .left, .right{
@@ -242,7 +244,7 @@ p{
 .tile{
   grid-column: span 12;
   grid-row:span 3;
-  filter:grayscale(100%) opacity(80%);
+  filter: opacity(.8) grayscale(1);
   .eyebrow{
     font-size:14px;
     letter-spacing:2px;
@@ -355,38 +357,173 @@ p{
 
 
 }
+// End Large devices
 
-// End Small Devices
+/* Portrait */
+/* Declare the same value for min- and max-width to avoid colliding with desktops */
+/* Source: https://medium.com/connect-the-dots/css-media-queries-for-ipad-pro-8cad10e17106*/
+@media only screen
+  and (min-device-width: 1024px)
+  and (max-device-width: 1024px)
+  and (orientation: portrait)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+    //for subpages
+    .content-hero{
+      margin-top: 50vh;
+    }
+
+}
 
 
 // ---------------------------------------------
-// XSmall devices (350px and down)--------
+// Medium devices (959px and down)---------------
 //----------------------------------------------
+@media (max-width:768px){
+
+  .title {
+      font-size: 16vw;
+      line-height:14vw;
+      letter-spacing: -.051041667vw;
+  }
+
+  .eyebrow{
+    font-size: 3vw;
+    letter-spacing:.4vw;
+  }
+
+  .info{
+    font-size:3vw;
+    line-height: 3vw;
+  }
+
+}
+// End Medium devices
+
+
+
+// ---------------------------------------------
+// Small devices (480px and down)--------------
+// ---------------------------------------------
+
+@media (max-width: 480px) {
+
+  #circle {
+    top:15px;
+    right:15px;
+    width:22vw;
+    padding-bottom:22vw;
+  }
+
+  .eyebrow{
+    margin-bottom: 5vw;
+  }
+
+  .caption{
+    margin:0 0 5vw 0;
+  }
+
+  //for subpages
+  .content-hero{
+    margin-top: 56vh;
+  }
+
+  //specifically for index
+  .minh-800 {
+
+    .content-hero {
+      margin-top: 52vw;
+    }
+
+  }
+
+
+  #hero-tmo{
+  	@include subpageHero-s('../img/subpage/bg-tmo-s.jpg');
+  }
+
+  #hero-vw{
+  	@include subpageHero-s('../img/subpage/bg-vw-s.jpg');
+  }
+
+  #hero-odi{
+  	@include subpageHero-s('../img/subpage/bg-odi-s.jpg');
+  }
+
+  #hero-cmhf{
+  	@include subpageHero-s('../img/subpage/bg-cmhf-s.jpg');
+  }
+
+
+}
+
+
+// ---------------------------------------------
+// XSmall devices (350px and down)--------------
+// ---------------------------------------------
+
 @media (max-width: 350px) {
+
+  .title{
+    font-size:56px;
+    line-height: 50px;
+  }
+
+  .eyebrow{
+    font-size:10.5px;
+  }
+
+  .info{
+    font-size:10.5px;
+    line-height: 10.5px;
+  }
+
+  .content-hero{
+    .eyebrow{
+      margin-bottom:18px;
+    }
+  }
   .tile{
     grid-row:span 2;
   }
+}
+// End XSmall devices
 
+
+
+// ---------------------------------------------
+// Hovers that don't play well with touch devices...
+// ---------------------------------------------
+@media (hover: hover) {
+
+  #name{
+    @include hover_underline($underline_gap:1,$underline_thickness:1,$color:#{$gray80});
+  }
+
+  .menu{
+
+    .title{
+      -webkit-text-stroke: 1px $white;
+    }
+
+    a:hover > .title{
+  		color:$gray15;
+    }
+
+    a:hover > .eyebrow{
+  		color:$gray60;
+  	}
+  }
 }
 
-@media (max-width:1024px){
-  ._404, ._500{
-    .grid-rows{
-      grid-auto-rows: 50px;
-    }
-    .intro{
-      min-height:768px;
-    }
-    .errorgif{
-      grid-column: 5/span 8;
-      grid-row: 5/span 5;
+@media (hover: hover) and (max-width: 959px) {
+
+  .menu{
+    .title{
+      -webkit-text-stroke: .5px $white;
     }
   }
 }
 
 
-// @media (pointer: coarse){
-//   .container{
-//     height:auto;
-//   }
-// }
+// End Hovers that don't play well with touch...

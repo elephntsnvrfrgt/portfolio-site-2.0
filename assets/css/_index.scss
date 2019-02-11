@@ -1,10 +1,7 @@
 body{
-  background:$gray15;
+  background:$white;
 }
 
-html.sr .load-hidden {
-    visibility: hidden;
-}
 
 //circle stamp
 
@@ -50,12 +47,8 @@ html.sr .load-hidden {
 .container{
 	margin:0 0 0 60px;
 	width:calc(100% - 60px);
-	height:100vh;
-  // must keep height or else ScrollReveal won't work.
-	overflow-x:hidden;
-	overflow-y:scroll;
-  -webkit-overflow-scrolling: touch;
   background:$white;
+  overflow:hidden;
 
 	// perspective: 1000px;
   // transform-style: preserve-3d;
@@ -75,13 +68,40 @@ html.sr .load-hidden {
 }
 
 .intro{
+  visibility:hidden;
   height:100vh;
   min-height:800px;
 }
 
-.fadein{
-	opacity:0;
+//––––––––––––––––––––––––––––––––––––––
+//hero
+//––––––––––––––––––––––––––––––––––––––
+
+
+.content-hero{
+  margin-top: 30vh;
+	grid-column: 1/span 7;
+	color: $gray15;
+
+	.eyebrow{
+		margin-bottom:32px;
+	}
+
+	.title{
+		margin-bottom:14px;
+	}
+
 }
+
+.minh-800 {
+
+  .title {
+    margin-bottom:0;
+  }
+
+}
+
+
 
 
 
@@ -103,16 +123,31 @@ html.sr .load-hidden {
 	justify-content:space-between;
 	grid-column:span 6;
 	grid-row:span 3;
-	//position: relative;
-	//z-index: 0;
-	filter:grayscale(100%) opacity(60%);
-	transition:all 1s ease !important;
-	&:hover, &:focus{
-		z-index:10;
-		filter:grayscale(0%) opacity(100%);
-		box-shadow: 0 12px 16px -12px rgba(0,0,0,0.10),
-								0 20px 100px -13px rgba(0,0,0,0.25);
-	}
+	filter: opacity(.6) grayscale(1);
+  box-shadow:
+    0 0 0 0 rgba(0,0,0,0),
+    0 0 0 0 rgba(0,0,0,0);
+	// &:hover, &:focus{
+	// 	z-index:10;
+	// 	filter: opacity(100%) grayscale(0);
+	// 	box-shadow: 0 12px 16px -12px rgba(0,0,0,0.10),
+	// 							0 20px 100px -13px rgba(0,0,0,0.25);
+	// }
+}
+
+
+.fadeInMove{
+  visibility: hidden;
+}
+
+.fadeInMoveRotate{
+  visibility:hidden;
+  backface-visibility: hidden;
+  transform: perspective(800px);
+}
+
+.parallaxSD{
+  overflow-y:hidden;
 }
 
 .offset{
@@ -139,19 +174,19 @@ html.sr .load-hidden {
 }
 
 .prjt-01{
-	background:center/cover #f8f8f8 url('../img/index/bg-TMO.jpg');
+	background:center/cover #f8f8f8 url('../img/index/tile-tmo.jpg');
 }
 
 .prjt-02{
-	background:center/cover #f8f8f8 url('../img/index/bg-VW.jpg');
+	background:center/cover #f8f8f8 url('../img/index/tile-vw.jpg');
 }
 
 .prjt-03{
-	background:center/cover #f8f8f8 url('../img/index/bg-CMHF.jpg');
+	background:center/cover #f8f8f8 url('../img/index/tile-cmhf.jpg');
 }
 
 .prjt-04{
-	background:center/cover #f8f8f8 url('../img/index/bg-ODI.jpg');
+	background:center/cover #f8f8f8 url('../img/index/tile-odi.jpg');
 }
 
 
@@ -196,9 +231,12 @@ footer {
 // error
 
 ._404, ._500{
-  background:red !important;
+
+  background-color:red;
+
   .container{
     overflow: visible;
+    background:red;
   }
   footer{
     position:fixed;

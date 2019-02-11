@@ -8,23 +8,24 @@ block content
 		#menuText.small Other work
 		
 	.container
-		section.grid-container.intro.revealMove.load-hidden#hero-cmhf
-			.content-hero.revealMove.load-hidden
+		section.grid-container.intro#hero-cmhf
+			.content-hero.parallaxH
 				+mixin_hero('Country Music Hall of Fame','Preserve','Web | Concept, Design, & Motion')
 				.herotext.description
-					p Located in Nashville, TN, Country Music Hall of Fame and Museum preserves the history and cultural importance of this music genre. They invited The Tombras Group, where I served as a visual designer, to pitch a tri-part site suite. In addition to the museum, CMHF manages two other historic entities: the legendary Hatch Show Print and Historic Studio B.
-					p What started as a pitch, this responsive design concept became more of an exercise in process and thinking. I was able to extend the initial ideas into more thoughtful design systems.
+					p.fadeInMove Located in Nashville, TN, Country Music Hall of Fame and Museum preserves the history and cultural importance of this music genre. They invited The Tombras Group, where I served as a visual designer, to pitch a tri-part site suite. In addition to the museum, CMHF manages two other historic entities: the legendary Hatch Show Print and Historic Studio B.
+					p.fadeInMove What started as a pitch, this responsive design concept became more of an exercise in process and thinking. I was able to extend the initial ideas into more thoughtful design systems.
 	
-		.section-title Pages
+		.section-title.parallaxST Pages
 		section.grid-container.content
 			
 			+mixin_overlap('Homepage','assets/img/subpage/cmhf/cmhf-01-L.jpg','assets/img/subpage/cmhf/cmhf-01-S@2x.png')
 		
-			.info.caption Hotspot interaction
-			video.video.revealFade.load-hidden(preload="auto" autoplay loop controls poster="assets/vid/cmhf-homepage-poster.jpg")
-				source(src="assets/vid/cmhf-homepage.webm" type="video/webm")
-				source(src="assets/vid/cmhf-homepage.mp4" type="video/mp4")
-			//- .video.revealFade.load-hidden
+			.wrapper-12.trigger.trigger-s
+				.info.caption.fadeInMove Hotspot interaction
+				video.video.fadeInMove(preload="auto" autoplay muted loop controls poster="assets/vid/cmhf-homepage-poster.jpg")
+					source(src="assets/vid/cmhf-homepage.webm" type="video/webm")
+					source(src="assets/vid/cmhf-homepage.mp4" type="video/mp4")
+			//- .video
 			//- 	iframe(
 			//- 		type="text/html"
 			//- 		width="1920px"
@@ -33,13 +34,14 @@ block content
 			//- 		frameborder="0"
 			//- 		allowfullscreen)
 			+mixin_overlap('Exhibits & Collections', 'assets/img/subpage/cmhf/cmhf-02-L.jpg', 'assets/img/subpage/cmhf/cmhf-02-S@2x.png')
-			.info.caption Inductee info
-			video.video.revealFade.load-hidden(preload="auto" autoplay loop controls poster="assets/vid/cmhf-inductee-poster.jpg")
-				source(src="assets/vid/cmhf-inductee.webm" type="video/webm")
-				source(src="assets/vid/cmhf-inductee.mp4" type="video/mp4")
+			.wrapper-12.trigger.trigger-s
+				.info.caption.fadeInMove Inductee info
+				video.video.fadeInMove(preload="auto" autoplay muted loop controls poster="assets/vid/cmhf-inductee-poster.jpg")
+					source(src="assets/vid/cmhf-inductee.webm" type="video/webm")
+					source(src="assets/vid/cmhf-inductee.mp4" type="video/mp4")
 			+mixin_overlap('Exhibit', 'assets/img/subpage/cmhf/cmhf-03-L.jpg', 'assets/img/subpage/cmhf/cmhf-03-S@2x.png')
 			+mixin_overlap('Hall of Fame Inductee', 'assets/img/subpage/cmhf/cmhf-05-L.jpg', 'assets/img/subpage/cmhf/cmhf-05-S@2x.png')
-			//- .video.revealFade.load-hidden
+			//- .video
 			//- 	iframe(
 			//- 		type="text/html"
 			//- 		width="1920px"
@@ -47,7 +49,7 @@ block content
 			//- 		src="https://www.youtube.com/embed/https://youtu.be/Vtqhn2ovhu4?autoplay=0&controls=0&loop=1&playlist=https://youtu.be/Vtqhn2ovhu4&rel=0&showinfo=0&color=white&modestbranding=1"
 			//- 		frameborder="0"
 			//- 		allowfullscreen)
-			//- .video.revealFade.load-hidden
+			//- .video
 			//- 	iframe(
 			//- 		frameborder="0"
 			//- 		width="1920"
@@ -60,10 +62,10 @@ block content
 							
 			
 		
-		#cmhfendsection1
+		#cmhfendsection1.parallaxSD
 
-		.footer
-			#circle.nextPrjt
+		.footer.trigger.trigger-s
+			#circle.nextPrjt.fadeInMove
 				<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
 						<defs>
 								<path id="circlePath" d=" M 150, 150 m -120, 0 a 120,120 0 0,1 240,0 a 120,120 0 0,1 -240,0 "/>
@@ -72,10 +74,10 @@ block content
 						<g>
 								<use xlink:href="#circlePath" fill="none"/>
 								<text fill="#9B9B9B">
-										<textPath xlink:href="#circlePath">T-Mobile • Switcher • T-Mobile •</textPath>
+										<textPath xlink:href="#circlePath">Odigo • Automotive • Insurance •</textPath>
 								</text>
 						</g>
 				</svg>
-			a#next.title.revealMove.load-hidden(href="tmo-switcher.html") Next
+			a#next.title.fadeInMove(href="odi.html") Next
 			
 		include includes/_footer.pug

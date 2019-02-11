@@ -55,7 +55,7 @@
 	right:0;
 	z-index:110;
 	height:100vh;
-	padding:248px 0;
+	padding:248px 80px;
 	text-align:center;
 
 	li:nth-last-child(1n+2){
@@ -68,7 +68,6 @@
 
 	.title, .eyebrow{
 		transition: all .75s;
-		//transform:scale3d(1,1,1);
 	}
 
 	.eyebrow{
@@ -76,19 +75,11 @@
 	}
 
 	.title{
-		-webkit-text-stroke: 1px white;
+		//-webkit-text-stroke: 1px $white; edit in mediaqueries
 		line-height: 148px;
 	}
 
-	a:hover > .title{
-		-webkit-text-fill:$gray15;
-		color:$gray15;
-	}
-
-	a:hover > .eyebrow{
-		color:$gray60;
-		//letter-spacing: 4px;
-	}
+	//hovers for li located in mediaqueries
 
 
 }

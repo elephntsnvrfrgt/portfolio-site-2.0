@@ -35,7 +35,6 @@
 	text-align: right;
 	cursor:pointer;
 	transition:color 250ms ease-in;
-	@include hover_underline($underline_gap:1,$underline_thickness:1,$color:#{$gray80});
 }
 
 #social-container{
