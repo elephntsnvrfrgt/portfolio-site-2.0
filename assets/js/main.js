@@ -303,6 +303,10 @@ window.requestAnimationFrame(function() {
 								return "#E9C378";
 							case "odi":
 								return "#7251DB";
+							case "404":
+								return "inherit"
+							case "500":
+								return "inherit"
 							default:
 								return "#0FBFFF";
 						}
