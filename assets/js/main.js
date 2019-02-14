@@ -275,9 +275,59 @@ window.requestAnimationFrame(function() {
 
 //–––––––––––––––––––––––––––––––––––––––––––
 //ScrollMagic
-
 	//For devices larger than or equal to 960px
 	if ($(window).width() >= 960) {
+
+
+		//Progress bar
+		scrollProgress();
+
+		$(window).resize(function(){
+			scrollProgress();
+		});
+
+		function scrollProgress() {
+
+			var controller = new ScrollMagic.Controller(),
+					windowsize = $(window).height(),
+					containersize = $('.container').height(),
+					duration = (containersize-windowsize),
+					getId = $('body').attr('id'),
+					color = (function color(){
+						switch(getId){
+							case "tmo":
+								return "#e20074";
+							case "vw":
+								return "#009DDC";
+							case "cmhf":
+								return "#E9C378";
+							case "odi":
+								return "#7251DB";
+							default:
+								return "#0FBFFF";
+						}
+						getId; //get the ID and then run against the cases
+					}),
+					tweenScrollProgress = TweenMax
+												.fromTo(
+													$("#scroll-progress"),
+													1,
+													{height:0, backgroundColor:color},
+													{height:"100%", ease:Linear.easeNone}
+												)
+											;
+
+					var sceneScrollProgress = new ScrollMagic.Scene({
+								triggerElement:".container",
+								triggerHook:0,
+								duration:duration
+					})
+
+							.setTween(tweenScrollProgress)
+							.addTo(controller);
+
+		}
+
 
 		//Init ScrollMagic
 		var controller = new ScrollMagic.Controller();
@@ -370,6 +420,7 @@ window.requestAnimationFrame(function() {
 						.setTween(tween)
 						.addTo(controller);
 			});
+
 
 		//For devices less than 960px---------------------
 		} else {

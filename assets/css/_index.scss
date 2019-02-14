@@ -1,6 +1,25 @@
+html{
+  overflow:-moz-scrollbars-none;
+}
+
+::-webkit-scrollbar{
+  display:none;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: transparent;
+}
+
 body{
   background:$white;
 }
+
+
 
 
 //circle stamp
