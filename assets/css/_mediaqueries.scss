@@ -140,7 +140,7 @@ p{
   right:65px;
 }
 
-#menu-container #name{
+#menu-container #home{
   display:block;
   text-align:left;
   position: fixed;
@@ -496,7 +496,7 @@ p{
 // ---------------------------------------------
 @media (hover: hover) {
 
-  #name{
+  #name, #home{
     @include hover_underline($underline_gap:1,$underline_thickness:1,$color:#{$gray80});
   }
 

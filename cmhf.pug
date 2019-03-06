@@ -3,6 +3,7 @@ extends layout.pug
 block prepend head
 	- var pageTitle = "Country Music Hall of Fame"
 
+block prepend body
 	body#cmhf
 
 block content
@@ -28,14 +29,6 @@ block content
 				video.video.fadeInMove(preload="auto" autoplay muted loop controls poster="assets/vid/cmhf-homepage-poster.jpg")
 					source(src="assets/vid/cmhf-homepage.webm" type="video/webm")
 					source(src="assets/vid/cmhf-homepage.mp4" type="video/mp4")
-			//- .video
-			//- 	iframe(
-			//- 		type="text/html"
-			//- 		width="1920px"
-			//- 		height="1080px"
-			//- 		src="https://www.youtube.com/embed/sZ08Yr0bhUk?autoplay=0&controls=0&loop=1&playlist=sZ08Yr0bhUk&rel=0&showinfo=0&color=white&modestbranding=1"
-			//- 		frameborder="0"
-			//- 		allowfullscreen)
 			+mixin_overlap('Exhibits & Collections', 'assets/img/subpage/cmhf/cmhf-02-L.jpg', 'assets/img/subpage/cmhf/cmhf-02-S@2x.png')
 			.wrapper-12.trigger.trigger-s
 				.info.caption.fadeInMove Inductee info
@@ -44,27 +37,7 @@ block content
 					source(src="assets/vid/cmhf-inductee.mp4" type="video/mp4")
 			+mixin_overlap('Exhibit', 'assets/img/subpage/cmhf/cmhf-03-L.jpg', 'assets/img/subpage/cmhf/cmhf-03-S@2x.png')
 			+mixin_overlap('Hall of Fame Inductee', 'assets/img/subpage/cmhf/cmhf-05-L.jpg', 'assets/img/subpage/cmhf/cmhf-05-S@2x.png')
-			//- .video
-			//- 	iframe(
-			//- 		type="text/html"
-			//- 		width="1920px"
-			//- 		height="1080px"
-			//- 		src="https://www.youtube.com/embed/https://youtu.be/Vtqhn2ovhu4?autoplay=0&controls=0&loop=1&playlist=https://youtu.be/Vtqhn2ovhu4&rel=0&showinfo=0&color=white&modestbranding=1"
-			//- 		frameborder="0"
-			//- 		allowfullscreen)
-			//- .video
-			//- 	iframe(
-			//- 		frameborder="0"
-			//- 		width="1920"
-			//- 		height="1080"
-			//- 		src="//www.dailymotion.com/embed/video/x6v3rvy?autoPlay=1"
-			//- 		allowfullscreen=""
-			//- 		allow="autoplay"
-			//- 		)
-			
-							
-			
-		
+					
 		#cmhfendsection1.parallaxSD
 
 		.footer.trigger.trigger-s

@@ -3,6 +3,7 @@ extends layout.pug
 block prepend head
 	- var pageTitle = "T-Mobile Switch"
 	
+block prepend body
 	body#tmo
 
 block content
@@ -60,7 +61,7 @@ block content
 				video.video.fadeInMove(preload="auto" controls poster="assets/vid/tmo-switcher-results-poster.jpg")
 					source(src="assets/vid/tmo-switcher-results.webm" type="video/webm")
 					source(src="assets/vid/tmo-switcher-results.mp4" type="video/mp4")
-					p.vjs-no-js To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+					
 			
 			//-YouTube hosted video
 			//----------------------------------------------

@@ -92,7 +92,7 @@ window.requestAnimationFrame(function() {
 			.to(
 				infoContainer,
 				1,
-				{x:375, ease: Power3.easeOut}
+				{x:435, ease: Power3.easeOut}
 			)
 			.staggerFromTo(
 				infoFade,
@@ -114,7 +114,7 @@ window.requestAnimationFrame(function() {
 			.to(
 				infoContainer,
 				1,
-				{x:-375, ease:Power2.easeInOut},
+				{x:-435, ease:Power2.easeInOut},
 				'-=.5'
 			)
 
