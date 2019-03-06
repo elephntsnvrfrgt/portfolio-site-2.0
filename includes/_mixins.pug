@@ -28,7 +28,7 @@ mixin mixin_experience(job_name, years)
 mixin mixin_5050-iRight(headline, body, src)
 	.fiftyfifty.iRight-l.iRight-s.trigger.trigger-s
 		.right
-			img.fadeInMove(src=src)
+			img.fadeInMove(src=src lazyload="on")
 		.left
 			.content-hl.fadeInMove=headline
 			p.fadeInMove=body
@@ -37,7 +37,7 @@ mixin mixin_5050-iRight(headline, body, src)
 mixin mixin_5050-iLeft(headline, body, src)
 	.fiftyfifty.iLeft-l.iLeft-s.trigger.trigger-s
 		.left
-			img.fadeInMove(src=src)
+			img.fadeInMove(src=src lazyload="on")
 		.right
 			.content-hl.fadeInMove=headline
 			p.fadeInMove=body
@@ -53,9 +53,9 @@ mixin mixin_overlap(eyebrow, desktop_img, mobile_img)
 	.overlap-component.trigger.trigger-s
 		.eyebrow.fadeInMove=eyebrow
 		.desktop-comp.fadeInMove
-			img(src=desktop_img)
+			img(src=desktop_img lazyload="on")
 		.mobile-comp.fadeInMove
-			img(src=mobile_img)
+			img(src=mobile_img lazyload="on")
 				
 		//-- end overlap component	
 		
@@ -84,6 +84,8 @@ mixin mixin_footer-nextPrjt(circle, nextLink)
 //-- js stack -----------------------------------------------------------------
 
 mixin mixin_js
+	script(src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous")
+	
 	script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js")
 	
 	script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/plugins/TextPlugin.min.js")
