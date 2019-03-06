@@ -4,7 +4,8 @@ $(window).on("load", function(){
 // OPTIONAL - waits til next tick render to run code (prevents running in the middle of render tick)
 window.requestAnimationFrame(function() {
 
-	var 	navContent = $('.nav-content'),
+	var 	navContainer = $('#index #nav-container'),
+				navContent = $('.nav-content'),
 				logoMark = $('#logo-mark'),
 				social = $('.social'),
 				socialLinks = $(".social-links"),
@@ -37,6 +38,27 @@ window.requestAnimationFrame(function() {
 //–––––––––––––––––––––––––––––––––––––––––––
 //nav animations
 
+	//nav bar reveal
+	tlMax
+		.fromTo(navContainer,
+			1.25,
+			{height:0},
+			{height:"100vh", ease: Power3.easeOut}
+		)
+		.fromTo($('#index #circle, #index #name'),
+			1.25,
+			{autoAlpha:0},
+			{autoAlpha:1, ease: Power2.easeInOut}
+		)
+		.fromTo($('#index .container'),
+			1.25,
+			{autoAlpha:0},
+			{autoAlpha:1, ease: Power2.easeOut},
+			'-=1.25'
+		)
+
+
+	//logo mark social links reveal
 	logoMark.mouseover(
 		function(){
 			tlMax
@@ -49,6 +71,7 @@ window.requestAnimationFrame(function() {
 		}
 	);
 
+	//logo mark social links exit
 	socialContainer.mouseleave(
 		function(){
 			tlMax
@@ -239,23 +262,25 @@ window.requestAnimationFrame(function() {
 
 	tlMax
 			.staggerFromTo(".content-hero .fadeInMove",
-			duration,
-			{y:80, autoAlpha:0},
-			{y:0, autoAlpha:1, ease: Power3.easeOut},
-			0.15)
+				duration,
+				{y:80, autoAlpha:0},
+				{y:0, autoAlpha:1, ease: Power3.easeOut},
+				0.15,
+				'-=1.25'
+			)
 
 			.fromTo(heroBg,
-			duration,
-			{y:40,autoAlpha:0},
-			{y:0, autoAlpha:1, ease: Power2.easeOut},
-			'-=1.5'
+				duration,
+				{y:40,autoAlpha:0},
+				{y:0, autoAlpha:1, ease: Power2.easeOut},
+				'-=1.5'
 			)
 
 			.fromTo(".errorgif",
-			duration,
-			{y:40,autoAlpha:0},
-			{y:0, autoAlpha:1, ease: Power2.easeOut},
-			'-=1.55'
+				duration,
+				{y:40,autoAlpha:0},
+				{y:0, autoAlpha:1, ease: Power2.easeOut},
+				'-=1.55'
 			)
 
 //–––––––––––––––––––––––––––––––––––––––––––

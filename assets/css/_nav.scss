@@ -21,6 +21,9 @@
 	background-color:transparent;
 }
 
+#index #nav-container{
+	height:0;
+}
 
 #nav-container{
 	position:fixed;
@@ -39,6 +42,9 @@
 	@include text-render;
 }
 
+#index #name{
+	visibility: hidden;
+}
 
 #name{
 	font-weight:500;
@@ -81,7 +87,7 @@
 #logo-mark{
 	float:left;
 	margin:3px 20px 0 20px;
-  display:block;
+  //display:block;
 	opacity:.6;
 	img{
 		width:13px;
@@ -211,7 +217,7 @@
 	display: block;
 	position:fixed;
 	z-index:40;
-	left:-375+60px;
+	left:-375px;
 	min-height:510px;
 	height:100vh;
 	padding:10px 0 44px 0;
