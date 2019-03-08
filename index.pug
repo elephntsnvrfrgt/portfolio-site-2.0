@@ -1,62 +1,63 @@
-extends layout.pug	
+extends layout.pug
 
 block prepend head
 	- var pageTitle = "Isaac Martin – Design, Art Direction, Motion"
-	
-block prepend body
-	body#index
 
-block content
-			#circle
-				<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
-						<defs>
-								<path id="circlePath" d=" M 150, 150 m -120, 0 a 120,120 0 0,1 240,0 a 120,120 0 0,1 -240,0 "/>
-						</defs>
-						<circle cx="150" cy="150" r="150" fill="none"/>
-						<g>
-								<use xlink:href="#circlePath" fill="none"/>
-								<text fill="#9B9B9B">
-										<textPath xlink:href="#circlePath">Design  •  Art Direction  •  Motion  •  </textPath>
-								</text>
-						</g>
-				</svg>
-			.container
-				
-				section.grid-container.grid-rows.intro.minh-800
-					.content-hero
-						.eyebrow.fadeInMove Selected works of
-						h2.title.fadeInMove Isaac
-						h2.title.fadeInMove Martin
-						
-				section.grid-container.grid-rows.work.trigger
-					.offset
-					a.tile.prjt-01.fadeInMove.fadeInMove-s(href="tmo-switcher.html")
-						.prjtNo.small p.01
-						.prjtTitle.eyebrow T-Mobile Switcher
-					a.tile.prjt-02.fadeInMove.fadeInMove-s(href="vw.html")
-						.prjtNo.small p.02
-						.prjtTitle.eyebrow Volkswagen Car-Net
-					a.tile.prjt-03.fadeInMove.fadeInMove-s(href="cmhf.html")
-						.prjtNo.small p.03
-						.prjtTitle.eyebrow Country Music Hall of Fame
-					a.tile.prjt-04.fadeInMove.fadeInMove-s(href="odi.html")
-						.prjtNo.small p.04
-						.prjtTitle.eyebrow Odigo Auto Insurance
-						
-				section.grid-container.about.trigger.trigger-s
-					.column
-						.eyebrow.fadeInMove About
-						p.fadeInMove Hello. If you haven’t gathered, I’m Isaac Martin. A graphic &amp; interactive designer striving to make beautiful and usable things.
-						p.fadeInMove Currently a Design Lead at <a href="https://www.publicissapient.com/" target="_blank" rel="noopener">Publicis Sapient</a> <span class="deemphasize">(formerly known as <strike>Publicis.Sapient </strike><a href="https://www.sapientrazorfish.com/" target="_blank" rel="noopener"><strike>SapientRazorfish</strike></a> <a href="http://web.archive.org/web/20161121042711/https://www.razorfish.com/" target="_blank" rel="noopener"><strike>Razorfish</a></strike>)</span> in Austin, Texas. I’m up for a side project from time to time, so please feel free to reach out.
-					.column
-						.eyebrow.fadeInMove Connect
-						ul
-							li.fadeInMove
-								a.hover-underline(href='https://www.behance.net/isaacmartin' target="_blank" rel="noopener") Behance
-							li.fadeInMove
-								a.hover-underline(href='https://dribbble.com/isaacmartin' target="_blank" rel="noopener") Dribbble
-							li.fadeInMove
-								a.hover-underline(href='https://twitter.com/isaacmart_in' target="_blank" rel="noopener") Twitter
-							li.fadeInMove
-								a.hover-underline(href='mailto:hello[at]isaacmart[dot]in?subject=Howdy&body=Sorry%20to%20give%20you%20work%20when%20all%20you%20are%20trying%20to%20do%20is%20say%20hello...%20but%20replace%20the%20%5Bat%5D%20and%20%5Bdot%5D%20with%20the%20real%20symbols%20in%20the%20To%3A%20before%20you%20mash%20that%20send%20button.') Email
-				include includes/_footer.pug
+block append content
+		#barba-wrapper
+			.barba-container#index
+				include includes/_scrollbar.pug
+				#circle
+					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
+							<defs>
+									<path id="circlePath" d=" M 150, 150 m -120, 0 a 120,120 0 0,1 240,0 a 120,120 0 0,1 -240,0 "/>
+							</defs>
+							<circle cx="150" cy="150" r="150" fill="none"/>
+							<g>
+									<use xlink:href="#circlePath" fill="none"/>
+									<text fill="#9B9B9B">
+											<textPath xlink:href="#circlePath">Design  •  Art Direction  •  Motion  •  </textPath>
+									</text>
+							</g>
+					</svg>
+					
+				.ResizeSensor.container
+					
+					section.grid-container.grid-rows.intro.minh-800
+						.content-hero
+							.eyebrow.fadeInMove Selected works of
+							h2.title.fadeInMove Isaac
+							h2.title.fadeInMove Martin
+							
+					section.grid-container.grid-rows.work.trigger
+						.offset
+						a.tile.prjt-01.fadeInMove.fadeInMove-s(href="tmo-switcher.html")
+							.prjtNo.small p.01
+							.prjtTitle.eyebrow T-Mobile Switcher
+						a.tile.prjt-02.fadeInMove.fadeInMove-s(href="vw.html")
+							.prjtNo.small p.02
+							.prjtTitle.eyebrow Volkswagen Car-Net
+						a.tile.prjt-03.fadeInMove.fadeInMove-s(href="cmhf.html")
+							.prjtNo.small p.03
+							.prjtTitle.eyebrow Country Music Hall of Fame
+						a.tile.prjt-04.fadeInMove.fadeInMove-s(href="odi.html")
+							.prjtNo.small p.04
+							.prjtTitle.eyebrow Odigo Auto Insurance
+							
+					section.grid-container.about.trigger.trigger-s
+						.column
+							.eyebrow.fadeInMove About
+							p.fadeInMove Hello. If you haven’t gathered, I’m Isaac Martin. A graphic &amp; interactive designer striving to make beautiful and usable things.
+							p.fadeInMove Currently a Design Lead at <a href="https://www.publicissapient.com/" target="_blank" rel="noopener">Publicis Sapient</a> <span class="deemphasize">(formerly known as <strike>Publicis.Sapient </strike><a href="https://www.sapientrazorfish.com/" target="_blank" rel="noopener"><strike>SapientRazorfish</strike></a> <a href="http://web.archive.org/web/20161121042711/https://www.razorfish.com/" target="_blank" rel="noopener"><strike>Razorfish</a></strike>)</span> in Austin, Texas. I’m up for a side project from time to time, so please feel free to reach out.
+						.column
+							.eyebrow.fadeInMove Connect
+							ul
+								li.fadeInMove
+									a.hover-underline(href='https://www.behance.net/isaacmartin' target="_blank" rel="noopener") Behance
+								li.fadeInMove
+									a.hover-underline(href='https://dribbble.com/isaacmartin' target="_blank" rel="noopener") Dribbble
+								li.fadeInMove
+									a.hover-underline(href='https://twitter.com/isaacmart_in' target="_blank" rel="noopener") Twitter
+								li.fadeInMove
+									a.hover-underline(href='mailto:hello[at]isaacmart[dot]in?subject=Howdy&body=Sorry%20to%20give%20you%20work%20when%20all%20you%20are%20trying%20to%20do%20is%20say%20hello...%20but%20replace%20the%20%5Bat%5D%20and%20%5Bdot%5D%20with%20the%20real%20symbols%20in%20the%20To%3A%20before%20you%20mash%20that%20send%20button.') Email
+					include includes/_footer.pug

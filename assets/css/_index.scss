@@ -27,7 +27,7 @@ body{
 //circle stamp
 
 #index #circle{
-  visibility: hidden;
+  // visibility: hidden;
 }
 
 #circle {
@@ -68,7 +68,7 @@ body{
 
 
 #index .container{
-  visibility: hidden;
+  // visibility: hidden;
 }
 
 .container{
@@ -95,7 +95,7 @@ body{
 }
 
 .intro{
-  visibility:hidden;
+  // visibility:hidden;
   height:100vh;
   min-height:800px;
 }
@@ -164,11 +164,11 @@ body{
 
 
 .fadeInMove{
-  visibility: hidden;
+  // visibility: hidden;
 }
 
 .fadeInMoveRotate{
-  visibility:hidden;
+  // visibility:hidden;
   backface-visibility: hidden;
   transform: perspective(800px);
 }
