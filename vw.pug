@@ -3,61 +3,62 @@ extends layout.pug
 block prepend head
 	- var pageTitle = "Volkswagen Car-Net"
 	
-block prepend body
-	body#vw
-
 block append content
-	#menu-btn
-		<svg id="burger" width="14" class="openmenu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><path class="top" d="M0 6h30v2H0z"/><line class="mid" x1="0" y1="15" x2="30" y2="15" stroke-width="1.4" vector-effect="non-scaling-stroke"/><path class="bot" d="M0 22h30v2H0z"/></svg>
-		#menuText.small Other work
-		
-	.container
-		section.grid-container.intro#hero-vw
-			.content-hero.parallaxH
-				+mixin_hero('Volkswagen Car-Net','Connect','App | Concept, Design, & Motion')
-				.herotext.description
-					p.fadeInMove Car-Net is a service by Volkswagen that allows you to remotely monitor and interact with your VW. What started as a pitch with Razorfish, quickly turned into a personal concept piece that allowed me to explore visuals as well as functionality, pushing it more into what it could and should be.
-	
-		.section-title.parallaxST The App
-		section.grid-container.content
-			//- .eyebrow Dashboard
-			//- .img-full
-			//- 	img(src='assets/img/subpage/vw/vw-dashboard@2x.png')
-			
-			+mixin_overlap('Dashboard','assets/img/subpage/vw/vw-01-L@2x.jpg','assets/img/subpage/vw/vw-01-S@3x.png')
-			
-			+mixin_5050-iRight('Remote key', 'The need for physical keys seems to be dwindling, so why not get rid of a fob too? Here you have all the functionality, plus much more.', 'assets/img/subpage/vw/vw-phone-remote-key@3x.png')
-			+mixin_5050-iLeft('Tracking', 'A couple things to help you keep track. Boundary alerts send notifications when your vehicle enters or exits geofences. Similarly, Speed alerts notify you when your vehicle exceeds a specific or relative threshold. Both alerts were designed to be versatile in application, whether it’s keeping your led-foot teenager accountable or giving your spouse a heads up you’re on your way home.', 'assets/img/subpage/vw/vw-phone-tracking@3x.png')
-			+mixin_5050-iRight('Destinations', 'Destinations would allow for linking existing accounts (such as Google) for easier maintainability. And being smarter, it could remind you where you parked, when it’s time to head to work, or more importantly, how to get home on the fastest route. Push those directions to the vehicle infotainment so it’s ready to go when you are.', 'assets/img/subpage/vw/vw-phone-destinations@3x.png')
-			+mixin_5050-iLeft('Health', 'The Health Report enables you, whether you’re familiar with car mechanics or not, to be proactive in a maintenance schedule. If/when the time comes to do more serious work, you see the same diagnosis the mechanic has and opens up clearer communication.', 'assets/img/subpage/vw/vw-phone-health@3x.png')
-			+mixin_5050-iRight('Assistance', 'If unfortunate events occur, Assistance is there to… well, assist. Car-Net will contact a live person to dispatch the appropriate help. This occurs automatically in the case of a collision, otherwise you can manually initiate if need be.', 'assets/img/subpage/vw/vw-phone-assistance@3x.png')
-		
-		#vwendsection1.parallaxSD
-			
-		.section-title.parallaxST Watch
-		section.grid-container.content
-			+mixin_5050-iRight('Remote key', 'To keep things simple and prioritize utility, the watch app is boiled down to the Remote Key functions. Page-based navigation makes for quick access to most functions.', 'assets/img/subpage/vw/vw-watch-01@3x.png')
-			+mixin_5050-iLeft('Force Touch Menu', 'The remaining functions are grouped under a Force Touch, in order to negate accidental triggers. Things like starting the engine, panic, or calling emergency services.', 'assets/img/subpage/vw/vw-watch-02@3x.png')
-			+mixin_5050-iRight('Alerts & Notifications', 'These would be smarter and more proactive. Leave for work at the same time everyday? Car-Net can set the mood with music and a comfortable temperature so you can start your commute off right. Walking out of the store with a cart full of groceries? Car-Net can open the trunk for you.', 'assets/img/subpage/vw/vw-watch-03@3x.png')
-			+mixin_5050-iLeft('Voice Control', 'For those times when you’re hands are full, why not speak those commands into reality. Or maybe you’re just lazy and couldn’t be bothered to push a button, let alone look at your wrist. The only thing better would be mind control, I suppose.', 'assets/img/subpage/vw/vw-watch-04@3x.png')
-		
-		#vwendsection2.parallaxSD
+		#barba-wrapper
+			.barba-container#vw
+				include includes/_scrollbar.pug
+				include includes/_menu.pug
+				#menu-btn
+					<svg id="burger" width="14" class="openmenu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><path class="top" d="M0 6h30v2H0z"/><line class="mid" x1="0" y1="15" x2="30" y2="15" stroke-width="1.4" vector-effect="non-scaling-stroke"/><path class="bot" d="M0 22h30v2H0z"/></svg>
+					#menuText.small Other work
 
-		.footer.trigger.trigger-s
-			#circle.nextPrjt.fadeInMove
-				<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
-						<defs>
-								<path id="circlePath" d=" M 150, 150 m -120, 0 a 120,120 0 0,1 240,0 a 120,120 0 0,1 -240,0 "/>
-						</defs>
-						<circle cx="150" cy="150" r="150" fill="none"/>
-						<g>
-								<use xlink:href="#circlePath" fill="none"/>
-								<text fill="#9B9B9B">
-										<textPath xlink:href="#circlePath">Country • Music • Hall of Fame •</textPath>
-								</text>
-						</g>
-				</svg>
-			a#next.title.fadeInMove(href="cmhf.html") Next
-		
-			
-		include includes/_footer.pug
+				.container
+					section.grid-container.intro#hero-vw
+						.content-hero.parallaxH
+							+mixin_hero('Volkswagen Car-Net','Connect','App | Concept, Design, & Motion')
+							.herotext.description
+								p.fadeInMove Car-Net is a service by Volkswagen that allows you to remotely monitor and interact with your VW. What started as a pitch with Razorfish, quickly turned into a personal concept piece that allowed me to explore visuals as well as functionality, pushing it more into what it could and should be.
+				
+					.section-title.parallaxST The App
+					section.grid-container.content
+						//- .eyebrow Dashboard
+						//- .img-full
+						//- 	img(src='assets/img/subpage/vw/vw-dashboard@2x.png')
+						
+						+mixin_overlap('Dashboard','assets/img/subpage/vw/vw-01-L@2x.jpg','assets/img/subpage/vw/vw-01-S@3x.png')
+						
+						+mixin_5050-iRight('Remote key', 'The need for physical keys seems to be dwindling, so why not get rid of a fob too? Here you have all the functionality, plus much more.', 'assets/img/subpage/vw/vw-phone-remote-key@3x.png')
+						+mixin_5050-iLeft('Tracking', 'A couple things to help you keep track. Boundary alerts send notifications when your vehicle enters or exits geofences. Similarly, Speed alerts notify you when your vehicle exceeds a specific or relative threshold. Both alerts were designed to be versatile in application, whether it’s keeping your led-foot teenager accountable or giving your spouse a heads up you’re on your way home.', 'assets/img/subpage/vw/vw-phone-tracking@3x.png')
+						+mixin_5050-iRight('Destinations', 'Destinations would allow for linking existing accounts (such as Google) for easier maintainability. And being smarter, it could remind you where you parked, when it’s time to head to work, or more importantly, how to get home on the fastest route. Push those directions to the vehicle infotainment so it’s ready to go when you are.', 'assets/img/subpage/vw/vw-phone-destinations@3x.png')
+						+mixin_5050-iLeft('Health', 'The Health Report enables you, whether you’re familiar with car mechanics or not, to be proactive in a maintenance schedule. If/when the time comes to do more serious work, you see the same diagnosis the mechanic has and opens up clearer communication.', 'assets/img/subpage/vw/vw-phone-health@3x.png')
+						+mixin_5050-iRight('Assistance', 'If unfortunate events occur, Assistance is there to… well, assist. Car-Net will contact a live person to dispatch the appropriate help. This occurs automatically in the case of a collision, otherwise you can manually initiate if need be.', 'assets/img/subpage/vw/vw-phone-assistance@3x.png')
+					
+					#vwendsection1.parallaxSD
+						
+					.section-title.parallaxST Watch
+					section.grid-container.content
+						+mixin_5050-iRight('Remote key', 'To keep things simple and prioritize utility, the watch app is boiled down to the Remote Key functions. Page-based navigation makes for quick access to most functions.', 'assets/img/subpage/vw/vw-watch-01@3x.png')
+						+mixin_5050-iLeft('Force Touch Menu', 'The remaining functions are grouped under a Force Touch, in order to negate accidental triggers. Things like starting the engine, panic, or calling emergency services.', 'assets/img/subpage/vw/vw-watch-02@3x.png')
+						+mixin_5050-iRight('Alerts & Notifications', 'These would be smarter and more proactive. Leave for work at the same time everyday? Car-Net can set the mood with music and a comfortable temperature so you can start your commute off right. Walking out of the store with a cart full of groceries? Car-Net can open the trunk for you.', 'assets/img/subpage/vw/vw-watch-03@3x.png')
+						+mixin_5050-iLeft('Voice Control', 'For those times when you’re hands are full, why not speak those commands into reality. Or maybe you’re just lazy and couldn’t be bothered to push a button, let alone look at your wrist. The only thing better would be mind control, I suppose.', 'assets/img/subpage/vw/vw-watch-04@3x.png')
+					
+					#vwendsection2.parallaxSD
+
+					.footer.trigger.trigger-s
+						#circle.nextPrjt.fadeInMove
+							<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
+									<defs>
+											<path id="circlePath" d=" M 150, 150 m -120, 0 a 120,120 0 0,1 240,0 a 120,120 0 0,1 -240,0 "/>
+									</defs>
+									<circle cx="150" cy="150" r="150" fill="none"/>
+									<g>
+											<use xlink:href="#circlePath" fill="none"/>
+											<text fill="#9B9B9B">
+													<textPath xlink:href="#circlePath">Country • Music • Hall of Fame •</textPath>
+											</text>
+									</g>
+							</svg>
+						a#next.title.fadeInMove(href="cmhf.html") Next
+					
+						
+					include includes/_footer.pug
