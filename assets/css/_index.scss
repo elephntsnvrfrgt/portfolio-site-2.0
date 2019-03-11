@@ -21,12 +21,21 @@ body{
   background:$gray15;
 }
 
-.hide{
-  width:100vw;
+.load{
+  margin:0 0 0 60px;
+  width:calc(100% - 60px);
   height:100vh;
   background:$gray15;
   position:absolute;
-  z-index:1000;
+  z-index:15;
+  display:flex;
+  .small{
+    width:100%;
+    align-self: center;
+    text-align:center;
+
+
+  }
 }
 
 

@@ -42,32 +42,23 @@ window.requestAnimationFrame(function() {
 			.set(container,
 				{autoAlpha:0}
 			)
-			// .set(logoTypeAnim,
-			// 	{height:0}
-			// )
-			.set(logoType,
-				{autoAlpha:0}
-			)
-			.set($(".hide"),
-				{autoAlpha:0}
-			)
-			// .fromTo(logoTypeAnim,
-			// 	1,
-			// 	{height:0},
-			// 	{height:80, ease:Power3.easeInOut}
-			// )
 
-			.staggerFromTo($('.initreveal'),
+			.staggerFromTo($('.blinkreveal'),
 				1.25,
 				{autoAlpha:0},
 				{autoAlpha:1, ease: Bounce.easeIn},
 				.3
 			)
+
+			.to($(".load"),
+				1.5,
+				{autoAlpha:0, ease:Power2.easeInOut},
+				"+=1.25"
+			)
 			.fromTo(container,
 				1.25,
 				{autoAlpha:0},
-				{autoAlpha:1, ease: Power2.easeInOut},
-				"+=1.25"
+				{autoAlpha:1, ease: Power2.easeInOut}
 			)
 
 		//–––––––––––––––––––––––––––––––––––––––––––

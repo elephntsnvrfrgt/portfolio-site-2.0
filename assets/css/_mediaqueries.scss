@@ -500,6 +500,13 @@ p{
     @include hover_underline($underline_gap:1,$underline_thickness:1,$color:#{$gray80});
   }
 
+  .load{
+    .title{
+      color:$gray15;
+      -webkit-text-stroke: 1px $gray40;
+    }
+  }
+
   .menu{
 
     .title{
@@ -517,6 +524,12 @@ p{
 }
 
 @media (hover: hover) and (max-width: 959px) {
+
+  .load{
+    .title{
+      -webkit-text-stroke: .5px $gray40;
+    }
+  }
 
   .menu{
     .title{
