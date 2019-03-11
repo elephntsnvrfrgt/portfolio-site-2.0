@@ -4,6 +4,16 @@
 
 // styling ––––––––––––––
 
+.nameanimation{
+	position: absolute;
+  left: 24px;
+  top: 25px;
+  height: 0;
+  width: 13px;
+	background:$gray40;
+
+}
+
 #scroll-progress-container{
 	position:fixed;
 	z-index:50;
@@ -64,12 +74,13 @@
 #social-container{
 	transform-origin: left top;
 	transform: rotate(-90deg);
-	width:400px;
+	//width:400px;
 	position:fixed;
 	//left: 2px;
-  bottom: -60px;
-  padding: 21px 0 20px 0;
+  bottom: -64px;
+  //padding: 21px 0 20px 0;
 	.social-links{
+    margin: 23px 23px 23px 0;
 		display:inline-block;
 		li{
 			float:left;
@@ -85,8 +96,9 @@
 }
 
 #logo-mark{
+	display:block;
 	float:left;
-	margin:3px 20px 0 20px;
+	margin:24px;
   //display:block;
 	opacity:.6;
 	img{
