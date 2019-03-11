@@ -69,6 +69,11 @@
 //----------------------------------------------
 @media (max-width: 959px) {
 
+  .load{
+    margin:0;
+    width:100vw;
+  }
+
 //typography
 
 .title {
@@ -408,6 +413,7 @@ p{
 
 @media (max-width: 480px) {
 
+
   #circle {
     top:15px;
     right:15px;
@@ -463,6 +469,7 @@ p{
 // ---------------------------------------------
 
 @media (max-width: 350px) {
+
 
   .title{
     font-size:56px;
