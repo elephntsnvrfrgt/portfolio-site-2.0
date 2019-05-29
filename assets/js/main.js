@@ -31,11 +31,8 @@ window.requestAnimationFrame(function() {
 				open = false,
 				tlMax = new TimelineMax();
 
-	//–––––––––––––––––––––––––––––––––––––––––––
-	//reveal animations
-
-
-
+//–––––––––––––––––––––––––––––––––––––––––––
+//reveal animations
 
 		//container reveal
 		tlMax
@@ -61,8 +58,8 @@ window.requestAnimationFrame(function() {
 				{autoAlpha:1, ease: Power2.easeInOut}
 			)
 
-		//–––––––––––––––––––––––––––––––––––––––––––
-		//hero text animations
+//–––––––––––––––––––––––––––––––––––––––––––
+//hero text animations
 
 			var heroBg = ".intro",
 					duration = 1.5;
@@ -90,10 +87,9 @@ window.requestAnimationFrame(function() {
 						'-=1.55'
 					)
 
-	//–––––––––––––––––––––––––––––––––––––––––––
-	//nav animations
 
-
+//–––––––––––––––––––––––––––––––––––––––––––
+//nav animations
 
 		function socialReveal(){
 			tlMax
@@ -118,8 +114,8 @@ window.requestAnimationFrame(function() {
 
 
 
-	//–––––––––––––––––––––––––––––––––––––––––––
-	//info drawer animation
+//–––––––––––––––––––––––––––––––––––––––––––
+//info drawer animation
 
 		function openInfo() {
 			tlMax
@@ -159,8 +155,8 @@ window.requestAnimationFrame(function() {
 
 
 
-	//–––––––––––––––––––––––––––––––––––––––––––
-	//menu trigger and animation
+//–––––––––––––––––––––––––––––––––––––––––––
+//menu trigger and animation
 
 		const targetElement = document.querySelector("#menu-container");
 
@@ -248,50 +244,38 @@ window.requestAnimationFrame(function() {
 		});
 
 
-		//–––––––––––––––––––––––––––––––––––––––––––
-		//tile hover effect
-
-			$('.tile').each(function(index,element){
-				var tlMax = new TimelineMax({paused:true}),
-						duration = .6,
-						prjtTileInfo = ".prjtNo, .prjtTitle";
-				tlMax
-					.to($(element).find(prjtTileInfo), duration, {opacity:1, ease: Power1.easeInOut})
-					.to($(element), duration, {zIndex:10, filter:"opacity(1) grayscale(0)", boxShadow:"0 12px 16px -12px rgba(0,0,0,0.10), 0 20px 100px -13px rgba(0,0,0,0.25)", ease: Power1.easeInOut},'-=.6')
-
-				element.animation = tlMax;
-			})
-
-			$('.tile').hover(over, out);
-
-			function over(){
-				this.animation.play();
-			}
-
-			function out(){
-				this.animation.reverse();
-			}
 
 
+//–––––––––––––––––––––––––––––––––––––––––––
+//tile hover effect
 
+		$('.tile').each(function(index,element){
+			var tlMax = new TimelineMax({paused:true}),
+					duration = .6,
+					prjtTileInfo = ".prjtNo, .prjtTitle";
+			tlMax
+				.to($(element).find(prjtTileInfo), duration, {opacity:1, ease: Power1.easeInOut})
+				.to($(element), duration, {zIndex:10, filter:"opacity(1) grayscale(0)", boxShadow:"0 12px 16px -12px rgba(0,0,0,0.10), 0 20px 100px -13px rgba(0,0,0,0.25)", ease: Power1.easeInOut},'-=.6')
 
+			element.animation = tlMax;
+		})
 
-	//–––––––––––––––––––––––––––––––––––––––––––
-	//hero text animations
+		$('.tile').hover(over, out);
 
+		function over(){
+			this.animation.play();
+		}
 
-		// tlMax
-		// 		.staggerFromTo(".errorintro .fadeInMove",
-		// 		duration,
-		// 		{y:80, autoAlpha:0},
-		// 		{y:0, autoAlpha:1, ease: Power3.easeOut},
-		// 		0.15)
+		function out(){
+			this.animation.reverse();
+		}
 
 
 
 
-	//–––––––––––––––––––––––––––––––––––––––––––
-	//ScrollMagic
+//–––––––––––––––––––––––––––––––––––––––––––
+//ScrollMagic
+
 		//For devices larger than or equal to 960px
 		if ($(window).width() >= 960) {
 
