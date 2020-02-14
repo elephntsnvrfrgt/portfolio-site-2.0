@@ -1,11 +1,11 @@
 extends layout.pug	
 
 block prepend head
-	- var pageTitle = "Odigo Auto Insurance"
+	- var pageTitle = "Aflac"
 	
 block append content
 		#barba-wrapper
-			.barba-container#odi
+			.barba-container#aflac
 				include includes/_scrollbar.pug
 				include includes/_menu.pug
 				#menu-btn.initreveal
@@ -13,13 +13,20 @@ block append content
 					#menuText.small Other work
 		
 				.container
-					section.grid-container.intro#hero-odi
+					section.grid-container.intro#hero-aflac
 						.content-hero.parallaxH
-							+mixin_hero('Odigo Auto Insurance','Ensure','App | Concept, Design, & Motion')
+							+mixin_hero('Aflac','Assure','Web | Concept, Art Direction, Design, & Motion')
 							.herotext.description
-								p.fadeInMove A large insurance company spun out a startup to create a rewarding, behavior-based model that was all based on an app.
-								p.fadeInMove I was apart of the initial branding concept team, helping them develop the visual identity. Once the branding was settling in, I transitioned onto the product team, helping define the app functionality and visuals. To be completely transparent, they ended up scrapping the name, the identity, as well as most everything you see below. It was a fun and rewarding project nonetheless.
-				
+								p.fadeInMove Aflac came to Publicis Sapient for a homepage refresh.  We found that many folks knew Aflac for “the duck” but didn’t actually know who or what they did. Their existing homepage was on the extreme, utilitarian end of the spectrum and didn’t give any context. We aimed to evolve it into something that was fun, reassuring, and eductational while still providing the utility.
+					
+					.section-title.parallaxST Redesign
+					section.grid-container.content
+						.wrapper-12.trigger.trigger-s
+							.eyebrow.fadeInMove Homepage
+							video.video.fadeInMove(preload="auto" controls poster="assets/vid/tmo-switcher-hp-qs-poster.jpg")
+								source(src="assets/vid/tmo-switcher-hp-qs.webm" type="video/webm")
+								source(src="assets/vid/tmo-switcher-hp-qs.mp4" type="video/mp4")
+									
 					.section-title.parallaxST The App
 					section.grid-container.content
 						

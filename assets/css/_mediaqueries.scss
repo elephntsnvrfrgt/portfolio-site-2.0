@@ -21,6 +21,20 @@
     min-height:85vh;
     height:auto;
   }
+
+  ._404, ._500{
+    .intro{
+      height:100vh;
+    }
+    .grid-rows{
+      grid-template-rows: repeat(10, 1fr);
+      grid-auto-rows:auto;
+    }
+    .errortitle{
+      grid-row: 5/auto;
+    }
+  }
+
   .content-hero {
     margin-top: 35vh;
   }
