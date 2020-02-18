@@ -182,11 +182,11 @@ p{
 .menu{
   width:100%;
   margin:0;
-  padding: 30vw 14vw;
+  padding: 30vw 14vw 0;
   li:nth-last-child(1n+2) {
       margin: 0 0 25vw 0;
   }
-  li:nth-child(4) {
+  li:last-child {
       margin: 0 0 0 0;
   }
   .title{
@@ -227,7 +227,7 @@ p{
   padding-right:12vw;
 }
 
-#hero-tmo, #hero-cmhf, #hero-vw, #hero-odi{
+#hero-tmo, #hero-cmhf, #hero-vw, #hero-odi, #hero-aflac{
   background-position: right top;
   background-size: auto 60vw;
 }
@@ -463,6 +463,10 @@ p{
 
   #hero-cmhf{
   	@include subpageHero-s('../img/subpage/bg-cmhf-s.jpg');
+  }
+
+  #hero-aflac{
+  	@include subpageHero-s('../img/subpage/bg-aflac-s.jpg');
   }
 
 

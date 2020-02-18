@@ -55,14 +55,14 @@
 	right:0;
 	z-index:120;
 	height:100vh;
-	padding:248px 80px;
+	padding:248px 80px 0;
 	text-align:center;
 
 	li:nth-last-child(1n+2){
 		margin:0 0 248px 0;
 	}
 
-	li:nth-child(4){
+	li:last-child{
 		margin:0 0 0 0;
 	}
 

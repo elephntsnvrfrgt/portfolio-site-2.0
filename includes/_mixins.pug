@@ -45,7 +45,7 @@ mixin mixin_5050-iLeft(headline, body, src)
 		//-- end 5050 component
 			
 			
-//-- overlap component --------------------------------------------------------
+//-- overlap component (desktop + mobile) -------------------------------------
 //-- designed for cmhf --------------------------------------------------------
 
 mixin mixin_overlap(eyebrow, desktop_img, mobile_img)
@@ -58,6 +58,22 @@ mixin mixin_overlap(eyebrow, desktop_img, mobile_img)
 			img(src=mobile_img lazyload="on")
 				
 		//-- end overlap component	
+		
+		
+//-- overlap component 3up (dt + dt + dt) -------------------------------------
+//-- designed for aflac --------------------------------------------------------
+
+mixin mixin_overlap3up(eyebrow, desktop_img1, desktop_img2, desktop_img3)
+
+	.overlap-component._3up.trigger.trigger-s
+		.eyebrow.fadeInMove=eyebrow
+		.desktop-comp1.fadeInMove
+			img(src=desktop_img1)
+		.desktop-comp2.fadeInMove
+			img(src=desktop_img2)
+		.desktop-comp3.fadeInMove
+			img(src=desktop_img3)
+		//-- end overlap component 3up
 		
 		
 //-- footer next project nav --------------------------------------------------

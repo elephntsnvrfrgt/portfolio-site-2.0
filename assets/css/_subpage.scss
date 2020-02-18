@@ -18,6 +18,10 @@
 	@include subpageHero('../img/subpage/bg-cmhf.jpg');
 }
 
+#hero-aflac{
+	@include subpageHero('../img/subpage/bg-aflac.jpg');
+}
+
 
 
 
@@ -160,6 +164,34 @@ video.video{
 	grid-column:7/span 6;
 	grid-row-start:2;
 }
+	//--overlap component 3up (used on aflac)
+
+._3up{
+	margin-bottom:30rem !important;
+}
+
+.desktop-comp1{
+	grid-column:1/span 6;
+	grid-row-start: 2;
+	@include softShadow($blur:200, $alpha:0.1)
+}
+
+.desktop-comp2{
+	grid-column:4/span 6;
+	grid-row-start: 2;
+	position:relative;
+	top:15rem;
+	@include softShadow($blur:200, $alpha:0.1)
+}
+
+.desktop-comp3{
+	grid-column:7/span 6;
+	grid-row-start: 2;
+	position:relative;
+	top:30rem;
+	@include softShadow($blur:200, $alpha:0.1)
+
+}
 
 
 //––––––––––––––––––––––––––––––––––––––
@@ -248,6 +280,67 @@ video.video{
 	background:
 		no-repeat bottom left / 100% auto url(../img/subpage/cmhf/cmhfendsection1@3x.jpg)
 	;
+}
+
+#aflacendsection1{
+	content:'';
+	width:100%;
+	height:34vw;
+	background:
+		no-repeat top left / 100% auto url(../img/subpage/aflac/aflacendsection1@3x.jpg)
+	;
+}
+
+.leaf{
+	width:14vw;
+	position:relative;
+	z-index: 500;
+	left:32vw;
+	top:-17vh;
+}
+
+
+
+#aflacendsection2{
+	content:'';
+	width:100%;
+	height:44vw;
+	background:
+		no-repeat center left / 100% auto url(../img/subpage/aflac/aflacendsection2@3x.jpg)
+	;
+}
+
+#aflacendsection3{
+	content:'';
+	overflow-y:visible;
+	width:100%;
+	height:33vw;
+	background:
+		no-repeat bottom left / 100% auto url(../img/subpage/aflac/aflacendsection3@3x.jpg)
+	;
+}
+
+.bubbles-fg{
+	width:53vw;
+	position:absolute;
+	z-index: 500;
+	left:45vw;
+	bottom:-15vw;
+}
+
+.bubbles-mg{
+	width:57vw;
+	position:absolute;
+	z-index:400;
+	left:35vw;
+	bottom:-5vw;
+}
+
+.bubbles-bg{
+	width:41vw;
+	position:absolute;
+	left:55vw;
+	bottom:9vw;
 }
 
 

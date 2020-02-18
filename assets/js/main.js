@@ -374,6 +374,7 @@ window.requestAnimationFrame(function() {
 							.addTo(controller);
 				});
 
+
 				//Progress bar
 				scrollProgress();
 

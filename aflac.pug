@@ -15,7 +15,7 @@ block append content
 				.container
 					section.grid-container.intro#hero-aflac
 						.content-hero.parallaxH
-							+mixin_hero('Aflac','Assure','Web | Concept, Art Direction, Design, & Motion')
+							+mixin_hero('Aflac','Protect','Web | Concept, Art Direction, Design, & Motion')
 							.herotext.description
 								p.fadeInMove Aflac came to Publicis Sapient for a homepage refresh.  We found that many folks knew Aflac for “the duck” but didn’t actually know who or what they did. Their existing homepage was on the extreme, utilitarian end of the spectrum and didn’t give any context. We aimed to evolve it into something that was fun, reassuring, and eductational while still providing the utility.
 					
@@ -27,24 +27,31 @@ block append content
 								source(src="assets/vid/tmo-switcher-hp-qs.webm" type="video/webm")
 								source(src="assets/vid/tmo-switcher-hp-qs.mp4" type="video/mp4")
 									
-					.section-title.parallaxST The App
-					section.grid-container.content
-						
-						+mixin_5050-iRight('Welcome', 'From quotes to claims to customer service, everything you need is in the app. It also uses the smarts of your phone to assess your good (or bad) driving habits. How much and how cautious you drive determines how much you save, and it’s all in real-time.', 'assets/img/subpage/odi/odi-01@3x.png')
-						+mixin_5050-iLeft('Activity', 'This is your home dashboard. It gives a snapshot of your overall score, trips taken, last month’s savings, and any other relevant activity.After each trip you take, you get a score which is then averaged into your overall score. The higher your score, the lower your bill. If you have a bad driving habit, Odigo will set up mini challenges each month to help you brake those and establish safer ones. So in addition to savings, they’ll reward you with things like a free car wash.', 'assets/img/subpage/odi/odi-02@3x.png')
-						+mixin_5050-iRight('Insurance', 'This is where you get the nitty gritty details of your coverage as well as access to your documents like Proof of Insurance card. If you need to change your coverage, you can do so at anytime since everything is calculated in real-time.', 'assets/img/subpage/odi/odi-04@3x.png')
-						+mixin_5050-iLeft('Incidents', 'This is where you’ll see how many days you’ve been incident free. To further incentivize, there are tiers of achievement that unlock different rewards or discounts. Again, the safer you are, the cheaper you are. This is also where you’ll go in the unfortunate event that you do need to file a claim or get roadside assistance.', 'assets/img/subpage/odi/odi-05@3x.png')
-						+mixin_5050-iRight('Profile & Settings', 'Pretty straightforward here. Moved? Got a new credit card? Too many or too little notifications? This is where you can manage all of that. Simply and easily change your contact and payment info, or update your privacy and notification settings.', 'assets/img/subpage/odi/odi-03@3x.png')
+						+mixin_overlap('','assets/img/subpage/aflac/aflac-01-L.jpg','assets/img/subpage/aflac/aflac-01-S@3x.png')
 					
-					#odiendsection1.parallaxSD
-						
-					.section-title.parallaxST Assistant
-					section.grid-container.content
-						+mixin_5050-iRight('Ask Odigo', 'You may have noticed the persistent help bubble at the top of each screen. Just tap that sucker and you have instant access to your personal Odigo virtual assistant. If the virtual assistant can’t find what you’re looking for, you have the option to talk or chat with a human-being.', 'assets/img/subpage/odi/odi-06@3x.png')
-						+mixin_5050-iLeft('Call', 'If you prefer to talk to someone on the phone, you have the option of calling them or having them call you so you don’t have to wait on hold. Again, you’ll be connected to a real person that has access to your info and past inquiries so they know how best to help you.', 'assets/img/subpage/odi/odi-07@3x.png')
-						+mixin_5050-iRight('Chat', 'Chat is asynchronous. That means you can ask your question, and instead of waiting for a response, you can get back to your day while customer service gets to work on your question or issue. Come back when it’s convenient for you and pick up where you left off.', 'assets/img/subpage/odi/odi-08@3x.png')
+					img.leaf.parallaxST(src="assets/img/subpage/aflac/aflacendsection1-leaf-fg.png")
+					#aflacendsection1.parallaxSD
 					
-					#odiendsection2.parallaxSD
+					
+					.section-title.parallaxST Seasonal
+					section.grid-container.content
+						+mixin_overlap3up('Seasonal Visuals','assets/img/subpage/aflac/aflac-02-fall.jpg','assets/img/subpage/aflac/aflac-02-winter.jpg','assets/img/subpage/aflac/aflac-02-summer.jpg')
+					
+					#aflacendsection2.parallaxSD
+						
+						
+					.section-title.parallaxST Assure
+					section.grid-container.content
+						+mixin_5050-iRight('Adding depth','Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.','assets/img/subpage/aflac/aflac-03@3x.png')
+						+mixin_5050-iLeft('Lightening the mood', 'Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit sit amet non magna. Vestibulum id ligula porta felis euismod semper. Aenean lacinia bibendum nulla sed consectetur. Donec sed odio dui.', 'assets/img/subpage/aflac/aflac-04@3x.png')
+						+mixin_5050-iRight('Counting costs', 'Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.','assets/img/subpage/aflac/aflac-05@3x.png')
+												
+					#aflacendsection3.parallaxSD
+						img.bubbles-fg(src="assets/img/subpage/aflac/aflacendsection3-bubbles-fg.png")
+						img.bubbles-mg(src="assets/img/subpage/aflac/aflacendsection3-bubbles-mg.png")
+						img.bubbles-bg.parallaxST(src="assets/img/subpage/aflac/aflacendsection3-bubbles-bg.png")
+						
+
 
 					.footer.trigger.trigger-s
 						#circle.nextPrjt.fadeInMove
