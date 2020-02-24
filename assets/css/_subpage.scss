@@ -37,7 +37,7 @@
 .section-title{
 	position:relative;
 	//display:inline;
-	z-index:0;
+	z-index:1;
 	//float: right;
 	transform-origin: top right;
 	transform:rotate(-90deg);
@@ -216,6 +216,7 @@ video.video{
 //image section breaks
 //––––––––––––––––––––––––––––––––––––––
 
+
 #tmoendsection1{
 	content:'';
 	width:100%;
@@ -304,7 +305,7 @@ video.video{
 #aflacendsection2{
 	content:'';
 	width:100%;
-	height:44vw;
+	height:52vw;
 	background:
 		no-repeat center left / 100% auto url(../img/subpage/aflac/aflacendsection2@3x.jpg)
 	;

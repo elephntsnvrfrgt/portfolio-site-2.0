@@ -1,21 +1,21 @@
 html{
-  overflow:-moz-scrollbars-none;
-  scrollbar-width: none;
+  // overflow:-moz-scrollbars-none;
+  // scrollbar-width: none;
   background:$gray15;
 }
 
-html::-webkit-scrollbar{
-  display:none;
-}
-
-html::-webkit-scrollbar {
-    width: 0px;
-    background: transparent;
-}
-
-html::-webkit-scrollbar-thumb {
-    background: transparent;
-}
+// html::-webkit-scrollbar{
+//   display:none;
+// }
+//
+// html::-webkit-scrollbar {
+//     width: 0px;
+//     background: transparent;
+// }
+//
+// html::-webkit-scrollbar-thumb {
+//     background: transparent;
+// }
 
 body{
   background:$gray15;

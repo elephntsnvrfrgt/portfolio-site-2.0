@@ -375,58 +375,60 @@ window.requestAnimationFrame(function() {
 				});
 
 
-				//Progress bar
-				scrollProgress();
-
-				$(window).resize(function(){
-					scrollProgress();
-				});
-
-				function scrollProgress() {
-
-					var controller = new ScrollMagic.Controller(),
-							windowsize = $(window).height(),
-							containersize = $('.container').height(),
-							duration = (containersize-windowsize),
-							getId = $('.barba-container').attr('id'),
-							color = (function color(){
-								switch(getId){
-									case "tmo":
-										return "#e20074";
-									case "vw":
-										return "#009DDC";
-									case "cmhf":
-										return "#E9C378";
-									case "odi":
-										return "#7251DB";
-									case "404":
-										return "inherit"
-									case "500":
-										return "inherit"
-									default:
-										return "#0FBFFF";
-								}
-								getId; //get the ID and then run against the cases
-							}),
-							tweenScrollProgress = TweenMax
-														.fromTo(
-															$("#scroll-progress"),
-															1,
-															{height:0, backgroundColor:color},
-															{height:"100vh", ease:Linear.easeNone}
-														)
-													;
-
-							var sceneScrollProgress = new ScrollMagic.Scene({
-										triggerElement:".container",
-										triggerHook:0,
-										duration:duration
-							})
-
-									.setTween(tweenScrollProgress)
-									.addTo(controller);
-
-				}
+				// //Progress bar
+				// scrollProgress();
+				//
+				// $(window).resize(function(){
+				// 	scrollProgress();
+				// });
+				//
+				// function scrollProgress() {
+				//
+				// 	var controller = new ScrollMagic.Controller(),
+				// 			windowsize = $(window).height(),
+				// 			containersize = $('.container').height(),
+				// 			duration = (containersize-windowsize),
+				// 			getId = $('.barba-container').attr('id'),
+				// 			color = (function color(){
+				// 				switch(getId){
+				// 					case "tmo":
+				// 						return "#e20074";
+				// 					case "vw":
+				// 						return "#009DDC";
+				// 					case "cmhf":
+				// 						return "#E9C378";
+				// 					case "odi":
+				// 						return "#7251DB";
+				// 					case "aflac":
+				// 						return "#00a7e1";
+				// 					case "404":
+				// 						return "inherit";
+				// 					case "500":
+				// 						return "inherit";
+				// 					default:
+				// 						return "#0FBFFF";
+				// 				}
+				// 				getId; //get the ID and then run against the cases
+				// 			}),
+				// 			tweenScrollProgress = TweenMax
+				// 										.fromTo(
+				// 											$("#scroll-progress"),
+				// 											1,
+				// 											{height:0, backgroundColor:color},
+				// 											{height:"100vh", ease:Linear.easeNone}
+				// 										)
+				// 									;
+				//
+				// 			var sceneScrollProgress = new ScrollMagic.Scene({
+				// 						triggerElement:".container",
+				// 						triggerHook:0,
+				// 						duration:duration
+				// 			})
+				//
+				// 					.setTween(tweenScrollProgress)
+				// 					.addTo(controller);
+				//
+				// }
 
 			//For devices less than 960px---------------------
 			} else {
@@ -857,58 +859,60 @@ window.requestAnimationFrame(function() {
 										.addTo(controller);
 							});
 
-							//Progress bar
-							scrollProgress();
-
-							$(window).resize(function(){
-								scrollProgress();
-							});
-
-							function scrollProgress() {
-
-								var controller = new ScrollMagic.Controller(),
-										windowsize = $(window).height(),
-										containersize = $('.container').height(),
-										duration = (containersize-windowsize),
-										getId = $('.barba-container').attr('id'),
-										color = (function color(){
-											switch(getId){
-												case "tmo":
-													return "#e20074";
-												case "vw":
-													return "#009DDC";
-												case "cmhf":
-													return "#E9C378";
-												case "odi":
-													return "#7251DB";
-												case "404":
-													return "inherit"
-												case "500":
-													return "inherit"
-												default:
-													return "#0FBFFF";
-											}
-											getId; //get the ID and then run against the cases
-										}),
-										tweenScrollProgress = TweenMax
-																	.fromTo(
-																		$("#scroll-progress"),
-																		1,
-																		{height:0, backgroundColor:color},
-																		{height:"100%", ease:Linear.easeNone}
-																	)
-																;
-
-										var sceneScrollProgress = new ScrollMagic.Scene({
-													triggerElement:".container",
-													triggerHook:0,
-													duration:duration
-										})
-
-												.setTween(tweenScrollProgress)
-												.addTo(controller);
-
-							}
+							// //Progress bar
+							// scrollProgress();
+							//
+							// $(window).resize(function(){
+							// 	scrollProgress();
+							// });
+							//
+							// function scrollProgress() {
+							//
+							// 	var controller = new ScrollMagic.Controller(),
+							// 			windowsize = $(window).height(),
+							// 			containersize = $('.container').height(),
+							// 			duration = (containersize-windowsize),
+							// 			getId = $('.barba-container').attr('id'),
+							// 			color = (function color(){
+							// 				switch(getId){
+							// 					case "tmo":
+							// 						return "#e20074";
+							// 					case "vw":
+							// 						return "#009DDC";
+							// 					case "cmhf":
+							// 						return "#E9C378";
+							// 					case "odi":
+							// 						return "#7251DB";
+							// 					case "aflac":
+							// 						return "#00a7e1";
+							// 					case "404":
+							// 						return "inherit";
+							// 					case "500":
+							// 						return "inherit";
+							// 					default:
+							// 						return "#0FBFFF";
+							// 				}
+							// 				getId; //get the ID and then run against the cases
+							// 			}),
+							// 			tweenScrollProgress = TweenMax
+							// 										.fromTo(
+							// 											$("#scroll-progress"),
+							// 											1,
+							// 											{height:0, backgroundColor:color},
+							// 											{height:"100%", ease:Linear.easeNone}
+							// 										)
+							// 									;
+							//
+							// 			var sceneScrollProgress = new ScrollMagic.Scene({
+							// 						triggerElement:".container",
+							// 						triggerHook:0,
+							// 						duration:duration
+							// 			})
+							//
+							// 					.setTween(tweenScrollProgress)
+							// 					.addTo(controller);
+							//
+							// }
 
 				//For devices less than 960px---------------------
 						} else {

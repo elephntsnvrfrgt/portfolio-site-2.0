@@ -52,7 +52,7 @@
 
   .info{
     font-size:22px;
-    line-height: 22px;
+    line-height: 26px;
   }
 
   .caption{
@@ -403,8 +403,8 @@ p{
   }
 
   .info{
-    font-size:3vw;
-    line-height: 3vw;
+    font-size:3.5vw;
+    line-height: 4vw;
   }
 
 }
@@ -469,6 +469,53 @@ p{
   	@include subpageHero-s('../img/subpage/bg-aflac-s.jpg');
   }
 
+  ._3up {
+    margin-bottom: 10rem!important;
+  }
+
+  .desktop-comp2{
+    top: 3rem;
+  }
+
+  .desktop-comp3{
+    top:6rem;
+  }
+
+  #aflacendsection1, #aflacendsection2, #aflacendsection3{
+    width:150%;
+  }
+
+  #aflacendsection1{
+    height:50vw;
+    margin-bottom:12vw;
+  }
+
+  #aflacendsection2{
+    height:60vw;
+    margin-bottom:12vw;
+  }
+
+  .leaf{
+    width:20vw;
+  }
+
+  .bubbles-fg {
+    width: 73vw;
+    left: 56vw;
+    bottom: -22vw;
+  }
+
+  .bubbles-mg {
+      width: 57vw;
+      left: 79vw;
+      bottom: 0vw;
+  }
+
+  .bubbles-bg {
+    width: 71vw;
+    left: 67vw;
+    bottom: 8vw;
+  }
 
 }
 
@@ -502,6 +549,25 @@ p{
   .tile{
     grid-row:span 2;
   }
+
+  // .bubbles-fg {
+  //   width: 73vw;
+  //   left: 56vw;
+  //   bottom: -22vw;
+  // }
+  //
+  // .bubbles-mg {
+  //     width: 57vw;
+  //     left: 79vw;
+  //     bottom: 0vw;
+  // }
+  //
+  // .bubbles-bg {
+  //   width: 71vw;
+  //   left: 67vw;
+  //   bottom: 8vw;
+  // }
+
 }
 // End XSmall devices
 
