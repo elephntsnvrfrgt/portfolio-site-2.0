@@ -28,7 +28,7 @@ mixin mixin_experience(job_name, years)
 mixin mixin_5050-iRight(headline, body, src)
 	.fiftyfifty.iRight-l.iRight-s.trigger.trigger-s
 		.right
-			img.fadeInMove(src=src lazyload="on")
+			img.fadeInMove(src=src)
 		.left
 			.content-hl.fadeInMove=headline
 			p.fadeInMove=body
@@ -37,7 +37,7 @@ mixin mixin_5050-iRight(headline, body, src)
 mixin mixin_5050-iLeft(headline, body, src)
 	.fiftyfifty.iLeft-l.iLeft-s.trigger.trigger-s
 		.left
-			img.fadeInMove(src=src lazyload="on")
+			img.fadeInMove(src=src)
 		.right
 			.content-hl.fadeInMove=headline
 			p.fadeInMove=body
@@ -53,9 +53,24 @@ mixin mixin_overlap(eyebrow, desktop_img, mobile_img)
 	.overlap-component.trigger.trigger-s
 		.eyebrow.fadeInMove=eyebrow
 		.desktop-comp.fadeInMove
-			img(src=desktop_img lazyload="on")
+			img(src=desktop_img)
 		.mobile-comp.fadeInMove
-			img(src=mobile_img lazyload="on")
+			img(src=mobile_img)
+				
+		//-- end overlap component
+		
+		
+//-- overlap component (desktop + mobile) -------------------------------------
+//-- designed for cmhf --------------------------------------------------------
+
+mixin mixin_overlap12(eyebrow, desktop_img, mobile_img)
+	
+	.overlap-component.trigger.trigger-s
+		.eyebrow.fadeInMove=eyebrow
+		.desktop-comp12.fadeInMove
+			img(src=desktop_img)
+		.mobile-comp.fadeInMove
+			img(src=mobile_img)
 				
 		//-- end overlap component	
 		

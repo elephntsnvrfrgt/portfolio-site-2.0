@@ -22,7 +22,9 @@
 	@include subpageHero('../img/subpage/bg-aflac.jpg');
 }
 
-
+#hero-pt-gift{
+	@include subpageHero('../img/subpage/bg-pt-gift.jpg');
+}
 
 
 
@@ -42,6 +44,7 @@
 	transform-origin: top right;
 	transform:rotate(-90deg);
 	height:0;
+	width:max-content;
 	right:22vw;
 	text-align:right;
 }
@@ -154,16 +157,28 @@ video.video{
 		margin-bottom:0;
 	}
 }
+
 .desktop-comp{
 	grid-column:1/span 9;
 	grid-row-start: 2;
-	@include softShadow($blur:200, $alpha:0.1)
+	img{
+		@include softShadow($blur:200, $alpha:0.1)
+	}
 }
 
 .mobile-comp{
 	grid-column:7/span 6;
 	grid-row-start:2;
 }
+
+.desktop-comp12{
+	grid-column:1/span 12;
+	grid-row-start: 2;
+	img{
+		@include softShadow($blur:200, $alpha:0.1)
+	}
+}
+
 	//--overlap component 3up (used on aflac)
 
 ._3up{
