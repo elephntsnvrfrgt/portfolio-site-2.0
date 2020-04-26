@@ -1,7 +1,7 @@
 extends layout.pug	
 
 block prepend head
-	- var pageTitle = "Country Music Hall of Fame"
+	- var pageTitle = "Patrón Tequila Gift Guide"
 
 block append content
 		#barba-wrapper
@@ -15,7 +15,7 @@ block append content
 				.container
 					section.grid-container.intro#hero-pt-gift
 						.content-hero.parallaxH
-							+mixin_hero('Country Music Hall of Fame','Preserve','Web | Concept, Design, & Motion')
+							+mixin_hero('Patrón Tequila','Guide','Web | Concept, Design, Art Dir.')
 							.herotext.description
 								p.fadeInMove Located in Nashville, TN, Country Music Hall of Fame and Museum preserves the history and cultural importance of this music genre. They invited The Tombras Group, where I served as a visual designer, to pitch a tri-part site suite. In addition to the museum, CMHF manages two other historic entities: the legendary Hatch Show Print and Historic Studio B.
 								p.fadeInMove What started as a pitch, this responsive design concept became more of an exercise in process and thinking. I was able to extend the initial ideas into more thoughtful design systems.
@@ -25,22 +25,39 @@ block append content
 						
 						+mixin_overlap12('Landing Page','assets/img/subpage/pt-gift/patron-00-D-L@2x.jpg','assets/img/subpage/pt-gift/patron-00-M-L@2x.png')
 					
-						.wrapper-12.trigger.trigger-s
-							.info.caption.fadeInMove Hotspot interaction
-							video.video.fadeInMove(preload="auto" autoplay muted loop controls poster="assets/vid/cmhf-homepage-poster.jpg")
-								source(src="assets/vid/cmhf-homepage.webm" type="video/webm")
-								source(src="assets/vid/cmhf-homepage.mp4" type="video/mp4")
-						+mixin_overlap('Exhibits & Collections', 'assets/img/subpage/cmhf/cmhf-02-L.jpg', 'assets/img/subpage/cmhf/cmhf-02-S@2x.png')
-						.wrapper-12.trigger.trigger-s
-							.info.caption.fadeInMove Inductee info
-							video.video.fadeInMove(preload="auto" autoplay muted loop controls poster="assets/vid/cmhf-inductee-poster.jpg")
-								source(src="assets/vid/cmhf-inductee.webm" type="video/webm")
-								source(src="assets/vid/cmhf-inductee.mp4" type="video/mp4")
-						+mixin_overlap('Exhibit', 'assets/img/subpage/cmhf/cmhf-03-L.jpg', 'assets/img/subpage/cmhf/cmhf-03-S@2x.png')
-						+mixin_overlap('Hall of Fame Inductee', 'assets/img/subpage/cmhf/cmhf-05-L.jpg', 'assets/img/subpage/cmhf/cmhf-05-S@2x.png')
+						.img-9.trigger.trigger-s
+							.info.caption.fadeInMove Archetype 01
+							img.fadeInMove(src='assets/img/subpage/pt-gift/patron-01-L.jpg')
+					
+						.img-9.trigger.trigger-s
+							.info.caption.fadeInMove Archetype 02
+							img.fadeInMove(src='assets/img/subpage/pt-gift/patron-02-L.jpg')
+					
+						.img-9.trigger.trigger-s
+							.info.caption.fadeInMove Archetype 03
+							img.fadeInMove(src='assets/img/subpage/pt-gift/patron-03-L.jpg')
+						
+						.img-9.trigger.trigger-s
+							.info.caption.fadeInMove Archetype 04
+							img.fadeInMove(src='assets/img/subpage/pt-gift/patron-04-L.jpg')
 								
-					#cmhfendsection1.parallaxSD
+					#ptendsection1.parallaxSD
+						
+					.section-title.parallaxST Archetype
+					section.grid-container.content
+						
+						+mixin_overlap('Detail Page','assets/img/subpage/pt-gift/patron-05-D-L@2x.jpg','assets/img/subpage/pt-gift/patron-05-M-L@2x.png')
+						+mixin_overlap3up('','assets/img/subpage/pt-gift/patron-06-L@2x.jpg','assets/img/subpage/pt-gift/patron-07-L@2x.jpg','assets/img/subpage/pt-gift/patron-08-L@2x.jpg')
+						
+					#ptendsection2.parallaxSD
+						
+					section.grid-container.content
+						+mixin_overlap12('Menu','assets/img/subpage/pt-gift/patron-09-D-L@2x.jpg','assets/img/subpage/pt-gift/patron-09-M-L@2x.png')
+						+mixin_overlap12('Video Player','assets/img/subpage/pt-gift/patron-10-D-L@2x.jpg','assets/img/subpage/pt-gift/patron-10-M-L@2x.png')
 
+					#ptendsection3.parallaxSD
+						
+						
 					.footer.trigger.trigger-s
 						#circle.nextPrjt.fadeInMove
 							<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
