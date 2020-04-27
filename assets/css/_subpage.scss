@@ -38,15 +38,13 @@
 
 .section-title{
 	position:relative;
-	//display:inline;
 	z-index:1;
-	//float: right;
 	transform-origin: top right;
 	transform:rotate(-90deg);
-	height:0;
-	width:max-content;
-	right:22vw;
-	text-align:right;
+	min-width: 300vh;
+  height: 0;
+  right: 132vw;
+  text-align: right;
 }
 
 .fix{
@@ -402,6 +400,7 @@ video.video{
 	top:190px;
 	right:50px;
 }
+
 
 #next.title{
 	position: absolute;
