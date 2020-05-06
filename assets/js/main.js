@@ -301,7 +301,7 @@ window.requestAnimationFrame(function() {
 
 				var sceneReveal = new ScrollMagic.Scene({
 							triggerElement: this,
-							triggerHook: .6,
+							triggerHook: .75,
 							reverse:false
 
 						})
@@ -787,7 +787,7 @@ window.requestAnimationFrame(function() {
 
 							var sceneReveal = new ScrollMagic.Scene({
 										triggerElement: this,
-										triggerHook: .6,
+										triggerHook: .75,
 										reverse:false
 
 									})

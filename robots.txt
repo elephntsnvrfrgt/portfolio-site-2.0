@@ -1,0 +1,5 @@
+Sitemap: https://www.isaacmart.in/sitemap.xml
+User-Agent: *
+Crawl-delay:
+Disallow: /dev/
+Disallow: /archive/

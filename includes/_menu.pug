@@ -3,27 +3,27 @@ block menu
   ul#menu-container.menu.dark
     li.menuListItem
       a.dark(href="pt-gift.html")
-        .eyebrow.dark Patrón Tequila
-        .title Guide
+        .eyebrow.dark(class=active == 'pt-gift' ? 'active' : '') Patrón Tequila
+        .title(class=active == 'pt-gift' ? 'active' : '') Guide
     li.menuListItem
       a.dark(href="tmo-switcher.html")
-        .eyebrow.dark T-Mobile
-        .title Switch
+        .eyebrow.dark(class=active == 'tmo-switcher' ? 'active' : '') T-Mobile
+        .title(class=active == 'tmo-switcher' ? 'active' : '') Switch
     li.menuListItem
       a.dark(href="vw.html")
-        .eyebrow.dark Volkswagen Car-net
-        .title Connect
+        .eyebrow.dark(class=active == 'vw' ? 'active' : '') Volkswagen Car-net
+        .title(class=active == 'vw' ? 'active' : '') Connect
     li.menuListItem
       a.dark(href="aflac.html")
-        .eyebrow.dark Aflac
-        .title Protect
+        .eyebrow.dark(class=active == 'aflac' ? 'active' : '') Aflac
+        .title(class=active == 'aflac' ? 'active' : '') Protect
     li.menuListItem
       a.dark(href="cmhf.html")
-        .eyebrow.dark Country Music Hall of Fame
-        .title Preserve
+        .eyebrow.dark(class=active == 'cmhf' ? 'active' : '') Country Music Hall of Fame
+        .title(class=active == 'cmhf' ? 'active' : '') Preserve
     li.menuListItem
       a.dark(href="odi.html")
-        .eyebrow.dark Odigo Insurance
-        .title Ensure
+        .eyebrow.dark(class=active == 'odi' ? 'active' : '') Odigo Insurance
+        .title(class=active == 'odi' ? 'active' : '') Ensure
     
     a#home(href="index.html") Back to Home

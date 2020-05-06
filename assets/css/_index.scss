@@ -27,7 +27,7 @@ body{
   height:100vh;
   background:$gray15;
   position:absolute;
-  z-index:15;
+  z-index:1000;
   display:flex;
   .small{
     width:100%;
@@ -109,7 +109,7 @@ body{
 
 .intro{
   // visibility:hidden;
-  height:100vh;
+  height:85vh;
   min-height:800px;
 }
 
