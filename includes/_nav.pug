@@ -9,7 +9,7 @@
 				li.social
 					a#about Info
 				li.social
-					a(href="mailto:hello[at]isaacmart[dot]in?subject=Howdy&body=Sorry%20to%20give%20you%20work%20when%20all%20you%20are%20trying%20to%20do%20is%20say%20hello...%20but%20replace%20the%20%5Bat%5D%20and%20%5Bdot%5D%20with%20the%20real%20symbols%20in%20the%20To%3A%20before%20you%20mash%20that%20send%20button.") Email
+					a(href='mailto:isaac.michael.martin[at]gmail[dot]com?subject=Howdy&body=Sorry%20to%20give%20you%20work%20when%20all%20you%20are%20trying%20to%20do%20is%20say%20hello...%20but%20replace%20the%20%5Bat%5D%20and%20%5Bdot%5D%20with%20the%20real%20symbols%20in%20the%20To%3A%20before%20you%20mash%20that%20send%20button.') Email
 				li.social
 					a(href="https://www.behance.net/isaacmartin/" target="_blank" rel="noopener") Behance
 				li.social
@@ -23,11 +23,12 @@
 		.info-label.eyebrow About
 		p #{bio}
 	.info-content.info-fade
-		.info-label.eyebrow Experience
+		.eyebrow.info-label Experience
 		ul
+			+mixin_experience('The Graphic Standard','2020 - present')
 			li.experience
 				p Razorfish <strike>Publicis Sapient</strike> <strike>Publicis.Sapient</strike>  <strike>SapientRazorfish</strike> <strike>Razorfish</strike>
-				.small 2014 - present
+				.small 2014 - 2020
 			+mixin_experience('The Tombras Group','2011 - 2014')
 			+mixin_experience('Cornerstone Center for the Arts','2009 - 2011')
 	.info-content.info-fade

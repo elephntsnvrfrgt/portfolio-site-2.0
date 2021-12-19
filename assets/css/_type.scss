@@ -51,7 +51,7 @@ p{
 }
 
 .eyebrow{
-  font: 700 18px $sans-stack;
+  font: 700 14px $sans-stack;
 	color: $gray15;
 	text-transform:uppercase;
 	letter-spacing: 3.25px;
@@ -71,13 +71,13 @@ p{
 }
 
 .info{
-  font:500 18px/18px $mono-stack;
+  font:500 14px/14px $mono-stack;
 	color: $gray80;
   @include text-render;
 }
 
 .info-label{
-  font-size:12px;
+  font-size:12px !important;
   letter-spacing:2px;
 }
 

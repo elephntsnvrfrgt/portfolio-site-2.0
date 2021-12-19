@@ -1,0 +1,125 @@
+extends layout.pug	
+
+block prepend head
+	- var pageTitle = "Stella Domo"
+	- var active = "stella"
+	
+block append content
+		#barba-wrapper
+			.barba-container#tmo
+				include includes/_scrollbar.pug
+				include includes/_menu.pug
+				#menu-btn.initreveal
+					<svg id="burger" width="14" class="openmenu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><path class="top" d="M0 6h30v2H0z"/><line class="mid" x1="0" y1="15" x2="30" y2="15" stroke-width="1.4" vector-effect="non-scaling-stroke"/><path class="bot" d="M0 22h30v2H0z"/></svg>
+					#menuText.small Other work
+					
+				.container
+					
+					section.grid-container.intro#hero-stella
+						.content-hero.parallaxH
+							+mixin_hero('Stella Domo','Live','Web | Concept Design')
+							.herotext.description
+								p.fadeInMove This little micro experience for prospective customers starts on <span class="nowrap">T-Mobile’s</span> homepage (some other ads and social junk pointed to it as well). Three quick questions and you’re on your way. You’re taken to the Results page, which highlights the amount you’ll save per year, the other benefits that come with the <span class="nowrap">Un-Carrier,</span> and some other goofy bits to put a smile on their face. Most of the experience shown here made it to production, but a couple extra pieces got sprinkled in <span class="nowrap">for fun.</span>
+							
+					.section-title.parallaxST Questions
+					section.grid-container.content
+						.wrapper-12.trigger.trigger-s
+							.eyebrow.fadeInMove Homepage component
+							video.video.fadeInMove(preload="auto" controls poster="assets/vid/tmo-switcher-hp-qs-poster.jpg")
+								source(src="assets/vid/tmo-switcher-hp-qs.webm" type="video/webm")
+								source(src="assets/vid/tmo-switcher-hp-qs.mp4" type="video/mp4")
+								
+						
+						
+						//-YouTube hosted video
+						//----------------------------------------------
+						//- .video
+						//- 	iframe#ytplayer(
+						//- 		type="text/html"
+						//- 		width="1920px"
+						//- 		height="1080px"
+						//- 		src="https://www.youtube.com/embed/Hhng9QHNi9I?autoplay=0&controls=0&loop=1&playlist=Hhng9QHNi9I&rel=0&showinfo=0&color=white&modestbranding=1"
+						//- 		frameborder="0"
+						//- 		allowfullscreen)
+						
+						.img-9.trigger.trigger-s
+							.info.caption.fadeInMove Current carrier
+							img.fadeInMove(src='assets/img/subpage/tmo-switcher/q1-2116w.jpg')
+					
+						.img-9.trigger.trigger-s
+							.info.caption.fadeInMove Number of lines
+							img.fadeInMove(src='assets/img/subpage/tmo-switcher/q2-2116w.jpg')
+					
+						.img-9.trigger.trigger-s
+							.info.caption.hidden.fadeInMove Monthly bill
+							img.fadeInMove(src='assets/img/subpage/tmo-switcher/q3-2116w.jpg')
+							
+					
+					#tmoendsection1.parallaxSD
+					
+					.section-title.parallaxST Savings
+					section.grid-container.content
+						.wrapper-12.trigger.trigger-s
+							.eyebrow.fadeInMove Results page
+							video.video.fadeInMove(preload="auto" controls poster="assets/vid/tmo-switcher-results-poster.jpg")
+								source(src="assets/vid/tmo-switcher-results.webm" type="video/webm")
+								source(src="assets/vid/tmo-switcher-results.mp4" type="video/mp4")
+								
+						
+						//-YouTube hosted video
+						//----------------------------------------------
+						//- .video
+						//- 	iframe#ytplayer(
+						//- 		type="text/html"
+						//- 		width="1920px"
+						//- 		height="1080px"
+						//- 		src="https://www.youtube.com/embed/Vtqhn2ovhu4?autoplay=0&controls=0&loop=1&playlist=Vtqhn2ovhu4&rel=0&showinfo=0&color=white&modestbranding=1"
+						//- 		frameborder="0"
+						//- 		allowfullscreen)
+								
+						.img-9.trigger.trigger-s
+							.info.caption.fadeInMove Default view
+							img.fadeInMove(src='assets/img/subpage/tmo-switcher/lp-results.jpg')
+							
+						.img-9.trigger.trigger-s
+							.info.caption.fadeInMove Timeline view
+							img.fadeInMove(src='assets/img/subpage/tmo-switcher/lp-timeline.jpg')
+							
+					
+					#tmoendsection2.parallaxSD
+						
+					.footer.trigger.trigger-s
+						//- .grid-container.about.credits
+						//- 		.column
+						//- 			.eyebrow Credits
+						//- 			ul
+						//- 				li
+						//- 					p Shane Bzdok (Creative Direction)
+						//- 				li
+						//- 					p Gray Luckett (Art Direction)
+						//- 				li
+						//- 					p Lucy Swithenby (Experience Director)
+						//- 				li
+						//- 					p Hillary Oneslager (Experience Designer)
+						//- 				li
+						//- 					p Michael Calfee (Lead Developer)
+						//- 				li
+						//- 					p George Stocker (Developer)
+						//- 				li
+						//- 					p Lola Yuan (Developer)
+						#circle.nextPrjt.fadeInMove
+							<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="300px" height="300px" viewBox="0 0 300 300" enable-background="new 0 0 300 300" xml:space="preserve">
+									<defs>
+											<path id="circlePath" d=" M 150, 150 m -120, 0 a 120,120 0 0,1 240,0 a 120,120 0 0,1 -240,0 "/>
+									</defs>
+									<circle cx="150" cy="150" r="150" fill="none"/>
+									<g>
+											<use xlink:href="#circlePath" fill="none"/>
+											<text fill="#9B9B9B">                  
+													<textPath xlink:href="#circlePath" textLength="730" lengthAdjust="spacing">Volkswagen • Car-Net • Connect •</textPath>
+											</text>                                
+									</g>                                        
+							</svg>
+						a#next.title.fadeInMove(href="vw.html") Next
+						
+					include includes/_footer.pug

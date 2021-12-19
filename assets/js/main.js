@@ -41,7 +41,7 @@ window.requestAnimationFrame(function() {
 			)
 
 			.staggerFromTo($('.blinkreveal'),
-				1.25,
+				1,
 				{autoAlpha:0},
 				{autoAlpha:1, ease: Bounce.easeIn},
 				.3
@@ -50,10 +50,10 @@ window.requestAnimationFrame(function() {
 			.to($(".load"),
 				1.5,
 				{autoAlpha:0, ease:Power2.easeInOut},
-				"+=1.25"
+				"+=1"
 			)
 			.fromTo(container,
-				1.25,
+				1,
 				{autoAlpha:0},
 				{autoAlpha:1, ease: Power2.easeInOut}
 			)

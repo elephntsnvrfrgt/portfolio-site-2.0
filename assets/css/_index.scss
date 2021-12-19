@@ -45,7 +45,7 @@ body{
 
 #circle {
 	position: fixed;
-	z-index:20;
+  z-index:100;
 	top:50px;
 	right:50px;
 	width: 110px;
@@ -211,6 +211,10 @@ body{
 	width: 200px;
 	transform-origin: 40% -115%;
 	transform: rotate(-90deg);
+}
+
+.prjt-00{
+	background:center/cover #f8f8f8 url('../img/index/tile-sd.jpg');
 }
 
 .prjt-01{
